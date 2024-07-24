@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTEL o11y demo</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: Roboto;
+            background-image: url('otel-o11y-demo.png');
+            background-position: top 100px left 10px;
+            background-repeat: no-repeat;
+            background-size: 400px auto;
+        }
+
+        h1 {
+            font-family: 'Roboto Mono', Roboto;
+        }
+
+        button {
+            border: 5px solid orange;
+            background-color: #fff;
+            color: black;
+            border-radius: 15px;
+            padding: 10px 20px 10px 20px;
+            font-weight: 700;
+            font-size: 3rem;
+            font-family: 'Roboto Mono', Roboto;
+        }
+
+        button:hover {
+            border: 5px solid white;
+            background-color: orange;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        div {
+            font-weight:bolder;
+            font-size: 1.2em;
+        }
+
+        div.content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img#loading-meme {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>OTEL o11y demo</h1>
+    <p>Invoke Tier 1 service with...</p>
+    <p>
+        <button id="go_fast">🐇 FAST</button>&nbsp;&nbsp;
+        <button id="go_slow">🐢 SLOW</button>
+    </p>
+    <div id="message" style="display:none"></div>
+    <div class="content">
+        <img id="picture" src="#" alt="Picture" style="display:none"></img>
+        <img id="loading-meme" src="./loading-meme.gif" alt="Loading Meme" style="display:none"></img>
+    </div>
+    <script type="text/javascript" src="index.js">
+    </script>
+</body>
+
+</html>
