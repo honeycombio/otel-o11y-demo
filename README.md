@@ -17,6 +17,7 @@ OTEL Observability demo contains many common components of modern microservices 
 - Queue Consumer : application that waits for message queue and processes data and stores results into Database
 - Database : Database that persists processed data to be made available for application
 - Tier 2 App : Application that would get called by Tier 1 to both check the status of processing, and when finished deliver the outcome back to Tier 1.
+- OTEL collector : OpenTelemetry collector which acts as collecting agents
 
 Using this application as the base, you will be performing various instrumentation to extract telemetry data that will enable Honeycomb to receive those in metrics, logs, and traces, and then be able to provide the wholistic end-to-end investigation to debug the application when an incident occurs.
 
