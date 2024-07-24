@@ -1,0 +1,4 @@
+flask
+mysql-connector-python
+opentelemetry-distro
+opentelemetry-exporter-otlp

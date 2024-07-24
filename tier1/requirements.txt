@@ -1,0 +1,5 @@
+flask
+requests
+pika
+opentelemetry-distro
+opentelemetry-exporter-otlp

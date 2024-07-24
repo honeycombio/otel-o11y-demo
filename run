@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Run to start the whole system up, 5 services (one is nginx)
+# `./run``
+# Or, run with a parameter service name (from docker-compose) to restart just that service
+# `./run meminator`
+
+docker compose up --build -d $*
+
+# Check if running in GitHub Codespaces
+if [ -n "$CODESPACES" ]; then
+    echo "Running in GitHub Codespaces."
+
+    # Get Codespaces name and port
+    CODESPACE_NAME=$(echo $CODESPACE_NAME)
+    APP_PORT=10114
+
+    URL="https://${CODESPACE_NAME}-${APP_PORT}.app.github.dev"
+
+    echo "Meminator running on port 10114 at: $URL"
+
+    exit 0
+fi
+
+# Check if running in Gitpod
+if [ -n "$GITPOD_INSTANCE_ID" ]; then
+    echo "Running in Gitpod."
+
+    # Get the workspace url
+    URL=$(gp url 10114)
+
+    echo "Meminator running on port 10114 at: $URL"
+
+    exit 0
+fi
+
+# Default to local environment
+echo "Running locally."
+
+URL="http://localhost:10114/" 
+
+echo "Meminator running on port 10114 at: $URL"

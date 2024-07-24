@@ -1,0 +1,138 @@
+services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.70.0
+    labels:
+      description: "OpenTelemetry collector"
+    environment:
+      - HONEYCOMB_API_KEY=${HONEYCOMB_API_KEY}
+    container_name: "otel-collector"
+    command: [--config=/etc/otel-collector-config.yml]
+    volumes:
+      - ./otel-collector/otel-collector-config.yml:/etc/otel-collector-config.yml
+    ports:
+      - 24317:4317    # OTLP grpc receiver
+      - 24318:4318    # OTLP http receiver
+      - 54526:54526   # rsyslog
+    depends_on:
+      db:
+        condition: service_healthy
+      queue:
+        condition: service_healthy
+
+  waf:
+    image: docker.io/library/haproxy:lts-alpine
+    volumes:
+      - ./waf:/usr/local/etc/haproxy:ro
+    ports:
+      - 8100:8080
+      - 8150:9090
+    depends_on:
+      web:
+        condition: service_started
+
+  web:
+    platform: linux/amd64
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - 8200:80
+    depends_on:
+      tier1:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+
+  tier1:
+    build:
+      context: ./tier1
+      dockerfile: Dockerfile
+    image: tier1:latest
+    environment:
+      - OTEL_SERVICE_NAME=tier1-service
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=console,otlp_proto_http
+      - OTEL_LOGS_EXPORTER=otlp_proto_http
+      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
+      - OTEL_PYTHON_LOG_CORRELATION=true
+      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+    ports:
+      - 8300:8080
+    depends_on:
+      tier2:
+        condition: service_started
+      queue:
+        condition: service_healthy
+      db:
+        condition: service_started
+
+  tier2:
+    build:
+      context: ./tier2
+      dockerfile: Dockerfile
+    image: tier2:latest
+    environment:
+      - OTEL_SERVICE_NAME=tier2-service
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=console,otlp_proto_http
+      - OTEL_LOGS_EXPORTER=otlp_proto_http
+      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
+      - OTEL_PYTHON_LOG_CORRELATION=true
+      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+    ports:
+      - 8400:8080
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: docker.io/library/mysql:latest
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - 8500:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 12
+
+  queue:
+    image: docker.io/library/rabbitmq:3-management
+    ports:
+      - 8600:15672
+      - 8650:5672
+    environment:
+      RABBITMQ_DEFAULT_USER: test
+      RABBITMQ_DEFAULT_PASS: test
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics" ,"-q", "ping"]
+      timeout: 10s
+      retries: 12
+
+  queue_consumer:
+    build:
+      context: ./consumer
+      dockerfile: Dockerfile
+    environment:
+      - OTEL_SERVICE_NAME=consumer-service
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=otlp_proto_http
+      - OTEL_LOGS_EXPORTER=otlp_proto_http
+      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
+      - OTEL_PYTHON_LOG_CORRELATION=true
+      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+    ports:
+      - 8700:80
+    depends_on:
+      queue:
+        condition: service_healthy
+      db:
+        condition: service_healthy
