@@ -3,8 +3,6 @@ services:
     image: otel/opentelemetry-collector-contrib:0.70.0
     labels:
       description: "OpenTelemetry collector"
-    environment:
-      - HONEYCOMB_API_KEY=${HONEYCOMB_API_KEY}
     container_name: "otel-collector"
     command: [--config=/etc/otel-collector-config.yml]
     volumes:
@@ -24,7 +22,7 @@ services:
     volumes:
       - ./waf:/usr/local/etc/haproxy:ro
     ports:
-      - 8100:8080
+      - 22022:8080
       - 8150:9090
     depends_on:
       web:
@@ -53,11 +51,14 @@ services:
       - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
       - OTEL_TRACES_EXPORTER=console,otlp_proto_http
       - OTEL_LOGS_EXPORTER=otlp_proto_http
-      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
-      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
-    ports:
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/healthcheck || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 24
+    ports: 
       - 8300:8080
     depends_on:
       tier2:
@@ -65,7 +66,7 @@ services:
       queue:
         condition: service_healthy
       db:
-        condition: service_started
+        condition: service_healthy
 
   tier2:
     build:
@@ -77,8 +78,6 @@ services:
       - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
       - OTEL_TRACES_EXPORTER=console,otlp_proto_http
       - OTEL_LOGS_EXPORTER=otlp_proto_http
-      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
-      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
     ports:
@@ -100,8 +99,9 @@ services:
       MYSQL_PASSWORD: test
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
       timeout: 10s
-      retries: 12
+      retries: 24
 
   queue:
     image: docker.io/library/rabbitmq:3-management
@@ -113,8 +113,9 @@ services:
       RABBITMQ_DEFAULT_PASS: test
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics" ,"-q", "ping"]
+      interval: 5s
       timeout: 10s
-      retries: 12
+      retries: 24
 
   queue_consumer:
     build:
@@ -125,8 +126,6 @@ services:
       - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
       - OTEL_TRACES_EXPORTER=otlp_proto_http
       - OTEL_LOGS_EXPORTER=otlp_proto_http
-      - OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
-      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
     ports:

@@ -1,4 +1,5 @@
 from flask import Flask
+from healthcheck import HealthCheck
 import time
 import requests
 import random
@@ -7,6 +8,7 @@ import sys
 import logging
 
 APP = Flask(__name__)
+health = HealthCheck()
 
 QCREDS = pika.PlainCredentials("test","test")
 QCONN = pika.BlockingConnection(
@@ -21,6 +23,11 @@ QCHAN = QCONN.channel()
 QCHAN.queue_declare(queue="test")
 
 log = logging.getLogger(__name__)
+
+def is_healthy():
+    return True, "tier1 ok"
+
+health.add_check(is_healthy)
 
 def logit(msg):
     """making sure we are printing out to stderr
@@ -116,3 +123,5 @@ def random_route():
         do_saas("fast")
         result = do_tier2_fast()
     return result
+
+APP.add_url_rule("/healthcheck", "healthcheck", view_func=lambda: health.run())

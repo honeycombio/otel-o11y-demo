@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
+RUN apt-get -y update; apt-get -y install curl
 RUN pip3 install -r requirements.txt
 RUN opentelemetry-bootstrap --action=install
 COPY app.py .

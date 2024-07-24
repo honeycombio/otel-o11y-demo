@@ -13,11 +13,11 @@ if [ -n "$CODESPACES" ]; then
 
     # Get Codespaces name and port
     CODESPACE_NAME=$(echo $CODESPACE_NAME)
-    APP_PORT=10114
+    APP_PORT=22022
 
     URL="https://${CODESPACE_NAME}-${APP_PORT}.app.github.dev"
 
-    echo "Meminator running on port 10114 at: $URL"
+    echo "Meminator running on port 22022 at: $URL"
 
     exit 0
 fi
@@ -27,9 +27,9 @@ if [ -n "$GITPOD_INSTANCE_ID" ]; then
     echo "Running in Gitpod."
 
     # Get the workspace url
-    URL=$(gp url 10114)
+    URL=$(gp url 22022)
 
-    echo "Meminator running on port 10114 at: $URL"
+    echo "Meminator running on port 22022 at: $URL"
 
     exit 0
 fi
@@ -37,6 +37,6 @@ fi
 # Default to local environment
 echo "Running locally."
 
-URL="http://localhost:10114/" 
+URL="http://localhost:22022/" 
 
-echo "Meminator running on port 10114 at: $URL"
+echo "Meminator running on port 22022 at: $URL"
