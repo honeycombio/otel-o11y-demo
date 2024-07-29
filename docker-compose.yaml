@@ -5,6 +5,8 @@ services:
       description: "OpenTelemetry collector"
     container_name: "otel-collector"
     command: [--config=/etc/otel-collector-config.yml]
+    environment:
+      HONEYCOMB_API_KEY: ${HONEYCOMB_API_KEY}
     volumes:
       - ./otel-collector/otel-collector-config.yml:/etc/otel-collector-config.yml
     ports:
@@ -53,6 +55,8 @@ services:
       - OTEL_LOGS_EXPORTER=otlp_proto_http
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/healthcheck || exit 1"]
       interval: 5s
@@ -80,6 +84,8 @@ services:
       - OTEL_LOGS_EXPORTER=otlp_proto_http
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     ports:
       - 8400:8080
     depends_on:
@@ -128,6 +134,8 @@ services:
       - OTEL_LOGS_EXPORTER=otlp_proto_http
       - OTEL_PYTHON_LOG_CORRELATION=true
       - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     ports:
       - 8700:80
     depends_on:

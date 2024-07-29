@@ -15,6 +15,7 @@ async function tier1(event) {
         var url = '/proxy/';
         if (event.target.id == 'go_fast') var url = url + 'fast';
         else if (event.target.id == 'go_slow') var url = url + 'slow';
+        else if (event.target.id == 'go_error') var url = url + 'error';
 
         // Start with the loading image
         document.getElementById('picture').style = "display:none";
@@ -63,3 +64,4 @@ async function tier1(event) {
 
 document.getElementById('go_fast').addEventListener('click', tier1);
 document.getElementById('go_slow').addEventListener('click', tier1);
+document.getElementById('go_error').addEventListener('click', tier1);

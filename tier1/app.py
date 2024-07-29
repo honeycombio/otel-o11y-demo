@@ -46,7 +46,7 @@ def pure_tier2_proc(text):
     should not be polluted with side effects"""
     return f"{text}-plus-pure-tier2-proc"
 
-def do_tier2():
+def do_tier2(error = None):
     """this is the main stuff of calling internal service tier2"""
     logit("this is some important log that is to help troubleshoot when an app goes bad")
     logit("calling tier1 function")
@@ -63,6 +63,11 @@ def do_tier2_slow():
     logit("called slow function")
     time.sleep(1.5)
     return f"tier 1 slow :: {do_tier2()}"
+
+def do_error():
+    """call tier2 with error condition"""
+    logit("called error function")
+    return f"tier 2 error :: {do_tier2(error = True)}"
 
 def pure_queue_proc(ctx):
     """this is attempting to show use of a pure function that
@@ -109,6 +114,14 @@ def slow_route():
     do_queue("slow")
     do_saas("slow")
     result = do_tier2_slow()
+    return result
+
+@APP.route("/error")
+def error_route():
+    """for error"""
+    do_queue("error")
+    do_saas("error")
+    result = do_error()
     return result
 
 @APP.route("/random")

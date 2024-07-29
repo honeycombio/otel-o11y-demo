@@ -43,6 +43,9 @@ receivers:
     - type: json_parser
       parse_from: attributes.message
     - type: add
+      field: attributes.meta.signal_type
+      value: trace
+    - type: add
       field: attributes.meta.annotation_type
       value: trace
     - type: add
@@ -55,10 +58,16 @@ receivers:
       parse_from: attributes.request_date_time
       layout_type: strptime
       layout: "%d/%b/%Y:%H:%M:%S.%f"
-    - type: remove
-      field: body
-    - type: remove
-      field: attributes.message
+    - type: add
+      field: attributes.name
+      value: EXPR(attributes.appname)
+    - type: add
+      field: attributes.duration_ms
+      value: EXPR(attributes.total_request_time)
+#    - type: remove
+#      field: body
+#    - type: remove
+#      field: attributes.message
   hostmetrics:
     collection_interval: 60s
     scrapers:
