@@ -59,9 +59,9 @@ services:
       - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/healthcheck || exit 1"]
-      interval: 5s
-      timeout: 20s
-      retries: 24
+      interval: 10s
+      timeout: 10s
+      retries: 5
     ports: 
       - 8300:8080
     depends_on:
@@ -100,9 +100,9 @@ services:
       MYSQL_PASSWORD: test
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      interval: 5s
+      interval: 10s
       timeout: 10s
-      retries: 24
+      retries: 5
 
   queue:
     image: docker.io/library/rabbitmq:3-management
@@ -114,25 +114,18 @@ services:
       RABBITMQ_DEFAULT_PASS: test
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics" ,"-q", "ping"]
-      interval: 5s
+      interval: 10s
       timeout: 10s
-      retries: 24
+      retries: 5
 
   queue_consumer:
     build:
-      context: ./consumer
+      context: ./consumer-java
       dockerfile: Dockerfile
     environment:
       - OTEL_SERVICE_NAME=consumer-service
-      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
-      - OTEL_TRACES_EXPORTER=otlp_proto_http
-      - OTEL_LOGS_EXPORTER=otlp_proto_http
-      - OTEL_PYTHON_LOG_CORRELATION=true
-      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
       - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
       - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
-    ports:
-      - 8700:80
     depends_on:
       queue:
         condition: service_healthy
