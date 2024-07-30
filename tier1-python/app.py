@@ -50,7 +50,10 @@ def do_tier2(error = None):
     """this is the main stuff of calling internal service tier2"""
     logit("this is some important log that is to help troubleshoot when an app goes bad")
     logit("calling tier1 function")
-    resp = requests.get("http://tier2:8080")
+    url = "http://tier2:8080"
+    if error is not None and error is True:
+        url = url + "/error"
+    resp = requests.get(url)
     return pure_tier2_proc(resp.text)
 
 def do_tier2_fast():
@@ -119,8 +122,8 @@ def slow_route():
 @APP.route("/error")
 def error_route():
     """for error"""
-    do_queue("slow")
-    do_saas("slow")
+    do_queue("error")
+    do_saas("error")
     result = do_error()
     return result
 

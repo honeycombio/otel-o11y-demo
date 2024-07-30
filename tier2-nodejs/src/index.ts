@@ -44,12 +44,16 @@ function pureDbProc(rows: any[]): any[] {
     return [...rows, "some other thing"];
 }
 
-function queryDb(): Promise<any[]> {
+function queryDb(error = false): Promise<any[]> {
     // This is some imperative shell that is calling some DB and then
     // is being processed by some pure function that returning that
     logit("this is some important log that is used to update product owners that an event was successful");
-    logit("queried DB");
 
+    if(error == true) {
+        throw new Error("Exception occurred when trying to query database.");
+    }
+
+    logit("queried DB");
     return new Promise((resolve, reject) => {
         db.query('SELECT * FROM test', (err , result: any[]) => {
             if (err) {
@@ -65,6 +69,15 @@ app.get('/', async (req: Request, res: Response) => {
     try {
         await queryDb();
         res.send(`tier 2 ${Date.now()}`);
+    } catch (err) {
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.get('/error', async (req: Request, res: Response) => {
+    var error = true
+    try {
+        await queryDb(error);
     } catch (err) {
         res.status(500).send('Internal Server Error');
     }

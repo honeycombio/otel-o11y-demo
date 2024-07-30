@@ -58,16 +58,23 @@ def query_db():
 def pure_message_proc(body):
     """this is attempting to show use of a pure function that
     should not be polluted with side effects"""
+    message = body.decode('utf-8')
+    if message.startswith('error'):
+        raise Exception(message)
     return f"{body}-plus-some-message-proc"
 
 def on_message(chan, method_frame, header_frame, body, userdata=None):
-    """this is the main function that will handle queue messages
-    and do some business logic on it"""
-    logit(f"this is an event log just to show something important was processed")
-    time.sleep(1.5) if go_slow_p() else False
-    chan.basic_ack(delivery_tag=method_frame.delivery_tag)
-    query_db()
-    return pure_message_proc(body)
+    try:
+        """this is the main function that will handle queue messages
+        and do some business logic on it"""
+        logit(f"this is an event log just to show something important was processed")
+        time.sleep(1.5) if go_slow_p() else False
+        chan.basic_ack(delivery_tag=method_frame.delivery_tag)
+        query_db()
+        logit(f"on_message body : {body}")
+        return pure_message_proc(body)
+    except Exception as e:
+        log.error(f"Unexpected error: {e}")
 
 def cons_queue():
     """this is the main function that hooks up the queue and passes off
