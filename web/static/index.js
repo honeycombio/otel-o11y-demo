@@ -51,7 +51,7 @@ async function tier1(event) {
         document.getElementById('message').style = "display:none";
         // document.getElementById('picture').src = imgUrl;
         // document.getElementById('picture').style = "display:block;";
-        document.getElementById('message').innerText = "Got the response back: " + data;
+        document.getElementById('message').innerText = event.target.id + " → " + data;
         document.getElementById('message').style = "display:block;";
     } catch (error) {
         console.error('Error calling tier1:', error);

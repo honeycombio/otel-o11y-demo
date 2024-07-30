@@ -59,18 +59,18 @@ def do_tier2(error = None):
 def do_tier2_fast():
     """call tier2 with no delay"""
     logit("called fast function")
-    return f"tier 1 fast :: {do_tier2()}"
+    return f"{do_tier2()}"
 
 def do_tier2_slow():
     """call tier2 with some delay"""
     logit("called slow function")
     time.sleep(1.5)
-    return f"tier 1 slow :: {do_tier2()}"
+    return f"{do_tier2()}"
 
 def do_error():
     """call tier2 with error condition"""
     logit("called error function")
-    return f"tier 2 error :: {do_tier2(error = True)}"
+    return f"{do_tier2(error = True)}"
 
 def pure_queue_proc(ctx):
     """this is attempting to show use of a pure function that
@@ -88,6 +88,7 @@ def do_queue(ctx):
         routing_key="test",
         body=f"{ctx} {time.time()}"
     )
+    return f"do_queue"
 
 def pure_saas_proc(resp):
     """this is attempting to show use of a pure function that
@@ -106,25 +107,31 @@ def do_saas(ctx):
 @APP.route("/fast")
 def fast_route():
     """most likely fast route"""
-    do_queue("fast")
+    result = "tier 1 - fast"
+    result = result + " → " + str(do_queue("fast"))
+    result = result + " → " + "do_saas"
     do_saas("fast")
-    result = do_tier2_fast()
+    result = result + " → " + str(do_tier2_fast())
     return result
 
 @APP.route("/slow")
 def slow_route():
     """for sure slow route"""
-    do_queue("slow")
+    result = "tier 1 - slow"
+    result = result + " → " + str(do_queue("slow"))
+    result = result + " → " + "do_saas"
     do_saas("slow")
-    result = do_tier2_slow()
+    result = result + " → " + str(do_tier2_slow())
     return result
 
 @APP.route("/error")
 def error_route():
     """for error"""
-    do_queue("error")
+    result = "tier 1 - error"
+    result = result + " → " + str(do_queue("error"))
+    result = result + " → " + "do_saas"
     do_saas("error")
-    result = do_error()
+    result = result + " → " + str(do_error())
     return result
 
 @APP.route("/random")

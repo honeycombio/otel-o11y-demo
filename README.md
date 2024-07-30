@@ -55,10 +55,6 @@ Update the `.env` file with your Honeycomb API key:
 ```bash
 HONEYCOMB_API_KEY="your-api-key"
 
-# you could change this to your own S3 bucket of images. We accept no responsibility for the outcome.
-# Note: "random-pictures" is an actual S3 bucket name supplied for this course, filled with SFW meme images
-BUCKET_NAME="random-pictures"
-
 OTEL_EXPORTER_OTLP_ENDPOINT="https://api.honeycomb.io:443/"
 OTEL_EXPORTER_OTLP_HEADERS="x-honeycomb-team=${HONEYCOMB_API_KEY}"
 ```
