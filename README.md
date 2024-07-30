@@ -87,8 +87,6 @@ Visit [http://localhost:22022]()
 #### Using UI
 Press either `FAST`, `SLOW`, `ERROR` button to request service calls that would run fast, slow, or cause error. Response will be shown, which describes how the call was handled, and their results.
 
-> **NOTE** ⚠️ If you run the application for the first time, the result image may not load up properly. In that case, reload the page, and try again a few times.
-
 ### Stop the app
 
 `./stop`
