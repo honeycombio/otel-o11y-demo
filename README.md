@@ -74,7 +74,7 @@ Access the app:
 
 After making changes to a service, you can tell it to rebuild just that one:
 
-`./run [ meminator | backend-for-frontend | image-picker | phrase-picker ]`
+`./run [ waf | web | db | queue | otel-collector | queue-consumer | tier1 | tier2 ]`
 
 ### Try it out
 
