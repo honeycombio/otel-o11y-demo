@@ -11,13 +11,13 @@ This contains a sample application for use in OpenTelemetry Demo. The applicatio
 OTEL Observability demo contains many common components of modern microservices architecture application that is consisted of 
 - WAF : Web Application Firewall that acts as a gateway to the web application.
 - WEB : WEB tier that has reverse proxy and web frontend to interact with user via web browser.
-- Tier 1 App : Application that receives user request, and performs operations which involves 1) invoking external SaaS API 2) submitting request into Message Queue for processing 2) checking the progress of action and returning results when finished.
+- Tier 1 App (Python) : Application that receives user request, and performs operations which involves 1) invoking external SaaS API 2) submitting request into Message Queue for processing.
 - SaaS : Sample external API endpoint that will get invoked to retrieve sample data
 - Queue : Message queue that enqueues the request and makes it available for Queue consumer
-- Queue Consumer : application that waits for message queue and processes data and stores results into Database
+- Queue Consumer (Java Springboot) : application that waits for message queue and accesses database when the message is sent into queue by Tier 1.
 - Database : Database that persists processed data to be made available for application
-- Tier 2 App : Application that would get called by Tier 1 to both check the status of processing, and when finished deliver the outcome back to Tier 1.
-- OTEL collector : OpenTelemetry collector which acts as collecting agents
+- Tier 2 App (Node.js) : Application that would get called by Tier 1 that will access database and return the result.
+- OTEL collector : OpenTelemetry collector which acts as collecting agents for WAF and WEB layer.
 
 Using this application as the base, you will be performing various instrumentation to extract telemetry data that will enable Honeycomb to receive those in metrics, logs, and traces, and then be able to provide the wholistic end-to-end investigation to debug the application when an incident occurs.
 
