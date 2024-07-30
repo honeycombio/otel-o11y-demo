@@ -42,28 +42,36 @@ receivers:
     operators:
     - type: json_parser
       parse_from: attributes.message
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.meta.signal_type
       value: trace
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.meta.annotation_type
       value: trace
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.span.kind
       value: server
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.type
       value: server
+      if: 'attributes.message matches "^{.*}$"'
     - type: time_parser
       parse_from: attributes.request_date_time
       layout_type: strptime
       layout: "%d/%b/%Y:%H:%M:%S.%f"
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.name
       value: EXPR(attributes.appname)
+      if: 'attributes.message matches "^{.*}$"'
     - type: add
       field: attributes.duration_ms
       value: EXPR(attributes.total_request_time)
+      if: 'attributes.message matches "^{.*}$"'
 #    - type: remove
 #      field: body
 #    - type: remove

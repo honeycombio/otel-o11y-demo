@@ -45,9 +45,9 @@ services:
 
   tier1:
     build:
-      context: ./tier1
+      context: ./tier1-python
       dockerfile: Dockerfile
-    image: tier1:latest
+    image: tier1-python:latest
     environment:
       - OTEL_SERVICE_NAME=tier1-service
       - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
@@ -74,16 +74,11 @@ services:
 
   tier2:
     build:
-      context: ./tier2
+      context: ./tier2-nodejs
       dockerfile: Dockerfile
-    image: tier2:latest
+    image: tier2-nodejs:latest
     environment:
       - OTEL_SERVICE_NAME=tier2-service
-      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
-      - OTEL_TRACES_EXPORTER=console,otlp_proto_http
-      - OTEL_LOGS_EXPORTER=otlp_proto_http
-      - OTEL_PYTHON_LOG_CORRELATION=true
-      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
       - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
       - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     ports:

@@ -119,8 +119,8 @@ def slow_route():
 @APP.route("/error")
 def error_route():
     """for error"""
-    do_queue("error")
-    do_saas("error")
+    do_queue("slow")
+    do_saas("slow")
     result = do_error()
     return result
 
