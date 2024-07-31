@@ -75,6 +75,8 @@ http {
 }
 ```
 
+The completed instrumentation files can be referred in [instrumented](./instrumented) folder.
+
 ### What this would look like
 
 The out of box spans would have multiple nginx modules that were used during a typical web request, that would be consisted of multiple spans.
