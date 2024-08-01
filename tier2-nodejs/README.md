@@ -40,7 +40,7 @@ RUN npm install --save @opentelemetry/auto-instrumentations-node
 }
 ```
 
-3. In [docker-compose.yaml](../docker-compose.yaml), add the following environment variables to `tier1` so that OTEL auto-instrumentation would know the service name, OTLP exporting endpoint (where to send the traces to), and required API key to be part of OTLP headers for authenticating into it.
+3. In [docker-compose.yaml](../docker-compose.yaml), add the following environment variables to `tier2` so that OTEL auto-instrumentation would know the service name, OTLP exporting endpoint (where to send the traces to), and required API key to be part of OTLP headers for authenticating into it.
 
 ```
   tier2:
