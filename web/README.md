@@ -80,8 +80,12 @@ RUN apt-get install -y nginx-module-otel
 
 The completed instrumentation files can be referred in [instrumented](./instrumented) folder.
 
-### What this would look like
+## What this would look like
 
 ![screenshot](web-trace-screenshot.png "screenshot")
 
 You should see the service name `web` that bridges the trace between `waf` and `tier-service` calling `/proxy` and eventually calling `/slow` in tier1-service.
+
+## Further readings
+
+- [OpenTelemetry Concepts](https://opentelemetry.io/docs/concepts/) : Get yourself familiarized with various concepts of OpenTelemetry.
