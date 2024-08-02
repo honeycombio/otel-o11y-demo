@@ -90,3 +90,35 @@ Press either `FAST`, `SLOW`, `ERROR` button to request service calls that would 
 ### Stop the app
 
 `./stop`
+
+## Instrumenting the Application
+
+This application is initially left to **NOT having any OTEL instrumentation** applied in its `main` branch, therefore not emitting any telemetry data to anywhere. The expectation is that readers of this repo would be able to follow individual instructions of how to instrumenting each layers of the application one by one to achieve the full OTEL instrumentation.
+
+The fully instrumented application should be able to emit the trace looking similar to this:
+
+![trace](otel-o11y-demo-trace.png "trace")
+
+Aside from the trace, there will be logs and metrics that would get emitted from number of different components. Please refer to the table below on how to apply OTEL instrumentation per each component.
+
+|Component|Instrumentation instruction|Type of Telemetry|
+|---|---|---|
+|WAF|[README.md](./waf/README.md)|trace, log|
+|WEB|[README.md](./web/README.md)|trace|
+|Tier1|[README.md](./tier1-python/README.md)|trace|
+|Tier2|[README.md](./tier2-nodejs/README.md)|trace|
+|Consumer|[README.md](./consumer-java/README.md)|trace|
+|DB|[README.md](./db/README.md)|metric|
+|MQ|[README.md](./queue/README.md)|metric|
+|OTEL collector|[README.md](./otel-collector/README.md)|trace, metric, log|
+
+⚠️ **Note**
+If you wish to view the fully instrumented version of the application, you can check out the `otel-auto` branch in this repo which will contain all the instrumentation mentioned in the above readme's implemented.
+
+## Custom instrumenting the Application
+
+In addition to the auto-instrumentation, there are cases where application needs to contain manual instrumentation such as any specific application related information that can greatly enhance the observability. There is a branch called `otel-manual` that is a sub-branch of `otel-auto` which contains all the examples of custom instrumation for the following services:
+
+- tier1-python
+- tier2-nodejs
+- consumer-java
