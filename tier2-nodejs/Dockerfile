@@ -10,7 +10,6 @@ COPY package*.json /usr/src/app
 # Install dependencies
 RUN npm install
 RUN npm i --save-dev @types/mysql
-RUN npm install --save @opentelemetry/auto-instrumentations-node
 
 COPY tsconfig.json .
 # Copy the rest of the application code to the working directory

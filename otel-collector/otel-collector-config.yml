@@ -25,112 +25,29 @@ receivers:
         endpoint: 0.0.0.0:4318
       grpc:
         endpoint: 0.0.0.0:4317
-  mysql:
-    endpoint: db:3306
-    username: root
-    password: admin
-    collection_interval: 60s
-  rabbitmq:
-    endpoint: http://queue:15672
-    username: test
-    password: test
-    collection_interval: 60s
-  syslog/waf:
-    udp:
-      listen_address: "0.0.0.0:54526"
-    protocol: rfc3164
-    operators:
-    - type: json_parser
-      parse_from: attributes.message
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.meta.signal_type
-      value: trace
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.meta.annotation_type
-      value: trace
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.span.kind
-      value: server
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.type
-      value: server
-      if: 'attributes.message matches "^{.*}$"'
-    - type: time_parser
-      parse_from: attributes.request_date_time
-      layout_type: strptime
-      layout: "%d/%b/%Y:%H:%M:%S.%f"
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.name
-      value: EXPR(attributes.appname)
-      if: 'attributes.message matches "^{.*}$"'
-    - type: add
-      field: attributes.duration_ms
-      value: EXPR(attributes.total_request_time)
-      if: 'attributes.message matches "^{.*}$"'
-#    - type: remove
-#      field: body
-#    - type: remove
-#      field: attributes.message
-  hostmetrics:
-    collection_interval: 60s
-    scrapers:
-      cpu: {}
-      disk: {}
-      load: {}
-      filesystem: {}
-      memory: {}
-      network: {}
-      paging: {}
-      processes: {}
 
 processors:
   batch:
-  resourcedetection:
-    detectors: [env, system] # include ec2 for AWS, gcp for GCP and azure for Azure.
-    # Using OTEL_RESOURCE_ATTRIBUTES envvar, env detector adds custom labels.
-    timeout: 2s
-    override: false
-    system:
-      hostname_sources: [os]
 
 exporters:
   logging:
     verbosity: detailed
-  otlp/waf:
-    endpoint: api.honeycomb.io:443
-    headers:
-      x-honeycomb-team: ${env:HONEYCOMB_API_KEY}
-      x-honeycomb-dataset: waf
-  otlp/traces:
-    endpoint: api.honeycomb.io:443
-    headers:
-      x-honeycomb-team: ${env:HONEYCOMB_API_KEY}
-  otlp/metrics:
-    endpoint: api.honeycomb.io:443
-    headers:
-      x-honeycomb-dataset: metrics
-      x-honeycomb-team: ${env:HONEYCOMB_API_KEY}
 
 service:
 
   pipelines:
 
-    logs/waf:
-      receivers: [syslog/waf]
+    logs:
+      receivers: [otlp]
       processors: [batch]
-      exporters: [otlp/waf, logging]
+      exporters: [logging]
 
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [otlp/traces, logging]
+      exporters: [logging]
 
     metrics:
-      receivers: [otlp, mysql, rabbitmq, hostmetrics]
-      processors: [resourcedetection, batch]
-      exporters: [otlp/metrics]
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging]

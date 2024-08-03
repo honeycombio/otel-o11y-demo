@@ -78,8 +78,6 @@ RUN apt-get install -y nginx-module-otel
 * The above script is necessary to register the nginx repo, and installing necessary nginx and nginx-module-otel to the container.
 * Also, the module seems to have dependency with nginx:1.26.1
 
-The completed instrumentation files can be referred in [instrumented](./instrumented) folder.
-
 ## What this would look like
 
 ![screenshot](web-trace-screenshot.png "screenshot")

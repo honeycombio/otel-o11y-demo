@@ -17,7 +17,7 @@ if [ -n "$CODESPACES" ]; then
 
     URL="https://${CODESPACE_NAME}-${APP_PORT}.app.github.dev"
 
-    echo "Meminator running on port 22022 at: $URL"
+    echo "otel-o11y-demo running on port 22022 at: $URL"
 
     exit 0
 fi
@@ -29,7 +29,7 @@ if [ -n "$GITPOD_INSTANCE_ID" ]; then
     # Get the workspace url
     URL=$(gp url 22022)
 
-    echo "Meminator running on port 22022 at: $URL"
+    echo "otel-o11y-demo running on port 22022 at: $URL"
 
     exit 0
 fi
@@ -39,4 +39,4 @@ echo "Running locally."
 
 URL="http://localhost:22022/" 
 
-echo "Meminator running on port 22022 at: $URL"
+echo "otel-o11y-demo running on port 22022 at: $URL"
