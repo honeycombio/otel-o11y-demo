@@ -31,6 +31,8 @@ public class RabbitMQConfig {
 
     @Bean
     MessageListenerAdapter listenerAdapter(Receiver receiver) {
-        return new MessageListenerAdapter(receiver, "receiveMessage");
+        MessageListenerAdapter adapter = new MessageListenerAdapter(receiver, "receiveMessage");
+        adapter.setMessageConverter(null); // disable message conversion - will provide Message object as input
+        return adapter;
     }
 }
