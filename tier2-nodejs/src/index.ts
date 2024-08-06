@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import mysql from 'mysql2';
 import winston from 'winston';
+import { trace, context } from '@opentelemetry/api';
 
 // Database connection
 const db = mysql.createConnection({
@@ -19,6 +20,7 @@ db.connect((err) => {
 });
 
 const app = express();
+const tracer = trace.getTracer('tier2-nodejs');
 
 // Logger setup
 const logger = winston.createLogger({
@@ -47,21 +49,28 @@ function pureDbProc(rows: any[]): any[] {
 function queryDb(error = false): Promise<any[]> {
     // This is some imperative shell that is calling some DB and then
     // is being processed by some pure function that returning that
+    const querySpan = tracer.startSpan('queryDb');
     logit("this is some important log that is used to update product owners that an event was successful");
 
     if(error == true) {
+        querySpan?.setAttribute('error', true);
+        querySpan?.end();
         throw new Error("Exception occurred when trying to query database.");
     }
-
     logit("queried DB");
+
     return new Promise((resolve, reject) => {
+        const dbSpan = tracer.startSpan('db.query');
         db.query('SELECT * FROM test', (err , result: any[]) => {
             if (err) {
                 logit('Database query failed');
                 return reject(err);
             }
             resolve(pureDbProc(result));
+            dbSpan.setAttribute('db.rows', result.length);
+            dbSpan?.end();
         });
+        querySpan?.end();
     });
 }
 
