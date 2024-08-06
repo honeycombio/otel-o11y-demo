@@ -3,7 +3,6 @@ FROM maven:3.9.6-eclipse-temurin-21-jammy AS dependencies
 WORKDIR /app
 COPY pom.xml .
 RUN mvn -B dependency:resolve dependency:resolve-plugins
-RUN wget https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.33.2/opentelemetry-javaagent.jar
 
 # Stage 2: Build application
 FROM dependencies AS build
@@ -14,6 +13,5 @@ RUN mvn -B package -DskipTests
 FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 COPY --from=build /app/target/consumer-0.0.1-SNAPSHOT.jar ./consumer.jar
-COPY --from=dependencies /app/opentelemetry-javaagent.jar .
 EXPOSE 8080
-CMD ["java", "-javaagent:./opentelemetry-javaagent.jar", "-jar", "consumer.jar"]
+CMD ["java", "-jar", "consumer.jar"]

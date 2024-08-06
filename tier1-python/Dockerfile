@@ -10,5 +10,4 @@ COPY app.py .
 
 EXPOSE 8080
 
-CMD opentelemetry-instrument \
-    flask --app app run -p 8080 -h 0.0.0.0
+CMD flask --app app run -p 8080 -h 0.0.0.0

@@ -21,8 +21,6 @@ services:
     depends_on:
       tier1:
         condition: service_healthy
-      otel-collector:
-        condition: service_started
 
   tier1:
     build:
