@@ -14,7 +14,6 @@ In addition to the NGINX's opentelemetry module, Honeycomb's new HFO (Honeycomb 
 
 ```
 load_module modules/ngx_otel_module.so;
-load_module modules/ngx_http_js_module.so;
 events {}
 http {
   js_import http_js.js;
@@ -27,8 +26,7 @@ http {
                   '\t$remote_user'
                   '\t$time_local'
                   '\t$request'
-                  '\t$status'
-                  '\t$headers_json';
+                  '\t$status';
   include       mime.types;
   default_type  application/octet-stream;
   js_set $headers_json http_js.headers_json;
