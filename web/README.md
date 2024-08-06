@@ -12,7 +12,6 @@ NGINX has the ability to be configured with an opentelemetry module that can be 
 
 ```
 load_module modules/ngx_otel_module.so;
-load_module modules/ngx_http_js_module.so;
 events {}
 http {
   otel_exporter {
@@ -20,15 +19,11 @@ http {
   }
   otel_trace on;
   otel_service_name web;
-
-  js_import headers.js;
-  js_set $headers_json headers.headers_json;
   log_format main '$remote_addr'
                   '\t$remote_user'
                   '\t$time_local'
                   '\t$request'
-                  '\t$status'
-                  '\t$headers_json';
+                  '\t$status';
   include       mime.types;
   default_type  application/octet-stream;
 
