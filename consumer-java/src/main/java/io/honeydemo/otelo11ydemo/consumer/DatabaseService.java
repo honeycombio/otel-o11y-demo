@@ -13,6 +13,7 @@ import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.trace.Tracer;
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.common.Attributes;
+import io.opentelemetry.context.Context;
 
 @Service
 public class DatabaseService {
@@ -28,8 +29,7 @@ public class DatabaseService {
         logit("this is just to note i have done something against the DB");
         logit("queried DB");
 
-        
-        Span span = tracer.spanBuilder("queryDb").startSpan();
+        Span span = tracer.spanBuilder("queryDb").setParent(Context.current()).startSpan();
         span.makeCurrent();
         try {
             List<String> results = jdbcTemplate.query("SELECT * FROM test",
@@ -52,7 +52,7 @@ public class DatabaseService {
     }
 
     private List<String> pureDbProc(List<String> rows) {
-        Span span = tracer.spanBuilder("pureDbProc").startSpan();
+        Span span = tracer.spanBuilder("pureDbProc").setParent(Context.current()).startSpan();
         span.makeCurrent();
         rows.add("some other thing");
         span.setAttribute("db.rows", rows.size());
