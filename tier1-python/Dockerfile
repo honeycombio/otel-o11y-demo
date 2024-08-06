@@ -6,8 +6,10 @@ COPY requirements.txt .
 
 RUN apt-get -y update; apt-get -y install curl
 RUN pip3 install -r requirements.txt
+RUN opentelemetry-bootstrap --action=install
 COPY app.py .
 
 EXPOSE 8080
 
-CMD flask --app app run -p 8080 -h 0.0.0.0
+CMD opentelemetry-instrument \
+    flask --app app run -p 8080 -h 0.0.0.0
