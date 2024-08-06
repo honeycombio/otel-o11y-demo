@@ -127,6 +127,11 @@ git switch auto-instrumented
 
 In addition to the auto-instrumentation, there are cases where application needs to contain manual instrumentation such as any specific application related information that can greatly enhance the observability. There is a branch called `custom-instrumented` that is a sub-branch of `auto-instrumented` which contains all the examples of custom instrumation for the following services:
 
-- tier1-python
-- tier2-nodejs
-- consumer-java
+- [tier1-python](https://github.com/honeycombio/otel-o11y-demo/tree/custom-instrumented/tier1-python)
+- [tier2-nodejs](https://github.com/honeycombio/otel-o11y-demo/tree/custom-instrumented/tier2-nodejs)
+- [consumer-java](https://github.com/honeycombio/otel-o11y-demo/tree/custom-instrumented/consumer-java)
+
+These custom instrumentations are derived on top of `auto-instrumented` branch, adding richer spans and attributes which can be critical for observability and debugging purposes. You can also compare the contents on each branches to see how the changes were applied for each branches:
+
+- [main → auto-instrumented](https://github.com/honeycombio/otel-o11y-demo/compare/main...auto-instrumented)
+- [auto-instrumented → custom-instrumented](https://github.com/honeycombio/otel-o11y-demo/compare/auto-instrumented...custom-instrumented)
