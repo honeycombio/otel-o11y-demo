@@ -3,3 +3,5 @@ py-healthcheck
 six
 requests
 pika
+opentelemetry-distro
+opentelemetry-exporter-otlp
