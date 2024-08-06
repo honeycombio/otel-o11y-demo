@@ -113,7 +113,7 @@ Aside from the trace, there will be logs and metrics that would get emitted from
 |OTEL collector|[README.md](./otel-collector/README.md)|trace, metric, log|
 
 ⚠️ **Note**
-If you wish to view the fully instrumented version of the application, you can check out the `otel-auto` branch in this repo which will contain all the instrumentation mentioned in the above readme's implemented.
+If you wish to view the fully instrumented version of the application, you can check out the `auto-instrumented` branch in this repo which will contain all the instrumentation mentioned in the above readme's implemented.
 
 ## Accessing the instrumented branch
 If you want to skip applying OTEL instrumentation and take a look at fully instrumented version of this demo, you can check out the branch [auto-instrumented](https://github.com/honeycombio/otel-o11y-demo/tree/auto-instrumented) by running the following github command:
@@ -125,7 +125,7 @@ git switch auto-instrumented
 
 ## Custom instrumenting the Application
 
-In addition to the auto-instrumentation, there are cases where application needs to contain manual instrumentation such as any specific application related information that can greatly enhance the observability. There is a branch called `otel-manual` that is a sub-branch of `otel-auto` which contains all the examples of custom instrumation for the following services:
+In addition to the auto-instrumentation, there are cases where application needs to contain manual instrumentation such as any specific application related information that can greatly enhance the observability. There is a branch called `custom-instrumented` that is a sub-branch of `auto-instrumented` which contains all the examples of custom instrumation for the following services:
 
 - tier1-python
 - tier2-nodejs

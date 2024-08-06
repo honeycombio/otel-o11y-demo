@@ -74,6 +74,12 @@ CMD opentelemetry-instrument \
 
 You should see the service name `tier1-service` that contains GET/fast entry point, and has spans for enqueuing the message, and also calling SaaS service using GET, and eventually calling tier2-service.
 
+## Custom Instrumentation
+
+Auto-instrumentation does most of the base work for your instrumentation needs, but what makes your trace tremendously important is actually what you can instrument based on your business needs. Those are in the area of custom instrumentation, where you would need to work with the OTEL SDK's. On top of what is being automatically instrumented, let's add a few custom instrumentation to see how you can do it.
+
+
+
 ## Further readings
 
 - [OpenTelemetry Concepts](https://opentelemetry.io/docs/concepts/) : Get yourself familiarized with various concepts of OpenTelemetry.
