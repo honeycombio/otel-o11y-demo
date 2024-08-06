@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-local": "tsc && node src/index.js",
-    "start": "node src/index.js"
+    "start-local": "tsc && node --require @opentelemetry/auto-instrumentations-node/register src/index.js",
+    "start": "node --require @opentelemetry/auto-instrumentations-node/register src/index.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,4 +1,23 @@
 services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.70.0
+    labels:
+      description: "OpenTelemetry collector"
+    container_name: "otel-collector"
+    command: [--config=/etc/otel-collector-config.yml]
+    environment:
+      HONEYCOMB_API_KEY: ${HONEYCOMB_API_KEY}
+    volumes:
+      - ./otel-collector/otel-collector-config.yml:/etc/otel-collector-config.yml
+    ports:
+      - 24317:4317    # OTLP grpc receiver
+      - 24318:4318    # OTLP http receiver
+      - 54526:54526   # rsyslog
+    depends_on:
+      db:
+        condition: service_healthy
+      queue:
+        condition: service_healthy
 
   waf:
     image: docker.io/library/haproxy:lts-alpine
@@ -27,6 +46,15 @@ services:
       context: ./tier1-python
       dockerfile: Dockerfile
     image: tier1-python:latest
+    environment:
+      - OTEL_SERVICE_NAME=tier1-service
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_TRACES_EXPORTER=console,otlp_proto_http
+      - OTEL_LOGS_EXPORTER=otlp_proto_http
+      - OTEL_PYTHON_LOG_CORRELATION=true
+      - OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/healthcheck || exit 1"]
       interval: 10s
@@ -47,6 +75,10 @@ services:
       context: ./tier2-nodejs
       dockerfile: Dockerfile
     image: tier2-nodejs:latest
+    environment:
+      - OTEL_SERVICE_NAME=tier2-service
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     ports:
       - 8400:8080
     depends_on:
@@ -88,6 +120,10 @@ services:
     build:
       context: ./consumer-java
       dockerfile: Dockerfile
+    environment:
+      - OTEL_SERVICE_NAME=consumer-service
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=${HONEYCOMB_API_KEY}
     depends_on:
       queue:
         condition: service_healthy
