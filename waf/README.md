@@ -67,14 +67,12 @@ frontend waf
   http-request set-var(txn.trace_id) uuid(4),regsub(\"^([^-]{8})-([^-]{4})-([^-]{4})-([^-]{4})-([^-]{12})$\",\"\1\2\3\4\5\")
   http-request set-var(txn.parent_id) uuid(4),regsub(\"^([^-]{8})-([^-]{4})-([^-]{4})-([^-]{4})-([^-]{12})$\",\"\1\2\3\")
   unique-id-format 00-%[var(txn.trace_id)]-%[var(txn.parent_id)]-01
-  unique-id-header traceparent
-  
-  # http-after-response set-header traceparent %ID
-  # http-request set-header traceparent %ID
+  http-request set-header traceparent %[unique-id] if !{ req.hdr(traceparent) }
 
   # log-format "%ci|%cp|%Ts|%ft|%b|%s|%TR|%Tw|%Tc|%Tr|%Ta|%ST|%B|%CC|%CS|%ts|%ac|%fc|%bc|%sc|%rc|%sq|%bq|%[capture.req.method]|%[capture.req.hdr(0)]|%[capture.req.hdr(1)]://%[capture.req.hdr(2)]%HP|%ID|%[capture.res.hdr(0)]"
-  # log-format "%ci|%cp|%Ts|%ft|%b|%s|%TR|%Tw|%Tc|%Tr|%Ta|%ST|%B|%CC|%CS|%ts|%ac|%fc|%bc|%sc|%rc|%sq|%bq|%[capture.req.method]|%[capture.req.hdr(0)]|%[capture.req.hdr(1)]://%[capture.req.hdr(2)]%HP|%ID|%[capture.res.hdr(0)]"
   log-format "{\"appname\":\"haproxy\", \"service.name\":\"%ft\", \"trace.trace_id\":\"%[var(txn.trace_id)]\", \"trace.span_id\":\"%[var(txn.parent_id)]\", \"client_ip\":\"%ci\", \"client_port\":%cp, \"request_date_time\":\"%tr\", \"frontend\":\"%ft\", \"backend\":\"%b\", \"servername\":\"%s\", \"first_byte_time\":%TR, \"queue_wait_time\":%Tw, \"server_conn_time\":%Tc, \"server_response_time\":%Tr, \"total_request_time\":%Ta, \"status_code\":%ST, \"bytes_read\":%B, \"req_method\":\"%[capture.req.method]\", \"user_agent\":\"%[capture.req.hdr(0)]\", \"req_url\":\"%[capture.req.hdr(1)]://%[capture.req.hdr(2)]%HP\", \"traceparent\":\"%ID\"}"
+
+  default_backend web
 ```
 
 2. In the [otel-collector-config.yml](../otel-collector/otel-collector-config.yml), add the following syslog receiver for receiving the syslog data and parsing the data accordingly. Operators are processed in the order that is configured.
