@@ -101,8 +101,10 @@ COPY static/http_js.js /etc/nginx/http_js.js
 * The above script is necessary to register the nginx repo, and installing necessary nginx and nginx-module-otel to the container.
 * Also, the module seems to have dependency with nginx:1.26.1
 
-3. http_js.js and otelweb.js
+3. **http_js.js** and **otelweb.js**
+
 Copy the following files into [./static](./static) directory:
+
 - [http_js.js](https://github.com/honeycombio/otel-o11y-demo/blob/custom-instrumented/web/static/http_js.js): used to render traceparent meta tag inside [index.html](static/index.html) with the propagated traceparent value, if exists.
 - [otelweb.js](https://github.com/honeycombio/otel-o11y-demo/blob/custom-instrumented/web/static/otelweb.js): built and bundled frontend package containing instrumentation codes and exporters to emit trace to Honeycomb endpoint.
 
