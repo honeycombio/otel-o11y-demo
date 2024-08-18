@@ -129,11 +129,26 @@ If you do not have existing API key refer to the following [documentation](https
     <title>OTEL o11y demo</title>
 ```
 
+Also, at the end of the body, add the `<script type="module" src="otelweb.js"></script>` to include the web sdk to be loaded.
+
+```
+    <script type="text/javascript" src="index.js"></script>
+    <script type="module" src="otelweb.js"></script>
+```
+
 ## What this would look like
 
 ![screenshot](web-trace-screenshot.png "screenshot")
 
 You should see the service name `web` that bridges the trace between `waf` and `tier-service` calling `/proxy` and eventually calling `/slow` in tier1-service.
+
+![screenshot](web-trace-screenshot2.png "screenshot")
+
+Dataset `web-sdk` is also going to show how a particular page request had web resources (pages, images, etc) loaded that can give you insights on how efficient your page is being loaded.
+
+![screenshot](web-trace-screenshot3.png "screenshot")
+
+Various web vitals and user interactions can also be captured (e.g. mouse clicks) which can add depth to your real user monitoring.
 
 ## Further readings
 
