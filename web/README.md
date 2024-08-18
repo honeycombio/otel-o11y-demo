@@ -129,6 +129,13 @@ If you do not have existing API key refer to the following [documentation](https
     <title>OTEL o11y demo</title>
 ```
 
+Also, at the end of the body, add the `<script type="module" src="otelweb.js"></script>` to include the web sdk to be loaded.
+
+```
+    <script type="text/javascript" src="index.js"></script>
+    <script type="module" src="otelweb.js"></script>
+```
+
 ## What this would look like
 
 ![screenshot](web-trace-screenshot.png "screenshot")
