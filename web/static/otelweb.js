@@ -6258,7 +6258,8 @@ new class extends rI {
     }
 }({
     debug: true,
-    apiKey: "<your-api-key-here>",
+    endpoint: "http://localhost:24318/v1/traces",
+    skipOptionsValidation: true,
     serviceName: "web-sdk",
     instrumentations: [function(t) {
         void 0 === t && (t = {});

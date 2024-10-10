@@ -23,6 +23,9 @@ receivers:
     protocols:
       http:
         endpoint: 0.0.0.0:4318
+        cors:
+          allowed_origins: ["*"]
+          allowed_headers: ["*"]
       grpc:
         endpoint: 0.0.0.0:4317
   mysql:

@@ -109,12 +109,12 @@ Copy the following files into [./static](./static) directory:
 - [otelweb.js](https://github.com/honeycombio/otel-o11y-demo/blob/custom-instrumented/web/static/otelweb.js): built and bundled frontend package containing instrumentation codes and exporters to emit trace to Honeycomb endpoint.
 
 4. modify otelweb.js
-- Open `otelweb.js` and scroll to the end of the file. Replace the value of apiKey with the actual Honeycomb api key. Save the file.
-If you do not have existing API key refer to the following [documentation](https://docs.honeycomb.io/get-started/configure/environments/manage-api-keys/) for more information.
+- Open `otelweb.js` and scroll to the end of the file. By default, the web sdk is configured to send its web traces into the opentelemetry collector which would be running on the localhost as part of the docker compose. You may be able to change that if you wish to send it to any external opentelemetry collector.
 
 ```
     debug: true,
-    apiKey: "<your-api-key-here>",
+    endpoint: "http://localhost:24318/v1/traces",
+    skipOptionsValidation: true,
     serviceName: "web-sdk",
 ```
 
