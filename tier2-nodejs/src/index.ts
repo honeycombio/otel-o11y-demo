@@ -2,22 +2,6 @@ import express, { Request, Response } from 'express';
 import mysql from 'mysql2';
 import winston from 'winston';
 
-// Database connection
-const db = mysql.createConnection({
-    host: 'db',
-    user: 'test',
-    password: 'test',
-    database: 'test'
-});
-
-db.connect((err) => {
-    if (err) {
-        logger.error('Database connection failed:', err);
-        return;
-    }
-    logger.info('Connected to database');
-});
-
 const app = express();
 
 // Logger setup
@@ -53,7 +37,22 @@ function queryDb(error = false): Promise<any[]> {
         throw new Error("Exception occurred when trying to query database.");
     }
 
-    logit("queried DB");
+    // Database connection
+    const db = mysql.createConnection({
+        host: 'db',
+        user: 'test',
+        password: 'test',
+        database: 'test'
+    });
+    
+    db.connect((err) => {
+        if (err) {
+            logger.error('Database connection failed:', err);
+            return;
+        }
+        logger.info('Connected to database');
+    });
+    
     return new Promise((resolve, reject) => {
         db.query('SELECT * FROM test', (err , result: any[]) => {
             if (err) {
@@ -61,6 +60,13 @@ function queryDb(error = false): Promise<any[]> {
                 return reject(err);
             }
             resolve(pureDbProc(result));
+        });
+        logit("queried DB");
+        db.end((err2) => {
+            if(err2) {
+                console.error('Error closing connection: ' + err2.stack);
+                return reject(err2);
+            }
         });
     });
 }
