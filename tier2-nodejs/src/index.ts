@@ -3,22 +3,6 @@ import mysql from 'mysql2';
 import winston from 'winston';
 import { trace, context } from '@opentelemetry/api';
 
-// Database connection
-const db = mysql.createConnection({
-    host: 'db',
-    user: 'test',
-    password: 'test',
-    database: 'test'
-});
-
-db.connect((err) => {
-    if (err) {
-        logger.error('Database connection failed:', err);
-        return;
-    }
-    logger.info('Connected to database');
-});
-
 const app = express();
 const tracer = trace.getTracer('tier2-nodejs');
 
@@ -57,7 +41,22 @@ function queryDb(error = false): Promise<any[]> {
         querySpan?.end();
         throw new Error("Exception occurred when trying to query database.");
     }
-    logit("queried DB");
+
+    // Database connection
+    const db = mysql.createConnection({
+        host: 'db',
+        user: 'test',
+        password: 'test',
+        database: 'test'
+    });
+    
+    db.connect((err) => {
+        if (err) {
+            logger.error('Database connection failed:', err);
+            return;
+        }
+        logger.info('Connected to database');
+    });
 
     return new Promise((resolve, reject) => {
         const dbSpan = tracer.startSpan('db.query');
@@ -70,7 +69,14 @@ function queryDb(error = false): Promise<any[]> {
             dbSpan.setAttribute('db.rows', result.length);
             dbSpan?.end();
         });
+        logit("queried DB");
         querySpan?.end();
+        db.end((err2) => {
+            if(err2) {
+                console.error('Error closing connection: ' + err2.stack);
+                return reject(err2);
+            }
+        });
     });
 }
 

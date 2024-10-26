@@ -6258,8 +6258,9 @@ new class extends rI {
     }
 }({
     debug: true,
-    endpoint: "http://localhost:24318/v1/traces",
-    skipOptionsValidation: true,
+    endpoint: "https://api.honeycomb.io/v1/traces",
+    apiKey: "<your api key>",
+    skipOptionsValidation: false,
     serviceName: "web-sdk",
     instrumentations: [function(t) {
         void 0 === t && (t = {});

@@ -7,3 +7,4 @@ opentelemetry-distro
 opentelemetry-exporter-otlp
 opentelemetry-api
 opentelemetry-sdk
+tenacity

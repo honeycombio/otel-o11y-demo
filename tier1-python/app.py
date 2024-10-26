@@ -6,6 +6,7 @@ import random
 import pika
 import sys
 import logging
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 from opentelemetry import trace
 
@@ -15,14 +16,20 @@ APP = Flask(__name__)
 health = HealthCheck()
 
 QCREDS = pika.PlainCredentials("test","test")
-QCONN = pika.BlockingConnection(
-    pika.ConnectionParameters(
-        host="queue",
-        credentials=QCREDS,
-        heartbeat=600,
-        blocked_connection_timeout=300,
+
+@retry(stop=stop_after_attempt(10), wait=wait_fixed(4))
+def establish_queue_connection():
+    return pika.BlockingConnection(
+        pika.ConnectionParameters(
+            host="queue",
+            credentials=QCREDS,
+            heartbeat=600,
+            blocked_connection_timeout=300,
+            socket_timeout=10
+        )
     )
-  )
+
+QCONN = establish_queue_connection()
 QCHAN = QCONN.channel()
 QCHAN.queue_declare(queue="test")
 
