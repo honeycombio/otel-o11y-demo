@@ -3,3 +3,4 @@ py-healthcheck
 six
 requests
 pika
+tenacity
