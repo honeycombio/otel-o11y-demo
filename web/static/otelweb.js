@@ -6261,7 +6261,7 @@ new class extends rI {
     endpoint: "https://api.honeycomb.io/v1/traces",
     apiKey: "<your api key>",
     skipOptionsValidation: false,
-    serviceName: "web-sdk",
+    serviceName: "hfo",
     instrumentations: [function(t) {
         void 0 === t && (t = {});
         for (var e, n = 0, r = Object.keys(t); n < r.length; n++) {
