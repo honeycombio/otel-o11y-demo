@@ -8,12 +8,16 @@ import sys
 import logging
 from tenacity import retry, stop_after_attempt, wait_fixed
 
+from opentelemetry import trace
+
+tracer = trace.get_tracer("tier1-python")
+
 APP = Flask(__name__)
 health = HealthCheck()
 
 QCREDS = pika.PlainCredentials("test","test")
 
-@retry(stop=stop_after_attempt(10), wait=wait_fixed(4))
+@retry(stop=stop_after_attempt(60), wait=wait_fixed(10))
 def establish_queue_connection():
     return pika.BlockingConnection(
         pika.ConnectionParameters(
@@ -24,10 +28,6 @@ def establish_queue_connection():
             socket_timeout=10
         )
     )
-
-QCONN = establish_queue_connection()
-QCHAN = QCONN.channel()
-QCHAN.queue_declare(queue="test")
 
 log = logging.getLogger(__name__)
 
@@ -84,23 +84,34 @@ def pure_queue_proc(ctx):
     should not be polluted with side effects"""
     return f"{ctx}-plus-pure-queue-proc"
 
+@tracer.start_as_current_span("do_queue")
 def do_queue(ctx):
     """this is the main function that will write to a queue that
     will be picked up by some consumer, like registering a new user"""
     logit(f"this is some important log that is used to gain insight to how well we are doing registering new members")
     logit(f"called queue function w/ {ctx}")
     time.sleep(1.5) if go_slow_p() else False
+
+    QCONN = establish_queue_connection()
+    QCHAN = QCONN.channel()
+    QCHAN.queue_declare(queue="test")
+
     QCHAN.basic_publish(
         exchange="",
         routing_key="test",
         body=f"{ctx} {time.time()}"
     )
+
+    QCONN.close()
     return f"do_queue"
 
+@tracer.start_as_current_span("pure_saas_proc")
 def pure_saas_proc(resp):
     """this is attempting to show use of a pure function that
     should not be polluted with side effects"""
     resp["didsomethingpure"] = time.localtime()
+    current_span = trace.get_current_span()
+    current_span.set_attribute("app.didsomethingpure", str(resp["didsomethingpure"]))
     return resp
 
 def do_saas(ctx):
