@@ -1,35 +1,26 @@
-var t, e, n, r, i, o, a, s, u, c, l, p, f, d, h, _, v, m, g, y, b, E, T, w = globalThis;
-
-function O(t, e, n, r) {
-    Object.defineProperty(t, e, {
-        get: n,
-        set: r,
-        enumerable: !0,
-        configurable: !0
-    })
-}
-var S = {},
-    R = {},
-    L = w.parcelRequire38d5;
-null == L && ((L = function(t) {
-    if (t in S) return S[t].exports;
-    if (t in R) {
-        var e = R[t];
-        delete R[t];
+var t, e, n, r, o, i, a, s, u, c, l, p, f, d, h, g, _, v, m, y, b, E, T, w, S, O, L = globalThis,
+    P = {},
+    A = {},
+    R = L.parcelRequire38d5;
+null == R && ((R = function(t) {
+    if (t in P) return P[t].exports;
+    if (t in A) {
+        var e = A[t];
+        delete A[t];
         var n = {
             id: t,
             exports: {}
         };
-        return S[t] = n, e.call(n.exports, n, n.exports), n.exports
+        return P[t] = n, e.call(n.exports, n, n.exports), n.exports
     }
     var r = Error("Cannot find module '" + t + "'");
     throw r.code = "MODULE_NOT_FOUND", r
 }).register = function(t, e) {
-    R[t] = e
-}, w.parcelRequire38d5 = L), (0, L.register)("86Wyx", function(t, e) {
+    A[t] = e
+}, L.parcelRequire38d5 = R), (0, R.register)("86Wyx", function(t, e) {
     ! function(n, r) {
-        var i = "function",
-            o = "undefined",
+        var o = "function",
+            i = "undefined",
             a = "object",
             s = "string",
             u = "major",
@@ -39,21 +30,21 @@ null == L && ((L = function(t) {
             f = "vendor",
             d = "version",
             h = "architecture",
-            _ = "console",
-            v = "mobile",
-            m = "tablet",
-            g = "smarttv",
+            g = "console",
+            _ = "mobile",
+            v = "tablet",
+            m = "smarttv",
             y = "wearable",
             b = "embedded",
             E = "Amazon",
             T = "Apple",
             w = "ASUS",
-            O = "BlackBerry",
-            S = "Browser",
-            R = "Chrome",
-            L = "Firefox",
+            S = "BlackBerry",
+            O = "Browser",
+            L = "Chrome",
+            P = "Firefox",
             A = "Google",
-            P = "Huawei",
+            R = "Huawei",
             C = "Microsoft",
             N = "Motorola",
             x = "Opera",
@@ -61,8 +52,8 @@ null == L && ((L = function(t) {
             D = "Sharp",
             M = "Sony",
             k = "Xiaomi",
-            U = "Zebra",
-            j = "Facebook",
+            j = "Zebra",
+            U = "Facebook",
             B = "Chromium OS",
             F = "Mac OS",
             H = function(t, e) {
@@ -81,27 +72,27 @@ null == L && ((L = function(t) {
                 return t.toLowerCase()
             },
             z = function(t, e) {
-                if (typeof t === s) return t = t.replace(/^\s\s*/, ""), typeof e === o ? t : t.substring(0, 500)
+                if (typeof t === s) return t = t.replace(/^\s\s*/, ""), typeof e === i ? t : t.substring(0, 500)
             },
-            q = function(t, e) {
-                for (var n, o, s, u, c, l, p = 0; p < e.length && !c;) {
+            $ = function(t, e) {
+                for (var n, i, s, u, c, l, p = 0; p < e.length && !c;) {
                     var f = e[p],
                         d = e[p + 1];
-                    for (n = o = 0; n < f.length && !c && f[n];)
+                    for (n = i = 0; n < f.length && !c && f[n];)
                         if (c = f[n++].exec(t))
-                            for (s = 0; s < d.length; s++) l = c[++o], typeof(u = d[s]) === a && u.length > 0 ? 2 === u.length ? typeof u[1] == i ? this[u[0]] = u[1].call(this, l) : this[u[0]] = u[1] : 3 === u.length ? typeof u[1] !== i || u[1].exec && u[1].test ? this[u[0]] = l ? l.replace(u[1], u[2]) : void 0 : this[u[0]] = l ? u[1].call(this, l, u[2]) : void 0 : 4 === u.length && (this[u[0]] = l ? u[3].call(this, l.replace(u[1], u[2])) : void 0) : this[u] = l || r;
+                            for (s = 0; s < d.length; s++) l = c[++i], typeof(u = d[s]) === a && u.length > 0 ? 2 === u.length ? typeof u[1] == o ? this[u[0]] = u[1].call(this, l) : this[u[0]] = u[1] : 3 === u.length ? typeof u[1] !== o || u[1].exec && u[1].test ? this[u[0]] = l ? l.replace(u[1], u[2]) : void 0 : this[u[0]] = l ? u[1].call(this, l, u[2]) : void 0 : 4 === u.length && (this[u[0]] = l ? u[3].call(this, l.replace(u[1], u[2])) : void 0) : this[u] = l || r;
                     p += 2
                 }
             },
-            $ = function(t, e) {
+            q = function(t, e) {
                 for (var n in e)
                     if (typeof e[n] === a && e[n].length > 0) {
-                        for (var i = 0; i < e[n].length; i++)
-                            if (G(e[n][i], t)) return "?" === n ? r : n
+                        for (var o = 0; o < e[n].length; o++)
+                            if (G(e[n][o], t)) return "?" === n ? r : n
                     } else if (G(e[n], t)) return "?" === n ? r : n;
                 return t
             },
-            K = {
+            W = {
                 ME: "4.90",
                 "NT 3.11": "NT3.51",
                 "NT 4.0": "NT4.0",
@@ -114,7 +105,7 @@ null == L && ((L = function(t) {
                 10: ["NT 6.4", "NT 10.0"],
                 RT: "ARM"
             },
-            W = {
+            K = {
                 browser: [
                     [/\b(?:crmo|crios)\/([\w\.]+)/i],
                     [d, [l, "Chrome"]],
@@ -135,7 +126,7 @@ null == L && ((L = function(t) {
                     [/\bddg\/([\w\.]+)/i],
                     [d, [l, "DuckDuckGo"]],
                     [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-                    [d, [l, "UC" + S]],
+                    [d, [l, "UC" + O]],
                     [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
                     [d, [l, "WeChat"]],
                     [/konqueror\/([\w\.]+)/i],
@@ -145,13 +136,13 @@ null == L && ((L = function(t) {
                     [/ya(?:search)?browser\/([\w\.]+)/i],
                     [d, [l, "Yandex"]],
                     [/slbrowser\/([\w\.]+)/i],
-                    [d, [l, "Smart Lenovo " + S]],
+                    [d, [l, "Smart Lenovo " + O]],
                     [/(avast|avg)\/([\w\.]+)/i],
                     [
-                        [l, /(.+)/, "$1 Secure " + S], d
+                        [l, /(.+)/, "$1 Secure " + O], d
                     ],
                     [/\bfocus\/([\w\.]+)/i],
-                    [d, [l, L + " Focus"]],
+                    [d, [l, P + " Focus"]],
                     [/\bopt\/([\w\.]+)/i],
                     [d, [l, x + " Touch"]],
                     [/coc_coc\w+\/([\w\.]+)/i],
@@ -161,16 +152,16 @@ null == L && ((L = function(t) {
                     [/coast\/([\w\.]+)/i],
                     [d, [l, x + " Coast"]],
                     [/miuibrowser\/([\w\.]+)/i],
-                    [d, [l, "MIUI " + S]],
+                    [d, [l, "MIUI " + O]],
                     [/fxios\/([-\w\.]+)/i],
-                    [d, [l, L]],
+                    [d, [l, P]],
                     [/\bqihu|(qi?ho?o?|360)browser/i],
                     [
-                        [l, "360 " + S]
+                        [l, "360 " + O]
                     ],
                     [/(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i],
                     [
-                        [l, /(.+)/, "$1 " + S], d
+                        [l, /(.+)/, "$1 " + O], d
                     ],
                     [/samsungbrowser\/([\w\.]+)/i],
                     [d, [l, I + " Internet"]],
@@ -190,7 +181,7 @@ null == L && ((L = function(t) {
                     [l],
                     [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
                     [
-                        [l, j], d
+                        [l, U], d
                     ],
                     [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
                     [l, d],
@@ -199,13 +190,13 @@ null == L && ((L = function(t) {
                     [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
                     [d, [l, "TikTok"]],
                     [/headlesschrome(?:\/([\w\.]+)| )/i],
-                    [d, [l, R + " Headless"]],
+                    [d, [l, L + " Headless"]],
                     [/ wv\).+(chrome)\/([\w\.]+)/i],
                     [
-                        [l, R + " WebView"], d
+                        [l, L + " WebView"], d
                     ],
                     [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-                    [d, [l, "Android " + S]],
+                    [d, [l, "Android " + O]],
                     [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
                     [l, d],
                     [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
@@ -213,7 +204,7 @@ null == L && ((L = function(t) {
                     [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
                     [d, l],
                     [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-                    [l, [d, $, {
+                    [l, [d, q, {
                         "1.0": "/8",
                         "1.2": "/1",
                         "1.3": "/3",
@@ -230,7 +221,7 @@ null == L && ((L = function(t) {
                         [l, "Netscape"], d
                     ],
                     [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-                    [d, [l, L + " Reality"]],
+                    [d, [l, P + " Reality"]],
                     [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /(links) \(([\w\.]+)/i, /panasonic;(viera)/i],
                     [l, d],
                     [/(cobalt)\/([\w\.]+)/i],
@@ -277,334 +268,334 @@ null == L && ((L = function(t) {
                 device: [
                     [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
                     [c, [f, I],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]([-\w]+)/i, /sec-(sgh\w+)/i],
                     [c, [f, I],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
                     [c, [f, T],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
                     [c, [f, T],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(macintosh);/i],
                     [c, [f, T]],
                     [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
                     [c, [f, D],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
-                    [c, [f, P],
-                        [p, m]
+                    [c, [f, R],
+                        [p, v]
                     ],
                     [/(?:huawei|honor)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-                    [c, [f, P],
-                        [p, v]
+                    [c, [f, R],
+                        [p, _]
                     ],
                     [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i],
                     [
                         [c, /_/g, " "],
                         [f, k],
-                        [p, v]
+                        [p, _]
                     ],
                     [/oid[^\)]+; (2\d{4}(283|rpbf)[cgl])( bui|\))/i, /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
                     [
                         [c, /_/g, " "],
                         [f, k],
-                        [p, m]
+                        [p, v]
                     ],
                     [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
                     [c, [f, "OPPO"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(opd2\d{3}a?) bui/i],
                     [c, [f, "OPPO"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
                     [c, [f, "Vivo"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
                     [c, [f, "Realme"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
                     [c, [f, N],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
                     [c, [f, N],
-                        [p, m]
+                        [p, v]
                     ],
                     [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
                     [c, [f, "LG"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i, /\blg-?([\d\w]+) bui/i],
                     [c, [f, "LG"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(ideatab[-\w ]+)/i, /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i],
                     [c, [f, "Lenovo"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(?:maemo|nokia).*(n900|lumia \d+)/i, /nokia[-_ ]?([-\w\.]*)/i],
                     [
                         [c, /_/g, " "],
                         [f, "Nokia"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(pixel c)\b/i],
                     [c, [f, A],
-                        [p, m]
+                        [p, v]
                     ],
                     [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
                     [c, [f, A],
-                        [p, v]
+                        [p, _]
                     ],
                     [/droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
                     [c, [f, M],
-                        [p, v]
+                        [p, _]
                     ],
                     [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
                     [
                         [c, "Xperia Tablet"],
                         [f, M],
-                        [p, m]
+                        [p, v]
                     ],
                     [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
                     [c, [f, "OnePlus"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo[c-r]{2})( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
                     [c, [f, E],
-                        [p, m]
+                        [p, v]
                     ],
                     [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
                     [
                         [c, /(.+)/g, "Fire Phone $1"],
                         [f, E],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(playbook);[-\w\),; ]+(rim)/i],
-                    [c, f, [p, m]],
+                    [c, f, [p, v]],
                     [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-                    [c, [f, O],
-                        [p, v]
+                    [c, [f, S],
+                        [p, _]
                     ],
                     [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
                     [c, [f, w],
-                        [p, m]
+                        [p, v]
                     ],
                     [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
                     [c, [f, w],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(nexus 9)/i],
                     [c, [f, "HTC"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
                     [f, [c, /_/g, " "],
-                        [p, v]
+                        [p, _]
                     ],
                     [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
                     [c, [f, "Acer"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
                     [c, [f, "Meizu"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
                     [c, [f, "Ulefone"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i, /(hp) ([\w ]+\w)/i, /(asus)-?(\w+)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w]+)/i, /(jolla)/i, /(oppo) ?([\w ]+) bui/i],
-                    [f, c, [p, v]],
+                    [f, c, [p, _]],
                     [/(kobo)\s(ereader|touch)/i, /(archos) (gamepad2?)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-                    [f, c, [p, m]],
+                    [f, c, [p, v]],
                     [/(surface duo)/i],
                     [c, [f, C],
-                        [p, m]
+                        [p, v]
                     ],
                     [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
                     [c, [f, "Fairphone"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/(u304aa)/i],
                     [c, [f, "AT&T"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\bsie-(\w*)/i],
                     [c, [f, "Siemens"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(rct\w+) b/i],
                     [c, [f, "RCA"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(venue[\d ]{2,7}) b/i],
                     [c, [f, "Dell"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(q(?:mv|ta)\w+) b/i],
                     [c, [f, "Verizon"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
                     [c, [f, "Barnes & Noble"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(tm\d{3}\w+) b/i],
                     [c, [f, "NuVision"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(k88) b/i],
                     [c, [f, "ZTE"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(nx\d{3}j) b/i],
                     [c, [f, "ZTE"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(gen\d{3}) b.+49h/i],
                     [c, [f, "Swiss"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(zur\d{3}) b/i],
                     [c, [f, "Swiss"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b((zeki)?tb.*\b) b/i],
                     [c, [f, "Zeki"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
                     [
-                        [f, "Dragon Touch"], c, [p, m]
+                        [f, "Dragon Touch"], c, [p, v]
                     ],
                     [/\b(ns-?\w{0,9}) b/i],
                     [c, [f, "Insignia"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b((nxa|next)-?\w{0,9}) b/i],
                     [c, [f, "NextBook"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
                     [
-                        [f, "Voice"], c, [p, v]
+                        [f, "Voice"], c, [p, _]
                     ],
                     [/\b(lvtel\-)?(v1[12]) b/i],
                     [
-                        [f, "LvTel"], c, [p, v]
+                        [f, "LvTel"], c, [p, _]
                     ],
                     [/\b(ph-1) /i],
                     [c, [f, "Essential"],
-                        [p, v]
+                        [p, _]
                     ],
                     [/\b(v(100md|700na|7011|917g).*\b) b/i],
                     [c, [f, "Envizen"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\b(trio[-\w\. ]+) b/i],
                     [c, [f, "MachSpeed"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/\btu_(1491) b/i],
                     [c, [f, "Rotor"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(shield[\w ]+) b/i],
                     [c, [f, "Nvidia"],
-                        [p, m]
+                        [p, v]
                     ],
                     [/(sprint) (\w+)/i],
-                    [f, c, [p, v]],
+                    [f, c, [p, _]],
                     [/(kin\.[onetw]{3})/i],
                     [
                         [c, /\./g, " "],
                         [f, C],
-                        [p, v]
+                        [p, _]
                     ],
                     [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-                    [c, [f, U],
-                        [p, m]
-                    ],
-                    [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-                    [c, [f, U],
+                    [c, [f, j],
                         [p, v]
                     ],
+                    [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
+                    [c, [f, j],
+                        [p, _]
+                    ],
                     [/smart-tv.+(samsung)/i],
-                    [f, [p, g]],
+                    [f, [p, m]],
                     [/hbbtv.+maple;(\d+)/i],
                     [
                         [c, /^/, "SmartTV"],
                         [f, I],
-                        [p, g]
+                        [p, m]
                     ],
                     [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
                     [
                         [f, "LG"],
-                        [p, g]
+                        [p, m]
                     ],
                     [/(apple) ?tv/i],
                     [f, [c, T + " TV"],
-                        [p, g]
+                        [p, m]
                     ],
                     [/crkey/i],
                     [
-                        [c, R + "cast"],
+                        [c, L + "cast"],
                         [f, A],
-                        [p, g]
+                        [p, m]
                     ],
                     [/droid.+aft(\w+)( bui|\))/i],
                     [c, [f, E],
-                        [p, g]
+                        [p, m]
                     ],
                     [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
                     [c, [f, D],
-                        [p, g]
+                        [p, m]
                     ],
                     [/(bravia[\w ]+)( bui|\))/i],
                     [c, [f, M],
-                        [p, g]
+                        [p, m]
                     ],
                     [/(mitv-\w{5}) bui/i],
                     [c, [f, k],
-                        [p, g]
+                        [p, m]
                     ],
                     [/Hbbtv.*(technisat) (.*);/i],
-                    [f, c, [p, g]],
+                    [f, c, [p, m]],
                     [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
                     [
                         [f, z],
                         [c, z],
-                        [p, g]
+                        [p, m]
                     ],
                     [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
                     [
-                        [p, g]
+                        [p, m]
                     ],
                     [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-                    [f, c, [p, _]],
+                    [f, c, [p, g]],
                     [/droid.+; (shield) bui/i],
                     [c, [f, "Nvidia"],
-                        [p, _]
+                        [p, g]
                     ],
                     [/(playstation [345portablevi]+)/i],
                     [c, [f, M],
-                        [p, _]
+                        [p, g]
                     ],
                     [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
                     [c, [f, C],
-                        [p, _]
+                        [p, g]
                     ],
                     [/((pebble))app/i],
                     [f, c, [p, y]],
@@ -617,11 +608,11 @@ null == L && ((L = function(t) {
                         [p, y]
                     ],
                     [/droid.+; (wt63?0{2,3})\)/i],
-                    [c, [f, U],
+                    [c, [f, j],
                         [p, y]
                     ],
                     [/(quest( \d| pro)?)/i],
-                    [c, [f, j],
+                    [c, [f, U],
                         [p, y]
                     ],
                     [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
@@ -631,16 +622,16 @@ null == L && ((L = function(t) {
                         [p, b]
                     ],
                     [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-                    [c, [p, v]],
+                    [c, [p, _]],
                     [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-                    [c, [p, m]],
+                    [c, [p, v]],
                     [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
                     [
-                        [p, m]
+                        [p, v]
                     ],
                     [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
                     [
-                        [p, v]
+                        [p, _]
                     ],
                     [/(android[-\w\. ]{0,9});.+buil/i],
                     [c, [f, "Generic"]]
@@ -659,10 +650,10 @@ null == L && ((L = function(t) {
                     [/microsoft (windows) (vista|xp)/i],
                     [l, d],
                     [/(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i],
-                    [l, [d, $, K]],
+                    [l, [d, q, W]],
                     [/windows nt 6\.2; (arm)/i, /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
                     [
-                        [d, $, K],
+                        [d, q, W],
                         [l, "Windows"]
                     ],
                     [/ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
@@ -680,17 +671,17 @@ null == L && ((L = function(t) {
                     [/(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i, /(blackberry)\w*\/([\w\.]*)/i, /(tizen|kaios)[\/ ]([\w\.]+)/i, /\((series40);/i],
                     [l, d],
                     [/\(bb(10);/i],
-                    [d, [l, O]],
+                    [d, [l, S]],
                     [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
                     [d, [l, "Symbian"]],
                     [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-                    [d, [l, L + " OS"]],
+                    [d, [l, P + " OS"]],
                     [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
                     [d, [l, "webOS"]],
                     [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
                     [d, [l, "watchOS"]],
                     [/crkey\/([\d\.]+)/i],
-                    [d, [l, R + "cast"]],
+                    [d, [l, L + "cast"]],
                     [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
                     [
                         [l, B], d
@@ -707,26 +698,26 @@ null == L && ((L = function(t) {
             },
             Z = function(t, e) {
                 if (typeof t === a && (e = t, t = r), !(this instanceof Z)) return new Z(t, e).getResult();
-                var _ = typeof n !== o && n.navigator ? n.navigator : r,
-                    g = t || (_ && _.userAgent ? _.userAgent : ""),
-                    y = _ && _.userAgentData ? _.userAgentData : r,
-                    b = e ? H(W, e) : W,
-                    E = _ && _.userAgent == g;
+                var g = typeof n !== i && n.navigator ? n.navigator : r,
+                    m = t || (g && g.userAgent ? g.userAgent : ""),
+                    y = g && g.userAgentData ? g.userAgentData : r,
+                    b = e ? H(K, e) : K,
+                    E = g && g.userAgent == m;
                 return this.getBrowser = function() {
                     var t, e = {};
-                    return e[l] = r, e[d] = r, q.call(e, g, b.browser), e[u] = typeof(t = e[d]) === s ? t.replace(/[^\d\.]/g, "").split(".")[0] : r, E && _ && _.brave && typeof _.brave.isBrave == i && (e[l] = "Brave"), e
+                    return e[l] = r, e[d] = r, $.call(e, m, b.browser), e[u] = typeof(t = e[d]) === s ? t.replace(/[^\d\.]/g, "").split(".")[0] : r, E && g && g.brave && typeof g.brave.isBrave == o && (e[l] = "Brave"), e
                 }, this.getCPU = function() {
                     var t = {};
-                    return t[h] = r, q.call(t, g, b.cpu), t
+                    return t[h] = r, $.call(t, m, b.cpu), t
                 }, this.getDevice = function() {
                     var t = {};
-                    return t[f] = r, t[c] = r, t[p] = r, q.call(t, g, b.device), E && !t[p] && y && y.mobile && (t[p] = v), E && "Macintosh" == t[c] && _ && typeof _.standalone !== o && _.maxTouchPoints && _.maxTouchPoints > 2 && (t[c] = "iPad", t[p] = m), t
+                    return t[f] = r, t[c] = r, t[p] = r, $.call(t, m, b.device), E && !t[p] && y && y.mobile && (t[p] = _), E && "Macintosh" == t[c] && g && typeof g.standalone !== i && g.maxTouchPoints && g.maxTouchPoints > 2 && (t[c] = "iPad", t[p] = v), t
                 }, this.getEngine = function() {
                     var t = {};
-                    return t[l] = r, t[d] = r, q.call(t, g, b.engine), t
+                    return t[l] = r, t[d] = r, $.call(t, m, b.engine), t
                 }, this.getOS = function() {
                     var t = {};
-                    return t[l] = r, t[d] = r, q.call(t, g, b.os), E && !t[l] && y && y.platform && "Unknown" != y.platform && (t[l] = y.platform.replace(/chrome os/i, B).replace(/macos/i, F)), t
+                    return t[l] = r, t[d] = r, $.call(t, m, b.os), E && !t[l] && y && y.platform && "Unknown" != y.platform && (t[l] = y.platform.replace(/chrome os/i, B).replace(/macos/i, F)), t
                 }, this.getResult = function() {
                     return {
                         ua: this.getUA(),
@@ -737,15 +728,15 @@ null == L && ((L = function(t) {
                         cpu: this.getCPU()
                     }
                 }, this.getUA = function() {
-                    return g
+                    return m
                 }, this.setUA = function(t) {
-                    return g = typeof t === s && t.length > 500 ? z(t, 500) : t, this
-                }, this.setUA(g), this
+                    return m = typeof t === s && t.length > 500 ? z(t, 500) : t, this
+                }, this.setUA(m), this
             };
-        Z.VERSION = "1.0.38", Z.BROWSER = V([l, d, u]), Z.CPU = V([h]), Z.DEVICE = V([c, f, p, _, v, g, m, y, b]), Z.ENGINE = Z.OS = V([l, d]), typeof e !== o ? (t.exports && (e = t.exports = Z), e.UAParser = Z) : typeof define === i && define.amd ? define(function() {
+        Z.VERSION = "1.0.38", Z.BROWSER = V([l, d, u]), Z.CPU = V([h]), Z.DEVICE = V([c, f, p, g, _, m, v, y, b]), Z.ENGINE = Z.OS = V([l, d]), typeof e !== i ? (t.exports && (e = t.exports = Z), e.UAParser = Z) : typeof define === o && define.amd ? define(function() {
             return Z
-        }) : typeof n !== o && (n.UAParser = Z);
-        var Y = typeof n !== o && (n.jQuery || n.Zepto);
+        }) : typeof n !== i && (n.UAParser = Z);
+        var Y = typeof n !== i && (n.jQuery || n.Zepto);
         if (Y && !Y.ua) {
             var Q = new Z;
             Y.ua = Q.getResult(), Y.ua.get = function() {
@@ -758,220 +749,220 @@ null == L && ((L = function(t) {
         }
     }("object" == typeof window ? window : this)
 });
-var A = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof w ? w : {},
-    P = "1.9.0",
-    C = /^(\d+)\.(\d+)\.(\d+)(-(.+))?$/,
-    N = function(t) {
+var C = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    N = "1.9.0",
+    x = /^(\d+)\.(\d+)\.(\d+)(-(.+))?$/,
+    I = function(t) {
         var e = new Set([t]),
             n = new Set,
-            r = t.match(C);
+            r = t.match(x);
         if (!r) return function() {
             return !1
         };
-        var i = {
+        var o = {
             major: +r[1],
             minor: +r[2],
             patch: +r[3],
             prerelease: r[4]
         };
-        if (null != i.prerelease) return function(e) {
+        if (null != o.prerelease) return function(e) {
             return e === t
         };
 
-        function o(t) {
+        function i(t) {
             return n.add(t), !1
         }
         return function(t) {
             if (e.has(t)) return !0;
             if (n.has(t)) return !1;
-            var r = t.match(C);
-            if (!r) return o(t);
+            var r = t.match(x);
+            if (!r) return i(t);
             var a = {
                 major: +r[1],
                 minor: +r[2],
                 patch: +r[3],
                 prerelease: r[4]
             };
-            return null != a.prerelease || i.major !== a.major ? o(t) : 0 === i.major ? i.minor === a.minor && i.patch <= a.patch ? (e.add(t), !0) : o(t) : i.minor <= a.minor ? (e.add(t), !0) : o(t)
+            return null != a.prerelease || o.major !== a.major ? i(t) : 0 === o.major ? o.minor === a.minor && o.patch <= a.patch ? (e.add(t), !0) : i(t) : o.minor <= a.minor ? (e.add(t), !0) : i(t)
         }
-    }(P),
-    x = Symbol.for("opentelemetry.js.api." + P.split(".")[0]);
+    }(N),
+    D = Symbol.for("opentelemetry.js.api." + N.split(".")[0]);
 
-function I(t, e, n, r) {
+function M(t, e, n, r) {
     void 0 === r && (r = !1);
-    var i, o = A[x] = null !== (i = A[x]) && void 0 !== i ? i : {
-        version: P
+    var o, i = C[D] = null !== (o = C[D]) && void 0 !== o ? o : {
+        version: N
     };
-    if (!r && o[t]) {
+    if (!r && i[t]) {
         var a = Error("@opentelemetry/api: Attempted duplicate registration of API: " + t);
         return n.error(a.stack || a.message), !1
     }
-    if (o.version !== P) {
-        var a = Error("@opentelemetry/api: Registration of version v" + o.version + " for " + t + " does not match previously registered API v" + P);
+    if (i.version !== N) {
+        var a = Error("@opentelemetry/api: Registration of version v" + i.version + " for " + t + " does not match previously registered API v" + N);
         return n.error(a.stack || a.message), !1
     }
-    return o[t] = e, n.debug("@opentelemetry/api: Registered a global for " + t + " v" + P + "."), !0
+    return i[t] = e, n.debug("@opentelemetry/api: Registered a global for " + t + " v" + N + "."), !0
 }
 
-function D(t) {
-    var e, n, r = null === (e = A[x]) || void 0 === e ? void 0 : e.version;
-    if (r && N(r)) return null === (n = A[x]) || void 0 === n ? void 0 : n[t]
+function k(t) {
+    var e, n, r = null === (e = C[D]) || void 0 === e ? void 0 : e.version;
+    if (r && I(r)) return null === (n = C[D]) || void 0 === n ? void 0 : n[t]
 }
 
-function M(t, e) {
-    e.debug("@opentelemetry/api: Unregistering a global for " + t + " v" + P + ".");
-    var n = A[x];
+function j(t, e) {
+    e.debug("@opentelemetry/api: Unregistering a global for " + t + " v" + N + ".");
+    var n = C[D];
     n && delete n[t]
 }
-var k = function(t, e) {
+var U = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    U = function(t, e, n) {
+    B = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    j = function() {
+    F = function() {
         function t(t) {
             this._namespace = t.namespace || "DiagComponentLogger"
         }
         return t.prototype.debug = function() {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-            return B("debug", this._namespace, t)
+            return H("debug", this._namespace, t)
         }, t.prototype.error = function() {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-            return B("error", this._namespace, t)
+            return H("error", this._namespace, t)
         }, t.prototype.info = function() {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-            return B("info", this._namespace, t)
+            return H("info", this._namespace, t)
         }, t.prototype.warn = function() {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-            return B("warn", this._namespace, t)
+            return H("warn", this._namespace, t)
         }, t.prototype.verbose = function() {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-            return B("verbose", this._namespace, t)
+            return H("verbose", this._namespace, t)
         }, t
     }();
 
-function B(t, e, n) {
-    var r = D("diag");
-    if (r) return n.unshift(e), r[t].apply(r, U([], k(n), !1))
-}(iu = iL || (iL = {}))[iu.NONE = 0] = "NONE", iu[iu.ERROR = 30] = "ERROR", iu[iu.WARN = 50] = "WARN", iu[iu.INFO = 60] = "INFO", iu[iu.DEBUG = 70] = "DEBUG", iu[iu.VERBOSE = 80] = "VERBOSE", iu[iu.ALL = 9999] = "ALL";
-var F = function(t, e) {
+function H(t, e, n) {
+    var r = k("diag");
+    if (r) return n.unshift(e), r[t].apply(r, B([], U(n), !1))
+}(oi = ow || (ow = {}))[oi.NONE = 0] = "NONE", oi[oi.ERROR = 30] = "ERROR", oi[oi.WARN = 50] = "WARN", oi[oi.INFO = 60] = "INFO", oi[oi.DEBUG = 70] = "DEBUG", oi[oi.VERBOSE = 80] = "VERBOSE", oi[oi.ALL = 9999] = "ALL";
+var V = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    H = function(t, e, n) {
+    G = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    V = function() {
+    X = function() {
         function t() {
             function t(t) {
                 return function() {
                     for (var e = [], n = 0; n < arguments.length; n++) e[n] = arguments[n];
-                    var r = D("diag");
-                    if (r) return r[t].apply(r, H([], F(e), !1))
+                    var r = k("diag");
+                    if (r) return r[t].apply(r, G([], V(e), !1))
                 }
             }
             var e = this;
             e.setLogger = function(t, n) {
                 if (void 0 === n && (n = {
-                        logLevel: iL.INFO
+                        logLevel: ow.INFO
                     }), t === e) {
-                    var r, i, o, a = Error("Cannot use diag as the logger for itself. Please use a DiagLogger implementation like ConsoleDiagLogger or a custom implementation");
+                    var r, o, i, a = Error("Cannot use diag as the logger for itself. Please use a DiagLogger implementation like ConsoleDiagLogger or a custom implementation");
                     return e.error(null !== (r = a.stack) && void 0 !== r ? r : a.message), !1
                 }
                 "number" == typeof n && (n = {
                     logLevel: n
                 });
-                var s = D("diag"),
+                var s = k("diag"),
                     u = function(t, e) {
                         function n(n, r) {
-                            var i = e[n];
-                            return "function" == typeof i && t >= r ? i.bind(e) : function() {}
+                            var o = e[n];
+                            return "function" == typeof o && t >= r ? o.bind(e) : function() {}
                         }
-                        return t < iL.NONE ? t = iL.NONE : t > iL.ALL && (t = iL.ALL), e = e || {}, {
-                            error: n("error", iL.ERROR),
-                            warn: n("warn", iL.WARN),
-                            info: n("info", iL.INFO),
-                            debug: n("debug", iL.DEBUG),
-                            verbose: n("verbose", iL.VERBOSE)
+                        return t < ow.NONE ? t = ow.NONE : t > ow.ALL && (t = ow.ALL), e = e || {}, {
+                            error: n("error", ow.ERROR),
+                            warn: n("warn", ow.WARN),
+                            info: n("info", ow.INFO),
+                            debug: n("debug", ow.DEBUG),
+                            verbose: n("verbose", ow.VERBOSE)
                         }
-                    }(null !== (i = n.logLevel) && void 0 !== i ? i : iL.INFO, t);
+                    }(null !== (o = n.logLevel) && void 0 !== o ? o : ow.INFO, t);
                 if (s && !n.suppressOverrideMessage) {
-                    var c = null !== (o = Error().stack) && void 0 !== o ? o : "<failed to generate stacktrace>";
+                    var c = null !== (i = Error().stack) && void 0 !== i ? i : "<failed to generate stacktrace>";
                     s.warn("Current logger will be overwritten from " + c), u.warn("Current logger will overwrite one already registered from " + c)
                 }
-                return I("diag", u, e, !0)
+                return M("diag", u, e, !0)
             }, e.disable = function() {
-                M("diag", e)
+                j("diag", e)
             }, e.createComponentLogger = function(t) {
-                return new j(t)
+                return new F(t)
             }, e.verbose = t("verbose"), e.debug = t("debug"), e.info = t("info"), e.warn = t("warn"), e.error = t("error")
         }
         return t.instance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t
     }(),
-    G = function(t, e) {
+    z = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    X = function(t) {
+    $ = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -986,7 +977,7 @@ var F = function(t, e) {
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    z = function() {
+    q = function() {
         function t(t) {
             this._entries = t ? new Map(t) : new Map
         }
@@ -995,7 +986,7 @@ var F = function(t, e) {
             if (e) return Object.assign({}, e)
         }, t.prototype.getAllEntries = function() {
             return Array.from(this._entries.entries()).map(function(t) {
-                var e = G(t, 2);
+                var e = z(t, 2);
                 return [e[0], e[1]]
             })
         }, t.prototype.setEntry = function(e, n) {
@@ -1005,12 +996,12 @@ var F = function(t, e) {
             var n = new t(this._entries);
             return n._entries.delete(e), n
         }, t.prototype.removeEntries = function() {
-            for (var e, n, r = [], i = 0; i < arguments.length; i++) r[i] = arguments[i];
-            var o = new t(this._entries);
+            for (var e, n, r = [], o = 0; o < arguments.length; o++) r[o] = arguments[o];
+            var i = new t(this._entries);
             try {
-                for (var a = X(r), s = a.next(); !s.done; s = a.next()) {
+                for (var a = $(r), s = a.next(); !s.done; s = a.next()) {
                     var u = s.value;
-                    o._entries.delete(u)
+                    i._entries.delete(u)
                 }
             } catch (t) {
                 e = {
@@ -1023,34 +1014,34 @@ var F = function(t, e) {
                     if (e) throw e.error
                 }
             }
-            return o
+            return i
         }, t.prototype.clear = function() {
             return new t
         }, t
     }(),
-    q = Symbol("BaggageEntryMetadata"),
-    $ = V.instance();
+    W = Symbol("BaggageEntryMetadata"),
+    K = X.instance();
 
-function K(t) {
-    return void 0 === t && (t = {}), new z(new Map(Object.entries(t)))
+function Z(t) {
+    return void 0 === t && (t = {}), new q(new Map(Object.entries(t)))
 }
 
-function W(t) {
+function Y(t) {
     return Symbol.for(t)
 }
-var Z = new function t(e) {
+var Q = new function t(e) {
         var n = this;
         n._currentContext = e ? new Map(e) : new Map, n.getValue = function(t) {
             return n._currentContext.get(t)
         }, n.setValue = function(e, r) {
-            var i = new t(n._currentContext);
-            return i._currentContext.set(e, r), i
+            var o = new t(n._currentContext);
+            return o._currentContext.set(e, r), o
         }, n.deleteValue = function(e) {
             var r = new t(n._currentContext);
             return r._currentContext.delete(e), r
         }
     },
-    Y = [{
+    J = [{
         n: "error",
         c: "error"
     }, {
@@ -1066,8 +1057,8 @@ var Z = new function t(e) {
         n: "verbose",
         c: "trace"
     }],
-    Q = function() {
-        for (var t = 0; t < Y.length; t++) this[Y[t].n] = function(t) {
+    tt = function() {
+        for (var t = 0; t < J.length; t++) this[J[t].n] = function(t) {
             return function() {
                 for (var e = [], n = 0; n < arguments.length; n++) e[n] = arguments[n];
                 if (console) {
@@ -1075,19 +1066,19 @@ var Z = new function t(e) {
                     if ("function" != typeof r && (r = console.log), "function" == typeof r) return r.apply(console, e)
                 }
             }
-        }(Y[t].c)
+        }(J[t].c)
     };
-(ic = iA || (iA = {}))[ic.INT = 0] = "INT", ic[ic.DOUBLE = 1] = "DOUBLE", (il = iP || (iP = {}))[il.NOT_RECORD = 0] = "NOT_RECORD", il[il.RECORD = 1] = "RECORD", il[il.RECORD_AND_SAMPLED = 2] = "RECORD_AND_SAMPLED", (ip = iC || (iC = {}))[ip.INTERNAL = 0] = "INTERNAL", ip[ip.SERVER = 1] = "SERVER", ip[ip.CLIENT = 2] = "CLIENT", ip[ip.PRODUCER = 3] = "PRODUCER", ip[ip.CONSUMER = 4] = "CONSUMER", (id = iN || (iN = {}))[id.UNSET = 0] = "UNSET", id[id.OK = 1] = "OK", id[id.ERROR = 2] = "ERROR", (ih = ix || (ix = {}))[ih.NONE = 0] = "NONE", ih[ih.SAMPLED = 1] = "SAMPLED";
-var J = "0000000000000000",
-    tt = "00000000000000000000000000000000",
-    te = {
-        traceId: tt,
-        spanId: J,
-        traceFlags: ix.NONE
+(oa = oS || (oS = {}))[oa.INT = 0] = "INT", oa[oa.DOUBLE = 1] = "DOUBLE", (os = oO || (oO = {}))[os.NOT_RECORD = 0] = "NOT_RECORD", os[os.RECORD = 1] = "RECORD", os[os.RECORD_AND_SAMPLED = 2] = "RECORD_AND_SAMPLED", (ou = oL || (oL = {}))[ou.INTERNAL = 0] = "INTERNAL", ou[ou.SERVER = 1] = "SERVER", ou[ou.CLIENT = 2] = "CLIENT", ou[ou.PRODUCER = 3] = "PRODUCER", ou[ou.CONSUMER = 4] = "CONSUMER", (oc = oP || (oP = {}))[oc.UNSET = 0] = "UNSET", oc[oc.OK = 1] = "OK", oc[oc.ERROR = 2] = "ERROR", (ol = oA || (oA = {}))[ol.NONE = 0] = "NONE", ol[ol.SAMPLED = 1] = "SAMPLED";
+var te = "0000000000000000",
+    tn = "00000000000000000000000000000000",
+    tr = {
+        traceId: tn,
+        spanId: te,
+        traceFlags: oA.NONE
     },
-    tn = function() {
+    to = function() {
         function t(t) {
-            void 0 === t && (t = te), this._spanContext = t
+            void 0 === t && (t = tr), this._spanContext = t
         }
         return t.prototype.spanContext = function() {
             return this._spanContext
@@ -1109,54 +1100,54 @@ var J = "0000000000000000",
             return !1
         }, t.prototype.recordException = function(t, e) {}, t
     }(),
-    tr = /^([0-9a-f]{32})$/i,
-    ti = /^[0-9a-f]{16}$/i;
-
-function to(t) {
-    return tr.test(t) && t !== tt
-}
-
-function ta(t) {
-    var e;
-    return to(t.traceId) && (e = t.spanId, ti.test(e) && e !== J)
-}
+    ti = /^([0-9a-f]{32})$/i,
+    ta = /^[0-9a-f]{16}$/i;
 
 function ts(t) {
-    return new tn(t)
+    return ti.test(t) && t !== tn
 }
-var tu = function(t, e) {
+
+function tu(t) {
+    var e;
+    return ts(t.traceId) && (e = t.spanId, ta.test(e) && e !== te)
+}
+
+function tc(t) {
+    return new to(t)
+}
+var tl = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    tc = function(t, e, n) {
+    tp = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    tl = function() {
+    tf = function() {
         function t() {}
         return t.prototype.active = function() {
-            return Z
+            return Q
         }, t.prototype.with = function(t, e, n) {
-            for (var r = [], i = 3; i < arguments.length; i++) r[i - 3] = arguments[i];
-            return e.call.apply(e, tc([n], tu(r), !1))
+            for (var r = [], o = 3; o < arguments.length; o++) r[o - 3] = arguments[o];
+            return e.call.apply(e, tp([n], tl(r), !1))
         }, t.prototype.bind = function(t, e) {
             return e
         }, t.prototype.enable = function() {
@@ -1165,57 +1156,57 @@ var tu = function(t, e) {
             return this
         }, t
     }(),
-    tp = function(t, e) {
+    td = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    tf = function(t, e, n) {
+    th = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    td = "context",
-    th = new tl,
-    t_ = function() {
+    tg = "context",
+    t_ = new tf,
+    tv = function() {
         function t() {}
         return t.getInstance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t.prototype.setGlobalContextManager = function(t) {
-            return I(td, t, V.instance())
+            return M(tg, t, X.instance())
         }, t.prototype.active = function() {
             return this._getContextManager().active()
         }, t.prototype.with = function(t, e, n) {
-            for (var r, i = [], o = 3; o < arguments.length; o++) i[o - 3] = arguments[o];
-            return (r = this._getContextManager()).with.apply(r, tf([t, e, n], tp(i), !1))
+            for (var r, o = [], i = 3; i < arguments.length; i++) o[i - 3] = arguments[i];
+            return (r = this._getContextManager()).with.apply(r, th([t, e, n], td(o), !1))
         }, t.prototype.bind = function(t, e) {
             return this._getContextManager().bind(t, e)
         }, t.prototype._getContextManager = function() {
-            return D(td) || th
+            return k(tg) || t_
         }, t.prototype.disable = function() {
-            this._getContextManager().disable(), M(td, V.instance())
+            this._getContextManager().disable(), j(tg, X.instance())
         }, t
     }(),
-    tv = t_.getInstance(),
-    tm = V.instance(),
-    tg = (i_ = function(t, e) {
-        return (i_ = Object.setPrototypeOf || ({
+    tm = tv.getInstance(),
+    ty = X.instance(),
+    tb = (op = function(t, e) {
+        return (op = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -1228,103 +1219,103 @@ var tu = function(t, e) {
         function n() {
             this.constructor = t
         }
-        i_(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        op(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    ty = function() {
+    tE = function() {
         function t() {}
         return t.prototype.createGauge = function(t, e) {
-            return tN
-        }, t.prototype.createHistogram = function(t, e) {
-            return tx
-        }, t.prototype.createCounter = function(t, e) {
-            return tC
-        }, t.prototype.createUpDownCounter = function(t, e) {
             return tI
-        }, t.prototype.createObservableGauge = function(t, e) {
-            return tM
-        }, t.prototype.createObservableCounter = function(t, e) {
+        }, t.prototype.createHistogram = function(t, e) {
             return tD
-        }, t.prototype.createObservableUpDownCounter = function(t, e) {
+        }, t.prototype.createCounter = function(t, e) {
+            return tx
+        }, t.prototype.createUpDownCounter = function(t, e) {
+            return tM
+        }, t.prototype.createObservableGauge = function(t, e) {
+            return tj
+        }, t.prototype.createObservableCounter = function(t, e) {
             return tk
+        }, t.prototype.createObservableUpDownCounter = function(t, e) {
+            return tU
         }, t.prototype.addBatchObservableCallback = function(t, e) {}, t.prototype.removeBatchObservableCallback = function(t) {}, t
     }(),
-    tb = function() {},
-    tE = function(t) {
-        function e() {
-            return null !== t && t.apply(this, arguments) || this
-        }
-        return tg(e, t), e.prototype.add = function(t, e) {}, e
-    }(tb),
-    tT = function(t) {
-        function e() {
-            return null !== t && t.apply(this, arguments) || this
-        }
-        return tg(e, t), e.prototype.add = function(t, e) {}, e
-    }(tb),
+    tT = function() {},
     tw = function(t) {
         function e() {
             return null !== t && t.apply(this, arguments) || this
         }
-        return tg(e, t), e.prototype.record = function(t, e) {}, e
-    }(tb),
+        return tb(e, t), e.prototype.add = function(t, e) {}, e
+    }(tT),
+    tS = function(t) {
+        function e() {
+            return null !== t && t.apply(this, arguments) || this
+        }
+        return tb(e, t), e.prototype.add = function(t, e) {}, e
+    }(tT),
     tO = function(t) {
         function e() {
             return null !== t && t.apply(this, arguments) || this
         }
-        return tg(e, t), e.prototype.record = function(t, e) {}, e
-    }(tb),
-    tS = function() {
-        function t() {}
-        return t.prototype.addCallback = function(t) {}, t.prototype.removeCallback = function(t) {}, t
-    }(),
-    tR = function(t) {
-        function e() {
-            return null !== t && t.apply(this, arguments) || this
-        }
-        return tg(e, t), e
-    }(tS),
+        return tb(e, t), e.prototype.record = function(t, e) {}, e
+    }(tT),
     tL = function(t) {
         function e() {
             return null !== t && t.apply(this, arguments) || this
         }
-        return tg(e, t), e
-    }(tS),
+        return tb(e, t), e.prototype.record = function(t, e) {}, e
+    }(tT),
+    tP = function() {
+        function t() {}
+        return t.prototype.addCallback = function(t) {}, t.prototype.removeCallback = function(t) {}, t
+    }(),
     tA = function(t) {
         function e() {
             return null !== t && t.apply(this, arguments) || this
         }
-        return tg(e, t), e
-    }(tS),
-    tP = new ty,
-    tC = new tE,
-    tN = new tw,
-    tx = new tO,
-    tI = new tT,
-    tD = new tR,
-    tM = new tL,
+        return tb(e, t), e
+    }(tP),
+    tR = function(t) {
+        function e() {
+            return null !== t && t.apply(this, arguments) || this
+        }
+        return tb(e, t), e
+    }(tP),
+    tC = function(t) {
+        function e() {
+            return null !== t && t.apply(this, arguments) || this
+        }
+        return tb(e, t), e
+    }(tP),
+    tN = new tE,
+    tx = new tw,
+    tI = new tO,
+    tD = new tL,
+    tM = new tS,
     tk = new tA,
-    tU = new(function() {
+    tj = new tR,
+    tU = new tC,
+    tB = new(function() {
         function t() {}
         return t.prototype.getMeter = function(t, e, n) {
-            return tP
+            return tN
         }, t
     }()),
-    tj = "metrics",
-    tB = (function() {
+    tF = "metrics",
+    tH = (function() {
         function t() {}
         return t.getInstance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t.prototype.setGlobalMeterProvider = function(t) {
-            return I(tj, t, V.instance())
+            return M(tF, t, X.instance())
         }, t.prototype.getMeterProvider = function() {
-            return D(tj) || tU
+            return k(tF) || tB
         }, t.prototype.getMeter = function(t, e, n) {
             return this.getMeterProvider().getMeter(t, e, n)
         }, t.prototype.disable = function() {
-            M(tj, V.instance())
+            j(tF, X.instance())
         }, t
     })().getInstance(),
-    tF = function() {
+    tV = function() {
         function t() {}
         return t.prototype.inject = function(t, e) {}, t.prototype.extract = function(t, e) {
             return t
@@ -1332,7 +1323,7 @@ var tu = function(t, e) {
             return []
         }, t
     }(),
-    tH = {
+    tG = {
         get: function(t, e) {
             if (null != t) return t[e]
         },
@@ -1340,123 +1331,123 @@ var tu = function(t, e) {
             return null == t ? [] : Object.keys(t)
         }
     },
-    tV = {
+    tX = {
         set: function(t, e, n) {
             null != t && (t[e] = n)
         }
     },
-    tG = W("OpenTelemetry Baggage Key");
-
-function tX(t) {
-    return t.getValue(tG) || void 0
-}
-
-function tz() {
-    return tX(t_.getInstance().active())
-}
-
-function tq(t, e) {
-    return t.setValue(tG, e)
-}
+    tz = Y("OpenTelemetry Baggage Key");
 
 function t$(t) {
-    return t.deleteValue(tG)
+    return t.getValue(tz) || void 0
 }
-var tK = "propagation",
-    tW = new tF,
-    tZ = (function() {
+
+function tq() {
+    return t$(tv.getInstance().active())
+}
+
+function tW(t, e) {
+    return t.setValue(tz, e)
+}
+
+function tK(t) {
+    return t.deleteValue(tz)
+}
+var tZ = "propagation",
+    tY = new tV,
+    tQ = (function() {
         function t() {
-            this.createBaggage = K, this.getBaggage = tX, this.getActiveBaggage = tz, this.setBaggage = tq, this.deleteBaggage = t$
+            this.createBaggage = Z, this.getBaggage = t$, this.getActiveBaggage = tq, this.setBaggage = tW, this.deleteBaggage = tK
         }
         return t.getInstance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t.prototype.setGlobalPropagator = function(t) {
-            return I(tK, t, V.instance())
+            return M(tZ, t, X.instance())
         }, t.prototype.inject = function(t, e, n) {
-            return void 0 === n && (n = tV), this._getGlobalPropagator().inject(t, e, n)
+            return void 0 === n && (n = tX), this._getGlobalPropagator().inject(t, e, n)
         }, t.prototype.extract = function(t, e, n) {
-            return void 0 === n && (n = tH), this._getGlobalPropagator().extract(t, e, n)
+            return void 0 === n && (n = tG), this._getGlobalPropagator().extract(t, e, n)
         }, t.prototype.fields = function() {
             return this._getGlobalPropagator().fields()
         }, t.prototype.disable = function() {
-            M(tK, V.instance())
+            j(tZ, X.instance())
         }, t.prototype._getGlobalPropagator = function() {
-            return D(tK) || tW
+            return k(tZ) || tY
         }, t
     })().getInstance(),
-    tY = W("OpenTelemetry Context Key SPAN");
+    tJ = Y("OpenTelemetry Context Key SPAN");
 
-function tQ(t) {
-    return t.getValue(tY) || void 0
+function t0(t) {
+    return t.getValue(tJ) || void 0
 }
 
-function tJ() {
-    return tQ(t_.getInstance().active())
-}
-
-function t0(t, e) {
-    return t.setValue(tY, e)
-}
-
-function t1(t) {
-    return t.deleteValue(tY)
+function t1() {
+    return t0(tv.getInstance().active())
 }
 
 function t2(t, e) {
-    return t0(t, new tn(e))
+    return t.setValue(tJ, e)
 }
 
 function t3(t) {
-    var e;
-    return null === (e = tQ(t)) || void 0 === e ? void 0 : e.spanContext()
+    return t.deleteValue(tJ)
 }
-var t4 = t_.getInstance(),
-    t6 = function() {
+
+function t4(t, e) {
+    return t2(t, new to(e))
+}
+
+function t6(t) {
+    var e;
+    return null === (e = t0(t)) || void 0 === e ? void 0 : e.spanContext()
+}
+var t5 = tv.getInstance(),
+    t9 = function() {
         function t() {}
         return t.prototype.startSpan = function(t, e, n) {
-            if (void 0 === n && (n = t4.active()), null == e ? void 0 : e.root) return new tn;
-            var r = n && t3(n);
-            return "object" == typeof r && "string" == typeof r.spanId && "string" == typeof r.traceId && "number" == typeof r.traceFlags && ta(r) ? new tn(r) : new tn
+            if (void 0 === n && (n = t5.active()), null == e ? void 0 : e.root) return new to;
+            var r = n && t6(n);
+            return "object" == typeof r && "string" == typeof r.spanId && "string" == typeof r.traceId && "number" == typeof r.traceFlags && tu(r) ? new to(r) : new to
         }, t.prototype.startActiveSpan = function(t, e, n, r) {
             if (!(arguments.length < 2)) {
-                2 == arguments.length ? a = e : 3 == arguments.length ? (i = e, a = n) : (i = e, o = n, a = r);
-                var i, o, a, s = null != o ? o : t4.active(),
-                    u = this.startSpan(t, i, s),
-                    c = t0(s, u);
-                return t4.with(c, a, void 0, u)
+                2 == arguments.length ? a = e : 3 == arguments.length ? (o = e, a = n) : (o = e, i = n, a = r);
+                var o, i, a, s = null != i ? i : t5.active(),
+                    u = this.startSpan(t, o, s),
+                    c = t2(s, u);
+                return t5.with(c, a, void 0, u)
             }
         }, t
     }(),
-    t5 = new t6,
-    t9 = function() {
+    t8 = new t9,
+    t7 = function() {
         function t(t, e, n, r) {
             this._provider = t, this.name = e, this.version = n, this.options = r
         }
         return t.prototype.startSpan = function(t, e, n) {
             return this._getTracer().startSpan(t, e, n)
         }, t.prototype.startActiveSpan = function(t, e, n, r) {
-            var i = this._getTracer();
-            return Reflect.apply(i.startActiveSpan, i, arguments)
+            var o = this._getTracer();
+            return Reflect.apply(o.startActiveSpan, o, arguments)
         }, t.prototype._getTracer = function() {
             if (this._delegate) return this._delegate;
             var t = this._provider.getDelegateTracer(this.name, this.version, this.options);
-            return t ? (this._delegate = t, this._delegate) : t5
+            return t ? (this._delegate = t, this._delegate) : t8
         }, t
     }(),
-    t8 = new(function() {
+    et = new(function() {
         function t() {}
         return t.prototype.getTracer = function(t, e, n) {
-            return new t6
+            return new t9
         }, t
     }()),
-    t7 = function() {
+    ee = function() {
         function t() {}
         return t.prototype.getTracer = function(t, e, n) {
             var r;
-            return null !== (r = this.getDelegateTracer(t, e, n)) && void 0 !== r ? r : new t9(this, t, e, n)
+            return null !== (r = this.getDelegateTracer(t, e, n)) && void 0 !== r ? r : new t7(this, t, e, n)
         }, t.prototype.getDelegate = function() {
             var t;
-            return null !== (t = this._delegate) && void 0 !== t ? t : t8
+            return null !== (t = this._delegate) && void 0 !== t ? t : et
         }, t.prototype.setDelegate = function(t) {
             this._delegate = t
         }, t.prototype.getDelegateTracer = function(t, e, n) {
@@ -1464,187 +1455,187 @@ var t4 = t_.getInstance(),
             return null === (r = this._delegate) || void 0 === r ? void 0 : r.getTracer(t, e, n)
         }, t
     }(),
-    et = "trace",
-    ee = (function() {
+    en = "trace",
+    er = (function() {
         function t() {
-            this._proxyTracerProvider = new t7, this.wrapSpanContext = ts, this.isSpanContextValid = ta, this.deleteSpan = t1, this.getSpan = tQ, this.getActiveSpan = tJ, this.getSpanContext = t3, this.setSpan = t0, this.setSpanContext = t2
+            this._proxyTracerProvider = new ee, this.wrapSpanContext = tc, this.isSpanContextValid = tu, this.deleteSpan = t3, this.getSpan = t0, this.getActiveSpan = t1, this.getSpanContext = t6, this.setSpan = t2, this.setSpanContext = t4
         }
         return t.getInstance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t.prototype.setGlobalTracerProvider = function(t) {
-            var e = I(et, this._proxyTracerProvider, V.instance());
+            var e = M(en, this._proxyTracerProvider, X.instance());
             return e && this._proxyTracerProvider.setDelegate(t), e
         }, t.prototype.getTracerProvider = function() {
-            return D(et) || this._proxyTracerProvider
+            return k(en) || this._proxyTracerProvider
         }, t.prototype.getTracer = function(t, e) {
             return this.getTracerProvider().getTracer(t, e)
         }, t.prototype.disable = function() {
-            M(et, V.instance()), this._proxyTracerProvider = new t7
+            j(en, X.instance()), this._proxyTracerProvider = new ee
         }, t
     })().getInstance(),
-    en = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof w ? w : {},
-    er = Symbol.for("io.opentelemetry.js.api.logs"),
-    ei = function() {
+    eo = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    ei = Symbol.for("io.opentelemetry.js.api.logs"),
+    ea = function() {
         function t() {}
         return t.prototype.emit = function(t) {}, t
     }();
-new ei;
-var eo = new(function() {
+new ea;
+var es = new(function() {
         function t() {}
         return t.prototype.getLogger = function(t, e, n) {
-            return new ei
+            return new ea
         }, t
     }()),
-    ea = (function() {
+    eu = (function() {
         function t() {}
         return t.getInstance = function() {
             return this._instance || (this._instance = new t), this._instance
         }, t.prototype.setGlobalLoggerProvider = function(t) {
-            return en[er] ? this.getLoggerProvider() : (en[er] = function(e) {
-                return 1 === e ? t : eo
+            return eo[ei] ? this.getLoggerProvider() : (eo[ei] = function(e) {
+                return 1 === e ? t : es
             }, t)
         }, t.prototype.getLoggerProvider = function() {
             var t, e;
-            return null !== (e = null === (t = en[er]) || void 0 === t ? void 0 : t.call(en, 1)) && void 0 !== e ? e : eo
+            return null !== (e = null === (t = eo[ei]) || void 0 === t ? void 0 : t.call(eo, 1)) && void 0 !== e ? e : es
         }, t.prototype.getLogger = function(t, e, n) {
             return this.getLoggerProvider().getLogger(t, e, n)
         }, t.prototype.disable = function() {
-            delete en[er]
+            delete eo[ei]
         }, t
     })().getInstance(),
-    es = "service.name",
-    eu = "telemetry.sdk.name",
-    ec = "telemetry.sdk.language",
-    el = "telemetry.sdk.version",
-    ep = ((iI = {})[eu] = "opentelemetry", iI["process.runtime.name"] = "browser", iI[ec] = "webjs", iI[el] = "1.25.1", iI),
-    ef = function() {
-        return (ef = Object.assign || function(t) {
+    ec = "service.name",
+    el = "telemetry.sdk.name",
+    ep = "telemetry.sdk.language",
+    ef = "telemetry.sdk.version",
+    ed = ((oR = {})[el] = "opentelemetry", oR["process.runtime.name"] = "browser", oR[ep] = "webjs", oR[ef] = "1.26.0", oR),
+    eh = function() {
+        return (eh = Object.assign || function(t) {
             for (var e, n = 1, r = arguments.length; n < r; n++)
-                for (var i in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
+                for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
             return t
         }).apply(this, arguments)
     },
-    ed = function(t, e) {
-        var n, r, i, o, a = {
+    eg = function(t, e) {
+        var n, r, o, i, a = {
             label: 0,
             sent: function() {
-                if (1 & i[0]) throw i[1];
-                return i[1]
+                if (1 & o[0]) throw o[1];
+                return o[1]
             },
             trys: [],
             ops: []
         };
-        return o = {
+        return i = {
             next: s(0),
             throw: s(1),
             return: s(2)
-        }, "function" == typeof Symbol && (o[Symbol.iterator] = function() {
+        }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
             return this
-        }), o;
+        }), i;
 
-        function s(o) {
+        function s(i) {
             return function(s) {
-                return function(o) {
+                return function(i) {
                     if (n) throw TypeError("Generator is already executing.");
                     for (; a;) try {
-                        if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) return i;
-                        switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
+                        if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                        switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
                             case 0:
                             case 1:
-                                i = o;
+                                o = i;
                                 break;
                             case 4:
                                 return a.label++, {
-                                    value: o[1],
+                                    value: i[1],
                                     done: !1
                                 };
                             case 5:
-                                a.label++, r = o[1], o = [0];
+                                a.label++, r = i[1], i = [0];
                                 continue;
                             case 7:
-                                o = a.ops.pop(), a.trys.pop();
+                                i = a.ops.pop(), a.trys.pop();
                                 continue;
                             default:
-                                if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
+                                if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                     a = 0;
                                     continue
                                 }
-                                if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                                    a.label = o[1];
+                                if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
+                                    a.label = i[1];
                                     break
                                 }
-                                if (6 === o[0] && a.label < i[1]) {
-                                    a.label = i[1], i = o;
+                                if (6 === i[0] && a.label < o[1]) {
+                                    a.label = o[1], o = i;
                                     break
                                 }
-                                if (i && a.label < i[2]) {
-                                    a.label = i[2], a.ops.push(o);
+                                if (o && a.label < o[2]) {
+                                    a.label = o[2], a.ops.push(i);
                                     break
                                 }
-                                i[2] && a.ops.pop(), a.trys.pop();
+                                o[2] && a.ops.pop(), a.trys.pop();
                                 continue
                         }
-                        o = e.call(t, a)
+                        i = e.call(t, a)
                     } catch (t) {
-                        o = [6, t], r = 0
+                        i = [6, t], r = 0
                     } finally {
-                        n = i = 0
+                        n = o = 0
                     }
-                    if (5 & o[0]) throw o[1];
+                    if (5 & i[0]) throw i[1];
                     return {
-                        value: o[0] ? o[1] : void 0,
+                        value: i[0] ? i[1] : void 0,
                         done: !0
                     }
-                }([o, s])
+                }([i, s])
             }
         }
     },
-    eh = function(t, e) {
+    e_ = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    e_ = function() {
+    ev = function() {
         function t(t, e) {
             var n, r = this;
             this._attributes = t, this.asyncAttributesPending = null != e, this._syncAttributes = null !== (n = this._attributes) && void 0 !== n ? n : {}, this._asyncAttributesPromise = null == e ? void 0 : e.then(function(t) {
                 return r._attributes = Object.assign({}, r._attributes, t), r.asyncAttributesPending = !1, t
             }, function(t) {
-                return tm.debug("a resource's async attributes promise rejected: %s", t), r.asyncAttributesPending = !1, {}
+                return ty.debug("a resource's async attributes promise rejected: %s", t), r.asyncAttributesPending = !1, {}
             })
         }
         return t.empty = function() {
             return t.EMPTY
         }, t.default = function() {
             var e;
-            return new t(((e = {})[es] = "unknown_service", e[ec] = ep[ec], e[eu] = ep[eu], e[el] = ep[el], e))
+            return new t(((e = {})[ec] = "unknown_service", e[ep] = ed[ep], e[el] = ed[el], e[ef] = ed[ef], e))
         }, Object.defineProperty(t.prototype, "attributes", {
             get: function() {
                 var t;
-                return this.asyncAttributesPending && tm.error("Accessing resource attributes before async attributes settled"), null !== (t = this._attributes) && void 0 !== t ? t : {}
+                return this.asyncAttributesPending && ty.error("Accessing resource attributes before async attributes settled"), null !== (t = this._attributes) && void 0 !== t ? t : {}
             },
             enumerable: !1,
             configurable: !0
         }), t.prototype.waitForAsyncAttributes = function() {
             var t, e, n, r;
             return t = this, e = void 0, n = void 0, r = function() {
-                return ed(this, function(t) {
+                return eg(this, function(t) {
                     switch (t.label) {
                         case 0:
                             if (!this.asyncAttributesPending) return [3, 2];
@@ -1655,12 +1646,12 @@ var eo = new(function() {
                             return [2]
                     }
                 })
-            }, new(n || (n = Promise))(function(i, o) {
+            }, new(n || (n = Promise))(function(o, i) {
                 function a(t) {
                     try {
                         u(r.next(t))
                     } catch (t) {
-                        o(t)
+                        i(t)
                     }
                 }
 
@@ -1668,13 +1659,13 @@ var eo = new(function() {
                     try {
                         u(r.throw(t))
                     } catch (t) {
-                        o(t)
+                        i(t)
                     }
                 }
 
                 function u(t) {
                     var e;
-                    t.done ? i(t.value) : ((e = t.value) instanceof n ? e : new n(function(t) {
+                    t.done ? o(t.value) : ((e = t.value) instanceof n ? e : new n(function(t) {
                         t(e)
                     })).then(a, s)
                 }
@@ -1683,98 +1674,98 @@ var eo = new(function() {
         }, t.prototype.merge = function(e) {
             var n, r = this;
             if (!e) return this;
-            var i = ef(ef({}, this._syncAttributes), null !== (n = e._syncAttributes) && void 0 !== n ? n : e.attributes);
-            return this._asyncAttributesPromise || e._asyncAttributesPromise ? new t(i, Promise.all([this._asyncAttributesPromise, e._asyncAttributesPromise]).then(function(t) {
-                var n, i = eh(t, 2),
-                    o = i[0],
-                    a = i[1];
-                return ef(ef(ef(ef({}, r._syncAttributes), o), null !== (n = e._syncAttributes) && void 0 !== n ? n : e.attributes), a)
-            })) : new t(i)
+            var o = eh(eh({}, this._syncAttributes), null !== (n = e._syncAttributes) && void 0 !== n ? n : e.attributes);
+            return this._asyncAttributesPromise || e._asyncAttributesPromise ? new t(o, Promise.all([this._asyncAttributesPromise, e._asyncAttributesPromise]).then(function(t) {
+                var n, o = e_(t, 2),
+                    i = o[0],
+                    a = o[1];
+                return eh(eh(eh(eh({}, r._syncAttributes), i), null !== (n = e._syncAttributes) && void 0 !== n ? n : e.attributes), a)
+            })) : new t(o)
         }, t.EMPTY = new t({}), t
     }(),
-    ev = function(t, e) {
-        var n, r, i, o, a = {
+    em = function(t, e) {
+        var n, r, o, i, a = {
             label: 0,
             sent: function() {
-                if (1 & i[0]) throw i[1];
-                return i[1]
+                if (1 & o[0]) throw o[1];
+                return o[1]
             },
             trys: [],
             ops: []
         };
-        return o = {
+        return i = {
             next: s(0),
             throw: s(1),
             return: s(2)
-        }, "function" == typeof Symbol && (o[Symbol.iterator] = function() {
+        }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
             return this
-        }), o;
+        }), i;
 
-        function s(o) {
+        function s(i) {
             return function(s) {
-                return function(o) {
+                return function(i) {
                     if (n) throw TypeError("Generator is already executing.");
                     for (; a;) try {
-                        if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) return i;
-                        switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
+                        if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                        switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
                             case 0:
                             case 1:
-                                i = o;
+                                o = i;
                                 break;
                             case 4:
                                 return a.label++, {
-                                    value: o[1],
+                                    value: i[1],
                                     done: !1
                                 };
                             case 5:
-                                a.label++, r = o[1], o = [0];
+                                a.label++, r = i[1], i = [0];
                                 continue;
                             case 7:
-                                o = a.ops.pop(), a.trys.pop();
+                                i = a.ops.pop(), a.trys.pop();
                                 continue;
                             default:
-                                if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
+                                if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                     a = 0;
                                     continue
                                 }
-                                if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                                    a.label = o[1];
+                                if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
+                                    a.label = i[1];
                                     break
                                 }
-                                if (6 === o[0] && a.label < i[1]) {
-                                    a.label = i[1], i = o;
+                                if (6 === i[0] && a.label < o[1]) {
+                                    a.label = o[1], o = i;
                                     break
                                 }
-                                if (i && a.label < i[2]) {
-                                    a.label = i[2], a.ops.push(o);
+                                if (o && a.label < o[2]) {
+                                    a.label = o[2], a.ops.push(i);
                                     break
                                 }
-                                i[2] && a.ops.pop(), a.trys.pop();
+                                o[2] && a.ops.pop(), a.trys.pop();
                                 continue
                         }
-                        o = e.call(t, a)
+                        i = e.call(t, a)
                     } catch (t) {
-                        o = [6, t], r = 0
+                        i = [6, t], r = 0
                     } finally {
-                        n = i = 0
+                        n = o = 0
                     }
-                    if (5 & o[0]) throw o[1];
+                    if (5 & i[0]) throw i[1];
                     return {
-                        value: o[0] ? o[1] : void 0,
+                        value: i[0] ? i[1] : void 0,
                         done: !0
                     }
-                }([o, s])
+                }([i, s])
             }
         }
     },
-    em = function(t) {
+    ey = function(t) {
         void 0 === t && (t = {});
         var e, n = (null !== (e = t.detectors) && void 0 !== e ? e : []).map(function(e) {
                 try {
-                    var n, r, i, o, a, s = e.detect(t);
-                    return (a = null !== s && "object" == typeof s && "function" == typeof s.then ? new e_({}, (n = void 0, r = void 0, i = void 0, o = function() {
+                    var n, r, o, i, a, s = e.detect(t);
+                    return (a = null !== s && "object" == typeof s && "function" == typeof s.then ? new ev({}, (n = void 0, r = void 0, o = void 0, i = function() {
                         var t;
-                        return ev(this, function(e) {
+                        return em(this, function(e) {
                             switch (e.label) {
                                 case 0:
                                     return [4, s];
@@ -1782,10 +1773,10 @@ var eo = new(function() {
                                     return t = e.sent(), [2, t.attributes]
                             }
                         })
-                    }, new(i || (i = Promise))(function(t, e) {
+                    }, new(o || (o = Promise))(function(t, e) {
                         function a(t) {
                             try {
-                                u(o.next(t))
+                                u(i.next(t))
                             } catch (t) {
                                 e(t)
                             }
@@ -1793,7 +1784,7 @@ var eo = new(function() {
 
                         function s(t) {
                             try {
-                                u(o.throw(t))
+                                u(i.throw(t))
                             } catch (t) {
                                 e(t)
                             }
@@ -1801,55 +1792,55 @@ var eo = new(function() {
 
                         function u(e) {
                             var n;
-                            e.done ? t(e.value) : ((n = e.value) instanceof i ? n : new i(function(t) {
+                            e.done ? t(e.value) : ((n = e.value) instanceof o ? n : new o(function(t) {
                                 t(n)
                             })).then(a, s)
                         }
-                        u((o = o.apply(n, r || [])).next())
+                        u((i = i.apply(n, r || [])).next())
                     }))) : s).waitForAsyncAttributes ? a.waitForAsyncAttributes().then(function() {
-                        return tm.debug(e.constructor.name + " found resource.", a)
-                    }) : tm.debug(e.constructor.name + " found resource.", a), a
+                        return ty.debug(e.constructor.name + " found resource.", a)
+                    }) : ty.debug(e.constructor.name + " found resource.", a), a
                 } catch (t) {
-                    return tm.error(e.constructor.name + " failed: " + t.message), e_.empty()
+                    return ty.error(e.constructor.name + " failed: " + t.message), ev.empty()
                 }
             }),
             r = n.reduce(function(t, e) {
                 return t.merge(e)
-            }, e_.empty());
+            }, ev.empty());
         return r.waitForAsyncAttributes && r.waitForAsyncAttributes().then(function() {
-            eg(n)
+            eb(n)
         }), r
     },
-    eg = function(t) {
+    eb = function(t) {
         t.forEach(function(t) {
             if (Object.keys(t.attributes).length > 0) {
                 var e = JSON.stringify(t.attributes, null, 4);
-                tm.verbose(e)
+                ty.verbose(e)
             }
         })
     };
-(iv = iD || (iD = {}))[iv.NOT_RECORD = 0] = "NOT_RECORD", iv[iv.RECORD = 1] = "RECORD", iv[iv.RECORD_AND_SAMPLED = 2] = "RECORD_AND_SAMPLED";
-var ey = function() {
+(of = oC || (oC = {}))[of.NOT_RECORD = 0] = "NOT_RECORD", of [of.RECORD = 1] = "RECORD", of [of.RECORD_AND_SAMPLED = 2] = "RECORD_AND_SAMPLED";
+var eE = function() {
         function t() {}
         return t.prototype.shouldSample = function() {
             return {
-                decision: iD.NOT_RECORD
+                decision: oC.NOT_RECORD
             }
         }, t.prototype.toString = function() {
             return "AlwaysOffSampler"
         }, t
     }(),
-    eb = function() {
+    eT = function() {
         function t() {}
         return t.prototype.shouldSample = function() {
             return {
-                decision: iD.RECORD_AND_SAMPLED
+                decision: oC.RECORD_AND_SAMPLED
             }
         }, t.prototype.toString = function() {
             return "AlwaysOnSampler"
         }, t
     }(),
-    eE = function() {
+    ew = function() {
         function t() {
             var t = this;
             this._promise = new Promise(function(e, n) {
@@ -1868,35 +1859,35 @@ var ey = function() {
             this._reject(t)
         }, t
     }(),
-    eT = function(t, e) {
+    eS = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    ew = function(t, e, n) {
+    eO = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    eO = function() {
+    eL = function() {
         function t(t, e) {
-            this._callback = t, this._that = e, this._isCalled = !1, this._deferred = new eE
+            this._callback = t, this._that = e, this._isCalled = !1, this._deferred = new ew
         }
         return Object.defineProperty(t.prototype, "isCalled", {
             get: function() {
@@ -1915,7 +1906,7 @@ var ey = function() {
             if (!this._isCalled) {
                 this._isCalled = !0;
                 try {
-                    Promise.resolve((t = this._callback).call.apply(t, ew([this._that], eT(n), !1))).then(function(t) {
+                    Promise.resolve((t = this._callback).call.apply(t, eO([this._that], eS(n), !1))).then(function(t) {
                         return e._deferred.resolve(t)
                     }, function(t) {
                         return e._deferred.reject(t)
@@ -1927,12 +1918,12 @@ var ey = function() {
             return this._deferred.promise
         }, t
     }();
-(im = iM || (iM = {}))[im.SUCCESS = 0] = "SUCCESS", im[im.FAILED = 1] = "FAILED", (ig = ik || (ik = {})).AlwaysOff = "always_off", ig.AlwaysOn = "always_on", ig.ParentBasedAlwaysOff = "parentbased_always_off", ig.ParentBasedAlwaysOn = "parentbased_always_on", ig.ParentBasedTraceIdRatio = "parentbased_traceidratio", ig.TraceIdRatio = "traceidratio";
-var eS = ["OTEL_SDK_DISABLED"],
-    eR = ["OTEL_BSP_EXPORT_TIMEOUT", "OTEL_BSP_MAX_EXPORT_BATCH_SIZE", "OTEL_BSP_MAX_QUEUE_SIZE", "OTEL_BSP_SCHEDULE_DELAY", "OTEL_BLRP_EXPORT_TIMEOUT", "OTEL_BLRP_MAX_EXPORT_BATCH_SIZE", "OTEL_BLRP_MAX_QUEUE_SIZE", "OTEL_BLRP_SCHEDULE_DELAY", "OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_ATTRIBUTE_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT", "OTEL_LOGRECORD_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_LOGRECORD_ATTRIBUTE_COUNT_LIMIT", "OTEL_SPAN_EVENT_COUNT_LIMIT", "OTEL_SPAN_LINK_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_PER_EVENT_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_PER_LINK_COUNT_LIMIT", "OTEL_EXPORTER_OTLP_TIMEOUT", "OTEL_EXPORTER_OTLP_TRACES_TIMEOUT", "OTEL_EXPORTER_OTLP_METRICS_TIMEOUT", "OTEL_EXPORTER_OTLP_LOGS_TIMEOUT", "OTEL_EXPORTER_JAEGER_AGENT_PORT"],
-    eL = ["OTEL_NO_PATCH_MODULES", "OTEL_PROPAGATORS"],
-    eA = 1 / 0,
-    eP = {
+(od = oN || (oN = {}))[od.SUCCESS = 0] = "SUCCESS", od[od.FAILED = 1] = "FAILED", (oh = ox || (ox = {})).AlwaysOff = "always_off", oh.AlwaysOn = "always_on", oh.ParentBasedAlwaysOff = "parentbased_always_off", oh.ParentBasedAlwaysOn = "parentbased_always_on", oh.ParentBasedTraceIdRatio = "parentbased_traceidratio", oh.TraceIdRatio = "traceidratio";
+var eP = ["OTEL_SDK_DISABLED"],
+    eA = ["OTEL_BSP_EXPORT_TIMEOUT", "OTEL_BSP_MAX_EXPORT_BATCH_SIZE", "OTEL_BSP_MAX_QUEUE_SIZE", "OTEL_BSP_SCHEDULE_DELAY", "OTEL_BLRP_EXPORT_TIMEOUT", "OTEL_BLRP_MAX_EXPORT_BATCH_SIZE", "OTEL_BLRP_MAX_QUEUE_SIZE", "OTEL_BLRP_SCHEDULE_DELAY", "OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_ATTRIBUTE_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT", "OTEL_LOGRECORD_ATTRIBUTE_VALUE_LENGTH_LIMIT", "OTEL_LOGRECORD_ATTRIBUTE_COUNT_LIMIT", "OTEL_SPAN_EVENT_COUNT_LIMIT", "OTEL_SPAN_LINK_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_PER_EVENT_COUNT_LIMIT", "OTEL_SPAN_ATTRIBUTE_PER_LINK_COUNT_LIMIT", "OTEL_EXPORTER_OTLP_TIMEOUT", "OTEL_EXPORTER_OTLP_TRACES_TIMEOUT", "OTEL_EXPORTER_OTLP_METRICS_TIMEOUT", "OTEL_EXPORTER_OTLP_LOGS_TIMEOUT", "OTEL_EXPORTER_JAEGER_AGENT_PORT"],
+    eR = ["OTEL_NO_PATCH_MODULES", "OTEL_PROPAGATORS"],
+    eC = 1 / 0,
+    eN = {
         OTEL_SDK_DISABLED: !1,
         CONTAINER_NAME: "",
         ECS_CONTAINER_METADATA_URI_V4: "",
@@ -1966,23 +1957,23 @@ var eS = ["OTEL_SDK_DISABLED"],
         OTEL_EXPORTER_OTLP_METRICS_TIMEOUT: 1e4,
         OTEL_EXPORTER_OTLP_LOGS_TIMEOUT: 1e4,
         OTEL_EXPORTER_ZIPKIN_ENDPOINT: "http://localhost:9411/api/v2/spans",
-        OTEL_LOG_LEVEL: iL.INFO,
+        OTEL_LOG_LEVEL: ow.INFO,
         OTEL_NO_PATCH_MODULES: [],
         OTEL_PROPAGATORS: ["tracecontext", "baggage"],
         OTEL_RESOURCE_ATTRIBUTES: "",
         OTEL_SERVICE_NAME: "",
-        OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT: eA,
+        OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT: eC,
         OTEL_ATTRIBUTE_COUNT_LIMIT: 128,
-        OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT: eA,
+        OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT: eC,
         OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT: 128,
-        OTEL_LOGRECORD_ATTRIBUTE_VALUE_LENGTH_LIMIT: eA,
+        OTEL_LOGRECORD_ATTRIBUTE_VALUE_LENGTH_LIMIT: eC,
         OTEL_LOGRECORD_ATTRIBUTE_COUNT_LIMIT: 128,
         OTEL_SPAN_EVENT_COUNT_LIMIT: 128,
         OTEL_SPAN_LINK_COUNT_LIMIT: 128,
         OTEL_SPAN_ATTRIBUTE_PER_EVENT_COUNT_LIMIT: 128,
         OTEL_SPAN_ATTRIBUTE_PER_LINK_COUNT_LIMIT: 128,
         OTEL_TRACES_EXPORTER: "",
-        OTEL_TRACES_SAMPLER: ik.ParentBasedAlwaysOn,
+        OTEL_TRACES_SAMPLER: ox.ParentBasedAlwaysOn,
         OTEL_TRACES_SAMPLER_ARG: "",
         OTEL_LOGS_EXPORTER: "",
         OTEL_EXPORTER_OTLP_INSECURE: "",
@@ -2011,42 +2002,42 @@ var eS = ["OTEL_SDK_DISABLED"],
         OTEL_EXPORTER_OTLP_LOGS_PROTOCOL: "http/protobuf",
         OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE: "cumulative"
     },
-    eC = {
-        ALL: iL.ALL,
-        VERBOSE: iL.VERBOSE,
-        DEBUG: iL.DEBUG,
-        INFO: iL.INFO,
-        WARN: iL.WARN,
-        ERROR: iL.ERROR,
-        NONE: iL.NONE
+    ex = {
+        ALL: ow.ALL,
+        VERBOSE: ow.VERBOSE,
+        DEBUG: ow.DEBUG,
+        INFO: ow.INFO,
+        WARN: ow.WARN,
+        ERROR: ow.ERROR,
+        NONE: ow.NONE
     };
 
-function eN(t) {
+function eI(t) {
     var e = {};
-    for (var n in eP)
+    for (var n in eN)
         if ("OTEL_LOG_LEVEL" === n) ! function(t, e, n) {
             var r = n[t];
             if ("string" == typeof r) {
-                var i = eC[r.toUpperCase()];
-                null != i && (e[t] = i)
+                var o = ex[r.toUpperCase()];
+                null != o && (e[t] = o)
             }
         }(n, e, t);
-        else if (eS.indexOf(n) > -1) ! function(t, e, n) {
+        else if (eP.indexOf(n) > -1) ! function(t, e, n) {
         if (void 0 !== n[t]) {
             var r = String(n[t]);
             e[t] = "true" === r.toLowerCase()
         }
     }(n, e, t);
-    else if (eR.indexOf(n) > -1) ! function(t, e, n, r, i) {
-        if (void 0 === r && (r = -1 / 0), void 0 === i && (i = 1 / 0), void 0 !== n[t]) {
-            var o = Number(n[t]);
-            isNaN(o) || (o < r ? e[t] = r : o > i ? e[t] = i : e[t] = o)
+    else if (eA.indexOf(n) > -1) ! function(t, e, n, r, o) {
+        if (void 0 === r && (r = -1 / 0), void 0 === o && (o = 1 / 0), void 0 !== n[t]) {
+            var i = Number(n[t]);
+            isNaN(i) || (i < r ? e[t] = r : i > o ? e[t] = o : e[t] = i)
         }
     }(n, e, t);
-    else if (eL.indexOf(n) > -1) ! function(t, e, n, r) {
+    else if (eR.indexOf(n) > -1) ! function(t, e, n, r) {
         void 0 === r && (r = ",");
-        var i = n[t];
-        "string" == typeof i && (e[t] = i.split(r).map(function(t) {
+        var o = n[t];
+        "string" == typeof o && (e[t] = o.split(r).map(function(t) {
             return t.trim()
         }))
     }(n, e, t);
@@ -2056,13 +2047,13 @@ function eN(t) {
     }
     return e
 }
-var ex = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof w ? w : {};
+var eD = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {};
 
-function eI() {
-    return Object.assign({}, eP, eN(ex))
+function eM() {
+    return Object.assign({}, eN, eI(eD))
 }
-var eD = function(t) {
-    tm.error("string" == typeof t ? t : JSON.stringify(function(t) {
+var ek = function(t) {
+    ty.error("string" == typeof t ? t : JSON.stringify(function(t) {
         for (var e = {}, n = t; null !== n;) Object.getOwnPropertyNames(n).forEach(function(t) {
             if (!e[t]) {
                 var r = n[t];
@@ -2073,26 +2064,26 @@ var eD = function(t) {
     }(t)))
 };
 
-function eM(t) {
+function ej(t) {
     try {
-        eD(t)
+        ek(t)
     } catch (t) {}
 }
-var ek = W("OpenTelemetry SDK Context Key SUPPRESS_TRACING");
+var eU = Y("OpenTelemetry SDK Context Key SUPPRESS_TRACING");
 
-function eU(t) {
-    return !0 === t.getValue(ek)
+function eB(t) {
+    return !0 === t.getValue(eU)
 }
-var ej = function() {
+var eF = function() {
         function t(t, e) {
             this._exporter = t, this._isExporting = !1, this._finishedSpans = [], this._droppedSpansCount = 0;
-            var n = eI();
-            this._maxExportBatchSize = "number" == typeof(null == e ? void 0 : e.maxExportBatchSize) ? e.maxExportBatchSize : n.OTEL_BSP_MAX_EXPORT_BATCH_SIZE, this._maxQueueSize = "number" == typeof(null == e ? void 0 : e.maxQueueSize) ? e.maxQueueSize : n.OTEL_BSP_MAX_QUEUE_SIZE, this._scheduledDelayMillis = "number" == typeof(null == e ? void 0 : e.scheduledDelayMillis) ? e.scheduledDelayMillis : n.OTEL_BSP_SCHEDULE_DELAY, this._exportTimeoutMillis = "number" == typeof(null == e ? void 0 : e.exportTimeoutMillis) ? e.exportTimeoutMillis : n.OTEL_BSP_EXPORT_TIMEOUT, this._shutdownOnce = new eO(this._shutdown, this), this._maxExportBatchSize > this._maxQueueSize && (tm.warn("BatchSpanProcessor: maxExportBatchSize must be smaller or equal to maxQueueSize, setting maxExportBatchSize to match maxQueueSize"), this._maxExportBatchSize = this._maxQueueSize)
+            var n = eM();
+            this._maxExportBatchSize = "number" == typeof(null == e ? void 0 : e.maxExportBatchSize) ? e.maxExportBatchSize : n.OTEL_BSP_MAX_EXPORT_BATCH_SIZE, this._maxQueueSize = "number" == typeof(null == e ? void 0 : e.maxQueueSize) ? e.maxQueueSize : n.OTEL_BSP_MAX_QUEUE_SIZE, this._scheduledDelayMillis = "number" == typeof(null == e ? void 0 : e.scheduledDelayMillis) ? e.scheduledDelayMillis : n.OTEL_BSP_SCHEDULE_DELAY, this._exportTimeoutMillis = "number" == typeof(null == e ? void 0 : e.exportTimeoutMillis) ? e.exportTimeoutMillis : n.OTEL_BSP_EXPORT_TIMEOUT, this._shutdownOnce = new eL(this._shutdown, this), this._maxExportBatchSize > this._maxQueueSize && (ty.warn("BatchSpanProcessor: maxExportBatchSize must be smaller or equal to maxQueueSize, setting maxExportBatchSize to match maxQueueSize"), this._maxExportBatchSize = this._maxQueueSize)
         }
         return t.prototype.forceFlush = function() {
             return this._shutdownOnce.isCalled ? this._shutdownOnce.promise : this._flushAll()
         }, t.prototype.onStart = function(t, e) {}, t.prototype.onEnd = function(t) {
-            this._shutdownOnce.isCalled || (t.spanContext().traceFlags & ix.SAMPLED) == 0 || this._addToBuffer(t)
+            this._shutdownOnce.isCalled || (t.spanContext().traceFlags & oA.SAMPLED) == 0 || this._addToBuffer(t)
         }, t.prototype.shutdown = function() {
             return this._shutdownOnce.call()
         }, t.prototype._shutdown = function() {
@@ -2106,14 +2097,14 @@ var ej = function() {
             })
         }, t.prototype._addToBuffer = function(t) {
             if (this._finishedSpans.length >= this._maxQueueSize) {
-                0 === this._droppedSpansCount && tm.debug("maxQueueSize reached, dropping spans"), this._droppedSpansCount++;
+                0 === this._droppedSpansCount && ty.debug("maxQueueSize reached, dropping spans"), this._droppedSpansCount++;
                 return
             }
-            this._droppedSpansCount > 0 && (tm.warn("Dropped " + this._droppedSpansCount + " spans because maxQueueSize reached"), this._droppedSpansCount = 0), this._finishedSpans.push(t), this._maybeStartTimer()
+            this._droppedSpansCount > 0 && (ty.warn("Dropped " + this._droppedSpansCount + " spans because maxQueueSize reached"), this._droppedSpansCount = 0), this._finishedSpans.push(t), this._maybeStartTimer()
         }, t.prototype._flushAll = function() {
             var t = this;
             return new Promise(function(e, n) {
-                for (var r = [], i = Math.ceil(t._finishedSpans.length / t._maxExportBatchSize), o = 0; o < i; o++) r.push(t._flushOneBatch());
+                for (var r = [], o = Math.ceil(t._finishedSpans.length / t._maxExportBatchSize), i = 0; i < o; i++) r.push(t._flushOneBatch());
                 Promise.all(r).then(function() {
                     e()
                 }).catch(n)
@@ -2124,19 +2115,19 @@ var ej = function() {
                 var r = setTimeout(function() {
                     n(Error("Timeout"))
                 }, t._exportTimeoutMillis);
-                tv.with(tv.active().setValue(ek, !0), function() {
-                    t._finishedSpans.length <= t._maxExportBatchSize ? (i = t._finishedSpans, t._finishedSpans = []) : i = t._finishedSpans.splice(0, t._maxExportBatchSize);
-                    for (var i, o = function() {
-                            return t._exporter.export(i, function(t) {
-                                var i;
-                                clearTimeout(r), t.code === iM.SUCCESS ? e() : n(null !== (i = t.error) && void 0 !== i ? i : Error("BatchSpanProcessor: span export failed"))
+                tm.with(tm.active().setValue(eU, !0), function() {
+                    t._finishedSpans.length <= t._maxExportBatchSize ? (o = t._finishedSpans, t._finishedSpans = []) : o = t._finishedSpans.splice(0, t._maxExportBatchSize);
+                    for (var o, i = function() {
+                            return t._exporter.export(o, function(t) {
+                                var o;
+                                clearTimeout(r), t.code === oN.SUCCESS ? e() : n(null !== (o = t.error) && void 0 !== o ? o : Error("BatchSpanProcessor: span export failed"))
                             })
-                        }, a = null, s = 0, u = i.length; s < u; s++) {
-                        var c = i[s];
+                        }, a = null, s = 0, u = o.length; s < u; s++) {
+                        var c = o[s];
                         c.resource.asyncAttributesPending && c.resource.waitForAsyncAttributes && (null != a || (a = []), a.push(c.resource.waitForAsyncAttributes()))
                     }
-                    null === a ? o() : Promise.all(a).then(o, function(t) {
-                        eM(t), n(t)
+                    null === a ? i() : Promise.all(a).then(i, function(t) {
+                        ej(t), n(t)
                     })
                 })
             })
@@ -2147,7 +2138,7 @@ var ej = function() {
                     t._isExporting = !0, t._flushOneBatch().finally(function() {
                         t._isExporting = !1, t._finishedSpans.length > 0 && (t._clearTimer(), t._maybeStartTimer())
                     }).catch(function(e) {
-                        t._isExporting = !1, eM(e)
+                        t._isExporting = !1, ej(e)
                     })
                 };
                 if (this._finishedSpans.length >= this._maxExportBatchSize) return e();
@@ -2159,8 +2150,8 @@ var ej = function() {
             void 0 !== this._timer && (clearTimeout(this._timer), this._timer = void 0)
         }, t
     }(),
-    eB = (iy = function(t, e) {
-        return (iy = Object.setPrototypeOf || ({
+    eH = (og = function(t, e) {
+        return (og = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -2173,14 +2164,14 @@ var ej = function() {
         function n() {
             this.constructor = t
         }
-        iy(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        og(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    eF = function(t) {
+    eV = function(t) {
         function e(e, n) {
             var r = t.call(this, e, n) || this;
             return r.onInit(n), r
         }
-        return eB(e, t), e.prototype.onInit = function(t) {
+        return eH(e, t), e.prototype.onInit = function(t) {
             var e = this;
             (null == t ? void 0 : t.disableAutoFlushOnDocumentHide) !== !0 && "undefined" != typeof document && (this._visibilityChangeListener = function() {
                 "hidden" === document.visibilityState && e.forceFlush()
@@ -2190,14 +2181,14 @@ var ej = function() {
         }, e.prototype.onShutdown = function() {
             "undefined" != typeof document && (this._visibilityChangeListener && document.removeEventListener("visibilitychange", this._visibilityChangeListener), this._pageHideListener && document.removeEventListener("pagehide", this._pageHideListener))
         }, e
-    }(ej),
-    eH = function() {
+    }(eF),
+    eG = function() {
         function t(t) {
             void 0 === t && (t = 0), this._ratio = t, this._ratio = this._normalize(t), this._upperBound = Math.floor(4294967295 * this._ratio)
         }
         return t.prototype.shouldSample = function(t, e) {
             return {
-                decision: to(e) && this._accumulate(e) < this._upperBound ? iD.RECORD_AND_SAMPLED : iD.NOT_RECORD
+                decision: ts(e) && this._accumulate(e) < this._upperBound ? oC.RECORD_AND_SAMPLED : oC.NOT_RECORD
             }
         }, t.prototype.toString = function() {
             return "TraceIdRatioBased{" + this._ratio + "}"
@@ -2211,7 +2202,7 @@ var ej = function() {
             return e
         }, t
     }(),
-    eV = function(t) {
+    eX = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -2226,7 +2217,7 @@ var ej = function() {
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    eG = function() {
+    ez = function() {
         function t(t) {
             var e;
             void 0 === t && (t = {}), this._propagators = null !== (e = t.propagators) && void 0 !== e ? e : [], this._fields = Array.from(new Set(this._propagators.map(function(t) {
@@ -2236,14 +2227,14 @@ var ej = function() {
             }, [])))
         }
         return t.prototype.inject = function(t, e, n) {
-            var r, i;
+            var r, o;
             try {
-                for (var o = eV(this._propagators), a = o.next(); !a.done; a = o.next()) {
+                for (var i = eX(this._propagators), a = i.next(); !a.done; a = i.next()) {
                     var s = a.value;
                     try {
                         s.inject(t, e, n)
                     } catch (t) {
-                        tm.warn("Failed to inject with " + s.constructor.name + ". Err: " + t.message)
+                        ty.warn("Failed to inject with " + s.constructor.name + ". Err: " + t.message)
                     }
                 }
             } catch (t) {
@@ -2252,7 +2243,7 @@ var ej = function() {
                 }
             } finally {
                 try {
-                    a && !a.done && (i = o.return) && i.call(o)
+                    a && !a.done && (o = i.return) && o.call(i)
                 } finally {
                     if (r) throw r.error
                 }
@@ -2262,7 +2253,7 @@ var ej = function() {
                 try {
                     return r.extract(t, e, n)
                 } catch (t) {
-                    tm.warn("Failed to inject with " + r.constructor.name + ". Err: " + t.message)
+                    ty.warn("Failed to inject with " + r.constructor.name + ". Err: " + t.message)
                 }
                 return t
             }, t)
@@ -2270,115 +2261,96 @@ var ej = function() {
             return this._fields.slice()
         }, t
     }(),
-    eX = Function.prototype.toString,
-    ez = eX.call(Object),
-    eq = (ia = Object.getPrototypeOf, is = Object, function(t) {
-        return ia(is(t))
+    e$ = Function.prototype.toString,
+    eq = e$.call(Object),
+    eW = (or = Object.getPrototypeOf, oo = Object, function(t) {
+        return or(oo(t))
     }),
-    e$ = Object.prototype,
-    eK = e$.hasOwnProperty,
-    eW = Symbol ? Symbol.toStringTag : void 0,
-    eZ = e$.toString;
+    eK = Object.prototype,
+    eZ = eK.hasOwnProperty,
+    eY = Symbol ? Symbol.toStringTag : void 0,
+    eQ = eK.toString;
 
-function eY(t) {
-    if (!(null != t && "object" == typeof t) || "[object Object]" !== (null == t ? void 0 === t ? "[object Undefined]" : "[object Null]" : eW && eW in Object(t) ? function(t) {
-            var e = eK.call(t, eW),
-                n = t[eW],
+function eJ(t) {
+    if (!(null != t && "object" == typeof t) || "[object Object]" !== (null == t ? void 0 === t ? "[object Undefined]" : "[object Null]" : eY && eY in Object(t) ? function(t) {
+            var e = eZ.call(t, eY),
+                n = t[eY],
                 r = !1;
             try {
-                t[eW] = void 0, r = !0
+                t[eY] = void 0, r = !0
             } catch (t) {}
-            var i = eZ.call(t);
-            return r && (e ? t[eW] = n : delete t[eW]), i
-        }(t) : eZ.call(t))) return !1;
-    var e = eq(t);
+            var o = eQ.call(t);
+            return r && (e ? t[eY] = n : delete t[eY]), o
+        }(t) : eQ.call(t))) return !1;
+    var e = eW(t);
     if (null === e) return !0;
-    var n = eK.call(e, "constructor") && e.constructor;
-    return "function" == typeof n && n instanceof n && eX.call(n) === ez
+    var n = eZ.call(e, "constructor") && e.constructor;
+    return "function" == typeof n && n instanceof n && e$.call(n) === eq
 }
 
-function eQ(t) {
-    return e0(t) ? t.slice() : t
+function e0(t) {
+    return e2(t) ? t.slice() : t
 }
 
-function eJ(t, e, n) {
-    for (var r = n.get(t[e]) || [], i = 0, o = r.length; i < o; i++) {
-        var a = r[i];
+function e1(t, e, n) {
+    for (var r = n.get(t[e]) || [], o = 0, i = r.length; o < i; o++) {
+        var a = r[o];
         if (a.key === e && a.obj === t) return !0
     }
     return !1
 }
 
-function e0(t) {
+function e2(t) {
     return Array.isArray(t)
 }
 
-function e1(t) {
+function e3(t) {
     return "function" == typeof t
 }
 
-function e2(t) {
-    return !e3(t) && !e0(t) && !e1(t) && "object" == typeof t
+function e4(t) {
+    return !e6(t) && !e2(t) && !e3(t) && "object" == typeof t
 }
 
-function e3(t) {
+function e6(t) {
     return "string" == typeof t || "number" == typeof t || "boolean" == typeof t || void 0 === t || t instanceof Date || t instanceof RegExp || null === t
 }
-var e4 = "baggage",
-    e6 = {};
-O(e6, "serializeKeyPairs", () => e9), O(e6, "getKeyPairs", () => e8), O(e6, "parsePairKeyValue", () => e7), O(e6, "parseKeyPairsIntoRecord", () => nt);
-var e5 = function(t, e) {
-    var n = "function" == typeof Symbol && t[Symbol.iterator];
-    if (!n) return t;
-    var r, i, o = n.call(t),
-        a = [];
-    try {
-        for (;
-            (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
-    } catch (t) {
-        i = {
-            error: t
-        }
-    } finally {
+var e5 = "baggage",
+    e9 = function(t, e) {
+        var n = "function" == typeof Symbol && t[Symbol.iterator];
+        if (!n) return t;
+        var r, o, i = n.call(t),
+            a = [];
         try {
-            r && !r.done && (n = o.return) && n.call(o)
+            for (;
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
+        } catch (t) {
+            o = {
+                error: t
+            }
         } finally {
-            if (i) throw i.error
+            try {
+                r && !r.done && (n = i.return) && n.call(i)
+            } finally {
+                if (o) throw o.error
+            }
         }
-    }
-    return a
-};
-
-function e9(t) {
-    return t.reduce(function(t, e) {
-        var n = "" + t + ("" !== t ? "," : "") + e;
-        return n.length > 8192 ? t : n
-    }, "")
-}
+        return a
+    };
 
 function e8(t) {
-    return t.getAllEntries().map(function(t) {
-        var e = e5(t, 2),
-            n = e[0],
-            r = e[1],
-            i = encodeURIComponent(n) + "=" + encodeURIComponent(r.value);
-        return void 0 !== r.metadata && (i += ";" + r.metadata.toString()), i
-    })
-}
-
-function e7(t) {
     var e, n = t.split(";");
     if (!(n.length <= 0)) {
         var r = n.shift();
         if (r) {
-            var i = r.indexOf("=");
-            if (!(i <= 0)) {
-                var o, a = decodeURIComponent(r.substring(0, i).trim()),
-                    s = decodeURIComponent(r.substring(i + 1).trim());
-                return n.length > 0 && ("string" != typeof(o = n.join(";")) && ($.error("Cannot create baggage metadata from unknown type: " + typeof o), o = ""), e = {
-                    __TYPE__: q,
+            var o = r.indexOf("=");
+            if (!(o <= 0)) {
+                var i, a = decodeURIComponent(r.substring(0, o).trim()),
+                    s = decodeURIComponent(r.substring(o + 1).trim());
+                return n.length > 0 && ("string" != typeof(i = n.join(";")) && (K.error("Cannot create baggage metadata from unknown type: " + typeof i), i = ""), e = {
+                    __TYPE__: W,
                     toString: function() {
-                        return o
+                        return i
                     }
                 }), {
                     key: a,
@@ -2389,49 +2361,48 @@ function e7(t) {
         }
     }
 }
-
-function nt(t) {
-    return "string" != typeof t || 0 === t.length ? {} : t.split(",").map(function(t) {
-        return e7(t)
-    }).filter(function(t) {
-        return void 0 !== t && t.value.length > 0
-    }).reduce(function(t, e) {
-        return t[e.key] = e.value, t
-    }, {})
-}
-var ne = function() {
+var e7 = function() {
         function t() {}
         return t.prototype.inject = function(t, e, n) {
-            var r = tZ.getBaggage(t);
-            if (!(!r || eU(t))) {
-                var i = e9(e8(r).filter(function(t) {
+            var r = tQ.getBaggage(t);
+            if (!(!r || eB(t))) {
+                var o = r.getAllEntries().map(function(t) {
+                    var e = e9(t, 2),
+                        n = e[0],
+                        r = e[1],
+                        o = encodeURIComponent(n) + "=" + encodeURIComponent(r.value);
+                    return void 0 !== r.metadata && (o += ";" + r.metadata.toString()), o
+                }).filter(function(t) {
                     return t.length <= 4096
-                }).slice(0, 180));
-                i.length > 0 && n.set(e, e4, i)
+                }).slice(0, 180).reduce(function(t, e) {
+                    var n = "" + t + ("" !== t ? "," : "") + e;
+                    return n.length > 8192 ? t : n
+                }, "");
+                o.length > 0 && n.set(e, e5, o)
             }
         }, t.prototype.extract = function(t, e, n) {
-            var r = n.get(e, e4),
-                i = Array.isArray(r) ? r.join(",") : r;
-            if (!i) return t;
-            var o = {};
-            return 0 === i.length ? t : (i.split(",").forEach(function(t) {
-                var e = e7(t);
+            var r = n.get(e, e5),
+                o = Array.isArray(r) ? r.join(",") : r;
+            if (!o) return t;
+            var i = {};
+            return 0 === o.length ? t : (o.split(",").forEach(function(t) {
+                var e = e8(t);
                 if (e) {
                     var n = {
                         value: e.value
                     };
-                    e.metadata && (n.metadata = e.metadata), o[e.key] = n
+                    e.metadata && (n.metadata = e.metadata), i[e.key] = n
                 }
-            }), 0 === Object.entries(o).length) ? t : tZ.setBaggage(t, tZ.createBaggage(o))
+            }), 0 === Object.entries(i).length) ? t : tQ.setBaggage(t, tQ.createBaggage(i))
         }, t.prototype.fields = function() {
-            return [e4]
+            return [e5]
         }, t
     }(),
-    nn = "[_0-9a-z-*/]",
-    nr = RegExp("^(?:[a-z]" + nn + "{0,255}|" + ("[a-z0-9]" + nn) + "{0,240}@[a-z]" + nn + "{0,13})$"),
-    ni = /^[ -~]{0,255}[!-~]$/,
-    no = /,|=/,
-    na = function() {
+    nt = "[_0-9a-z-*/]",
+    ne = RegExp("^(?:[a-z]" + nt + "{0,255}|" + ("[a-z0-9]" + nt) + "{0,240}@[a-z]" + nt + "{0,13})$"),
+    nn = /^[ -~]{0,255}[!-~]$/,
+    nr = /,|=/,
+    no = function() {
         function t(t) {
             this._internalState = new Map, t && this._parse(t)
         }
@@ -2453,9 +2424,9 @@ var ne = function() {
                 var n = e.trim(),
                     r = n.indexOf("=");
                 if (-1 !== r) {
-                    var i = n.slice(0, r),
-                        o = n.slice(r + 1, e.length);
-                    nr.test(i) && ni.test(o) && !no.test(o) && t.set(i, o)
+                    var o = n.slice(0, r),
+                        i = n.slice(r + 1, e.length);
+                    ne.test(o) && nn.test(i) && !nr.test(i) && t.set(o, i)
                 }
                 return t
             }, new Map), this._internalState.size > 32 && (this._internalState = new Map(Array.from(this._internalState.entries()).reverse().slice(0, 32))))
@@ -2466,40 +2437,40 @@ var ne = function() {
             return e._internalState = new Map(this._internalState), e
         }, t
     }(),
-    ns = "traceparent",
-    nu = "tracestate",
-    nc = RegExp("^\\s?((?!ff)[\\da-f]{2})-((?![0]{32})[\\da-f]{32})-((?![0]{16})[\\da-f]{16})-([\\da-f]{2})(-.*)?\\s?$"),
-    nl = function() {
+    ni = "traceparent",
+    na = "tracestate",
+    ns = RegExp("^\\s?((?!ff)[\\da-f]{2})-((?![0]{32})[\\da-f]{32})-((?![0]{16})[\\da-f]{16})-([\\da-f]{2})(-.*)?\\s?$"),
+    nu = function() {
         function t() {}
         return t.prototype.inject = function(t, e, n) {
-            var r = ee.getSpanContext(t);
-            if (!(!r || eU(t)) && ta(r)) {
-                var i = "00-" + r.traceId + "-" + r.spanId + "-0" + Number(r.traceFlags || ix.NONE).toString(16);
-                n.set(e, ns, i), r.traceState && n.set(e, nu, r.traceState.serialize())
+            var r = er.getSpanContext(t);
+            if (!(!r || eB(t)) && tu(r)) {
+                var o = "00-" + r.traceId + "-" + r.spanId + "-0" + Number(r.traceFlags || oA.NONE).toString(16);
+                n.set(e, ni, o), r.traceState && n.set(e, na, r.traceState.serialize())
             }
         }, t.prototype.extract = function(t, e, n) {
-            var r, i = n.get(e, ns);
-            if (!i) return t;
-            var o = Array.isArray(i) ? i[0] : i;
-            if ("string" != typeof o) return t;
-            var a = (r = nc.exec(o)) && ("00" !== r[1] || !r[5]) ? {
+            var r, o = n.get(e, ni);
+            if (!o) return t;
+            var i = Array.isArray(o) ? o[0] : o;
+            if ("string" != typeof i) return t;
+            var a = (r = ns.exec(i)) && ("00" !== r[1] || !r[5]) ? {
                 traceId: r[2],
                 spanId: r[3],
                 traceFlags: parseInt(r[4], 16)
             } : null;
             if (!a) return t;
             a.isRemote = !0;
-            var s = n.get(e, nu);
+            var s = n.get(e, na);
             if (s) {
                 var u = Array.isArray(s) ? s.join(",") : s;
-                a.traceState = new na("string" == typeof u ? u : void 0)
+                a.traceState = new no("string" == typeof u ? u : void 0)
             }
-            return ee.setSpanContext(t, a)
+            return er.setSpanContext(t, a)
         }, t.prototype.fields = function() {
-            return [ns, nu]
+            return [ni, na]
         }, t
     }(),
-    np = function(t) {
+    nc = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -2514,42 +2485,42 @@ var ne = function() {
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    nf = function(t, e) {
+    nl = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     };
 
-function nd(t) {
+function np(t) {
     var e, n, r = {};
     if ("object" != typeof t || null == t) return r;
     try {
-        for (var i = np(Object.entries(t)), o = i.next(); !o.done; o = i.next()) {
-            var a = nf(o.value, 2),
+        for (var o = nc(Object.entries(t)), i = o.next(); !i.done; i = o.next()) {
+            var a = nl(i.value, 2),
                 s = a[0],
                 u = a[1];
             if ("string" != typeof s || !(s.length > 0)) {
-                tm.warn("Invalid attribute key: " + s);
+                ty.warn("Invalid attribute key: " + s);
                 continue
             }
-            if (!nh(u)) {
-                tm.warn("Invalid attribute value set for key: " + s);
+            if (!nf(u)) {
+                ty.warn("Invalid attribute value set for key: " + s);
                 continue
             }
             Array.isArray(u) ? r[s] = u.slice() : r[s] = u
@@ -2560,7 +2531,7 @@ function nd(t) {
         }
     } finally {
         try {
-            o && !o.done && (n = i.return) && n.call(i)
+            i && !i.done && (n = o.return) && n.call(o)
         } finally {
             if (e) throw e.error
         }
@@ -2568,14 +2539,14 @@ function nd(t) {
     return r
 }
 
-function nh(t) {
+function nf(t) {
     return null == t || (Array.isArray(t) ? function(t) {
         try {
-            for (var e, n, r, i = np(t), o = i.next(); !o.done; o = i.next()) {
-                var a = o.value;
+            for (var e, n, r, o = nc(t), i = o.next(); !i.done; i = o.next()) {
+                var a = i.value;
                 if (null != a) {
                     if (!r) {
-                        if (n_(a)) {
+                        if (nd(a)) {
                             r = typeof a;
                             continue
                         }
@@ -2590,16 +2561,16 @@ function nh(t) {
             }
         } finally {
             try {
-                o && !o.done && (n = i.return) && n.call(i)
+                i && !i.done && (n = o.return) && n.call(o)
             } finally {
                 if (e) throw e.error
             }
         }
         return !0
-    }(t) : n_(t))
+    }(t) : nd(t))
 }
 
-function n_(t) {
+function nd(t) {
     switch (typeof t) {
         case "number":
         case "boolean":
@@ -2608,54 +2579,43 @@ function n_(t) {
     }
     return !1
 }
-var nv = performance;
+var nh = performance;
 
-function nm(t) {
+function ng(t) {
     return [Math.trunc(t / 1e3), Math.round(t % 1e3 * 1e6)]
 }
 
-function ng() {
-    var t = nv.timeOrigin;
-    return "number" != typeof t && (t = nv.timing && nv.timing.fetchStart), t
+function n_() {
+    var t = nh.timeOrigin;
+    return "number" != typeof t && (t = nh.timing && nh.timing.fetchStart), t
 }
 
-function ny(t) {
-    return nO(nm(ng()), nm("number" == typeof t ? t : nv.now()))
+function nv(t) {
+    return nb(ng(n_()), ng("number" == typeof t ? t : nh.now()))
 }
 
-function nb(t) {
-    if (nT(t)) return t;
-    if ("number" == typeof t) return t < ng() ? ny(t) : nm(t);
-    if (t instanceof Date) return nm(t.getTime());
-    throw TypeError("Invalid input type")
-}
-
-function nE(t) {
-    return 1e9 * t[0] + t[1]
-}
-
-function nT(t) {
+function nm(t) {
     return Array.isArray(t) && 2 === t.length && "number" == typeof t[0] && "number" == typeof t[1]
 }
 
-function nw(t) {
-    return nT(t) || "number" == typeof t || t instanceof Date
+function ny(t) {
+    return nm(t) || "number" == typeof t || t instanceof Date
 }
 
-function nO(t, e) {
+function nb(t, e) {
     var n = [t[0] + e[0], t[1] + e[1]];
     return n[1] >= 1e9 && (n[1] -= 1e9, n[0] += 1), n
 }
-var nS = "exception.type",
-    nR = "exception.message",
-    nL = "exception.stacktrace",
-    nA = "http.method",
-    nP = "http.url",
-    nC = "http.host",
-    nN = "http.scheme",
-    nx = "http.status_code",
-    nI = "http.user_agent",
-    nD = function(t) {
+var nE = "exception.type",
+    nT = "exception.message",
+    nw = "exception.stacktrace",
+    nS = "http.method",
+    nO = "http.url",
+    nL = "http.host",
+    nP = "http.scheme",
+    nA = "http.status_code",
+    nR = "http.user_agent",
+    nC = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -2670,51 +2630,51 @@ var nS = "exception.type",
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    nM = function(t, e) {
+    nN = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    nk = function(t, e, n) {
+    nx = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    nU = function() {
-        function t(t, e, n, r, i, o, a, s, u, c) {
+    nI = function() {
+        function t(t, e, n, r, o, i, a, s, u, c) {
             void 0 === a && (a = []), this.attributes = {}, this.links = [], this.events = [], this._droppedAttributesCount = 0, this._droppedEventsCount = 0, this._droppedLinksCount = 0, this.status = {
-                code: iN.UNSET
-            }, this.endTime = [0, 0], this._ended = !1, this._duration = [-1, -1], this.name = n, this._spanContext = r, this.parentSpanId = o, this.kind = i, this.links = a;
+                code: oP.UNSET
+            }, this.endTime = [0, 0], this._ended = !1, this._duration = [-1, -1], this.name = n, this._spanContext = r, this.parentSpanId = i, this.kind = o, this.links = a;
             var l = Date.now();
-            this._performanceStartTime = nv.now(), this._performanceOffset = l - (this._performanceStartTime + ng()), this._startTimeProvided = null != s, this.startTime = this._getTime(null != s ? s : l), this.resource = t.resource, this.instrumentationLibrary = t.instrumentationLibrary, this._spanLimits = t.getSpanLimits(), this._attributeValueLengthLimit = this._spanLimits.attributeValueLengthLimit || 0, null != c && this.setAttributes(c), this._spanProcessor = t.getActiveSpanProcessor(), this._spanProcessor.onStart(this, e)
+            this._performanceStartTime = nh.now(), this._performanceOffset = l - (this._performanceStartTime + n_()), this._startTimeProvided = null != s, this.startTime = this._getTime(null != s ? s : l), this.resource = t.resource, this.instrumentationLibrary = t.instrumentationLibrary, this._spanLimits = t.getSpanLimits(), this._attributeValueLengthLimit = this._spanLimits.attributeValueLengthLimit || 0, null != c && this.setAttributes(c), this._spanProcessor = t.getActiveSpanProcessor(), this._spanProcessor.onStart(this, e)
         }
         return t.prototype.spanContext = function() {
             return this._spanContext
         }, t.prototype.setAttribute = function(t, e) {
-            return null == e || this._isSpanEnded() || (0 === t.length ? tm.warn("Invalid attribute key: " + t) : nh(e) ? Object.keys(this.attributes).length >= this._spanLimits.attributeCountLimit && !Object.prototype.hasOwnProperty.call(this.attributes, t) ? this._droppedAttributesCount++ : this.attributes[t] = this._truncateToSize(e) : tm.warn("Invalid attribute value set for key: " + t)), this
+            return null == e || this._isSpanEnded() || (0 === t.length ? ty.warn("Invalid attribute key: " + t) : nf(e) ? Object.keys(this.attributes).length >= this._spanLimits.attributeCountLimit && !Object.prototype.hasOwnProperty.call(this.attributes, t) ? this._droppedAttributesCount++ : this.attributes[t] = this._truncateToSize(e) : ty.warn("Invalid attribute value set for key: " + t)), this
         }, t.prototype.setAttributes = function(t) {
             var e, n;
             try {
-                for (var r = nD(Object.entries(t)), i = r.next(); !i.done; i = r.next()) {
-                    var o = nM(i.value, 2),
-                        a = o[0],
-                        s = o[1];
+                for (var r = nC(Object.entries(t)), o = r.next(); !o.done; o = r.next()) {
+                    var i = nN(o.value, 2),
+                        a = i[0],
+                        s = i[1];
                     this.setAttribute(a, s)
                 }
             } catch (t) {
@@ -2723,7 +2683,7 @@ var nS = "exception.type",
                 }
             } finally {
                 try {
-                    i && !i.done && (n = r.return) && n.call(r)
+                    o && !o.done && (n = r.return) && n.call(r)
                 } finally {
                     if (e) throw e.error
                 }
@@ -2731,9 +2691,9 @@ var nS = "exception.type",
             return this
         }, t.prototype.addEvent = function(t, e, n) {
             if (this._isSpanEnded()) return this;
-            if (0 === this._spanLimits.eventCountLimit) return tm.warn("No events allowed."), this._droppedEventsCount++, this;
-            this.events.length >= this._spanLimits.eventCountLimit && (0 === this._droppedEventsCount && tm.debug("Dropping extra events."), this.events.shift(), this._droppedEventsCount++), nw(e) && (nw(n) || (n = e), e = void 0);
-            var r = nd(e);
+            if (0 === this._spanLimits.eventCountLimit) return ty.warn("No events allowed."), this._droppedEventsCount++, this;
+            this.events.length >= this._spanLimits.eventCountLimit && (0 === this._droppedEventsCount && ty.debug("Dropping extra events."), this.events.shift(), this._droppedEventsCount++), ny(e) && (ny(n) || (n = e), e = void 0);
+            var r = np(e);
             return this.events.push({
                 name: t,
                 attributes: r,
@@ -2744,31 +2704,31 @@ var nS = "exception.type",
             return this.links.push(t), this
         }, t.prototype.addLinks = function(t) {
             var e;
-            return (e = this.links).push.apply(e, nk([], nM(t), !1)), this
+            return (e = this.links).push.apply(e, nx([], nN(t), !1)), this
         }, t.prototype.setStatus = function(t) {
             return this._isSpanEnded() || (this.status = t), this
         }, t.prototype.updateName = function(t) {
             return this._isSpanEnded() || (this.name = t), this
         }, t.prototype.end = function(t) {
-            var e, n, r, i;
+            var e, n, r, o;
             if (this._isSpanEnded()) {
-                tm.error(this.name + " " + this._spanContext.traceId + "-" + this._spanContext.spanId + " - You can only call end() on a span once.");
+                ty.error(this.name + " " + this._spanContext.traceId + "-" + this._spanContext.spanId + " - You can only call end() on a span once.");
                 return
             }
-            this._ended = !0, this.endTime = this._getTime(t), this._duration = (e = this.startTime, r = (n = this.endTime)[0] - e[0], (i = n[1] - e[1]) < 0 && (r -= 1, i += 1e9), [r, i]), this._duration[0] < 0 && (tm.warn("Inconsistent start and end time, startTime > endTime. Setting span duration to 0ms.", this.startTime, this.endTime), this.endTime = this.startTime.slice(), this._duration = [0, 0]), this._droppedEventsCount > 0 && tm.warn("Dropped " + this._droppedEventsCount + " events because eventCountLimit reached"), this._spanProcessor.onEnd(this)
+            this._ended = !0, this.endTime = this._getTime(t), this._duration = (e = this.startTime, r = (n = this.endTime)[0] - e[0], (o = n[1] - e[1]) < 0 && (r -= 1, o += 1e9), [r, o]), this._duration[0] < 0 && (ty.warn("Inconsistent start and end time, startTime > endTime. Setting span duration to 0ms.", this.startTime, this.endTime), this.endTime = this.startTime.slice(), this._duration = [0, 0]), this._droppedEventsCount > 0 && ty.warn("Dropped " + this._droppedEventsCount + " events because eventCountLimit reached"), this._spanProcessor.onEnd(this)
         }, t.prototype._getTime = function(t) {
-            if ("number" == typeof t && t < nv.now()) return ny(t + this._performanceOffset);
-            if ("number" == typeof t) return nm(t);
-            if (t instanceof Date) return nm(t.getTime());
-            if (nT(t)) return t;
-            if (this._startTimeProvided) return nm(Date.now());
-            var e = nv.now() - this._performanceStartTime;
-            return nO(this.startTime, nm(e))
+            if ("number" == typeof t && t < nh.now()) return nv(t + this._performanceOffset);
+            if ("number" == typeof t) return ng(t);
+            if (t instanceof Date) return ng(t.getTime());
+            if (nm(t)) return t;
+            if (this._startTimeProvided) return ng(Date.now());
+            var e = nh.now() - this._performanceStartTime;
+            return nb(this.startTime, ng(e))
         }, t.prototype.isRecording = function() {
             return !1 === this._ended
         }, t.prototype.recordException = function(t, e) {
             var n = {};
-            "string" == typeof t ? n[nR] = t : t && (t.code ? n[nS] = t.code.toString() : t.name && (n[nS] = t.name), t.message && (n[nR] = t.message), t.stack && (n[nL] = t.stack)), n[nS] || n[nR] ? this.addEvent("exception", n, e) : tm.warn("Failed to record an exception " + t)
+            "string" == typeof t ? n[nT] = t : t && (t.code ? n[nE] = t.code.toString() : t.name && (n[nE] = t.name), t.message && (n[nT] = t.message), t.stack && (n[nw] = t.stack)), n[nE] || n[nT] ? this.addEvent("exception", n, e) : ty.warn("Failed to record an exception " + t)
         }, Object.defineProperty(t.prototype, "duration", {
             get: function() {
                 return this._duration
@@ -2800,141 +2760,142 @@ var nS = "exception.type",
             enumerable: !1,
             configurable: !0
         }), t.prototype._isSpanEnded = function() {
-            return this._ended && tm.warn("Can not execute the operation on ended Span {traceId: " + this._spanContext.traceId + ", spanId: " + this._spanContext.spanId + "}"), this._ended
+            return this._ended && ty.warn("Can not execute the operation on ended Span {traceId: " + this._spanContext.traceId + ", spanId: " + this._spanContext.spanId + "}"), this._ended
         }, t.prototype._truncateToLimitUtil = function(t, e) {
             return t.length <= e ? t : t.substr(0, e)
         }, t.prototype._truncateToSize = function(t) {
             var e = this,
                 n = this._attributeValueLengthLimit;
-            return n <= 0 ? (tm.warn("Attribute value limit must be positive, got " + n), t) : "string" == typeof t ? this._truncateToLimitUtil(t, n) : Array.isArray(t) ? t.map(function(t) {
+            return n <= 0 ? (ty.warn("Attribute value limit must be positive, got " + n), t) : "string" == typeof t ? this._truncateToLimitUtil(t, n) : Array.isArray(t) ? t.map(function(t) {
                 return "string" == typeof t ? e._truncateToLimitUtil(t, n) : t
             }) : t
         }, t
     }(),
-    nj = function() {
+    nD = function() {
         function t(t) {
-            var e, n, r, i;
-            this._root = t.root, this._root || (eM(Error("ParentBasedSampler must have a root sampler configured")), this._root = new eb), this._remoteParentSampled = null !== (e = t.remoteParentSampled) && void 0 !== e ? e : new eb, this._remoteParentNotSampled = null !== (n = t.remoteParentNotSampled) && void 0 !== n ? n : new ey, this._localParentSampled = null !== (r = t.localParentSampled) && void 0 !== r ? r : new eb, this._localParentNotSampled = null !== (i = t.localParentNotSampled) && void 0 !== i ? i : new ey
+            var e, n, r, o;
+            this._root = t.root, this._root || (ej(Error("ParentBasedSampler must have a root sampler configured")), this._root = new eT), this._remoteParentSampled = null !== (e = t.remoteParentSampled) && void 0 !== e ? e : new eT, this._remoteParentNotSampled = null !== (n = t.remoteParentNotSampled) && void 0 !== n ? n : new eE, this._localParentSampled = null !== (r = t.localParentSampled) && void 0 !== r ? r : new eT, this._localParentNotSampled = null !== (o = t.localParentNotSampled) && void 0 !== o ? o : new eE
         }
-        return t.prototype.shouldSample = function(t, e, n, r, i, o) {
-            var a = ee.getSpanContext(t);
-            return a && ta(a) ? a.isRemote ? a.traceFlags & ix.SAMPLED ? this._remoteParentSampled.shouldSample(t, e, n, r, i, o) : this._remoteParentNotSampled.shouldSample(t, e, n, r, i, o) : a.traceFlags & ix.SAMPLED ? this._localParentSampled.shouldSample(t, e, n, r, i, o) : this._localParentNotSampled.shouldSample(t, e, n, r, i, o) : this._root.shouldSample(t, e, n, r, i, o)
+        return t.prototype.shouldSample = function(t, e, n, r, o, i) {
+            var a = er.getSpanContext(t);
+            return a && tu(a) ? a.isRemote ? a.traceFlags & oA.SAMPLED ? this._remoteParentSampled.shouldSample(t, e, n, r, o, i) : this._remoteParentNotSampled.shouldSample(t, e, n, r, o, i) : a.traceFlags & oA.SAMPLED ? this._localParentSampled.shouldSample(t, e, n, r, o, i) : this._localParentNotSampled.shouldSample(t, e, n, r, o, i) : this._root.shouldSample(t, e, n, r, o, i)
         }, t.prototype.toString = function() {
             return "ParentBased{root=" + this._root.toString() + ", remoteParentSampled=" + this._remoteParentSampled.toString() + ", remoteParentNotSampled=" + this._remoteParentNotSampled.toString() + ", localParentSampled=" + this._localParentSampled.toString() + ", localParentNotSampled=" + this._localParentNotSampled.toString() + "}"
         }, t
     }(),
-    nB = eI(),
-    nF = ik.AlwaysOn;
+    nM = eM(),
+    nk = ox.AlwaysOn;
 
-function nH() {
+function nj() {
+    var t = eM();
     return {
-        sampler: nV(nB),
+        sampler: nU(nM),
         forceFlushTimeoutMillis: 3e4,
         generalLimits: {
-            attributeValueLengthLimit: eI().OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT,
-            attributeCountLimit: eI().OTEL_ATTRIBUTE_COUNT_LIMIT
+            attributeValueLengthLimit: t.OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT,
+            attributeCountLimit: t.OTEL_ATTRIBUTE_COUNT_LIMIT
         },
         spanLimits: {
-            attributeValueLengthLimit: eI().OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT,
-            attributeCountLimit: eI().OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT,
-            linkCountLimit: eI().OTEL_SPAN_LINK_COUNT_LIMIT,
-            eventCountLimit: eI().OTEL_SPAN_EVENT_COUNT_LIMIT,
-            attributePerEventCountLimit: eI().OTEL_SPAN_ATTRIBUTE_PER_EVENT_COUNT_LIMIT,
-            attributePerLinkCountLimit: eI().OTEL_SPAN_ATTRIBUTE_PER_LINK_COUNT_LIMIT
+            attributeValueLengthLimit: t.OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT,
+            attributeCountLimit: t.OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT,
+            linkCountLimit: t.OTEL_SPAN_LINK_COUNT_LIMIT,
+            eventCountLimit: t.OTEL_SPAN_EVENT_COUNT_LIMIT,
+            attributePerEventCountLimit: t.OTEL_SPAN_ATTRIBUTE_PER_EVENT_COUNT_LIMIT,
+            attributePerLinkCountLimit: t.OTEL_SPAN_ATTRIBUTE_PER_LINK_COUNT_LIMIT
         }
     }
 }
 
-function nV(t) {
-    switch (void 0 === t && (t = eI()), t.OTEL_TRACES_SAMPLER) {
-        case ik.AlwaysOn:
-            return new eb;
-        case ik.AlwaysOff:
-            return new ey;
-        case ik.ParentBasedAlwaysOn:
-            return new nj({
-                root: new eb
+function nU(t) {
+    switch (void 0 === t && (t = eM()), t.OTEL_TRACES_SAMPLER) {
+        case ox.AlwaysOn:
+            return new eT;
+        case ox.AlwaysOff:
+            return new eE;
+        case ox.ParentBasedAlwaysOn:
+            return new nD({
+                root: new eT
             });
-        case ik.ParentBasedAlwaysOff:
-            return new nj({
-                root: new ey
+        case ox.ParentBasedAlwaysOff:
+            return new nD({
+                root: new eE
             });
-        case ik.TraceIdRatio:
-            return new eH(nG(t));
-        case ik.ParentBasedTraceIdRatio:
-            return new nj({
-                root: new eH(nG(t))
+        case ox.TraceIdRatio:
+            return new eG(nB(t));
+        case ox.ParentBasedTraceIdRatio:
+            return new nD({
+                root: new eG(nB(t))
             });
         default:
-            return tm.error('OTEL_TRACES_SAMPLER value "' + t.OTEL_TRACES_SAMPLER + " invalid, defaulting to " + nF + '".'), new eb
+            return ty.error('OTEL_TRACES_SAMPLER value "' + t.OTEL_TRACES_SAMPLER + " invalid, defaulting to " + nk + '".'), new eT
     }
 }
 
-function nG(t) {
-    if (void 0 === t.OTEL_TRACES_SAMPLER_ARG || "" === t.OTEL_TRACES_SAMPLER_ARG) return tm.error("OTEL_TRACES_SAMPLER_ARG is blank, defaulting to 1."), 1;
+function nB(t) {
+    if (void 0 === t.OTEL_TRACES_SAMPLER_ARG || "" === t.OTEL_TRACES_SAMPLER_ARG) return ty.error("OTEL_TRACES_SAMPLER_ARG is blank, defaulting to 1."), 1;
     var e = Number(t.OTEL_TRACES_SAMPLER_ARG);
-    return isNaN(e) ? (tm.error("OTEL_TRACES_SAMPLER_ARG=" + t.OTEL_TRACES_SAMPLER_ARG + " was given, but it is invalid, defaulting to 1."), 1) : e < 0 || e > 1 ? (tm.error("OTEL_TRACES_SAMPLER_ARG=" + t.OTEL_TRACES_SAMPLER_ARG + " was given, but it is out of range ([0..1]), defaulting to 1."), 1) : e
+    return isNaN(e) ? (ty.error("OTEL_TRACES_SAMPLER_ARG=" + t.OTEL_TRACES_SAMPLER_ARG + " was given, but it is invalid, defaulting to 1."), 1) : e < 0 || e > 1 ? (ty.error("OTEL_TRACES_SAMPLER_ARG=" + t.OTEL_TRACES_SAMPLER_ARG + " was given, but it is out of range ([0..1]), defaulting to 1."), 1) : e
 }
-var nX = function() {
-        this.generateTraceId = nq(16), this.generateSpanId = nq(8)
+var nF = function() {
+        this.generateTraceId = nV(16), this.generateSpanId = nV(8)
     },
-    nz = Array(32);
+    nH = Array(32);
 
-function nq(t) {
+function nV(t) {
     return function() {
-        for (var e = 0; e < 2 * t; e++) nz[e] = Math.floor(16 * Math.random()) + 48, nz[e] >= 58 && (nz[e] += 39);
-        return String.fromCharCode.apply(null, nz.slice(0, 2 * t))
+        for (var e = 0; e < 2 * t; e++) nH[e] = Math.floor(16 * Math.random()) + 48, nH[e] >= 58 && (nH[e] += 39);
+        return String.fromCharCode.apply(null, nH.slice(0, 2 * t))
     }
 }
-var n$ = function() {
+var nG = function() {
         function t(t, e, n) {
             this._tracerProvider = n;
-            var r, i, o, a = (r = {
-                sampler: nV()
-            }, (o = Object.assign({}, i = nH(), r, e)).generalLimits = Object.assign({}, i.generalLimits, e.generalLimits || {}), o.spanLimits = Object.assign({}, i.spanLimits, e.spanLimits || {}), o);
-            this._sampler = a.sampler, this._generalLimits = a.generalLimits, this._spanLimits = a.spanLimits, this._idGenerator = e.idGenerator || new nX, this.resource = n.resource, this.instrumentationLibrary = t
+            var r, o, i, a = (r = {
+                sampler: nU()
+            }, (i = Object.assign({}, o = nj(), r, e)).generalLimits = Object.assign({}, o.generalLimits, e.generalLimits || {}), i.spanLimits = Object.assign({}, o.spanLimits, e.spanLimits || {}), i);
+            this._sampler = a.sampler, this._generalLimits = a.generalLimits, this._spanLimits = a.spanLimits, this._idGenerator = e.idGenerator || new nF, this.resource = n.resource, this.instrumentationLibrary = t
         }
         return t.prototype.startSpan = function(t, e, n) {
-            void 0 === e && (e = {}), void 0 === n && (n = tv.active()), e.root && (n = ee.deleteSpan(n));
-            var r, i, o, a, s, u, c = ee.getSpan(n);
-            if (eU(n)) {
-                tm.debug("Instrumentation suppressed, returning Noop Span");
-                var l = ee.wrapSpanContext(te);
+            void 0 === e && (e = {}), void 0 === n && (n = tm.active()), e.root && (n = er.deleteSpan(n));
+            var r, o, i, a, s, u, c = er.getSpan(n);
+            if (eB(n)) {
+                ty.debug("Instrumentation suppressed, returning Noop Span");
+                var l = er.wrapSpanContext(tr);
                 return l
             }
             var p = null == c ? void 0 : c.spanContext(),
                 f = this._idGenerator.generateSpanId();
-            p && ee.isSpanContextValid(p) ? (a = p.traceId, s = p.traceState, u = p.spanId) : a = this._idGenerator.generateTraceId();
-            var d = null !== (r = e.kind) && void 0 !== r ? r : iC.INTERNAL,
-                h = (null !== (i = e.links) && void 0 !== i ? i : []).map(function(t) {
+            p && er.isSpanContextValid(p) ? (a = p.traceId, s = p.traceState, u = p.spanId) : a = this._idGenerator.generateTraceId();
+            var d = null !== (r = e.kind) && void 0 !== r ? r : oL.INTERNAL,
+                h = (null !== (o = e.links) && void 0 !== o ? o : []).map(function(t) {
                     return {
                         context: t.context,
-                        attributes: nd(t.attributes)
+                        attributes: np(t.attributes)
                     }
                 }),
-                _ = nd(e.attributes),
-                v = this._sampler.shouldSample(n, a, t, d, _, h);
-            s = null !== (o = v.traceState) && void 0 !== o ? o : s;
-            var m = {
+                g = np(e.attributes),
+                _ = this._sampler.shouldSample(n, a, t, d, g, h);
+            s = null !== (i = _.traceState) && void 0 !== i ? i : s;
+            var v = {
                 traceId: a,
                 spanId: f,
-                traceFlags: v.decision === iP.RECORD_AND_SAMPLED ? ix.SAMPLED : ix.NONE,
+                traceFlags: _.decision === oO.RECORD_AND_SAMPLED ? oA.SAMPLED : oA.NONE,
                 traceState: s
             };
-            if (v.decision === iP.NOT_RECORD) {
-                tm.debug("Recording is off, propagating context in a non-recording span");
-                var l = ee.wrapSpanContext(m);
+            if (_.decision === oO.NOT_RECORD) {
+                ty.debug("Recording is off, propagating context in a non-recording span");
+                var l = er.wrapSpanContext(v);
                 return l
             }
-            var g = nd(Object.assign(_, v.attributes));
-            return new nU(this, n, t, m, d, u, h, e.startTime, void 0, g)
+            var m = np(Object.assign(g, _.attributes));
+            return new nI(this, n, t, v, d, u, h, e.startTime, void 0, m)
         }, t.prototype.startActiveSpan = function(t, e, n, r) {
             if (!(arguments.length < 2)) {
-                2 == arguments.length ? a = e : 3 == arguments.length ? (i = e, a = n) : (i = e, o = n, a = r);
-                var i, o, a, s = null != o ? o : tv.active(),
-                    u = this.startSpan(t, i, s),
-                    c = ee.setSpan(s, u);
-                return tv.with(c, a, void 0, u)
+                2 == arguments.length ? a = e : 3 == arguments.length ? (o = e, a = n) : (o = e, i = n, a = r);
+                var o, i, a, s = null != i ? i : tm.active(),
+                    u = this.startSpan(t, o, s),
+                    c = er.setSpan(s, u);
+                return tm.with(c, a, void 0, u)
             }
         }, t.prototype.getGeneralLimits = function() {
             return this._generalLimits
@@ -2944,7 +2905,7 @@ var n$ = function() {
             return this._tracerProvider.getActiveSpanProcessor()
         }, t
     }(),
-    nK = function(t) {
+    nX = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -2959,16 +2920,16 @@ var n$ = function() {
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    nW = function() {
+    nz = function() {
         function t(t) {
             this._spanProcessors = t
         }
         return t.prototype.forceFlush = function() {
             var t, e, n = [];
             try {
-                for (var r = nK(this._spanProcessors), i = r.next(); !i.done; i = r.next()) {
-                    var o = i.value;
-                    n.push(o.forceFlush())
+                for (var r = nX(this._spanProcessors), o = r.next(); !o.done; o = r.next()) {
+                    var i = o.value;
+                    n.push(i.forceFlush())
                 }
             } catch (e) {
                 t = {
@@ -2976,7 +2937,7 @@ var n$ = function() {
                 }
             } finally {
                 try {
-                    i && !i.done && (e = r.return) && e.call(r)
+                    o && !o.done && (e = r.return) && e.call(r)
                 } finally {
                     if (t) throw t.error
                 }
@@ -2985,20 +2946,20 @@ var n$ = function() {
                 Promise.all(n).then(function() {
                     t()
                 }).catch(function(e) {
-                    eM(e || Error("MultiSpanProcessor: forceFlush failed")), t()
+                    ej(e || Error("MultiSpanProcessor: forceFlush failed")), t()
                 })
             })
         }, t.prototype.onStart = function(t, e) {
             var n, r;
             try {
-                for (var i = nK(this._spanProcessors), o = i.next(); !o.done; o = i.next()) o.value.onStart(t, e)
+                for (var o = nX(this._spanProcessors), i = o.next(); !i.done; i = o.next()) i.value.onStart(t, e)
             } catch (t) {
                 n = {
                     error: t
                 }
             } finally {
                 try {
-                    o && !o.done && (r = i.return) && r.call(i)
+                    i && !i.done && (r = o.return) && r.call(o)
                 } finally {
                     if (n) throw n.error
                 }
@@ -3006,14 +2967,14 @@ var n$ = function() {
         }, t.prototype.onEnd = function(t) {
             var e, n;
             try {
-                for (var r = nK(this._spanProcessors), i = r.next(); !i.done; i = r.next()) i.value.onEnd(t)
+                for (var r = nX(this._spanProcessors), o = r.next(); !o.done; o = r.next()) o.value.onEnd(t)
             } catch (t) {
                 e = {
                     error: t
                 }
             } finally {
                 try {
-                    i && !i.done && (n = r.return) && n.call(r)
+                    o && !o.done && (n = r.return) && n.call(r)
                 } finally {
                     if (e) throw e.error
                 }
@@ -3021,9 +2982,9 @@ var n$ = function() {
         }, t.prototype.shutdown = function() {
             var t, e, n = [];
             try {
-                for (var r = nK(this._spanProcessors), i = r.next(); !i.done; i = r.next()) {
-                    var o = i.value;
-                    n.push(o.shutdown())
+                for (var r = nX(this._spanProcessors), o = r.next(); !o.done; o = r.next()) {
+                    var i = o.value;
+                    n.push(i.shutdown())
                 }
             } catch (e) {
                 t = {
@@ -3031,7 +2992,7 @@ var n$ = function() {
                 }
             } finally {
                 try {
-                    i && !i.done && (e = r.return) && e.call(r)
+                    o && !o.done && (e = r.return) && e.call(r)
                 } finally {
                     if (t) throw t.error
                 }
@@ -3043,7 +3004,7 @@ var n$ = function() {
             })
         }, t
     }(),
-    nZ = function() {
+    n$ = function() {
         function t() {}
         return t.prototype.onStart = function(t, e) {}, t.prototype.onEnd = function(t) {}, t.prototype.shutdown = function() {
             return Promise.resolve()
@@ -3051,101 +3012,101 @@ var n$ = function() {
             return Promise.resolve()
         }, t
     }();
-(ib = iU || (iU = {}))[ib.resolved = 0] = "resolved", ib[ib.timeout = 1] = "timeout", ib[ib.error = 2] = "error", ib[ib.unresolved = 3] = "unresolved";
-var nY = function() {
+(o_ = oI || (oI = {}))[o_.resolved = 0] = "resolved", o_[o_.timeout = 1] = "timeout", o_[o_.error = 2] = "error", o_[o_.unresolved = 3] = "unresolved";
+var nq = function() {
         function t(t) {
             void 0 === t && (t = {}), this._registeredSpanProcessors = [], this._tracers = new Map;
-            var e, n, r, i, o, a, s, u, c, l, p, f, d, h, _, v, m = function() {
+            var e, n, r, o, i, a, s, u, c, l, p, f, d, h, g, _, v = function() {
                 for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-                for (var n = t.shift(), r = new WeakMap; t.length > 0;) n = function t(e, n, r, i) {
+                for (var n = t.shift(), r = new WeakMap; t.length > 0;) n = function t(e, n, r, o) {
                     if (void 0 === r && (r = 0), !(r > 20)) {
-                        if (r++, e3(e) || e3(n) || e1(n)) o = eQ(n);
-                        else if (e0(e)) {
-                            if (o = e.slice(), e0(n))
-                                for (var o, a = 0, s = n.length; a < s; a++) o.push(eQ(n[a]));
-                            else if (e2(n))
+                        if (r++, e6(e) || e6(n) || e3(n)) i = e0(n);
+                        else if (e2(e)) {
+                            if (i = e.slice(), e2(n))
+                                for (var i, a = 0, s = n.length; a < s; a++) i.push(e0(n[a]));
+                            else if (e4(n))
                                 for (var u = Object.keys(n), a = 0, s = u.length; a < s; a++) {
                                     var c = u[a];
-                                    o[c] = eQ(n[c])
+                                    i[c] = e0(n[c])
                                 }
-                        } else if (e2(e)) {
-                            if (e2(n)) {
-                                if (!(eY(e) && eY(n))) return n;
-                                o = Object.assign({}, e);
+                        } else if (e4(e)) {
+                            if (e4(n)) {
+                                if (!(eJ(e) && eJ(n))) return n;
+                                i = Object.assign({}, e);
                                 for (var u = Object.keys(n), a = 0, s = u.length; a < s; a++) {
                                     var c = u[a],
                                         l = n[c];
-                                    if (e3(l)) void 0 === l ? delete o[c] : o[c] = l;
+                                    if (e6(l)) void 0 === l ? delete i[c] : i[c] = l;
                                     else {
-                                        var p = o[c];
-                                        if (eJ(e, c, i) || eJ(n, c, i)) delete o[c];
+                                        var p = i[c];
+                                        if (e1(e, c, o) || e1(n, c, o)) delete i[c];
                                         else {
-                                            if (e2(p) && e2(l)) {
-                                                var f = i.get(p) || [],
-                                                    d = i.get(l) || [];
+                                            if (e4(p) && e4(l)) {
+                                                var f = o.get(p) || [],
+                                                    d = o.get(l) || [];
                                                 f.push({
                                                     obj: e,
                                                     key: c
                                                 }), d.push({
                                                     obj: n,
                                                     key: c
-                                                }), i.set(p, f), i.set(l, d)
+                                                }), o.set(p, f), o.set(l, d)
                                             }
-                                            o[c] = t(o[c], l, r, i)
+                                            i[c] = t(i[c], l, r, o)
                                         }
                                     }
                                 }
-                            } else o = n
+                            } else i = n
                         }
-                        return o
+                        return i
                     }
                 }(n, t.shift(), 0, r);
                 return n
-            }({}, nH(), (h = Object.assign({}, (e = t).spanLimits), _ = eN(ex), h.attributeCountLimit = null !== (s = null !== (a = null !== (o = null !== (r = null === (n = e.spanLimits) || void 0 === n ? void 0 : n.attributeCountLimit) && void 0 !== r ? r : null === (i = e.generalLimits) || void 0 === i ? void 0 : i.attributeCountLimit) && void 0 !== o ? o : _.OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT) && void 0 !== a ? a : _.OTEL_ATTRIBUTE_COUNT_LIMIT) && void 0 !== s ? s : 128, h.attributeValueLengthLimit = null !== (d = null !== (f = null !== (p = null !== (c = null === (u = e.spanLimits) || void 0 === u ? void 0 : u.attributeValueLengthLimit) && void 0 !== c ? c : null === (l = e.generalLimits) || void 0 === l ? void 0 : l.attributeValueLengthLimit) && void 0 !== p ? p : _.OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT) && void 0 !== f ? f : _.OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT) && void 0 !== d ? d : eA, Object.assign({}, e, {
+            }({}, nj(), (h = Object.assign({}, (e = t).spanLimits), g = eI(eD), h.attributeCountLimit = null !== (s = null !== (a = null !== (i = null !== (r = null === (n = e.spanLimits) || void 0 === n ? void 0 : n.attributeCountLimit) && void 0 !== r ? r : null === (o = e.generalLimits) || void 0 === o ? void 0 : o.attributeCountLimit) && void 0 !== i ? i : g.OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT) && void 0 !== a ? a : g.OTEL_ATTRIBUTE_COUNT_LIMIT) && void 0 !== s ? s : 128, h.attributeValueLengthLimit = null !== (d = null !== (f = null !== (p = null !== (c = null === (u = e.spanLimits) || void 0 === u ? void 0 : u.attributeValueLengthLimit) && void 0 !== c ? c : null === (l = e.generalLimits) || void 0 === l ? void 0 : l.attributeValueLengthLimit) && void 0 !== p ? p : g.OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT) && void 0 !== f ? f : g.OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT) && void 0 !== d ? d : eC, Object.assign({}, e, {
                 spanLimits: h
             })));
-            this.resource = null !== (v = m.resource) && void 0 !== v ? v : e_.empty(), this.resource = e_.default().merge(this.resource), this._config = Object.assign({}, m, {
+            this.resource = null !== (_ = v.resource) && void 0 !== _ ? _ : ev.empty(), this.resource = ev.default().merge(this.resource), this._config = Object.assign({}, v, {
                 resource: this.resource
             });
-            var g = this._buildExporterFromEnv();
-            if (void 0 !== g) {
-                var y = new eF(g);
+            var m = this._buildExporterFromEnv();
+            if (void 0 !== m) {
+                var y = new eV(m);
                 this.activeSpanProcessor = y
-            } else this.activeSpanProcessor = new nZ
+            } else this.activeSpanProcessor = new n$
         }
         return t.prototype.getTracer = function(t, e, n) {
             var r = t + "@" + (e || "") + ":" + ((null == n ? void 0 : n.schemaUrl) || "");
-            return this._tracers.has(r) || this._tracers.set(r, new n$({
+            return this._tracers.has(r) || this._tracers.set(r, new nG({
                 name: t,
                 version: e,
                 schemaUrl: null == n ? void 0 : n.schemaUrl
             }, this._config, this)), this._tracers.get(r)
         }, t.prototype.addSpanProcessor = function(t) {
             0 === this._registeredSpanProcessors.length && this.activeSpanProcessor.shutdown().catch(function(t) {
-                return tm.error("Error while trying to shutdown current span processor", t)
-            }), this._registeredSpanProcessors.push(t), this.activeSpanProcessor = new nW(this._registeredSpanProcessors)
+                return ty.error("Error while trying to shutdown current span processor", t)
+            }), this._registeredSpanProcessors.push(t), this.activeSpanProcessor = new nz(this._registeredSpanProcessors)
         }, t.prototype.getActiveSpanProcessor = function() {
             return this.activeSpanProcessor
         }, t.prototype.register = function(t) {
-            void 0 === t && (t = {}), ee.setGlobalTracerProvider(this), void 0 === t.propagator && (t.propagator = this._buildPropagatorFromEnv()), t.contextManager && tv.setGlobalContextManager(t.contextManager), t.propagator && tZ.setGlobalPropagator(t.propagator)
+            void 0 === t && (t = {}), er.setGlobalTracerProvider(this), void 0 === t.propagator && (t.propagator = this._buildPropagatorFromEnv()), t.contextManager && tm.setGlobalContextManager(t.contextManager), t.propagator && tQ.setGlobalPropagator(t.propagator)
         }, t.prototype.forceFlush = function() {
             var t = this._config.forceFlushTimeoutMillis,
                 e = this._registeredSpanProcessors.map(function(e) {
                     return new Promise(function(n) {
-                        var r, i = setTimeout(function() {
-                            n(Error("Span processor did not completed within timeout period of " + t + " ms")), r = iU.timeout
+                        var r, o = setTimeout(function() {
+                            n(Error("Span processor did not completed within timeout period of " + t + " ms")), r = oI.timeout
                         }, t);
                         e.forceFlush().then(function() {
-                            clearTimeout(i), r !== iU.timeout && n(r = iU.resolved)
+                            clearTimeout(o), r !== oI.timeout && n(r = oI.resolved)
                         }).catch(function(t) {
-                            clearTimeout(i), r = iU.error, n(t)
+                            clearTimeout(o), r = oI.error, n(t)
                         })
                     })
                 });
             return new Promise(function(t, n) {
                 Promise.all(e).then(function(e) {
                     var r = e.filter(function(t) {
-                        return t !== iU.resolved
+                        return t !== oI.resolved
                     });
                     r.length > 0 ? n(r) : t()
                 }).catch(function(t) {
@@ -3162,68 +3123,68 @@ var nY = function() {
             return null === (e = this.constructor._registeredExporters.get(t)) || void 0 === e ? void 0 : e()
         }, t.prototype._buildPropagatorFromEnv = function() {
             var t = this,
-                e = Array.from(new Set(eI().OTEL_PROPAGATORS)),
+                e = Array.from(new Set(eM().OTEL_PROPAGATORS)),
                 n = e.map(function(e) {
                     var n = t._getPropagator(e);
-                    return n || tm.warn('Propagator "' + e + '" requested through environment variable is unavailable.'), n
+                    return n || ty.warn('Propagator "' + e + '" requested through environment variable is unavailable.'), n
                 }).reduce(function(t, e) {
                     return e && t.push(e), t
                 }, []);
-            return 0 === n.length ? void 0 : 1 === e.length ? n[0] : new eG({
+            return 0 === n.length ? void 0 : 1 === e.length ? n[0] : new ez({
                 propagators: n
             })
         }, t.prototype._buildExporterFromEnv = function() {
-            var t = eI().OTEL_TRACES_EXPORTER;
+            var t = eM().OTEL_TRACES_EXPORTER;
             if ("none" !== t && "" !== t) {
                 var e = this._getSpanExporter(t);
-                return e || tm.error('Exporter "' + t + '" requested through environment variable is unavailable.'), e
+                return e || ty.error('Exporter "' + t + '" requested through environment variable is unavailable.'), e
             }
         }, t._registeredPropagators = new Map([
             ["tracecontext", function() {
-                return new nl
+                return new nu
             }],
             ["baggage", function() {
-                return new ne
+                return new e7
             }]
         ]), t._registeredExporters = new Map, t
     }(),
-    nQ = function(t, e) {
+    nW = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    nJ = function(t, e, n) {
+    nK = function(t, e, n) {
         if (n || 2 == arguments.length)
-            for (var r, i = 0, o = e.length; i < o; i++) !r && i in e || (r || (r = Array.prototype.slice.call(e, 0, i)), r[i] = e[i]);
+            for (var r, o = 0, i = e.length; o < i; o++) !r && o in e || (r || (r = Array.prototype.slice.call(e, 0, o)), r[o] = e[o]);
         return t.concat(r || Array.prototype.slice.call(e))
     },
-    n0 = function() {
+    nZ = function() {
         function t() {
-            this._enabled = !1, this._currentContext = Z
+            this._enabled = !1, this._currentContext = Q
         }
         return t.prototype._bindFunction = function(t, e) {
-            void 0 === t && (t = Z);
+            void 0 === t && (t = Q);
             var n = this,
                 r = function() {
-                    for (var r = this, i = [], o = 0; o < arguments.length; o++) i[o] = arguments[o];
+                    for (var r = this, o = [], i = 0; i < arguments.length; i++) o[i] = arguments[i];
                     return n.with(t, function() {
-                        return e.apply(r, i)
+                        return e.apply(r, o)
                     })
                 };
             return Object.defineProperty(r, "length", {
@@ -3237,22 +3198,22 @@ var nY = function() {
         }, t.prototype.bind = function(t, e) {
             return (void 0 === t && (t = this.active()), "function" == typeof e) ? this._bindFunction(t, e) : e
         }, t.prototype.disable = function() {
-            return this._currentContext = Z, this._enabled = !1, this
+            return this._currentContext = Q, this._enabled = !1, this
         }, t.prototype.enable = function() {
-            return this._enabled || (this._enabled = !0, this._currentContext = Z), this
+            return this._enabled || (this._enabled = !0, this._currentContext = Q), this
         }, t.prototype.with = function(t, e, n) {
-            for (var r = [], i = 3; i < arguments.length; i++) r[i - 3] = arguments[i];
-            var o = this._currentContext;
-            this._currentContext = t || Z;
+            for (var r = [], o = 3; o < arguments.length; o++) r[o - 3] = arguments[o];
+            var i = this._currentContext;
+            this._currentContext = t || Q;
             try {
-                return e.call.apply(e, nJ([n], nQ(r), !1))
+                return e.call.apply(e, nK([n], nW(r), !1))
             } finally {
-                this._currentContext = o
+                this._currentContext = i
             }
         }, t
     }(),
-    n1 = (iE = function(t, e) {
-        return (iE = Object.setPrototypeOf || ({
+    nY = (ov = function(t, e) {
+        return (ov = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -3265,9 +3226,9 @@ var nY = function() {
         function n() {
             this.constructor = t
         }
-        iE(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        ov(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    n2 = function(t) {
+    nQ = function(t) {
         function e(e) {
             void 0 === e && (e = {});
             var n = t.call(this, e) || this;
@@ -3275,118 +3236,118 @@ var nY = function() {
             if (e.propagator) throw "propagator should be defined in register method not in constructor";
             return n
         }
-        return n1(e, t), e.prototype.register = function(e) {
-            void 0 === e && (e = {}), void 0 === e.contextManager && (e.contextManager = new n0), e.contextManager && e.contextManager.enable(), t.prototype.register.call(this, e)
+        return nY(e, t), e.prototype.register = function(e) {
+            void 0 === e && (e = {}), void 0 === e.contextManager && (e.contextManager = new nZ), e.contextManager && e.contextManager.enable(), t.prototype.register.call(this, e)
         }, e
-    }(nY),
-    n3 = {
+    }(nq),
+    nJ = {
         PLATFORM: "browser.platform",
         BRANDS: "browser.brands",
         MOBILE: "browser.mobile",
         LANGUAGE: "browser.language",
         USER_AGENT: "browser.user_agent"
     },
-    n4 = function(t, e) {
-        var n, r, i, o, a = {
+    n0 = function(t, e) {
+        var n, r, o, i, a = {
             label: 0,
             sent: function() {
-                if (1 & i[0]) throw i[1];
-                return i[1]
+                if (1 & o[0]) throw o[1];
+                return o[1]
             },
             trys: [],
             ops: []
         };
-        return o = {
+        return i = {
             next: s(0),
             throw: s(1),
             return: s(2)
-        }, "function" == typeof Symbol && (o[Symbol.iterator] = function() {
+        }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
             return this
-        }), o;
+        }), i;
 
-        function s(o) {
+        function s(i) {
             return function(s) {
-                return function(o) {
+                return function(i) {
                     if (n) throw TypeError("Generator is already executing.");
                     for (; a;) try {
-                        if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done) return i;
-                        switch (r = 0, i && (o = [2 & o[0], i.value]), o[0]) {
+                        if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                        switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
                             case 0:
                             case 1:
-                                i = o;
+                                o = i;
                                 break;
                             case 4:
                                 return a.label++, {
-                                    value: o[1],
+                                    value: i[1],
                                     done: !1
                                 };
                             case 5:
-                                a.label++, r = o[1], o = [0];
+                                a.label++, r = i[1], i = [0];
                                 continue;
                             case 7:
-                                o = a.ops.pop(), a.trys.pop();
+                                i = a.ops.pop(), a.trys.pop();
                                 continue;
                             default:
-                                if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
+                                if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                     a = 0;
                                     continue
                                 }
-                                if (3 === o[0] && (!i || o[1] > i[0] && o[1] < i[3])) {
-                                    a.label = o[1];
+                                if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
+                                    a.label = i[1];
                                     break
                                 }
-                                if (6 === o[0] && a.label < i[1]) {
-                                    a.label = i[1], i = o;
+                                if (6 === i[0] && a.label < o[1]) {
+                                    a.label = o[1], o = i;
                                     break
                                 }
-                                if (i && a.label < i[2]) {
-                                    a.label = i[2], a.ops.push(o);
+                                if (o && a.label < o[2]) {
+                                    a.label = o[2], a.ops.push(i);
                                     break
                                 }
-                                i[2] && a.ops.pop(), a.trys.pop();
+                                o[2] && a.ops.pop(), a.trys.pop();
                                 continue
                         }
-                        o = e.call(t, a)
+                        i = e.call(t, a)
                     } catch (t) {
-                        o = [6, t], r = 0
+                        i = [6, t], r = 0
                     } finally {
-                        n = i = 0
+                        n = o = 0
                     }
-                    if (5 & o[0]) throw o[1];
+                    if (5 & i[0]) throw i[1];
                     return {
-                        value: o[0] ? o[1] : void 0,
+                        value: i[0] ? i[1] : void 0,
                         done: !0
                     }
-                }([o, s])
+                }([i, s])
             }
         }
     },
-    n6 = new(function() {
+    n1 = new(function() {
         function t() {}
         return t.prototype.detect = function(t) {
-            var e, n, r, i;
-            return e = this, n = void 0, r = void 0, i = function() {
+            var e, n, r, o;
+            return e = this, n = void 0, r = void 0, o = function() {
                 var e;
-                return n4(this, function(n) {
-                    var r, i;
-                    return "undefined" != typeof navigator ? (r = {}, (i = navigator.userAgentData) ? (r[n3.PLATFORM] = i.platform, r[n3.BRANDS] = i.brands.map(function(t) {
+                return n0(this, function(n) {
+                    var r, o;
+                    return "undefined" != typeof navigator ? (r = {}, (o = navigator.userAgentData) ? (r[nJ.PLATFORM] = o.platform, r[nJ.BRANDS] = o.brands.map(function(t) {
                         return t.brand + " " + t.version
-                    }), r[n3.MOBILE] = i.mobile) : r[n3.USER_AGENT] = navigator.userAgent, r[n3.LANGUAGE] = navigator.language, e = r, [2, this._getResourceAttributes(e, t)]) : [2, e_.empty()]
+                    }), r[nJ.MOBILE] = o.mobile) : r[nJ.USER_AGENT] = navigator.userAgent, r[nJ.LANGUAGE] = navigator.language, e = r, [2, this._getResourceAttributes(e, t)]) : [2, ev.empty()]
                 })
-            }, new(r || (r = Promise))(function(t, o) {
+            }, new(r || (r = Promise))(function(t, i) {
                 function a(t) {
                     try {
-                        u(i.next(t))
+                        u(o.next(t))
                     } catch (t) {
-                        o(t)
+                        i(t)
                     }
                 }
 
                 function s(t) {
                     try {
-                        u(i.throw(t))
+                        u(o.throw(t))
                     } catch (t) {
-                        o(t)
+                        i(t)
                     }
                 }
 
@@ -3396,65 +3357,65 @@ var nY = function() {
                         t(n)
                     })).then(a, s)
                 }
-                u((i = i.apply(e, n || [])).next())
+                u((o = o.apply(e, n || [])).next())
             })
         }, t.prototype._getResourceAttributes = function(t, e) {
-            return t[n3.USER_AGENT] || t[n3.PLATFORM] ? new e_(t) : (tm.debug("BrowserDetector failed: Unable to find required browser resources. "), e_.empty())
+            return t[nJ.USER_AGENT] || t[nJ.PLATFORM] ? new ev(t) : (ty.debug("BrowserDetector failed: Unable to find required browser resources. "), ev.empty())
         }, t
     }()),
-    n5 = L("86Wyx"),
-    n9 = function(t, e) {
+    n2 = R("86Wyx"),
+    n3 = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     };
 
-function n8(t, e) {
-    return tm.warn("Timeout must be greater than 0", t), e
+function n4(t, e) {
+    return ty.warn("Timeout must be greater than 0", t), e
 }
-var n7 = function() {
+var n6 = function() {
         function t(t) {
             var e, n, r;
-            void 0 === t && (t = {}), this._sendingPromises = [], this.url = this.getDefaultUrl(t), "string" == typeof t.hostname && (this.hostname = t.hostname), this.shutdown = this.shutdown.bind(this), this._shutdownOnce = new eO(this._shutdown, this), this._concurrencyLimit = "number" == typeof t.concurrencyLimit ? t.concurrencyLimit : 30, this.timeoutMillis = "number" != typeof(e = t.timeoutMillis) ? (r = Number(null !== (n = eI().OTEL_EXPORTER_OTLP_TRACES_TIMEOUT) && void 0 !== n ? n : eI().OTEL_EXPORTER_OTLP_TIMEOUT)) <= 0 ? n8(r, 1e4) : r : e <= 0 ? n8(e, 1e4) : e, this.onInit(t)
+            void 0 === t && (t = {}), this._sendingPromises = [], this.url = this.getDefaultUrl(t), "string" == typeof t.hostname && (this.hostname = t.hostname), this.shutdown = this.shutdown.bind(this), this._shutdownOnce = new eL(this._shutdown, this), this._concurrencyLimit = "number" == typeof t.concurrencyLimit ? t.concurrencyLimit : 30, this.timeoutMillis = "number" != typeof(e = t.timeoutMillis) ? (r = Number(null !== (n = eM().OTEL_EXPORTER_OTLP_TRACES_TIMEOUT) && void 0 !== n ? n : eM().OTEL_EXPORTER_OTLP_TIMEOUT)) <= 0 ? n4(r, 1e4) : r : e <= 0 ? n4(e, 1e4) : e, this.onInit(t)
         }
         return t.prototype.export = function(t, e) {
             if (this._shutdownOnce.isCalled) {
                 e({
-                    code: iM.FAILED,
+                    code: oN.FAILED,
                     error: Error("Exporter has been shutdown")
                 });
                 return
             }
             if (this._sendingPromises.length >= this._concurrencyLimit) {
                 e({
-                    code: iM.FAILED,
+                    code: oN.FAILED,
                     error: Error("Concurrent export limit reached")
                 });
                 return
             }
             this._export(t).then(function() {
                 e({
-                    code: iM.SUCCESS
+                    code: oN.SUCCESS
                 })
             }).catch(function(t) {
                 e({
-                    code: iM.FAILED,
+                    code: oN.FAILED,
                     error: t
                 })
             })
@@ -3462,7 +3423,7 @@ var n7 = function() {
             var e = this;
             return new Promise(function(n, r) {
                 try {
-                    tm.debug("items to be sent", t), e.send(t, n, r)
+                    ty.debug("items to be sent", t), e.send(t, n, r)
                 } catch (t) {
                     r(t)
                 }
@@ -3472,11 +3433,11 @@ var n7 = function() {
         }, t.prototype.forceFlush = function() {
             return Promise.all(this._sendingPromises).then(function() {})
         }, t.prototype._shutdown = function() {
-            return tm.debug("shutdown started"), this.onShutdown(), this.forceFlush()
+            return ty.debug("shutdown started"), this.onShutdown(), this.forceFlush()
         }, t
     }(),
-    rt = (iT = function(t, e) {
-        return (iT = Object.setPrototypeOf || ({
+    n5 = (om = function(t, e) {
+        return (om = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -3489,45 +3450,265 @@ var n7 = function() {
         function n() {
             this.constructor = t
         }
-        iT(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        om(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    re = function(t) {
+    n9 = function(t) {
         function e(e, n, r) {
-            var i = t.call(this, e) || this;
-            return i.name = "OTLPExporterError", i.data = r, i.code = n, i
+            var o = t.call(this, e) || this;
+            return o.name = "OTLPExporterError", o.data = r, o.code = n, o
         }
-        return rt(e, t), e
-    }(Error),
-    rn = function() {
-        return (rn = Object.assign || function(t) {
-            for (var e, n = 1, r = arguments.length; n < r; n++)
-                for (var i in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
-            return t
-        }).apply(this, arguments)
+        return n5(e, t), e
+    }(Error);
+
+function n8(t) {
+    return t >= 48 && t <= 57 ? t - 48 : t >= 97 && t <= 102 ? t - 87 : t - 55
+}
+
+function n7(t) {
+    for (var e = new Uint8Array(t.length / 2), n = 0, r = 0; r < t.length; r += 2) {
+        var o = n8(t.charCodeAt(r)),
+            i = n8(t.charCodeAt(r + 1));
+        e[n++] = o << 4 | i
+    }
+    return e
+}
+var rt = {
+        parseKeyPairsIntoRecord: function(t) {
+            return "string" != typeof t || 0 === t.length ? {} : t.split(",").map(function(t) {
+                return e8(t)
+            }).filter(function(t) {
+                return void 0 !== t && t.value.length > 0
+            }).reduce(function(t, e) {
+                return t[e.key] = e.value, t
+            }, {})
+        }
     },
-    rr = function(t, e) {
+    re = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     },
-    ri = (iw = function(t, e) {
-        return (iw = Object.setPrototypeOf || ({
+    rn = function() {
+        function t(t) {
+            this._parameters = t
+        }
+        return t.prototype.send = function(t, e) {
+            var n = this;
+            return new Promise(function(r) {
+                var o = new XMLHttpRequest;
+                o.timeout = e, o.open("POST", n._parameters.url), Object.entries(n._parameters.headers).forEach(function(t) {
+                    var e = re(t, 2),
+                        n = e[0],
+                        r = e[1];
+                    o.setRequestHeader(n, r)
+                }), o.ontimeout = function(t) {
+                    r({
+                        status: "failure",
+                        error: Error("XHR request timed out")
+                    })
+                }, o.onreadystatechange = function() {
+                    o.status >= 200 && o.status <= 299 ? (ty.debug("XHR success"), r({
+                        status: "success"
+                    })) : o.status && [429, 502, 503, 504].includes(o.status) ? r({
+                        status: "retryable",
+                        retryInMillis: function(t) {
+                            if (null == t) return -1;
+                            var e = Number.parseInt(t, 10);
+                            if (Number.isInteger(e)) return e > 0 ? 1e3 * e : -1;
+                            var n = new Date(t).getTime() - Date.now();
+                            return n >= 0 ? n : 0
+                        }(o.getResponseHeader("Retry-After"))
+                    }) : 0 !== o.status && r({
+                        status: "failure",
+                        error: Error("XHR request failed with non-retryable status")
+                    })
+                }, o.onabort = function() {
+                    r({
+                        status: "failure",
+                        error: Error("XHR request aborted")
+                    })
+                }, o.onerror = function() {
+                    r({
+                        status: "failure",
+                        error: Error("XHR request errored")
+                    })
+                }, o.send(new Blob([t], {
+                    type: n._parameters.headers["Content-Type"]
+                }))
+            })
+        }, t.prototype.shutdown = function() {}, t
+    }(),
+    rr = function() {
+        function t(t) {
+            this._params = t
+        }
+        return t.prototype.send = function(t) {
+            var e = this;
+            return new Promise(function(n) {
+                navigator.sendBeacon(e._params.url, new Blob([t], {
+                    type: e._params.blobType
+                })) ? (ty.debug("SendBeacon success"), n({
+                    status: "success"
+                })) : n({
+                    status: "failure",
+                    error: Error("SendBeacon failed")
+                })
+            })
+        }, t.prototype.shutdown = function() {}, t
+    }(),
+    ro = function(t, e) {
+        var n, r, o, i, a = {
+            label: 0,
+            sent: function() {
+                if (1 & o[0]) throw o[1];
+                return o[1]
+            },
+            trys: [],
+            ops: []
+        };
+        return i = {
+            next: s(0),
+            throw: s(1),
+            return: s(2)
+        }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
+            return this
+        }), i;
+
+        function s(i) {
+            return function(s) {
+                return function(i) {
+                    if (n) throw TypeError("Generator is already executing.");
+                    for (; a;) try {
+                        if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                        switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
+                            case 0:
+                            case 1:
+                                o = i;
+                                break;
+                            case 4:
+                                return a.label++, {
+                                    value: i[1],
+                                    done: !1
+                                };
+                            case 5:
+                                a.label++, r = i[1], i = [0];
+                                continue;
+                            case 7:
+                                i = a.ops.pop(), a.trys.pop();
+                                continue;
+                            default:
+                                if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                    a = 0;
+                                    continue
+                                }
+                                if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
+                                    a.label = i[1];
+                                    break
+                                }
+                                if (6 === i[0] && a.label < o[1]) {
+                                    a.label = o[1], o = i;
+                                    break
+                                }
+                                if (o && a.label < o[2]) {
+                                    a.label = o[2], a.ops.push(i);
+                                    break
+                                }
+                                o[2] && a.ops.pop(), a.trys.pop();
+                                continue
+                        }
+                        i = e.call(t, a)
+                    } catch (t) {
+                        i = [6, t], r = 0
+                    } finally {
+                        n = o = 0
+                    }
+                    if (5 & i[0]) throw i[1];
+                    return {
+                        value: i[0] ? i[1] : void 0,
+                        done: !0
+                    }
+                }([i, s])
+            }
+        }
+    },
+    ri = function() {
+        function t(t) {
+            this._transport = t
+        }
+        return t.prototype.retry = function(t, e, n) {
+            var r = this;
+            return new Promise(function(o, i) {
+                setTimeout(function() {
+                    r._transport.send(t, e).then(o, i)
+                }, n)
+            })
+        }, t.prototype.send = function(t, e) {
+            var n, r, o, i, a;
+            return r = this, o = void 0, i = void 0, a = function() {
+                var r, o, i, a, s, u, c;
+                return ro(this, function(l) {
+                    switch (l.label) {
+                        case 0:
+                            return r = Date.now() + e, [4, this._transport.send(t, e)];
+                        case 1:
+                            o = l.sent(), i = 5, a = 1e3, l.label = 2;
+                        case 2:
+                            if (!("retryable" === o.status && i > 0)) return [3, 4];
+                            if (i--, s = Math.max(Math.min(a, 5e3) + (.4 * Math.random() - .2), 0), a *= 1.5, (u = null !== (n = o.retryInMillis) && void 0 !== n ? n : s) > (c = r - Date.now())) return [2, o];
+                            return [4, this.retry(t, c, u)];
+                        case 3:
+                            return o = l.sent(), [3, 2];
+                        case 4:
+                            return [2, o]
+                    }
+                })
+            }, new(i || (i = Promise))(function(t, e) {
+                function n(t) {
+                    try {
+                        u(a.next(t))
+                    } catch (t) {
+                        e(t)
+                    }
+                }
+
+                function s(t) {
+                    try {
+                        u(a.throw(t))
+                    } catch (t) {
+                        e(t)
+                    }
+                }
+
+                function u(e) {
+                    var r;
+                    e.done ? t(e.value) : ((r = e.value) instanceof i ? r : new i(function(t) {
+                        t(r)
+                    })).then(n, s)
+                }
+                u((a = a.apply(r, o || [])).next())
+            })
+        }, t.prototype.shutdown = function() {
+            return this._transport.shutdown()
+        }, t
+    }(),
+    ra = (oy = function(t, e) {
+        return (oy = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -3540,98 +3721,74 @@ var n7 = function() {
         function n() {
             this.constructor = t
         }
-        iw(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        oy(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    ro = function() {
-        return (ro = Object.assign || function(t) {
-            for (var e, n = 1, r = arguments.length; n < r; n++)
-                for (var i in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
-            return t
-        }).apply(this, arguments)
-    },
-    ra = function(t) {
+    rs = function(t) {
         function e(e, n, r) {
             void 0 === e && (e = {});
-            var i, o, a = t.call(this, e) || this;
-            return (a._useXHR = !1, a._serializer = n, a._contentType = r, a._useXHR = !!e.headers || "function" != typeof navigator.sendBeacon, a._useXHR) ? a._headers = Object.assign({}, (void 0 === (i = e.headers) && (i = {}), o = {}, Object.entries(i).forEach(function(t) {
-                var e = n9(t, 2),
-                    n = e[0],
-                    r = e[1];
-                void 0 !== r ? o[n] = String(r) : tm.warn('Header "' + n + '" has invalid value (' + r + ") and will be ignored")
-            }), o), e6.parseKeyPairsIntoRecord(eI().OTEL_EXPORTER_OTLP_HEADERS)) : a._headers = {}, a
+            var o, i, a = t.call(this, e) || this;
+            return (a._serializer = n, e.headers || "function" != typeof navigator.sendBeacon) ? a._transport = new ri({
+                transport: new rn({
+                    headers: Object.assign({}, (void 0 === (o = e.headers) && (o = {}), i = {}, Object.entries(o).forEach(function(t) {
+                        var e = n3(t, 2),
+                            n = e[0],
+                            r = e[1];
+                        void 0 !== r ? i[n] = String(r) : ty.warn('Header "' + n + '" has invalid value (' + r + ") and will be ignored")
+                    }), i), rt.parseKeyPairsIntoRecord(eM().OTEL_EXPORTER_OTLP_HEADERS), {
+                        "Content-Type": r
+                    }),
+                    url: a.url
+                })
+            }.transport) : a._transport = new rr({
+                url: a.url,
+                blobType: r
+            }), a
         }
-        return ri(e, t), e.prototype.onInit = function() {}, e.prototype.onShutdown = function() {}, e.prototype.send = function(t, e, n) {
-            var r, i = this;
+        return ra(e, t), e.prototype.onInit = function() {}, e.prototype.onShutdown = function() {}, e.prototype.send = function(t, e, n) {
+            var r = this;
             if (this._shutdownOnce.isCalled) {
-                tm.debug("Shutdown already started. Cannot send objects");
+                ty.debug("Shutdown already started. Cannot send objects");
                 return
             }
-            var o = null !== (r = this._serializer.serializeRequest(t)) && void 0 !== r ? r : new Uint8Array,
-                a = new Promise(function(t, e) {
-                    var n, r, a, s, u, c, l, p, f, d;
-                    i._useXHR ? (n = i.url, r = ro(ro({}, i._headers), {
-                        "Content-Type": i._contentType
-                    }), a = i.timeoutMillis, c = !1, l = setTimeout(function() {
-                        clearTimeout(s), c = !0, u.readyState === XMLHttpRequest.DONE ? e(new re("Request Timeout")) : u.abort()
-                    }, a), (p = function(i, a) {
-                        void 0 === i && (i = 5), void 0 === a && (a = 1e3), (u = new XMLHttpRequest).open("POST", n), Object.entries(rn(rn({}, {
-                            Accept: "application/json",
-                            "Content-Type": "application/json"
-                        }), r)).forEach(function(t) {
-                            var e = rr(t, 2),
-                                n = e[0],
-                                r = e[1];
-                            u.setRequestHeader(n, r)
-                        }), u.send(o), u.onreadystatechange = function() {
-                            u.readyState === XMLHttpRequest.DONE && !1 === c && (u.status >= 200 && u.status <= 299 ? (tm.debug("xhr success", o), t(), clearTimeout(l), clearTimeout(s)) : u.status && [429, 502, 503, 504].includes(u.status) && i > 0 ? (a *= 1.5, s = setTimeout(function() {
-                                p(i - 1, a)
-                            }, u.getResponseHeader("Retry-After") ? function(t) {
-                                if (null == t) return -1;
-                                var e = Number.parseInt(t, 10);
-                                if (Number.isInteger(e)) return e > 0 ? 1e3 * e : -1;
-                                var n = new Date(t).getTime() - Date.now();
-                                return n >= 0 ? n : 0
-                            }(u.getResponseHeader("Retry-After")) : Math.round(Math.random() * (5e3 - a) + a))) : (e(new re("Failed to export with XHR (status: " + u.status + ")", u.status)), clearTimeout(l), clearTimeout(s)))
-                        }, u.onabort = function() {
-                            c && e(new re("Request Timeout")), clearTimeout(l), clearTimeout(s)
-                        }, u.onerror = function() {
-                            c && e(new re("Request Timeout")), clearTimeout(l), clearTimeout(s)
-                        }
-                    })()) : (f = i.url, d = {
-                        type: i._contentType
-                    }, navigator.sendBeacon(f, new Blob([o], d)) ? (tm.debug("sendBeacon - can send", o), t()) : e(new re("sendBeacon - cannot send " + o)))
-                }).then(e, n);
-            this._sendingPromises.push(a);
-            var s = function() {
-                var t = i._sendingPromises.indexOf(a);
-                i._sendingPromises.splice(t, 1)
+            var o = this._serializer.serializeRequest(t);
+            if (null == o) {
+                n(Error("Could not serialize message"));
+                return
+            }
+            var i = this._transport.send(o, this.timeoutMillis).then(function(t) {
+                "success" === t.status ? e() : "failure" === t.status && t.error ? n(t.error) : "retryable" === t.status ? n(new n9("Export failed with retryable status")) : n(new n9("Export failed with unknown error"))
+            }, n);
+            this._sendingPromises.push(i);
+            var a = function() {
+                var t = r._sendingPromises.indexOf(i);
+                r._sendingPromises.splice(t, 1)
             };
-            a.then(s, s)
+            i.then(a, a)
         }, e
-    }(n7),
-    rs = function(t, e) {
+    }(n6),
+    ru = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     };
 
-function ru(t) {
+function rc(t) {
     return Object.keys(t).map(function(e) {
         return function t(e, n) {
             return {
@@ -3655,7 +3812,7 @@ function ru(t) {
                     } : "object" === r && null != n ? {
                         kvlistValue: {
                             values: Object.entries(n).map(function(e) {
-                                var n = rs(e, 2);
+                                var n = ru(e, 2);
                                 return t(n[0], n[1])
                             })
                         }
@@ -3666,48 +3823,37 @@ function ru(t) {
     })
 }
 
-function rc(t) {
-    return t >= 48 && t <= 57 ? t - 48 : t >= 97 && t <= 102 ? t - 87 : t - 55
-}
-
 function rl(t) {
-    for (var e = new Uint8Array(t.length / 2), n = 0, r = 0; r < t.length; r += 2) {
-        var i = rc(t.charCodeAt(r)),
-            o = rc(t.charCodeAt(r + 1));
-        e[n++] = i << 4 | o
-    }
-    return e
-}
-
-function rp(t) {
     var e = BigInt(1e9);
     return BigInt(t[0]) * e + BigInt(t[1])
 }
 
-function rf(t) {
+function rp(t) {
     var e;
     return {
-        low: Number(BigInt.asUintN(32, e = rp(t))),
+        low: Number(BigInt.asUintN(32, e = rl(t))),
         high: Number(BigInt.asUintN(32, e >> BigInt(32)))
     }
 }
-var rd = "undefined" != typeof BigInt ? function(t) {
-    return rp(t).toString()
-} : nE;
+var rf = "undefined" != typeof BigInt ? function(t) {
+    return rl(t).toString()
+} : function(t) {
+    return 1e9 * t[0] + t[1]
+};
 
-function rh(t) {
+function rd(t) {
     return t
 }
 
-function r_(t) {
-    if (void 0 !== t) return rl(t)
+function rh(t) {
+    if (void 0 !== t) return n7(t)
 }
-var rv = {
-        encodeHrTime: rf,
-        encodeSpanContext: rl,
-        encodeOptionalSpanContext: r_
+var rg = {
+        encodeHrTime: rp,
+        encodeSpanContext: n7,
+        encodeOptionalSpanContext: rh
     },
-    rm = function(t) {
+    r_ = function(t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
             n = e && t[e],
             r = 0;
@@ -3722,37 +3868,37 @@ var rv = {
         };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
     },
-    rg = function(t, e) {
+    rv = function(t, e) {
         var n = "function" == typeof Symbol && t[Symbol.iterator];
         if (!n) return t;
-        var r, i, o = n.call(t),
+        var r, o, i = n.call(t),
             a = [];
         try {
             for (;
-                (void 0 === e || e-- > 0) && !(r = o.next()).done;) a.push(r.value)
+                (void 0 === e || e-- > 0) && !(r = i.next()).done;) a.push(r.value)
         } catch (t) {
-            i = {
+            o = {
                 error: t
             }
         } finally {
             try {
-                r && !r.done && (n = o.return) && n.call(o)
+                r && !r.done && (n = i.return) && n.call(i)
             } finally {
-                if (i) throw i.error
+                if (o) throw o.error
             }
         }
         return a
     };
-(iO = ij || (ij = {}))[iO.DELTA = 0] = "DELTA", iO[iO.CUMULATIVE = 1] = "CUMULATIVE", (iS = iB || (iB = {}))[iS.HISTOGRAM = 0] = "HISTOGRAM", iS[iS.EXPONENTIAL_HISTOGRAM = 1] = "EXPONENTIAL_HISTOGRAM", iS[iS.GAUGE = 2] = "GAUGE", iS[iS.SUM = 3] = "SUM";
-var ry = {
+(ob = oD || (oD = {}))[ob.DELTA = 0] = "DELTA", ob[ob.CUMULATIVE = 1] = "CUMULATIVE", (oE = oM || (oM = {}))[oE.HISTOGRAM = 0] = "HISTOGRAM", oE[oE.EXPONENTIAL_HISTOGRAM = 1] = "EXPONENTIAL_HISTOGRAM", oE[oE.GAUGE = 2] = "GAUGE", oE[oE.SUM = 3] = "SUM";
+var rm = {
         serializeRequest: function(t) {
             var e = {
                 resourceSpans: function(t, e) {
                     for (var n = function(t) {
                             var e, n, r = new Map;
                             try {
-                                for (var i = rm(t), o = i.next(); !o.done; o = i.next()) {
-                                    var a = o.value,
+                                for (var o = r_(t), i = o.next(); !i.done; i = o.next()) {
+                                    var a = i.value,
                                         s = r.get(a.resource);
                                     s || (s = new Map, r.set(a.resource, s));
                                     var u = a.instrumentationLibrary.name + "@" + (a.instrumentationLibrary.version || "") + ":" + (a.instrumentationLibrary.schemaUrl || ""),
@@ -3765,20 +3911,20 @@ var ry = {
                                 }
                             } finally {
                                 try {
-                                    o && !o.done && (n = i.return) && n.call(i)
+                                    i && !i.done && (n = o.return) && n.call(o)
                                 } finally {
                                     if (e) throw e.error
                                 }
                             }
                             return r
-                        }(t), r = [], i = n.entries(), o = i.next(); !o.done;) {
-                        for (var a = rg(o.value, 2), s = a[0], u = a[1], c = [], l = u.values(), p = l.next(); !p.done;) {
+                        }(t), r = [], o = n.entries(), i = o.next(); !i.done;) {
+                        for (var a = rv(i.value, 2), s = a[0], u = a[1], c = [], l = u.values(), p = l.next(); !p.done;) {
                             var f = p.value;
                             if (f.length > 0) {
                                 var d, h = f.map(function(t) {
                                     return function(t, e) {
                                         var n, r = t.spanContext(),
-                                            i = t.status;
+                                            o = t.status;
                                         return {
                                             traceId: e.encodeSpanContext(r.traceId),
                                             spanId: e.encodeSpanContext(r.spanId),
@@ -3788,11 +3934,11 @@ var ry = {
                                             kind: null == t.kind ? 0 : t.kind + 1,
                                             startTimeUnixNano: e.encodeHrTime(t.startTime),
                                             endTimeUnixNano: e.encodeHrTime(t.endTime),
-                                            attributes: ru(t.attributes),
+                                            attributes: rc(t.attributes),
                                             droppedAttributesCount: t.droppedAttributesCount,
                                             events: t.events.map(function(t) {
                                                 return {
-                                                    attributes: t.attributes ? ru(t.attributes) : [],
+                                                    attributes: t.attributes ? rc(t.attributes) : [],
                                                     name: t.name,
                                                     timeUnixNano: e.encodeHrTime(t.time),
                                                     droppedAttributesCount: t.droppedAttributesCount || 0
@@ -3800,14 +3946,14 @@ var ry = {
                                             }),
                                             droppedEventsCount: t.droppedEventsCount,
                                             status: {
-                                                code: i.code,
-                                                message: i.message
+                                                code: o.code,
+                                                message: o.message
                                             },
                                             links: t.links.map(function(t) {
                                                 return function(t, e) {
                                                     var n;
                                                     return {
-                                                        attributes: t.attributes ? ru(t.attributes) : [],
+                                                        attributes: t.attributes ? rc(t.attributes) : [],
                                                         spanId: e.encodeSpanContext(t.context.spanId),
                                                         traceId: e.encodeSpanContext(t.context.traceId),
                                                         traceState: null === (n = t.context.traceState) || void 0 === n ? void 0 : n.serialize(),
@@ -3830,25 +3976,25 @@ var ry = {
                             }
                             p = l.next()
                         }
-                        var _ = {
+                        var g = {
                             resource: {
-                                attributes: ru(s.attributes),
+                                attributes: rc(s.attributes),
                                 droppedAttributesCount: 0
                             },
                             scopeSpans: c,
                             schemaUrl: void 0
                         };
-                        r.push(_), o = i.next()
+                        r.push(g), i = o.next()
                     }
                     return r
                 }(t, function(t) {
-                    if (void 0 === t) return rv;
+                    if (void 0 === t) return rg;
                     var e, n, r = null === (e = t.useLongBits) || void 0 === e || e,
-                        i = null !== (n = t.useHex) && void 0 !== n && n;
+                        o = null !== (n = t.useHex) && void 0 !== n && n;
                     return {
-                        encodeHrTime: r ? rf : rd,
-                        encodeSpanContext: i ? rh : rl,
-                        encodeOptionalSpanContext: i ? rh : r_
+                        encodeHrTime: r ? rp : rf,
+                        encodeSpanContext: o ? rd : n7,
+                        encodeOptionalSpanContext: o ? rd : rh
                     }
                 }({
                     useHex: !0,
@@ -3861,8 +4007,8 @@ var ry = {
             return JSON.parse(new TextDecoder().decode(t))
         }
     },
-    rb = (iR = function(t, e) {
-        return (iR = Object.setPrototypeOf || ({
+    ry = (oT = function(t, e) {
+        return (oT = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -3875,36 +4021,24 @@ var ry = {
         function n() {
             this.constructor = t
         }
-        iR(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        oT(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    rE = "v1/traces",
-    rT = "http://localhost:4318/" + rE,
-    rw = function(t) {
+    rb = function(t) {
         function e(e) {
-            void 0 === e && (e = {});
-            var n = t.call(this, e, ry, "application/json") || this;
-            return n._headers = Object.assign(n._headers, e6.parseKeyPairsIntoRecord(eI().OTEL_EXPORTER_OTLP_TRACES_HEADERS)), n
+            return void 0 === e && (e = {}), t.call(this, e, rm, "application/json") || this
         }
-        return rb(e, t), e.prototype.getDefaultUrl = function(t) {
-            var e;
-            return "string" == typeof t.url ? t.url : eI().OTEL_EXPORTER_OTLP_TRACES_ENDPOINT.length > 0 ? function(t) {
-                try {
-                    var e = new URL(t);
-                    return "" === e.pathname && (e.pathname = e.pathname + "/"), e.toString()
-                } catch (e) {
-                    return tm.warn("Could not parse export URL: '" + t + "'"), t
-                }
-            }(eI().OTEL_EXPORTER_OTLP_TRACES_ENDPOINT) : eI().OTEL_EXPORTER_OTLP_ENDPOINT.length > 0 ? ((e = eI().OTEL_EXPORTER_OTLP_ENDPOINT).endsWith("/") || (e += "/"), e + rE) : rT
+        return ry(e, t), e.prototype.getDefaultUrl = function(t) {
+            return "string" == typeof t.url ? t.url : "http://localhost:4318/v1/traces"
         }, e
-    }(ra),
-    rO = {};
+    }(rs),
+    rE = {};
 
-function rS(t) {
+function rT(t) {
     return "function" == typeof t
 }
-var rR = console.error.bind(console);
+var rw = console.error.bind(console);
 
-function rL(t, e, n) {
+function rS(t, e, n) {
     var r = !!t[e] && t.propertyIsEnumerable(e);
     Object.defineProperty(t, e, {
         configurable: !0,
@@ -3914,75 +4048,75 @@ function rL(t, e, n) {
     })
 }
 
-function rA(t) {
-    t && t.logger && (rS(t.logger) ? rR = t.logger : rR("new logger isn't a function, not replacing"))
+function rO(t) {
+    t && t.logger && (rT(t.logger) ? rw = t.logger : rw("new logger isn't a function, not replacing"))
 }
 
-function rP(t, e, n) {
+function rL(t, e, n) {
     if (!t || !t[e]) {
-        rR("no original function " + e + " to wrap");
+        rw("no original function " + e + " to wrap");
         return
     }
     if (!n) {
-        rR("no wrapper function"), rR(Error().stack);
+        rw("no wrapper function"), rw(Error().stack);
         return
     }
-    if (!rS(t[e]) || !rS(n)) {
-        rR("original object and wrapper must be functions");
+    if (!rT(t[e]) || !rT(n)) {
+        rw("original object and wrapper must be functions");
         return
     }
     var r = t[e],
-        i = n(r, e);
-    return rL(i, "__original", r), rL(i, "__unwrap", function() {
-        t[e] === i && rL(t, e, r)
-    }), rL(i, "__wrapped", !0), rL(t, e, i), i
+        o = n(r, e);
+    return rS(o, "__original", r), rS(o, "__unwrap", function() {
+        t[e] === o && rS(t, e, r)
+    }), rS(o, "__wrapped", !0), rS(t, e, o), o
 }
 
-function rC(t, e) {
+function rP(t, e) {
     if (!t || !t[e]) {
-        rR("no function to unwrap."), rR(Error().stack);
+        rw("no function to unwrap."), rw(Error().stack);
         return
     }
     if (t[e].__unwrap) return t[e].__unwrap();
-    rR("no original to unwrap to -- has " + e + " already been unwrapped?")
+    rw("no original to unwrap to -- has " + e + " already been unwrapped?")
 }
-rA.wrap = rP, rA.massWrap = function(t, e, n) {
+rO.wrap = rL, rO.massWrap = function(t, e, n) {
     if (t) Array.isArray(t) || (t = [t]);
     else {
-        rR("must provide one or more modules to patch"), rR(Error().stack);
+        rw("must provide one or more modules to patch"), rw(Error().stack);
         return
     }
     if (!(e && Array.isArray(e))) {
-        rR("must provide one or more functions to wrap on modules");
+        rw("must provide one or more functions to wrap on modules");
         return
     }
     t.forEach(function(t) {
         e.forEach(function(e) {
-            rP(t, e, n)
+            rL(t, e, n)
         })
     })
-}, rA.unwrap = rC, rA.massUnwrap = function(t, e) {
+}, rO.unwrap = rP, rO.massUnwrap = function(t, e) {
     if (t) Array.isArray(t) || (t = [t]);
     else {
-        rR("must provide one or more modules to patch"), rR(Error().stack);
+        rw("must provide one or more modules to patch"), rw(Error().stack);
         return
     }
     if (!(e && Array.isArray(e))) {
-        rR("must provide one or more functions to unwrap on modules");
+        rw("must provide one or more functions to unwrap on modules");
         return
     }
     t.forEach(function(t) {
         e.forEach(function(e) {
-            rC(t, e)
+            rP(t, e)
         })
     })
-}, rO = rA;
-const rN = Array(32);
-class rx {
+}, rE = rO;
+const rA = Array(32);
+class rR {
     constructor() {
         this._idGenerator = function() {
-            for (let t = 0; t < 32; t++) rN[t] = Math.floor(16 * Math.random()) + 48, rN[t] >= 58 && (rN[t] += 39);
-            return String.fromCharCode.apply(null, rN.slice(0, 32))
+            for (let t = 0; t < 32; t++) rA[t] = Math.floor(16 * Math.random()) + 48, rA[t] >= 58 && (rA[t] += 39);
+            return String.fromCharCode.apply(null, rA.slice(0, 32))
         }, this._sessionId = this._idGenerator()
     }
     onStart(t) {
@@ -3996,13 +4130,13 @@ class rx {
         return Promise.resolve()
     }
 }
-class rI {
+class rC {
     constructor(t = {}) {
-        var e, n, r, i;
-        if (this._resource = null !== (e = t.resource) && void 0 !== e ? e : new e_({}), this._resourceDetectors = null !== (n = t.resourceDetectors) && void 0 !== n ? n : [n6], this._serviceName = t.serviceName, this._autoDetectResources = null === (r = t.autoDetectResources) || void 0 === r || r, t.spanProcessor || t.traceExporter) {
+        var e, n, r, o;
+        if (this._resource = null !== (e = t.resource) && void 0 !== e ? e : new ev({}), this._resourceDetectors = null !== (n = t.resourceDetectors) && void 0 !== n ? n : [n1], this._serviceName = t.serviceName, this._autoDetectResources = null === (r = t.autoDetectResources) || void 0 === r || r, t.spanProcessor || t.traceExporter) {
             let e = {};
             t.sampler && (e.sampler = t.sampler), t.spanLimits && (e.spanLimits = t.spanLimits), t.idGenerator && (e.idGenerator = t.idGenerator);
-            let n = null !== (i = t.spanProcessor) && void 0 !== i ? i : new eF(t.traceExporter);
+            let n = null !== (o = t.spanProcessor) && void 0 !== o ? o : new eV(t.traceExporter);
             this._tracerProviderConfig = {
                 tracerConfig: e,
                 spanProcessor: n,
@@ -4010,35 +4144,35 @@ class rI {
                 textMapPropagator: t.textMapPropagator
             }
         }
-        let o = [];
-        t.instrumentations && (o = t.instrumentations), this._instrumentations = o
+        let i = [];
+        t.instrumentations && (i = t.instrumentations), this._instrumentations = i
     }
     start() {
-        var t, e, n, r, i, o, a, s, u;
+        var t, e, n, r, o, i, a, s, u;
         if (this._disabled) return;
         if (a = (r = {
                 instrumentations: this._instrumentations
-            }).tracerProvider || ee.getTracerProvider(), s = r.meterProvider || tB.getMeterProvider(), u = r.loggerProvider || ea.getLoggerProvider(), function(t, e, n, r) {
-                for (var i = 0, o = t.length; i < o; i++) {
-                    var a = t[i];
+            }).tracerProvider || er.getTracerProvider(), s = r.meterProvider || tH.getMeterProvider(), u = r.loggerProvider || eu.getLoggerProvider(), function(t, e, n, r) {
+                for (var o = 0, i = t.length; o < i; o++) {
+                    var a = t[o];
                     e && a.setTracerProvider(e), n && a.setMeterProvider(n), r && a.setLoggerProvider && a.setLoggerProvider(r), a.getConfig().enabled || a.enable()
                 }
-            }(null !== (o = null === (i = r.instrumentations) || void 0 === i ? void 0 : i.flat()) && void 0 !== o ? o : [], a, s, u), this._autoDetectResources) {
+            }(null !== (i = null === (o = r.instrumentations) || void 0 === o ? void 0 : o.flat()) && void 0 !== i ? i : [], a, s, u), this._autoDetectResources) {
             let t = {
                 detectors: this._resourceDetectors
             };
-            this._resource = this._resource.merge(em(t))
+            this._resource = this._resource.merge(ey(t))
         }
-        this._resource = void 0 === this._serviceName ? this._resource : this._resource.merge(new e_({
-            [es]: this._serviceName
+        this._resource = void 0 === this._serviceName ? this._resource : this._resource.merge(new ev({
+            [ec]: this._serviceName
         }));
-        let c = new n2(Object.assign(Object.assign({}, null === (t = this._tracerProviderConfig) || void 0 === t ? void 0 : t.tracerConfig), {
+        let c = new nQ(Object.assign(Object.assign({}, null === (t = this._tracerProviderConfig) || void 0 === t ? void 0 : t.tracerConfig), {
             resource: this._resource
         }));
         this._tracerProvider = c, this._tracerProviderConfig && c.addSpanProcessor(this._tracerProviderConfig.spanProcessor), c.register({
             contextManager: null === (e = this._tracerProviderConfig) || void 0 === e ? void 0 : e.contextManager,
             propagator: null === (n = this._tracerProviderConfig) || void 0 === n ? void 0 : n.textMapPropagator
-        }), c.addSpanProcessor(new rx)
+        }), c.addSpanProcessor(new rR)
     }
     getResourceAttributes() {
         return this._resource.attributes
@@ -4048,8 +4182,8 @@ class rI {
         return this._tracerProvider && t.push(this._tracerProvider.shutdown()), Promise.all(t).then(() => {})
     }
 }
-const rD = "0.5.0",
-    rM = {
+const rN = "0.8.1",
+    rx = {
         path: !0,
         hash: !0,
         hostname: !0,
@@ -4058,17 +4192,17 @@ const rD = "0.5.0",
         search: !1
     };
 
-function rk(t, e) {
+function rI(t, e) {
     if (t) return e
 }
-const rU = t => t <= 768 ? "small" : t > 768 && t <= 1024 ? "medium" : t > 1024 ? "large" : "unknown",
-    rj = t => {
+const rD = t => t <= 768 ? "small" : t > 768 && t <= 1024 ? "medium" : t > 1024 ? "large" : "unknown",
+    rM = t => {
         var e;
         return null !== (e = null == t ? void 0 : t.effectiveType) && void 0 !== e ? e : "unknown"
     },
-    rB = (t, e) => t || e ? t || "desktop" : "unknown",
-    rF = t => {
-        let e = new(n5 && n5.__esModule ? n5.default : n5)(t),
+    rk = (t, e) => t || e ? t || "desktop" : "unknown",
+    rj = t => {
+        let e = new(n2 && n2.__esModule ? n2.default : n2)(t),
             {
                 name: n,
                 version: r
@@ -4076,20 +4210,20 @@ const rU = t => t <= 768 ? "small" : t > 768 && t <= 1024 ? "medium" : t > 1024 
         return {
             browserName: null != n ? n : "unknown",
             browserVersion: null != r ? r : "unknown",
-            deviceType: rB(e.getDevice().type, n)
+            deviceType: rk(e.getDevice().type, n)
         }
     };
 
-function rH(t) {
-    return t instanceof e_ ? t : new e_(t || {})
+function rU(t) {
+    return t instanceof ev ? t : new ev(t || {})
 }
-const rV = "v1/traces",
-    rG = `https://api.honeycomb.io/${rV}`,
-    rX = {
+const rB = "v1/traces",
+    rF = `https://api.honeycomb.io/${rB}`,
+    rH = {
         apiKey: "",
         tracesApiKey: "",
-        endpoint: rG,
-        tracesEndpoint: rG,
+        endpoint: rF,
+        tracesEndpoint: rF,
         serviceName: "unknown_service",
         debug: !1,
         sampleRate: 1,
@@ -4099,47 +4233,50 @@ const rV = "v1/traces",
             enabled: !0
         }
     },
-    rz = t => `@honeycombio/opentelemetry-web: ${t}`,
-    rq = /^[a-f0-9]*$/,
-    r$ = /^hc[a-z]ic_[a-z0-9]*$/;
+    rV = t => `@honeycombio/opentelemetry-web: ${t}`,
+    rG = /^[a-f0-9]*$/,
+    rX = /^hc[a-z]ic_[a-z0-9]*$/;
 
-function rK(t) {
+function rz(t) {
     if (null == t || 0 === t.length);
-    else if (32 === t.length) return rq.test(t);
-    else if (64 === t.length) return r$.test(t);
+    else if (32 === t.length) return rG.test(t);
+    else if (64 === t.length) return rX.test(t);
     return !1
 }
-const rW = t => {
+const r$ = t => {
         if (null == t ? void 0 : t.tracesEndpoint) return t.tracesEndpoint;
         if (null == t ? void 0 : t.endpoint) {
             var e;
-            return (e = t.endpoint).endsWith(rV) || e.endsWith(`${rV}/`) ? e : e.endsWith("/") ? e + rV : e + "/" + rV
+            return (e = t.endpoint).endsWith(rB) || e.endsWith(`${rB}/`) ? e : e.endsWith("/") ? e + rB : e + "/" + rB
         }
-        return rG
+        return rF
     },
-    rZ = t => (null == t ? void 0 : t.tracesApiKey) || (null == t ? void 0 : t.apiKey),
-    rY = t => "number" == typeof(null == t ? void 0 : t.sampleRate) && Number.isSafeInteger(null == t ? void 0 : t.sampleRate) && (null == t ? void 0 : t.sampleRate) >= 0 ? null == t ? void 0 : t.sampleRate : 1,
-    rQ = rz("❌ Missing API Key. Set `apiKey` in HoneycombOptions. Telemetry will not be exported."),
-    rJ = rz(`\u{274C} Missing Service Name. Set \`serviceName\` in HoneycombOptions. Defaulting to '${rX.serviceName}'`),
-    r0 = rz("\uD83D\uDD15 Dataset is ignored in favor of service name."),
-    r1 = rz("❌ Missing dataset. Specify either HONEYCOMB_DATASET environment variable or dataset in the options parameter."),
-    r2 = rz("⏭️ Skipping options validation. To re-enable, set skipOptionsValidation option or HONEYCOMB_SKIP_OPTIONS_VALIDATION to false."),
-    r3 = rz("\uD83D\uDD28 Default deterministic sampler has been overridden. Honeycomb requires a resource attribute called SampleRate to properly show weighted values. Non-deterministic sampleRate could lead to missing spans in Honeycomb. See our docs for more details. https://docs.honeycomb.io/getting-data-in/opentelemetry/node-distro/#sampling-without-the-honeycomb-sdk"),
-    r4 = rz("\uD83D\uDD15 Disabling local visualizations - must have both service name and API key configured."),
-    r6 = rz("\uD83D\uDD15 Failed to get proper auth response from Honeycomb. No local visualization available."),
-    r5 = t => {
+    rq = t => (null == t ? void 0 : t.tracesApiKey) || (null == t ? void 0 : t.apiKey),
+    rW = t => "number" == typeof(null == t ? void 0 : t.sampleRate) && Number.isSafeInteger(null == t ? void 0 : t.sampleRate) && (null == t ? void 0 : t.sampleRate) >= 0 ? null == t ? void 0 : t.sampleRate : 1,
+    rK = rV("❌ Missing API Key. Set `apiKey` in HoneycombOptions. Telemetry will not be exported."),
+    rZ = rV(`\u{274C} Missing Service Name. Set \`serviceName\` in HoneycombOptions. Defaulting to '${rH.serviceName}'`),
+    rY = rV("\uD83D\uDD15 Dataset is ignored in favor of service name."),
+    rQ = rV("❌ Missing dataset. Specify either HONEYCOMB_DATASET environment variable or dataset in the options parameter."),
+    rJ = rV("⏭️ Skipping options validation. To re-enable, set skipOptionsValidation option or HONEYCOMB_SKIP_OPTIONS_VALIDATION to false."),
+    r0 = rV("\uD83D\uDD28 Default deterministic sampler has been overridden. Honeycomb requires a resource attribute called SampleRate to properly show weighted values. Non-deterministic sampleRate could lead to missing spans in Honeycomb. See our docs for more details. https://docs.honeycomb.io/getting-data-in/opentelemetry/node-distro/#sampling-without-the-honeycomb-sdk"),
+    r1 = rV("\uD83D\uDD15 Disabling local visualizations - must have both service name and API key configured."),
+    r2 = rV("\uD83D\uDD15 Failed to get proper auth response from Honeycomb. No local visualization available."),
+    r3 = rV("\uD83D\uDD15 Default honeycomb exporter disabled but no exporters provided"),
+    r4 = t => {
+        var e;
+        let n = (null == t ? void 0 : t.logLevel) ? t.logLevel : ow.DEBUG;
         if (null == t ? void 0 : t.skipOptionsValidation) {
-            console.debug(r2);
+            n >= ow.DEBUG && console.debug(rJ);
             return
         }
-        return (null == t ? void 0 : t.apiKey) || console.warn(rQ), (null == t ? void 0 : t.serviceName) || console.warn(rJ), (null == t ? void 0 : t.apiKey) && !rK(null == t ? void 0 : t.apiKey) && (null == t ? void 0 : t.dataset) && console.warn(r0), (null == t ? void 0 : t.apiKey) && rK(null == t ? void 0 : t.apiKey) && !(null == t ? void 0 : t.dataset) && console.warn(r1), (null == t ? void 0 : t.sampler) && console.debug(r3), t
+        return (null == t ? void 0 : t.apiKey) || !(n >= ow.WARN) || console.warn(rK), (null == t ? void 0 : t.serviceName) || !(n >= ow.WARN) || console.warn(rZ), (null == t ? void 0 : t.apiKey) && !rz(null == t ? void 0 : t.apiKey) && (null == t ? void 0 : t.dataset) && n >= ow.WARN && console.warn(rY), (null == t ? void 0 : t.apiKey) && rz(null == t ? void 0 : t.apiKey) && !(null == t ? void 0 : t.dataset) && n >= ow.WARN && console.warn(rQ), (null == t ? void 0 : t.sampler) && n >= ow.DEBUG && console.debug(r0), (null == t ? void 0 : t.disableDefaultTraceExporter) !== !0 || (null == t ? void 0 : t.traceExporter) || (null === (e = null == t ? void 0 : t.traceExporters) || void 0 === e ? void 0 : e.length) || console.warn(r3), t
     };
-class r9 {
+class r6 {
     constructor() {}
     onStart(t, e) {
         var n, r;
-        (null !== (r = null === (n = tZ.getBaggage(e)) || void 0 === n ? void 0 : n.getAllEntries()) && void 0 !== r ? r : []).forEach(e => {
-            t.setAttribute(e[0], e[1].value), tm.debug(`@honeycombio/opentelemetry-web: \u{1F6A8} Baggage in all outgoing headers: ${e[0]}=${e[1].value} `)
+        (null !== (r = null === (n = tQ.getBaggage(e)) || void 0 === n ? void 0 : n.getAllEntries()) && void 0 !== r ? r : []).forEach(e => {
+            t.setAttribute(e[0], e[1].value), ty.debug(`@honeycombio/opentelemetry-web: \u{1F6A8} Baggage in all outgoing headers: ${e[0]}=${e[1].value} `)
         })
     }
     onEnd() {}
@@ -4150,23 +4287,23 @@ class r9 {
         return Promise.resolve()
     }
 }
-class r8 {
+class r5 {
     constructor() {}
     onStart(t) {
         let {
             href: e,
             pathname: n,
             search: r,
-            hash: i,
-            hostname: o
+            hash: o,
+            hostname: i
         } = window.location;
         t.setAttributes({
             "browser.width": window.innerWidth,
             "browser.height": window.innerHeight,
-            "page.hash": i,
+            "page.hash": o,
             "page.url": e,
             "page.route": n,
-            "page.hostname": o,
+            "page.hostname": i,
             "page.search": r,
             "url.path": n
         })
@@ -4179,13 +4316,13 @@ class r8 {
         return Promise.resolve()
     }
 }
-class r7 {
+class r9 {
     constructor(t) {
         this._exporters = t
     }
     export (t, e) {
         this._exporters.forEach(n => n.export(t, e)), e({
-            code: iM.SUCCESS
+            code: oN.SUCCESS
         })
     }
     async shutdown() {
@@ -4193,10 +4330,10 @@ class r7 {
         this._exporters.forEach(e => t.push(e.shutdown())), await Promise.all(t)
     }
 }
-class it {
-    constructor(t, e) {
-        if (this._traceUrl = "", !t || !e) {
-            console.debug(r4);
+class r8 {
+    constructor(t, e, n) {
+        if (this._traceUrl = "", this._logLevel = ow.DEBUG, n && (this._logLevel = n), !t || !e) {
+            this._logLevel >= ow.DEBUG && console.debug(r1);
             return
         }
         fetch("https://api.honeycomb.io/1/auth", {
@@ -4207,44 +4344,46 @@ class it {
             if (t.ok) return t.json();
             throw Error()
         }).then(n => {
-            var r, i, o, a, s;
+            var r, o, i, a, s;
             if (null === (r = n.team) || void 0 === r ? void 0 : r.slug) {
                 let r;
-                this._traceUrl = (a = null === (i = n.team) || void 0 === i ? void 0 : i.slug, s = null === (o = n.environment) || void 0 === o ? void 0 : o.slug, r = `https://ui.honeycomb.io/${a}`, !rK(e) && s && (r += `/environments/${s}`), r += `/datasets/${t}/trace?trace_id`)
+                this._traceUrl = (a = null === (o = n.team) || void 0 === o ? void 0 : o.slug, s = null === (i = n.environment) || void 0 === i ? void 0 : i.slug, r = `https://ui.honeycomb.io/${a}`, !rz(e) && s && (r += `/environments/${s}`), r += `/datasets/${t}/trace?trace_id`)
             } else throw Error()
         }).catch(() => {
-            console.log(r6)
+            this._logLevel >= ow.INFO && console.log(r2)
         })
     }
     export (t, e) {
         this._traceUrl && t.forEach(t => {
-            t.parentSpanId || console.log(rz(`Honeycomb link: ${this._traceUrl}=${t.spanContext().traceId}`))
+            !t.parentSpanId && this._logLevel >= ow.INFO && console.log(rV(`Honeycomb link: ${this._traceUrl}=${t.spanContext().traceId}`))
         }), e({
-            code: iM.SUCCESS
+            code: oN.SUCCESS
         })
     }
     shutdown() {
         return Promise.resolve()
     }
 }
-const ie = t => {
-    let e = new ir,
+const r7 = t => {
+    let e = new ot,
         n = [];
     return (null == t ? void 0 : t.localVisualizations) && n.push(function(t) {
-        let e = rZ(t);
-        return new it(null == t ? void 0 : t.serviceName, e)
-    }(t)), (null == t ? void 0 : t.traceExporter) && n.push(null == t ? void 0 : t.traceExporter), e.addProcessor(new eF(new r7([function(t) {
-        let e = rZ(t);
-        return new rw({
-            url: rW(t),
+        let e = rq(t);
+        return new r8(null == t ? void 0 : t.serviceName, e, null == t ? void 0 : t.logLevel)
+    }(t)), (null == t ? void 0 : t.traceExporter) && n.push(null == t ? void 0 : t.traceExporter), (null == t ? void 0 : t.traceExporters) && n.push(...t.traceExporters), (null == t ? void 0 : t.disableDefaultTraceExporter) !== !0 && n.unshift(function(t) {
+        let e = rq(t);
+        return new rb({
+            url: r$(t),
             headers: Object.assign({
                 "x-honeycomb-team": e,
-                "x-honeycomb-dataset": rK(e) ? null == t ? void 0 : t.dataset : void 0
+                "x-honeycomb-dataset": rz(e) ? null == t ? void 0 : t.dataset : void 0
             }, null == t ? void 0 : t.headers)
         })
-    }(t), ...n]))), e.addProcessor(new r9), e.addProcessor(new r8), (null == t ? void 0 : t.spanProcessor) && e.addProcessor(null == t ? void 0 : t.spanProcessor), e
+    }(t)), e.addProcessor(new eV(new r9([...n]))), e.addProcessor(new r6), e.addProcessor(new r5), (null == t ? void 0 : t.spanProcessor) && e.addProcessor(null == t ? void 0 : t.spanProcessor), (null == t ? void 0 : t.spanProcessors) && t.spanProcessors.forEach(t => {
+        e.addProcessor(t)
+    }), e
 };
-class ir {
+class ot {
     constructor() {
         this.spanProcessors = []
     }
@@ -4271,22 +4410,22 @@ class ir {
         return Promise.all(this.spanProcessors.map(t => t.forceFlush())).then(() => {})
     }
 }
-const ii = t => new io(rY(t));
-class io {
+const oe = t => new on(rW(t));
+class on {
     constructor(t) {
         switch (this._sampleRate = t, t) {
             case 0:
-                this._sampler = new ey;
+                this._sampler = new eE;
                 break;
             case 1:
-                this._sampler = new eb;
+                this._sampler = new eT;
                 break;
             default:
-                this._sampler = new eH(1 / t)
+                this._sampler = new eG(1 / t)
         }
     }
-    shouldSample(t, e, n, r, i, o) {
-        let a = this._sampler.shouldSample(t, e, n, r, i, o);
+    shouldSample(t, e, n, r, o, i) {
+        let a = this._sampler.shouldSample(t, e, n, r, o, i);
         return Object.assign(Object.assign({}, a), {
             attributes: Object.assign(Object.assign({}, a.attributes), {
                 SampleRate: this._sampleRate
@@ -4297,13 +4436,13 @@ class io {
         return `DeterministicSampler(${this._sampler.toString()})`
     }
 }
-var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, iR, iL, iA, iP, iC, iN, ix, iI, iD, iM, ik, iU, ij, iB, iF, iH, iV, iG = function() {
+var or, oo, oi, oa, os, ou, oc, ol, op, of, od, oh, og, o_, ov, om, oy, ob, oE, oT, ow, oS, oO, oL, oP, oA, oR, oC, oN, ox, oI, oD, oM, ok, oj, oU = function() {
         var t = self.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
         if (t && t.responseStart > 0 && t.responseStart < performance.now()) return t
     },
-    iX = function(t) {
+    oB = function(t) {
         if ("loading" === document.readyState) return "loading";
-        var e = iG();
+        var e = oU();
         if (e) {
             if (t < e.domInteractive) return "loading";
             if (0 === e.domContentLoadedEventStart || t < e.domContentLoadedEventStart) return "dom-interactive";
@@ -4311,40 +4450,40 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
         }
         return "complete"
     },
-    iz = function(t) {
+    oF = function(t) {
         var e = t.nodeName;
         return 1 === t.nodeType ? e.toLowerCase() : e.toUpperCase().replace(/^#/, "")
     },
-    iq = function(t, e) {
+    oH = function(t, e) {
         var n = "";
         try {
             for (; t && 9 !== t.nodeType;) {
                 var r = t,
-                    i = r.id ? "#" + r.id : iz(r) + (r.classList && r.classList.value && r.classList.value.trim() && r.classList.value.trim().length ? "." + r.classList.value.trim().replace(/\s+/g, ".") : "");
-                if (n.length + i.length > (e || 100) - 1) return n || i;
-                if (n = n ? i + ">" + n : i, r.id) break;
+                    o = r.id ? "#" + r.id : oF(r) + (r.classList && r.classList.value && r.classList.value.trim() && r.classList.value.trim().length ? "." + r.classList.value.trim().replace(/\s+/g, ".") : "");
+                if (n.length + o.length > (e || 100) - 1) return n || o;
+                if (n = n ? o + ">" + n : o, r.id) break;
                 t = r.parentNode
             }
         } catch (t) {}
         return n
     },
-    i$ = -1,
-    iK = function() {
-        return i$
+    oV = -1,
+    oG = function() {
+        return oV
     },
-    iW = function(t) {
+    oX = function(t) {
         addEventListener("pageshow", function(e) {
-            e.persisted && (i$ = e.timeStamp, t(e))
+            e.persisted && (oV = e.timeStamp, t(e))
         }, !0)
     },
-    iZ = function() {
-        var t = iG();
+    oz = function() {
+        var t = oU();
         return t && t.activationStart || 0
     },
-    iY = function(t, e) {
-        var n = iG(),
+    o$ = function(t, e) {
+        var n = oU(),
             r = "navigate";
-        return iK() >= 0 ? r = "back-forward-cache" : n && (document.prerendering || iZ() > 0 ? r = "prerender" : document.wasDiscarded ? r = "restore" : n.type && (r = n.type.replace(/_/g, "-"))), {
+        return oG() >= 0 ? r = "back-forward-cache" : n && (document.prerendering || oz() > 0 ? r = "prerender" : document.wasDiscarded ? r = "restore" : n.type && (r = n.type.replace(/_/g, "-"))), {
             name: t,
             value: void 0 === e ? -1 : e,
             rating: "good",
@@ -4354,7 +4493,7 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
             navigationType: r
         }
     },
-    iQ = function(t, e, n) {
+    oq = function(t, e, n) {
         try {
             if (PerformanceObserver.supportedEntryTypes.includes(t)) {
                 var r = new PerformanceObserver(function(t) {
@@ -4369,79 +4508,79 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
             }
         } catch (t) {}
     },
-    iJ = function(t, e, n, r) {
-        var i, o;
+    oW = function(t, e, n, r) {
+        var o, i;
         return function(a) {
             var s;
-            e.value >= 0 && (a || r) && ((o = e.value - (i || 0)) || void 0 === i) && (i = e.value, e.delta = o, e.rating = (s = e.value) > n[1] ? "poor" : s > n[0] ? "needs-improvement" : "good", t(e))
+            e.value >= 0 && (a || r) && ((i = e.value - (o || 0)) || void 0 === o) && (o = e.value, e.delta = i, e.rating = (s = e.value) > n[1] ? "poor" : s > n[0] ? "needs-improvement" : "good", t(e))
         }
     },
-    i0 = function(t) {
+    oK = function(t) {
         requestAnimationFrame(function() {
             return requestAnimationFrame(function() {
                 return t()
             })
         })
     },
-    i1 = function(t) {
+    oZ = function(t) {
         document.addEventListener("visibilitychange", function() {
             "hidden" === document.visibilityState && t()
         })
     },
-    i2 = function(t) {
+    oY = function(t) {
         var e = !1;
         return function() {
             e || (t(), e = !0)
         }
     },
-    i3 = -1,
-    i4 = function() {
+    oQ = -1,
+    oJ = function() {
         return "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0
     },
-    i6 = function(t) {
-        "hidden" === document.visibilityState && i3 > -1 && (i3 = "visibilitychange" === t.type ? t.timeStamp : 0, i9())
+    o0 = function(t) {
+        "hidden" === document.visibilityState && oQ > -1 && (oQ = "visibilitychange" === t.type ? t.timeStamp : 0, o2())
     },
-    i5 = function() {
-        addEventListener("visibilitychange", i6, !0), addEventListener("prerenderingchange", i6, !0)
+    o1 = function() {
+        addEventListener("visibilitychange", o0, !0), addEventListener("prerenderingchange", o0, !0)
     },
-    i9 = function() {
-        removeEventListener("visibilitychange", i6, !0), removeEventListener("prerenderingchange", i6, !0)
+    o2 = function() {
+        removeEventListener("visibilitychange", o0, !0), removeEventListener("prerenderingchange", o0, !0)
     },
-    i8 = function() {
-        return i3 < 0 && (i3 = i4(), i5(), iW(function() {
+    o3 = function() {
+        return oQ < 0 && (oQ = oJ(), o1(), oX(function() {
             setTimeout(function() {
-                i3 = i4(), i5()
+                oQ = oJ(), o1()
             }, 0)
         })), {
             get firstHiddenTime() {
-                return i3
+                return oQ
             }
         }
     },
-    i7 = function(t) {
+    o4 = function(t) {
         document.prerendering ? addEventListener("prerenderingchange", function() {
             return t()
         }, !0) : t()
     },
-    ot = [1800, 3e3],
-    oe = function(t, e) {
-        e = e || {}, i7(function() {
-            var n, r = i8(),
-                i = iY("FCP"),
-                o = iQ("paint", function(t) {
+    o6 = [1800, 3e3],
+    o5 = function(t, e) {
+        e = e || {}, o4(function() {
+            var n, r = o3(),
+                o = o$("FCP"),
+                i = oq("paint", function(t) {
                     t.forEach(function(t) {
-                        "first-contentful-paint" === t.name && (o.disconnect(), t.startTime < r.firstHiddenTime && (i.value = Math.max(t.startTime - iZ(), 0), i.entries.push(t), n(!0)))
+                        "first-contentful-paint" === t.name && (i.disconnect(), t.startTime < r.firstHiddenTime && (o.value = Math.max(t.startTime - oz(), 0), o.entries.push(t), n(!0)))
                     })
                 });
-            o && (n = iJ(t, i, ot, e.reportAllChanges), iW(function(r) {
-                n = iJ(t, i = iY("FCP"), ot, e.reportAllChanges), i0(function() {
-                    i.value = performance.now() - r.timeStamp, n(!0)
+            i && (n = oW(t, o, o6, e.reportAllChanges), oX(function(r) {
+                n = oW(t, o = o$("FCP"), o6, e.reportAllChanges), oK(function() {
+                    o.value = performance.now() - r.timeStamp, n(!0)
                 })
             }))
         })
     },
-    on = [.1, .25],
-    or = function(t, e) {
+    o9 = [.1, .25],
+    o8 = function(t, e) {
         var n, r;
         n = function(e) {
             t(function(t) {
@@ -4451,16 +4590,16 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
                         return t && t.value > e.value ? t : e
                     });
                     if (r && r.sources && r.sources.length) {
-                        var i = (e = r.sources).find(function(t) {
+                        var o = (e = r.sources).find(function(t) {
                             return t.node && 1 === t.node.nodeType
                         }) || e[0];
-                        i && (n = {
-                            largestShiftTarget: iq(i.node),
+                        o && (n = {
+                            largestShiftTarget: oH(o.node),
                             largestShiftTime: r.startTime,
                             largestShiftValue: r.value,
-                            largestShiftSource: i,
+                            largestShiftSource: o,
                             largestShiftEntry: r,
-                            loadState: iX(r.startTime)
+                            loadState: oB(r.startTime)
                         })
                     }
                 }
@@ -4468,47 +4607,47 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
                     attribution: n
                 })
             }(e))
-        }, r = (r = e) || {}, oe(i2(function() {
-            var t, e = iY("CLS", 0),
-                i = 0,
-                o = [],
+        }, r = (r = e) || {}, o5(oY(function() {
+            var t, e = o$("CLS", 0),
+                o = 0,
+                i = [],
                 a = function(n) {
                     n.forEach(function(t) {
                         if (!t.hadRecentInput) {
-                            var e = o[0],
-                                n = o[o.length - 1];
-                            i && t.startTime - n.startTime < 1e3 && t.startTime - e.startTime < 5e3 ? (i += t.value, o.push(t)) : (i = t.value, o = [t])
+                            var e = i[0],
+                                n = i[i.length - 1];
+                            o && t.startTime - n.startTime < 1e3 && t.startTime - e.startTime < 5e3 ? (o += t.value, i.push(t)) : (o = t.value, i = [t])
                         }
-                    }), i > e.value && (e.value = i, e.entries = o, t())
+                    }), o > e.value && (e.value = o, e.entries = i, t())
                 },
-                s = iQ("layout-shift", a);
-            s && (t = iJ(n, e, on, r.reportAllChanges), i1(function() {
+                s = oq("layout-shift", a);
+            s && (t = oW(n, e, o9, r.reportAllChanges), oZ(function() {
                 a(s.takeRecords()), t(!0)
-            }), iW(function() {
-                i = 0, t = iJ(n, e = iY("CLS", 0), on, r.reportAllChanges), i0(function() {
+            }), oX(function() {
+                o = 0, t = oW(n, e = o$("CLS", 0), o9, r.reportAllChanges), oK(function() {
                     return t()
                 })
             }), setTimeout(t, 0))
         }))
     },
-    oi = function(t, e) {
-        oe(function(e) {
+    o7 = function(t, e) {
+        o5(function(e) {
             t(function(t) {
                 var e = {
                     timeToFirstByte: 0,
                     firstByteToFCP: t.value,
-                    loadState: iX(iK())
+                    loadState: oB(oG())
                 };
                 if (t.entries.length) {
-                    var n = iG(),
+                    var n = oU(),
                         r = t.entries[t.entries.length - 1];
                     if (n) {
-                        var i = n.activationStart || 0,
-                            o = Math.max(0, n.responseStart - i);
+                        var o = n.activationStart || 0,
+                            i = Math.max(0, n.responseStart - o);
                         e = {
-                            timeToFirstByte: o,
-                            firstByteToFCP: t.value - o,
-                            loadState: iX(t.entries[0].startTime),
+                            timeToFirstByte: i,
+                            firstByteToFCP: t.value - i,
+                            loadState: oB(t.entries[0].startTime),
                             navigationEntry: n,
                             fcpEntry: r
                         }
@@ -4520,32 +4659,39 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
             }(e))
         }, e)
     },
-    oo = 0,
-    oa = 1 / 0,
-    os = 0,
-    ou = function(t) {
+    it = 0,
+    ie = 1 / 0,
+    ir = 0,
+    io = function(t) {
         t.forEach(function(t) {
-            t.interactionId && (oa = Math.min(oa, t.interactionId), oo = (os = Math.max(os, t.interactionId)) ? (os - oa) / 7 + 1 : 0)
+            t.interactionId && (ie = Math.min(ie, t.interactionId), it = (ir = Math.max(ir, t.interactionId)) ? (ir - ie) / 7 + 1 : 0)
         })
     },
-    oc = function() {
-        "interactionCount" in performance || iF || (iF = iQ("event", ou, {
+    ii = function() {
+        return ok ? it : performance.interactionCount || 0
+    },
+    ia = function() {
+        "interactionCount" in performance || ok || (ok = oq("event", io, {
             type: "event",
             buffered: !0,
             durationThreshold: 0
         }))
     },
-    ol = [],
-    op = new Map,
-    of = 0,
-    od = [],
-    oh = function(t) {
-        if (od.forEach(function(e) {
+    is = [],
+    iu = new Map,
+    ic = 0,
+    il = function() {
+        var t = Math.min(is.length - 1, Math.floor((ii() - ic) / 50));
+        return is[t]
+    },
+    ip = [],
+    id = function(t) {
+        if (ip.forEach(function(e) {
                 return e(t)
             }), t.interactionId || "first-input" === t.entryType) {
-            var e = ol[ol.length - 1],
-                n = op.get(t.interactionId);
-            if (n || ol.length < 10 || t.duration > e.latency) {
+            var e = is[is.length - 1],
+                n = iu.get(t.interactionId);
+            if (n || is.length < 10 || t.duration > e.latency) {
                 if (n) t.duration > n.latency ? (n.entries = [t], n.latency = t.duration) : t.duration === n.latency && t.startTime === n.entries[0].startTime && n.entries.push(t);
                 else {
                     var r = {
@@ -4553,90 +4699,89 @@ var ia, is, iu, ic, il, ip, id, ih, i_, iv, im, ig, iy, ib, iE, iT, iw, iO, iS, 
                         latency: t.duration,
                         entries: [t]
                     };
-                    op.set(r.id, r), ol.push(r)
+                    iu.set(r.id, r), is.push(r)
                 }
-                ol.sort(function(t, e) {
+                is.sort(function(t, e) {
                     return e.latency - t.latency
-                }), ol.length > 10 && ol.splice(10).forEach(function(t) {
-                    return op.delete(t.id)
+                }), is.length > 10 && is.splice(10).forEach(function(t) {
+                    return iu.delete(t.id)
                 })
             }
         }
     },
-    o_ = function(t) {
+    ih = function(t) {
         var e = self.requestIdleCallback || self.setTimeout,
             n = -1;
-        return t = i2(t), "hidden" === document.visibilityState ? t() : (n = e(t), i1(t)), n
+        return t = oY(t), "hidden" === document.visibilityState ? t() : (n = e(t), oZ(t)), n
     },
-    ov = [200, 500],
-    om = function(t, e) {
-        "PerformanceEventTiming" in self && "interactionId" in PerformanceEventTiming.prototype && (e = e || {}, i7(function() {
-            oc();
-            var n, r, i = iY("INP"),
-                o = function(t) {
-                    o_(function() {
-                        t.forEach(oh);
-                        var e, n = (e = Math.min(ol.length - 1, Math.floor(((iF ? oo : performance.interactionCount || 0) - of) / 50)), ol[e]);
-                        n && n.latency !== i.value && (i.value = n.latency, i.entries = n.entries, r())
+    ig = [200, 500],
+    i_ = function(t, e) {
+        "PerformanceEventTiming" in self && "interactionId" in PerformanceEventTiming.prototype && (e = e || {}, o4(function() {
+            ia();
+            var n, r, o = o$("INP"),
+                i = function(t) {
+                    ih(function() {
+                        t.forEach(id);
+                        var e = il();
+                        e && e.latency !== o.value && (o.value = e.latency, o.entries = e.entries, r())
                     })
                 },
-                a = iQ("event", o, {
+                a = oq("event", i, {
                     durationThreshold: null !== (n = e.durationThreshold) && void 0 !== n ? n : 40
                 });
-            r = iJ(t, i, ov, e.reportAllChanges), a && (a.observe({
+            r = oW(t, o, ig, e.reportAllChanges), a && (a.observe({
                 type: "first-input",
                 buffered: !0
-            }), i1(function() {
-                o(a.takeRecords()), r(!0)
-            }), iW(function() {
-                of = 0, ol.length = 0, op.clear(), r = iJ(t, i = iY("INP"), ov, e.reportAllChanges)
+            }), oZ(function() {
+                i(a.takeRecords()), r(!0)
+            }), oX(function() {
+                ic = ii(), is.length = 0, iu.clear(), r = oW(t, o = o$("INP"), ig, e.reportAllChanges)
             }))
         }))
     },
-    og = [],
-    oy = [],
-    ob = new WeakMap,
-    oE = new Map,
-    oT = -1,
-    ow = function(t) {
-        og = og.concat(t), oO()
+    iv = [],
+    im = [],
+    iy = 0,
+    ib = new WeakMap,
+    iE = new Map,
+    iT = -1,
+    iw = function(t) {
+        iv = iv.concat(t), iS()
     },
-    oO = function() {
-        oT < 0 && (oT = o_(oS))
+    iS = function() {
+        iT < 0 && (iT = ih(iO))
     },
-    oS = function() {
-        oE.size > 10 && oE.forEach(function(t, e) {
-            op.has(e) || oE.delete(e)
+    iO = function() {
+        iE.size > 10 && iE.forEach(function(t, e) {
+            iu.has(e) || iE.delete(e)
         });
-        var t = ol.map(function(t) {
-                return ob.get(t.entries[0])
+        var t = is.map(function(t) {
+                return ib.get(t.entries[0])
             }),
-            e = oy.length - 50;
-        oy = oy.filter(function(n, r) {
+            e = im.length - 50;
+        im = im.filter(function(n, r) {
             return r >= e || t.includes(n)
         });
-        for (var n = new Set, r = 0; r < oy.length; r++) {
-            var i = oy[r];
-            oC(i.startTime, i.processingEnd).forEach(function(t) {
+        for (var n = new Set, r = 0; r < im.length; r++) {
+            var o = im[r];
+            iC(o.startTime, o.processingEnd).forEach(function(t) {
                 n.add(t)
             })
         }
-        for (var o = 0; o < 50; o++) {
-            var a = og[og.length - 1 - o];
-            if (!a || a.startTime < iV) break;
-            n.add(a)
-        }
-        og = Array.from(n), oT = -1
+        var i = iv.length - 1 - 50;
+        iv = iv.filter(function(t, e) {
+            return t.startTime > iy && e > i || n.has(t)
+        }), iT = -1
     };
-od.push(function(t) {
-    t.interactionId && t.target && !oE.has(t.interactionId) && oE.set(t.interactionId, t.target)
+ip.push(function(t) {
+    t.interactionId && t.target && !iE.has(t.interactionId) && iE.set(t.interactionId, t.target)
 }, function(t) {
     var e, n = t.startTime + t.duration;
-    iV = Math.max(iV, t.processingEnd);
-    for (var r = oy.length - 1; r >= 0; r--) {
-        var i = oy[r];
-        if (8 >= Math.abs(n - i.renderTime)) {
-            (e = i).startTime = Math.min(t.startTime, e.startTime), e.processingStart = Math.min(t.processingStart, e.processingStart), e.processingEnd = Math.max(t.processingEnd, e.processingEnd), e.entries.push(t);
+    iy = Math.max(iy, t.processingEnd);
+    for (var r = im.length - 1; r >= 0; r--) {
+        var o = im[r];
+        if (8 >= Math.abs(n - o.renderTime)) {
+            (e = o).startTime = Math.min(t.startTime, e.startTime), e.processingStart = Math.min(t.processingStart, e.processingStart), e.processingEnd = Math.max(t.processingEnd, e.processingEnd), e.entries.push(t);
             break
         }
     }
@@ -4646,44 +4791,44 @@ od.push(function(t) {
         processingEnd: t.processingEnd,
         renderTime: n,
         entries: [t]
-    }, oy.push(e)), (t.interactionId || "first-input" === t.entryType) && ob.set(t, e), oO()
+    }, im.push(e)), (t.interactionId || "first-input" === t.entryType) && ib.set(t, e), iS()
 });
-var oR, oL, oA, oP, oC = function(t, e) {
-        for (var n, r = [], i = 0; n = og[i]; i++)
+var iL, iP, iA, iR, iC = function(t, e) {
+        for (var n, r = [], o = 0; n = iv[o]; o++)
             if (!(n.startTime + n.duration < t)) {
                 if (n.startTime > e) break;
                 r.push(n)
             } return r
     },
-    oN = function(t, e) {
-        iH || (iH = iQ("long-animation-frame", ow)), om(function(e) {
-            var n, r, i, o, a, s, u, c, l, p;
-            t((n = e.entries[0], r = ob.get(n), i = n.processingStart, o = r.processingEnd, a = r.entries.sort(function(t, e) {
+    iN = function(t, e) {
+        oj || (oj = oq("long-animation-frame", iw)), i_(function(e) {
+            var n, r, o, i, a, s, u, c, l, p;
+            t((n = e.entries[0], r = ib.get(n), o = n.processingStart, i = r.processingEnd, a = r.entries.sort(function(t, e) {
                 return t.processingStart - e.processingStart
-            }), s = oC(n.startTime, o), c = (u = e.entries.find(function(t) {
+            }), s = iC(n.startTime, i), c = (u = e.entries.find(function(t) {
                 return t.target
-            })) && u.target || oE.get(n.interactionId), l = [n.startTime + n.duration, o].concat(s.map(function(t) {
+            })) && u.target || iE.get(n.interactionId), l = [n.startTime + n.duration, i].concat(s.map(function(t) {
                 return t.startTime + t.duration
             })), p = Math.max.apply(Math, l), Object.assign(e, {
                 attribution: {
-                    interactionTarget: iq(c),
+                    interactionTarget: oH(c),
                     interactionTargetElement: c,
                     interactionType: n.name.startsWith("key") ? "keyboard" : "pointer",
                     interactionTime: n.startTime,
                     nextPaintTime: p,
                     processedEventEntries: a,
                     longAnimationFrameEntries: s,
-                    inputDelay: i - n.startTime,
-                    processingDuration: o - i,
-                    presentationDelay: Math.max(p - o, 0),
-                    loadState: iX(n.startTime)
+                    inputDelay: o - n.startTime,
+                    processingDuration: i - o,
+                    presentationDelay: Math.max(p - i, 0),
+                    loadState: oB(n.startTime)
                 }
             })))
         }, e)
     },
-    ox = [2500, 4e3],
-    oI = {},
-    oD = function(t, e) {
+    ix = [2500, 4e3],
+    iI = {},
+    iD = function(t, e) {
         var n, r;
         n = function(e) {
             t(function(t) {
@@ -4694,79 +4839,79 @@ var oR, oL, oA, oP, oC = function(t, e) {
                     elementRenderDelay: t.value
                 };
                 if (t.entries.length) {
-                    var n = iG();
+                    var n = oU();
                     if (n) {
                         var r = n.activationStart || 0,
-                            i = t.entries[t.entries.length - 1],
-                            o = i.url && performance.getEntriesByType("resource").filter(function(t) {
-                                return t.name === i.url
+                            o = t.entries[t.entries.length - 1],
+                            i = o.url && performance.getEntriesByType("resource").filter(function(t) {
+                                return t.name === o.url
                             })[0],
                             a = Math.max(0, n.responseStart - r),
-                            s = Math.max(a, o ? (o.requestStart || o.startTime) - r : 0),
-                            u = Math.max(s, o ? o.responseEnd - r : 0),
-                            c = Math.max(u, i.startTime - r);
+                            s = Math.max(a, i ? (i.requestStart || i.startTime) - r : 0),
+                            u = Math.max(s, i ? i.responseEnd - r : 0),
+                            c = Math.max(u, o.startTime - r);
                         e = {
-                            element: iq(i.element),
+                            element: oH(o.element),
                             timeToFirstByte: a,
                             resourceLoadDelay: s - a,
                             resourceLoadDuration: u - s,
                             elementRenderDelay: c - u,
                             navigationEntry: n,
-                            lcpEntry: i
-                        }, i.url && (e.url = i.url), o && (e.lcpResourceEntry = o)
+                            lcpEntry: o
+                        }, o.url && (e.url = o.url), i && (e.lcpResourceEntry = i)
                     }
                 }
                 return Object.assign(t, {
                     attribution: e
                 })
             }(e))
-        }, r = (r = e) || {}, i7(function() {
-            var t, e = i8(),
-                i = iY("LCP"),
-                o = function(n) {
+        }, r = (r = e) || {}, o4(function() {
+            var t, e = o3(),
+                o = o$("LCP"),
+                i = function(n) {
                     r.reportAllChanges || (n = n.slice(-1)), n.forEach(function(n) {
-                        n.startTime < e.firstHiddenTime && (i.value = Math.max(n.startTime - iZ(), 0), i.entries = [n], t())
+                        n.startTime < e.firstHiddenTime && (o.value = Math.max(n.startTime - oz(), 0), o.entries = [n], t())
                     })
                 },
-                a = iQ("largest-contentful-paint", o);
+                a = oq("largest-contentful-paint", i);
             if (a) {
-                t = iJ(n, i, ox, r.reportAllChanges);
-                var s = i2(function() {
-                    oI[i.id] || (o(a.takeRecords()), a.disconnect(), oI[i.id] = !0, t(!0))
+                t = oW(n, o, ix, r.reportAllChanges);
+                var s = oY(function() {
+                    iI[o.id] || (i(a.takeRecords()), a.disconnect(), iI[o.id] = !0, t(!0))
                 });
                 ["keydown", "click"].forEach(function(t) {
                     addEventListener(t, function() {
-                        return o_(s)
+                        return ih(s)
                     }, !0)
-                }), i1(s), iW(function(e) {
-                    t = iJ(n, i = iY("LCP"), ox, r.reportAllChanges), i0(function() {
-                        i.value = performance.now() - e.timeStamp, oI[i.id] = !0, t(!0)
+                }), oZ(s), oX(function(e) {
+                    t = oW(n, o = o$("LCP"), ix, r.reportAllChanges), oK(function() {
+                        o.value = performance.now() - e.timeStamp, iI[o.id] = !0, t(!0)
                     })
                 })
             }
         })
     },
-    oM = [800, 1800],
-    ok = function t(e) {
-        document.prerendering ? i7(function() {
+    iM = [800, 1800],
+    ik = function t(e) {
+        document.prerendering ? o4(function() {
             return t(e)
         }) : "complete" !== document.readyState ? addEventListener("load", function() {
             return t(e)
         }, !0) : setTimeout(e, 0)
     },
-    oU = function(t, e) {
+    ij = function(t, e) {
         e = e || {};
-        var n = iY("TTFB"),
-            r = iJ(t, n, oM, e.reportAllChanges);
-        ok(function() {
-            var i = iG();
-            i && (n.value = Math.max(i.responseStart - iZ(), 0), n.entries = [i], r(!0), iW(function() {
-                (r = iJ(t, n = iY("TTFB", 0), oM, e.reportAllChanges))(!0)
+        var n = o$("TTFB"),
+            r = oW(t, n, iM, e.reportAllChanges);
+        ik(function() {
+            var o = oU();
+            o && (n.value = Math.max(o.responseStart - oz(), 0), n.entries = [o], r(!0), oX(function() {
+                (r = oW(t, n = o$("TTFB", 0), iM, e.reportAllChanges))(!0)
             }))
         })
     },
-    oj = function(t, e) {
-        oU(function(e) {
+    iU = function(t, e) {
+        ij(function(e) {
             t(function(t) {
                 var e = {
                     waitingDuration: 0,
@@ -4778,14 +4923,14 @@ var oR, oL, oA, oP, oC = function(t, e) {
                 if (t.entries.length) {
                     var n = t.entries[0],
                         r = n.activationStart || 0,
-                        i = Math.max((n.workerStart || n.fetchStart) - r, 0),
-                        o = Math.max(n.domainLookupStart - r, 0),
+                        o = Math.max((n.workerStart || n.fetchStart) - r, 0),
+                        i = Math.max(n.domainLookupStart - r, 0),
                         a = Math.max(n.connectStart - r, 0),
                         s = Math.max(n.connectEnd - r, 0);
                     e = {
-                        waitingDuration: i,
-                        cacheDuration: o - i,
-                        dnsDuration: a - o,
+                        waitingDuration: o,
+                        cacheDuration: i - o,
+                        dnsDuration: a - i,
                         connectionDuration: s - a,
                         requestDuration: t.value - s,
                         navigationEntry: n
@@ -4797,86 +4942,86 @@ var oR, oL, oA, oP, oC = function(t, e) {
             }(e))
         }, e)
     },
-    oB = {
+    iB = {
         passive: !0,
         capture: !0
     },
-    oF = new Date,
-    oH = function(t, e) {
-        oR || (oR = e, oL = t, oA = new Date, oX(removeEventListener), oV())
+    iF = new Date,
+    iH = function(t, e) {
+        iL || (iL = e, iP = t, iA = new Date, iX(removeEventListener), iV())
     },
-    oV = function() {
-        if (oL >= 0 && oL < oA - oF) {
+    iV = function() {
+        if (iP >= 0 && iP < iA - iF) {
             var t = {
                 entryType: "first-input",
-                name: oR.type,
-                target: oR.target,
-                cancelable: oR.cancelable,
-                startTime: oR.timeStamp,
-                processingStart: oR.timeStamp + oL
+                name: iL.type,
+                target: iL.target,
+                cancelable: iL.cancelable,
+                startTime: iL.timeStamp,
+                processingStart: iL.timeStamp + iP
             };
-            oP.forEach(function(e) {
+            iR.forEach(function(e) {
                 e(t)
-            }), oP = []
+            }), iR = []
         }
     },
-    oG = function(t) {
+    iG = function(t) {
         if (t.cancelable) {
-            var e, n, r, i = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp;
+            var e, n, r, o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp;
             "pointerdown" == t.type ? (e = function() {
-                oH(i, t), r()
+                iH(o, t), r()
             }, n = function() {
                 r()
             }, r = function() {
-                removeEventListener("pointerup", e, oB), removeEventListener("pointercancel", n, oB)
-            }, addEventListener("pointerup", e, oB), addEventListener("pointercancel", n, oB)) : oH(i, t)
+                removeEventListener("pointerup", e, iB), removeEventListener("pointercancel", n, iB)
+            }, addEventListener("pointerup", e, iB), addEventListener("pointercancel", n, iB)) : iH(o, t)
         }
     },
-    oX = function(t) {
+    iX = function(t) {
         ["mousedown", "keydown", "touchstart", "pointerdown"].forEach(function(e) {
-            return t(e, oG, oB)
+            return t(e, iG, iB)
         })
     },
-    oz = [100, 300],
-    oq = function(t, e) {
-        e = e || {}, i7(function() {
-            var n, r = i8(),
-                i = iY("FID"),
-                o = function(t) {
-                    t.startTime < r.firstHiddenTime && (i.value = t.processingStart - t.startTime, i.entries.push(t), n(!0))
+    iz = [100, 300],
+    i$ = function(t, e) {
+        e = e || {}, o4(function() {
+            var n, r = o3(),
+                o = o$("FID"),
+                i = function(t) {
+                    t.startTime < r.firstHiddenTime && (o.value = t.processingStart - t.startTime, o.entries.push(t), n(!0))
                 },
                 a = function(t) {
-                    t.forEach(o)
+                    t.forEach(i)
                 },
-                s = iQ("first-input", a);
-            n = iJ(t, i, oz, e.reportAllChanges), s && (i1(i2(function() {
+                s = oq("first-input", a);
+            n = oW(t, o, iz, e.reportAllChanges), s && (oZ(oY(function() {
                 a(s.takeRecords()), s.disconnect()
-            })), iW(function() {
-                n = iJ(t, i = iY("FID"), oz, e.reportAllChanges), oP = [], oL = -1, oR = null, oX(addEventListener), oP.push(o), oV()
+            })), oX(function() {
+                n = oW(t, o = o$("FID"), iz, e.reportAllChanges), iR = [], iP = -1, iL = null, iX(addEventListener), iR.push(i), iV()
             }))
         })
     },
-    o$ = function(t, e) {
-        oq(function(e) {
+    iq = function(t, e) {
+        i$(function(e) {
             var n;
             t((n = e.entries[0], Object.assign(e, {
                 attribution: {
-                    eventTarget: iq(n.target),
+                    eventTarget: oH(n.target),
                     eventType: n.name,
                     eventTime: n.startTime,
                     eventEntry: n,
-                    loadState: iX(n.startTime)
+                    loadState: oB(n.startTime)
                 }
             })))
         }, e)
     };
-class oK {
+class iW {
     constructor(t, e, n = {}) {
-        this.instrumentationName = t, this.instrumentationVersion = e, this._wrap = rO.wrap, this._unwrap = rO.unwrap, this._massWrap = rO.massWrap, this._massUnwrap = rO.massUnwrap, this._config = Object.assign({
+        this.instrumentationName = t, this.instrumentationVersion = e, this._wrap = rE.wrap, this._unwrap = rE.unwrap, this._massWrap = rE.massWrap, this._massUnwrap = rE.massUnwrap, this._config = Object.assign({
             enabled: !0
-        }, n), this._diag = tm.createComponentLogger({
+        }, n), this._diag = ty.createComponentLogger({
             namespace: t
-        }), this._tracer = ee.getTracer(t, e), this._meter = tB.getMeter(t, e), this._updateMetricInstruments()
+        }), this._tracer = er.getTracer(t, e), this._meter = tH.getMeter(t, e), this._updateMetricInstruments()
     }
     get meter() {
         return this._meter
@@ -4898,170 +5043,203 @@ class oK {
         return this._tracer
     }
 }
-class oW extends oK {
+class iK extends iW {
     constructor({
         enabled: t = !0,
         vitalsToTrack: e = ["CLS", "LCP", "INP"],
         lcp: n,
         cls: r,
-        inp: i,
-        fid: o,
+        inp: o,
+        fid: i,
         fcp: a,
         ttfb: s
     } = {}) {
-        super("@honeycombio/instrumentation-web-vitals", rD, {
+        super("@honeycombio/instrumentation-web-vitals", rN, {
             enabled: t,
             vitalsToTrack: e,
             lcp: n,
             cls: r,
-            inp: i,
-            fid: o,
+            inp: o,
+            fid: i,
             fcp: a,
             ttfb: s
-        }), this.onReportCLS = (t, e) => {
+        }), this.onReportCLS = (t, e = {}) => {
+            let {
+                applyCustomAttributes: n
+            } = e;
             if (!this.isEnabled()) return;
             let {
-                name: n,
-                attribution: r
+                name: r,
+                attribution: o
             } = t, {
                 largestShiftTarget: i,
-                largestShiftTime: o,
-                largestShiftValue: a,
-                loadState: s,
-                largestShiftEntry: u
-            } = r, c = this.getAttrPrefix(n), l = this.tracer.startSpan(n);
-            l.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${c}.largest_shift_target`]: i,
-                [`${c}.element`]: i,
-                [`${c}.largest_shift_time`]: o,
-                [`${c}.largest_shift_value`]: a,
-                [`${c}.load_state`]: s,
-                [`${c}.had_recent_input`]: null == u ? void 0 : u.hadRecentInput
-            })), e && e(t, l), l.end()
-        }, this.onReportLCP = (t, e) => {
-            if (!this.isEnabled()) return;
-            let {
-                name: n,
-                attribution: r
-            } = t, {
-                element: i,
-                url: o,
-                timeToFirstByte: a,
-                resourceLoadDelay: s,
-                resourceLoadDuration: u,
-                elementRenderDelay: c
-            } = r, l = this.getAttrPrefix(n), p = this.tracer.startSpan(n);
-            p.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${l}.element`]: i,
-                [`${l}.url`]: o,
-                [`${l}.time_to_first_byte`]: a,
-                [`${l}.resource_load_delay`]: s,
-                [`${l}.resource_load_duration`]: u,
-                [`${l}.element_render_delay`]: c,
-                [`${l}.resource_load_time`]: u
-            })), e && e(t, p), p.end()
-        }, this.onReportINP = (t, e) => {
-            if (!this.isEnabled()) return;
-            let {
-                name: n,
-                attribution: r
-            } = t, {
-                inputDelay: i,
-                interactionTarget: o,
-                interactionTime: a,
-                interactionType: s,
+                largestShiftTime: a,
+                largestShiftValue: s,
                 loadState: u,
-                nextPaintTime: c,
-                presentationDelay: l,
-                processingDuration: p
-            } = r, f = this.getAttrPrefix(n), d = this.tracer.startSpan(n);
-            d.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${f}.input_delay`]: i,
-                [`${f}.interaction_target`]: o,
-                [`${f}.interaction_time`]: a,
-                [`${f}.interaction_type`]: s,
-                [`${f}.load_state`]: u,
-                [`${f}.next_paint_time`]: c,
-                [`${f}.presentation_delay`]: l,
-                [`${f}.processing_duration`]: p,
-                [`${f}.element`]: o,
-                [`${f}.event_type`]: s
-            })), e && e(t, d), d.end()
-        }, this.onReportFCP = (t, e) => {
+                largestShiftEntry: c
+            } = o, l = this.getAttrPrefix(r), p = this.tracer.startSpan(r);
+            p.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                [`${l}.largest_shift_target`]: i,
+                [`${l}.element`]: i,
+                [`${l}.largest_shift_time`]: a,
+                [`${l}.largest_shift_value`]: s,
+                [`${l}.load_state`]: u,
+                [`${l}.had_recent_input`]: null == c ? void 0 : c.hadRecentInput
+            })), n && n(t, p), p.end()
+        }, this.onReportLCP = (t, e = {}) => {
+            let {
+                applyCustomAttributes: n,
+                dataAttributes: r
+            } = e;
             if (!this.isEnabled()) return;
             let {
-                name: n,
-                attribution: r
+                name: o,
+                attribution: i
+            } = t, {
+                element: a,
+                url: s,
+                timeToFirstByte: u,
+                resourceLoadDelay: c,
+                resourceLoadDuration: l,
+                elementRenderDelay: p,
+                lcpEntry: f
+            } = i, d = this.getAttrPrefix(o), h = this.tracer.startSpan(o);
+            h.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                [`${d}.element`]: a,
+                [`${d}.url`]: s,
+                [`${d}.time_to_first_byte`]: u,
+                [`${d}.resource_load_delay`]: c,
+                [`${d}.resource_load_duration`]: l,
+                [`${d}.element_render_delay`]: p,
+                [`${d}.resource_load_time`]: l
+            }));
+            let g = null == f ? void 0 : f.element;
+            if (null == g ? void 0 : g.dataset)
+                for (let t in g.dataset) {
+                    let e = g.dataset[t];
+                    void 0 !== e && (void 0 === r || r.includes(t)) && h.setAttribute(`${d}.element.data.${t}`, e)
+                }
+            n && n(t, h), h.end()
+        }, this.onReportINP = (t, e = {
+            includeTimingsAsSpans: !1
+        }) => {
+            let {
+                applyCustomAttributes: n,
+                includeTimingsAsSpans: r
+            } = e;
+            if (!this.isEnabled()) return;
+            let {
+                name: o,
+                attribution: i
+            } = t, {
+                inputDelay: a,
+                interactionTarget: s,
+                interactionTime: u,
+                interactionType: c,
+                loadState: l,
+                nextPaintTime: p,
+                presentationDelay: f,
+                processingDuration: d,
+                longAnimationFrameEntries: h
+            } = i, g = this.getAttrPrefix(o), _ = a + d + f;
+            this.tracer.startActiveSpan(o, {
+                startTime: u
+            }, e => {
+                let o = Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                    [`${g}.input_delay`]: a,
+                    [`${g}.interaction_target`]: s,
+                    [`${g}.interaction_time`]: u,
+                    [`${g}.interaction_type`]: c,
+                    [`${g}.load_state`]: l,
+                    [`${g}.next_paint_time`]: p,
+                    [`${g}.presentation_delay`]: f,
+                    [`${g}.processing_duration`]: d,
+                    [`${g}.duration`]: _,
+                    [`${g}.element`]: s,
+                    [`${g}.event_type`]: c
+                });
+                e.setAttributes(o), n && n(t, e), r && h.forEach(t => {
+                    this.processPerformanceLongAnimationFrameTimingSpans(g, t)
+                }), e.end(u + _)
+            })
+        }, this.onReportFCP = (t, e = {}) => {
+            let {
+                applyCustomAttributes: n
+            } = e;
+            if (!this.isEnabled()) return;
+            let {
+                name: r,
+                attribution: o
             } = t, {
                 timeToFirstByte: i,
-                firstByteToFCP: o,
-                loadState: a
-            } = r, s = this.getAttrPrefix(n), u = this.tracer.startSpan(n);
-            u.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${s}.time_to_first_byte`]: i,
-                [`${s}.time_since_first_byte`]: o,
-                [`${s}.load_state`]: a
-            })), e && e(t, u), u.end()
-        }, this.onReportFID = (t, e) => {
+                firstByteToFCP: a,
+                loadState: s
+            } = o, u = this.getAttrPrefix(r), c = this.tracer.startSpan(r);
+            c.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                [`${u}.time_to_first_byte`]: i,
+                [`${u}.time_since_first_byte`]: a,
+                [`${u}.load_state`]: s
+            })), n && n(t, c), c.end()
+        }, this.onReportFID = (t, e = {}) => {
+            let {
+                applyCustomAttributes: n
+            } = e;
             if (!this.isEnabled()) return;
             let {
-                name: n,
-                attribution: r
+                name: r,
+                attribution: o
             } = t, {
                 eventTarget: i,
-                eventType: o,
-                loadState: a
-            } = r, s = this.getAttrPrefix(n), u = this.tracer.startSpan(n);
-            u.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${s}.element`]: i,
-                [`${s}.event_type`]: o,
-                [`${s}.load_state`]: a
-            })), e && e(t, u), u.end()
-        }, this.onReportTTFB = (t, e) => {
+                eventType: a,
+                loadState: s
+            } = o, u = this.getAttrPrefix(r), c = this.tracer.startSpan(r);
+            c.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                [`${u}.element`]: i,
+                [`${u}.event_type`]: a,
+                [`${u}.load_state`]: s
+            })), n && n(t, c), c.end()
+        }, this.onReportTTFB = (t, e = {}) => {
+            let {
+                applyCustomAttributes: n
+            } = e;
             if (!this.isEnabled()) return;
             let {
-                name: n,
-                attribution: r
+                name: r,
+                attribution: o
             } = t, {
                 cacheDuration: i,
-                connectionDuration: o,
-                dnsDuration: a,
-                requestDuration: s,
-                waitingDuration: u
-            } = r, c = this.getAttrPrefix(n), l = this.tracer.startSpan(n);
-            l.setAttributes(Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
-                [`${c}.waiting_duration`]: u,
-                [`${c}.dns_duration`]: a,
-                [`${c}.connection_duration`]: o,
-                [`${c}.request_duration`]: s,
-                [`${c}.cache_duration`]: i,
-                [`${c}.waiting_time`]: u,
-                [`${c}.dns_time`]: a,
-                [`${c}.connection_time`]: o,
-                [`${c}.request_time`]: s
-            })), e && e(t, l), l.end()
-        }, this.vitalsToTrack = [...e], this.lcpOpts = n, this.clsOpts = r, this.inpOpts = i, this.fidOpts = o, this.fcpOpts = a, this.ttfbOpts = s, this._isEnabled = t, this._setupWebVitalsCallbacks()
+                connectionDuration: a,
+                dnsDuration: s,
+                requestDuration: u,
+                waitingDuration: c
+            } = o, l = this.getAttrPrefix(r), p = Object.assign(Object.assign({}, this.getSharedAttributes(t)), {
+                [`${l}.waiting_duration`]: c,
+                [`${l}.dns_duration`]: s,
+                [`${l}.connection_duration`]: a,
+                [`${l}.request_duration`]: u,
+                [`${l}.cache_duration`]: i,
+                [`${l}.waiting_time`]: c,
+                [`${l}.dns_time`]: s,
+                [`${l}.connection_time`]: a,
+                [`${l}.request_time`]: u
+            }), f = this.tracer.startSpan(r);
+            f.setAttributes(p), n && n(t, f), f.end()
+        }, this.vitalsToTrack = [...e], this.lcpOpts = n, this.clsOpts = r, this.inpOpts = o, this.fidOpts = i, this.fcpOpts = a, this.ttfbOpts = s, this._isEnabled = t, this._setupWebVitalsCallbacks()
     }
     init() {}
     _setupWebVitalsCallbacks() {
-        this.vitalsToTrack.includes("CLS") && or(t => {
-            var e;
-            this.onReportCLS(t, null === (e = this.clsOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
-        }, this.clsOpts), this.vitalsToTrack.includes("LCP") && oD(t => {
-            var e;
-            this.onReportLCP(t, null === (e = this.lcpOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
-        }, this.lcpOpts), this.vitalsToTrack.includes("INP") && oN(t => {
-            var e;
-            this.onReportINP(t, null === (e = this.inpOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
-        }, this.inpOpts), this.vitalsToTrack.includes("FID") && o$(t => {
-            var e;
-            this.onReportFID(t, null === (e = this.fidOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
-        }, this.fidOpts), this.vitalsToTrack.includes("TTFB") && oj(t => {
-            var e;
-            this.onReportTTFB(t, null === (e = this.ttfbOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
-        }, this.ttfbOpts), this.vitalsToTrack.includes("FCP") && oi(t => {
-            var e;
-            this.onReportFCP(t, null === (e = this.fcpOpts) || void 0 === e ? void 0 : e.applyCustomAttributes)
+        this.vitalsToTrack.includes("CLS") && o8(t => {
+            this.onReportCLS(t, this.clsOpts)
+        }, this.clsOpts), this.vitalsToTrack.includes("LCP") && iD(t => {
+            this.onReportLCP(t, this.lcpOpts)
+        }, this.lcpOpts), this.vitalsToTrack.includes("INP") && iN(t => {
+            this.onReportINP(t, this.inpOpts)
+        }, this.inpOpts), this.vitalsToTrack.includes("FID") && iq(t => {
+            this.onReportFID(t, this.fidOpts)
+        }, this.fidOpts), this.vitalsToTrack.includes("TTFB") && iU(t => {
+            this.onReportTTFB(t, this.ttfbOpts)
+        }, this.ttfbOpts), this.vitalsToTrack.includes("FCP") && o7(t => {
+            this.onReportFCP(t, this.fcpOpts)
         }, this.fcpOpts)
     }
     getAttrPrefix(t) {
@@ -5072,17 +5250,63 @@ class oW extends oK {
             name: e,
             id: n,
             delta: r,
-            rating: i,
-            value: o,
+            rating: o,
+            value: i,
             navigationType: a
         } = t, s = this.getAttrPrefix(e);
         return {
             [`${s}.id`]: n,
             [`${s}.delta`]: r,
-            [`${s}.value`]: o,
-            [`${s}.rating`]: i,
+            [`${s}.value`]: i,
+            [`${s}.rating`]: o,
             [`${s}.navigation_type`]: a
         }
+    }
+    getAttributesForPerformanceLongAnimationFrameTiming(t, e) {
+        return {
+            [`${t}.duration`]: e.duration,
+            [`${t}.entryType`]: e.entryType,
+            [`${t}.name`]: e.name,
+            [`${t}.renderStart`]: e.renderStart,
+            [`${t}.startTime`]: e.startTime
+        }
+    }
+    getAttributesForPerformanceScriptTiming(t, e) {
+        return {
+            [`${t}.entry_type`]: e.entryType,
+            [`${t}.start_time`]: e.startTime,
+            [`${t}.execution_start`]: e.executionStart,
+            [`${t}.duration`]: e.duration,
+            [`${t}.forced_style_and_layout_duration`]: e.forcedStyleAndLayoutDuration,
+            [`${t}.invoker`]: e.invoker,
+            [`${t}.pause_duration`]: e.pauseDuration,
+            [`${t}.source_url`]: e.sourceURL,
+            [`${t}.source_function_name`]: e.sourceFunctionName,
+            [`${t}.source_char_position`]: e.sourceCharPosition,
+            [`${t}.window_attribution`]: e.windowAttribution
+        }
+    }
+    processPerformanceLongAnimationFrameTimingSpans(t, e) {
+        if (!e) return;
+        let n = `${t}.timing`,
+            r = this.getAttributesForPerformanceLongAnimationFrameTiming(n, e);
+        this.tracer.startActiveSpan(e.name, {
+            startTime: e.startTime
+        }, t => {
+            t.setAttributes(r), this.processPerformanceScriptTimingSpans(n, e.scripts), t.end(e.startTime + e.duration)
+        })
+    }
+    processPerformanceScriptTimingSpans(t, e) {
+        if (!e || !(null == e ? void 0 : e.length)) return;
+        let n = `${t}.script`;
+        e.map(t => {
+            this.tracer.startActiveSpan(t.name, {
+                startTime: t.startTime
+            }, e => {
+                let r = this.getAttributesForPerformanceScriptTiming(n, t);
+                e.setAttributes(r), e.end(t.startTime + t.duration)
+            })
+        })
     }
     disable() {
         if (!this.isEnabled()) {
@@ -5102,29 +5326,29 @@ class oW extends oK {
         return this._isEnabled
     }
 }
-class oZ extends oK {
+class iZ extends iW {
     constructor({
         enabled: t = !0
     } = {}) {
-        super("@honeycombio/instrumentation-global-errors", rD, {
+        super("@honeycombio/instrumentation-global-errors", rN, {
             enabled: t
         }), this.onError = t => {
             let e = "reason" in t ? t.reason : t.error,
                 n = null == e ? void 0 : e.message,
                 r = null == e ? void 0 : e.name,
-                i = {
-                    [nS]: r,
-                    [nR]: n,
-                    [nL]: null == e ? void 0 : e.stack
+                o = {
+                    [nE]: r,
+                    [nT]: n,
+                    [nw]: null == e ? void 0 : e.stack
                 };
             if (!n || !r) return;
-            let o = this.tracer.startSpan("exception", {
-                attributes: i
-            }, tv.active());
-            o.setStatus({
-                code: iN.ERROR,
+            let i = this.tracer.startSpan("exception", {
+                attributes: o
+            }, tm.active());
+            i.setStatus({
+                code: oP.ERROR,
                 message: n
-            }), o.end()
+            }), i.end()
         }, t && this.enable(), this._isEnabled = t
     }
     init() {}
@@ -5145,136 +5369,174 @@ class oZ extends oK {
     isEnabled() {
         return this._isEnabled
     }
-}(t = p || (p = {})).CONNECT_END = "connectEnd", t.CONNECT_START = "connectStart", t.DECODED_BODY_SIZE = "decodedBodySize", t.DOM_COMPLETE = "domComplete", t.DOM_CONTENT_LOADED_EVENT_END = "domContentLoadedEventEnd", t.DOM_CONTENT_LOADED_EVENT_START = "domContentLoadedEventStart", t.DOM_INTERACTIVE = "domInteractive", t.DOMAIN_LOOKUP_END = "domainLookupEnd", t.DOMAIN_LOOKUP_START = "domainLookupStart", t.ENCODED_BODY_SIZE = "encodedBodySize", t.FETCH_START = "fetchStart", t.LOAD_EVENT_END = "loadEventEnd", t.LOAD_EVENT_START = "loadEventStart", t.NAVIGATION_START = "navigationStart", t.REDIRECT_END = "redirectEnd", t.REDIRECT_START = "redirectStart", t.REQUEST_START = "requestStart", t.RESPONSE_END = "responseEnd", t.RESPONSE_START = "responseStart", t.SECURE_CONNECTION_START = "secureConnectionStart", t.UNLOAD_EVENT_END = "unloadEventEnd", t.UNLOAD_EVENT_START = "unloadEventStart";
-var oY = function(t) {
-    var e = "function" == typeof Symbol && Symbol.iterator,
-        n = e && t[e],
-        r = 0;
-    if (n) return n.call(t);
-    if (t && "number" == typeof t.length) return {
-        next: function() {
-            return t && r >= t.length && (t = void 0), {
-                value: t && t[r++],
-                done: !t
-            }
-        }
-    };
-    throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
-};
+}(t = h || (h = {})).CONNECT_END = "connectEnd", t.CONNECT_START = "connectStart", t.DECODED_BODY_SIZE = "decodedBodySize", t.DOM_COMPLETE = "domComplete", t.DOM_CONTENT_LOADED_EVENT_END = "domContentLoadedEventEnd", t.DOM_CONTENT_LOADED_EVENT_START = "domContentLoadedEventStart", t.DOM_INTERACTIVE = "domInteractive", t.DOMAIN_LOOKUP_END = "domainLookupEnd", t.DOMAIN_LOOKUP_START = "domainLookupStart", t.ENCODED_BODY_SIZE = "encodedBodySize", t.FETCH_START = "fetchStart", t.LOAD_EVENT_END = "loadEventEnd", t.LOAD_EVENT_START = "loadEventStart", t.NAVIGATION_START = "navigationStart", t.REDIRECT_END = "redirectEnd", t.REDIRECT_START = "redirectStart", t.REQUEST_START = "requestStart", t.RESPONSE_END = "responseEnd", t.RESPONSE_START = "responseStart", t.SECURE_CONNECTION_START = "secureConnectionStart", t.UNLOAD_EVENT_END = "unloadEventEnd", t.UNLOAD_EVENT_START = "unloadEventStart";
+var iY = performance;
 
-function oQ(t, e) {
-    return "string" == typeof e ? t === e : !!t.match(e)
+function iQ(t) {
+    return [Math.trunc(t / 1e3), Math.round(t % 1e3 * 1e6)]
 }
 
-function oJ(t, e) {
-    var n, r;
-    if (!e) return !1;
-    try {
-        for (var i = oY(e), o = i.next(); !o.done; o = i.next()) {
-            var a = o.value;
-            if (oQ(t, a)) return !0
-        }
-    } catch (t) {
-        n = {
-            error: t
-        }
-    } finally {
-        try {
-            o && !o.done && (r = i.return) && r.call(i)
-        } finally {
-            if (n) throw n.error
-        }
-    }
-    return !1
+function iJ() {
+    var t = iY.timeOrigin;
+    return "number" != typeof t && (t = iY.timing && iY.timing.fetchStart), t
 }
 
-function o0(t, e, n, r) {
-    var i = void 0,
-        o = void 0;
-    e in n && "number" == typeof n[e] && (i = n[e]);
-    var a = r || p.FETCH_START;
-    if (a in n && "number" == typeof n[a] && (o = n[a]), void 0 !== i && void 0 !== o && i >= o) return t.addEvent(e, i), t
+function i0(t) {
+    var e, n, r;
+    if (Array.isArray(t) && 2 === t.length && "number" == typeof t[0] && "number" == typeof t[1]) return t;
+    if ("number" == typeof t) return t < iJ() ? (e = iQ(iJ()), n = iQ("number" == typeof t ? t : iY.now()), (r = [e[0] + n[0], e[1] + n[1]])[1] >= 1e9 && (r[1] -= 1e9, r[0] += 1), r) : iQ(t);
+    if (t instanceof Date) return iQ(t.getTime());
+    throw TypeError("Invalid input type")
 }
 
-function o1(t, e) {
-    o0(t, p.FETCH_START, e), o0(t, p.DOMAIN_LOOKUP_START, e), o0(t, p.DOMAIN_LOOKUP_END, e), o0(t, p.CONNECT_START, e), "name" in e && e.name.startsWith("https:") && o0(t, p.SECURE_CONNECTION_START, e), o0(t, p.CONNECT_END, e), o0(t, p.REQUEST_START, e), o0(t, p.RESPONSE_START, e), o0(t, p.RESPONSE_END, e);
-    var n = e[p.ENCODED_BODY_SIZE];
+function i1(t) {
+    return 1e9 * t[0] + t[1]
+}
+
+function i2(t, e, n, r) {
+    var o = void 0,
+        i = void 0;
+    e in n && "number" == typeof n[e] && (o = n[e]);
+    var a = r || h.FETCH_START;
+    if (a in n && "number" == typeof n[a] && (i = n[a]), void 0 !== o && void 0 !== i && o >= i) return t.addEvent(e, o), t
+}
+
+function i3(t, e) {
+    i2(t, h.FETCH_START, e), i2(t, h.DOMAIN_LOOKUP_START, e), i2(t, h.DOMAIN_LOOKUP_END, e), i2(t, h.CONNECT_START, e), "name" in e && e.name.startsWith("https:") && i2(t, h.SECURE_CONNECTION_START, e), i2(t, h.CONNECT_END, e), i2(t, h.REQUEST_START, e), i2(t, h.RESPONSE_START, e), i2(t, h.RESPONSE_END, e);
+    var n = e[h.ENCODED_BODY_SIZE];
     void 0 !== n && t.setAttribute("http.response_content_length", n);
-    var r = e[p.DECODED_BODY_SIZE];
+    var r = e[h.DECODED_BODY_SIZE];
     void 0 !== r && n !== r && t.setAttribute("http.response_content_length_uncompressed", r)
 }
 
-function o2() {
+function i4() {
     return "undefined" != typeof location ? location.origin : void 0
 }
 
-function o3(t, e, n, r, i, o) {
-    void 0 === i && (i = new WeakSet);
-    var a, s, u, c, l, f = o4(t),
-        d = (a = t = f.toString(), s = i, u = nE(e), c = nE(n), (l = r.filter(function(t) {
-            var e = nE(nb(t[p.FETCH_START])),
-                n = nE(nb(t[p.RESPONSE_END]));
-            return t.initiatorType.toLowerCase() === (o || "xmlhttprequest") && t.name === a && e >= u && n <= c
+function i6(t, e, n, r, o, i) {
+    void 0 === o && (o = new WeakSet);
+    var a, s, u, c, l, p = i5(t),
+        f = (a = t = p.toString(), s = o, u = i1(e), c = i1(n), (l = r.filter(function(t) {
+            var e = i1(i0(t[h.FETCH_START])),
+                n = i1(i0(t[h.RESPONSE_END]));
+            return t.initiatorType.toLowerCase() === (i || "xmlhttprequest") && t.name === a && e >= u && n <= c
         })).length > 0 && (l = l.filter(function(t) {
             return !s.has(t)
         })), l);
-    if (0 === d.length) return {
+    if (0 === f.length) return {
         mainRequest: void 0
     };
-    if (1 === d.length) return {
-        mainRequest: d[0]
+    if (1 === f.length) return {
+        mainRequest: f[0]
     };
-    var h = d.slice().sort(function(t, e) {
-        var n = t[p.FETCH_START],
-            r = e[p.FETCH_START];
+    var d = f.slice().sort(function(t, e) {
+        var n = t[h.FETCH_START],
+            r = e[h.FETCH_START];
         return n > r ? 1 : n < r ? -1 : 0
     });
-    if (f.origin === o2() || !(h.length > 1)) return {
-        mainRequest: d[0]
+    if (p.origin === i4() || !(d.length > 1)) return {
+        mainRequest: f[0]
     };
-    var _ = h[0],
-        v = function(t, e, n) {
-            for (var r, i = nE(n), o = nE(nb(e)), a = t[1], s = t.length, u = 1; u < s; u++) {
+    var g = d[0],
+        _ = function(t, e, n) {
+            for (var r, o = i1(n), i = i1(i0(e)), a = t[1], s = t.length, u = 1; u < s; u++) {
                 var c = t[u],
-                    l = nE(nb(c[p.FETCH_START])),
-                    f = i - nE(nb(c[p.RESPONSE_END]));
-                l >= o && (!r || f < r) && (r = f, a = c)
+                    l = i1(i0(c[h.FETCH_START])),
+                    p = o - i1(i0(c[h.RESPONSE_END]));
+                l >= i && (!r || p < r) && (r = p, a = c)
             }
             return a
-        }(h, _[p.RESPONSE_END], n),
-        m = _[p.RESPONSE_END];
-    return v[p.FETCH_START] < m && (v = _, _ = void 0), {
-        corsPreFlightRequest: _,
-        mainRequest: v
+        }(d, g[h.RESPONSE_END], n),
+        v = g[h.RESPONSE_END];
+    return _[h.FETCH_START] < v && (_ = g, g = void 0), {
+        corsPreFlightRequest: g,
+        mainRequest: _
     }
 }
 
-function o4(t) {
+function i5(t) {
     if ("function" == typeof URL) return new URL(t, "undefined" != typeof document ? document.baseURI : "undefined" != typeof location ? location.href : void 0);
-    var e = (f || (f = document.createElement("a")), f);
+    var e = (g || (g = document.createElement("a")), g);
     return e.href = t, e
 }
 
-function o6(t, e) {
+function i9(t, e) {
     var n = e || [];
-    return ("string" == typeof n || n instanceof RegExp) && (n = [n]), o4(t).origin === o2() || n.some(function(e) {
-        return oQ(t, e)
+    return ("string" == typeof n || n instanceof RegExp) && (n = [n]), i5(t).origin === i4() || n.some(function(e) {
+        return "string" == typeof e ? t === e : !!t.match(e)
     })
 }
-var o5 = function() {
-        return (o5 = Object.assign || function(t) {
+var i8 = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    i7 = Symbol.for("io.opentelemetry.js.api.logs"),
+    at = function() {
+        function t() {}
+        return t.prototype.emit = function(t) {}, t
+    }(),
+    ae = new at,
+    an = new(function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            return new at
+        }, t
+    }()),
+    ar = function() {
+        function t(t, e, n, r) {
+            this._provider = t, this.name = e, this.version = n, this.options = r
+        }
+        return t.prototype.emit = function(t) {
+            this._getLogger().emit(t)
+        }, t.prototype._getLogger = function() {
+            if (this._delegate) return this._delegate;
+            var t = this._provider.getDelegateLogger(this.name, this.version, this.options);
+            return t ? (this._delegate = t, this._delegate) : ae
+        }, t
+    }(),
+    ao = function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            var r;
+            return null !== (r = this.getDelegateLogger(t, e, n)) && void 0 !== r ? r : new ar(this, t, e, n)
+        }, t.prototype.getDelegate = function() {
+            var t;
+            return null !== (t = this._delegate) && void 0 !== t ? t : an
+        }, t.prototype.setDelegate = function(t) {
+            this._delegate = t
+        }, t.prototype.getDelegateLogger = function(t, e, n) {
+            var r;
+            return null === (r = this._delegate) || void 0 === r ? void 0 : r.getLogger(t, e, n)
+        }, t
+    }(),
+    ai = (function() {
+        function t() {
+            this._proxyLoggerProvider = new ao
+        }
+        return t.getInstance = function() {
+            return this._instance || (this._instance = new t), this._instance
+        }, t.prototype.setGlobalLoggerProvider = function(t) {
+            return i8[i7] ? this.getLoggerProvider() : (i8[i7] = function(e) {
+                return 1 === e ? t : an
+            }, this._proxyLoggerProvider.setDelegate(t), t)
+        }, t.prototype.getLoggerProvider = function() {
+            var t, e;
+            return null !== (e = null === (t = i8[i7]) || void 0 === t ? void 0 : t.call(i8, 1)) && void 0 !== e ? e : this._proxyLoggerProvider
+        }, t.prototype.getLogger = function(t, e, n) {
+            return this.getLoggerProvider().getLogger(t, e, n)
+        }, t.prototype.disable = function() {
+            delete i8[i7], this._proxyLoggerProvider = new ao
+        }, t
+    })().getInstance(),
+    aa = function() {
+        return (aa = Object.assign || function(t) {
             for (var e, n = 1, r = arguments.length; n < r; n++)
-                for (var i in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
+                for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
             return t
         }).apply(this, arguments)
     },
-    o9 = function() {
+    as = function() {
         function t(t, e, n) {
-            this.instrumentationName = t, this.instrumentationVersion = e, this._wrap = rO.wrap, this._unwrap = rO.unwrap, this._massWrap = rO.massWrap, this._massUnwrap = rO.massUnwrap, this._config = o5({
-                enabled: !0
-            }, n), this._diag = tm.createComponentLogger({
+            this.instrumentationName = t, this.instrumentationVersion = e, this._config = {}, this._wrap = rE.wrap, this._unwrap = rE.unwrap, this._massWrap = rE.massWrap, this._massUnwrap = rE.massUnwrap, this.setConfig(n), this._diag = ty.createComponentLogger({
                 namespace: t
-            }), this._tracer = ee.getTracer(t, e), this._meter = tB.getMeter(t, e), this._logger = ea.getLogger(t, e), this._updateMetricInstruments()
+            }), this._tracer = er.getTracer(t, e), this._meter = tH.getMeter(t, e), this._logger = ai.getLogger(t, e), this._updateMetricInstruments()
         }
         return Object.defineProperty(t.prototype, "meter", {
             get: function() {
@@ -5298,7 +5560,9 @@ var o5 = function() {
         }, t.prototype._updateMetricInstruments = function() {}, t.prototype.getConfig = function() {
             return this._config
         }, t.prototype.setConfig = function(t) {
-            this._config = o5({}, t)
+            this._config = aa({
+                enabled: !0
+            }, t)
         }, t.prototype.setTracerProvider = function(t) {
             this._tracer = t.getTracer(this.instrumentationName, this.instrumentationVersion)
         }, Object.defineProperty(t.prototype, "tracer", {
@@ -5317,7 +5581,7 @@ var o5 = function() {
             }
         }, t
     }(),
-    o8 = (e = function(t, n) {
+    au = (e = function(t, n) {
         return (e = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
@@ -5333,34 +5597,30 @@ var o5 = function() {
         }
         e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
     }),
-    o7 = function(t) {
+    ac = function(t) {
         function e(e, n, r) {
-            var i = t.call(this, e, n, r) || this;
-            return i._config.enabled && i.enable(), i
+            var o = t.call(this, e, n, r) || this;
+            return o._config.enabled && o.enable(), o
         }
-        return o8(e, t), e
-    }(o9);
+        return au(e, t), e
+    }(as);
 
-function at(t, e, n) {
-    var r, i;
+function al(t, e, n) {
+    var r, o;
     try {
-        i = t()
+        o = t()
     } catch (t) {
         r = t
     } finally {
-        if (e(r, i), r && !n) throw r;
-        return i
+        if (e(r, o), r && !n) throw r;
+        return o
     }
-}
-
-function ae(t) {
-    return "function" == typeof t && "function" == typeof t.__original && "function" == typeof t.__unwrap && !0 === t.__wrapped
-}(n = d || (d = {})).DOCUMENT_LOAD = "documentLoad", n.DOCUMENT_FETCH = "documentFetch", n.RESOURCE_FETCH = "resourceFetch", (r = h || (h = {})).FIRST_PAINT = "firstPaint", r.FIRST_CONTENTFUL_PAINT = "firstContentfulPaint";
-var an = function() {
+}(n = _ || (_ = {})).DOCUMENT_LOAD = "documentLoad", n.DOCUMENT_FETCH = "documentFetch", n.RESOURCE_FETCH = "resourceFetch", (r = v || (v = {})).FIRST_PAINT = "firstPaint", r.FIRST_CONTENTFUL_PAINT = "firstContentfulPaint";
+var ap = function() {
         var t, e = {},
-            n = null === (t = nv.getEntriesByType) || void 0 === t ? void 0 : t.call(nv, "navigation")[0];
+            n = null === (t = nh.getEntriesByType) || void 0 === t ? void 0 : t.call(nh, "navigation")[0];
         if (n) {
-            var r = Object.values(p);
+            var r = Object.values(h);
             r.forEach(function(t) {
                 if (t in n) {
                     var r = n[t];
@@ -5368,12 +5628,12 @@ var an = function() {
                 }
             })
         } else {
-            var i = nv.timing;
-            if (i) {
-                var r = Object.values(p);
+            var o = nh.timing;
+            if (o) {
+                var r = Object.values(h);
                 r.forEach(function(t) {
-                    if (t in i) {
-                        var n = i[t];
+                    if (t in o) {
+                        var n = o[t];
                         "number" == typeof n && (e[t] = n)
                     }
                 })
@@ -5381,19 +5641,217 @@ var an = function() {
         }
         return e
     },
-    ar = {
-        "first-paint": h.FIRST_PAINT,
-        "first-contentful-paint": h.FIRST_CONTENTFUL_PAINT
+    af = {
+        "first-paint": v.FIRST_PAINT,
+        "first-contentful-paint": v.FIRST_CONTENTFUL_PAINT
     },
-    ai = function(t) {
-        var e, n = null === (e = nv.getEntriesByType) || void 0 === e ? void 0 : e.call(nv, "paint");
+    ad = function(t) {
+        var e, n = null === (e = nh.getEntriesByType) || void 0 === e ? void 0 : e.call(nh, "paint");
         n && n.forEach(function(e) {
             var n = e.name,
                 r = e.startTime;
-            n in ar && t.addEvent(ar[n], r)
+            n in af && t.addEvent(af[n], r)
         })
     },
-    ao = (i = function(t, e) {
+    ah = (o = function(t, e) {
+        return (o = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(t, e) {
+            t.__proto__ = e
+        } || function(t, e) {
+            for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
+        })(t, e)
+    }, function(t, e) {
+        if ("function" != typeof e && null !== e) throw TypeError("Class extends value " + String(e) + " is not a constructor or null");
+
+        function n() {
+            this.constructor = t
+        }
+        o(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+    }),
+    ag = function(t) {
+        function e(e) {
+            void 0 === e && (e = {});
+            var n = t.call(this, "@opentelemetry/instrumentation-document-load", "0.41.0", e) || this;
+            return n.component = "document-load", n.version = "1", n.moduleName = n.component, n
+        }
+        return ah(e, t), e.prototype.init = function() {}, e.prototype._onDocumentLoaded = function() {
+            var t = this;
+            window.setTimeout(function() {
+                t._collectPerformance()
+            })
+        }, e.prototype._addResourcesSpans = function(t) {
+            var e, n = this,
+                r = null === (e = nh.getEntriesByType) || void 0 === e ? void 0 : e.call(nh, "resource");
+            r && r.forEach(function(e) {
+                n._initResourceSpan(e, t)
+            })
+        }, e.prototype._collectPerformance = function() {
+            var t = this,
+                e = Array.from(document.getElementsByTagName("meta")).find(function(t) {
+                    return t.getAttribute("name") === ni
+                }),
+                n = ap(),
+                r = e && e.content || "";
+            tm.with(tQ.extract(Q, {
+                traceparent: r
+            }), function() {
+                var e, r = t._startSpan(_.DOCUMENT_LOAD, h.FETCH_START, n);
+                r && (tm.with(er.setSpan(tm.active(), r), function() {
+                    var e = t._startSpan(_.DOCUMENT_FETCH, h.FETCH_START, n);
+                    e && (e.setAttribute(nO, location.href), tm.with(er.setSpan(tm.active(), e), function() {
+                        var r;
+                        t.getConfig().ignoreNetworkEvents || i3(e, n), t._addCustomAttributesOnSpan(e, null === (r = t.getConfig().applyCustomAttributesOnSpan) || void 0 === r ? void 0 : r.documentFetch), t._endSpan(e, h.RESPONSE_END, n)
+                    }))
+                }), r.setAttribute(nO, location.href), r.setAttribute(nR, navigator.userAgent), t._addResourcesSpans(r), t.getConfig().ignoreNetworkEvents || (i2(r, h.FETCH_START, n), i2(r, h.UNLOAD_EVENT_START, n), i2(r, h.UNLOAD_EVENT_END, n), i2(r, h.DOM_INTERACTIVE, n), i2(r, h.DOM_CONTENT_LOADED_EVENT_START, n), i2(r, h.DOM_CONTENT_LOADED_EVENT_END, n), i2(r, h.DOM_COMPLETE, n), i2(r, h.LOAD_EVENT_START, n), i2(r, h.LOAD_EVENT_END, n)), t.getConfig().ignorePerformancePaintEvents || ad(r), t._addCustomAttributesOnSpan(r, null === (e = t.getConfig().applyCustomAttributesOnSpan) || void 0 === e ? void 0 : e.documentLoad), t._endSpan(r, h.LOAD_EVENT_END, n))
+            })
+        }, e.prototype._endSpan = function(t, e, n) {
+            t && (e in n ? t.end(n[e]) : t.end())
+        }, e.prototype._initResourceSpan = function(t, e) {
+            var n, r = this._startSpan(_.RESOURCE_FETCH, h.FETCH_START, t, e);
+            r && (r.setAttribute(nO, t.name), this.getConfig().ignoreNetworkEvents || i3(r, t), this._addCustomAttributesOnResourceSpan(r, t, null === (n = this.getConfig().applyCustomAttributesOnSpan) || void 0 === n ? void 0 : n.resourceFetch), this._endSpan(r, h.RESPONSE_END, t))
+        }, e.prototype._startSpan = function(t, e, n, r) {
+            if (e in n && "number" == typeof n[e]) return this.tracer.startSpan(t, {
+                startTime: n[e]
+            }, r ? er.setSpan(tm.active(), r) : void 0)
+        }, e.prototype._waitForPageLoad = function() {
+            "complete" === window.document.readyState ? this._onDocumentLoaded() : (this._onDocumentLoaded = this._onDocumentLoaded.bind(this), window.addEventListener("load", this._onDocumentLoaded))
+        }, e.prototype._addCustomAttributesOnSpan = function(t, e) {
+            var n = this;
+            e && al(function() {
+                return e(t)
+            }, function(t) {
+                t && n._diag.error("addCustomAttributesOnSpan", t)
+            }, !0)
+        }, e.prototype._addCustomAttributesOnResourceSpan = function(t, e, n) {
+            var r = this;
+            n && al(function() {
+                return n(t, e)
+            }, function(t) {
+                t && r._diag.error("addCustomAttributesOnResourceSpan", t)
+            }, !0)
+        }, e.prototype.enable = function() {
+            window.removeEventListener("load", this._onDocumentLoaded), this._waitForPageLoad()
+        }, e.prototype.disable = function() {
+            window.removeEventListener("load", this._onDocumentLoaded)
+        }, e
+    }(ac),
+    a_ = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    av = Symbol.for("io.opentelemetry.js.api.logs"),
+    am = function() {
+        function t() {}
+        return t.prototype.emit = function(t) {}, t
+    }(),
+    ay = new am,
+    ab = new(function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            return new am
+        }, t
+    }()),
+    aE = function() {
+        function t(t, e, n, r) {
+            this._provider = t, this.name = e, this.version = n, this.options = r
+        }
+        return t.prototype.emit = function(t) {
+            this._getLogger().emit(t)
+        }, t.prototype._getLogger = function() {
+            if (this._delegate) return this._delegate;
+            var t = this._provider.getDelegateLogger(this.name, this.version, this.options);
+            return t ? (this._delegate = t, this._delegate) : ay
+        }, t
+    }(),
+    aT = function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            var r;
+            return null !== (r = this.getDelegateLogger(t, e, n)) && void 0 !== r ? r : new aE(this, t, e, n)
+        }, t.prototype.getDelegate = function() {
+            var t;
+            return null !== (t = this._delegate) && void 0 !== t ? t : ab
+        }, t.prototype.setDelegate = function(t) {
+            this._delegate = t
+        }, t.prototype.getDelegateLogger = function(t, e, n) {
+            var r;
+            return null === (r = this._delegate) || void 0 === r ? void 0 : r.getLogger(t, e, n)
+        }, t
+    }(),
+    aw = (function() {
+        function t() {
+            this._proxyLoggerProvider = new aT
+        }
+        return t.getInstance = function() {
+            return this._instance || (this._instance = new t), this._instance
+        }, t.prototype.setGlobalLoggerProvider = function(t) {
+            return a_[av] ? this.getLoggerProvider() : (a_[av] = function(e) {
+                return 1 === e ? t : ab
+            }, this._proxyLoggerProvider.setDelegate(t), t)
+        }, t.prototype.getLoggerProvider = function() {
+            var t, e;
+            return null !== (e = null === (t = a_[av]) || void 0 === t ? void 0 : t.call(a_, 1)) && void 0 !== e ? e : this._proxyLoggerProvider
+        }, t.prototype.getLogger = function(t, e, n) {
+            return this.getLoggerProvider().getLogger(t, e, n)
+        }, t.prototype.disable = function() {
+            delete a_[av], this._proxyLoggerProvider = new aT
+        }, t
+    })().getInstance(),
+    aS = function() {
+        return (aS = Object.assign || function(t) {
+            for (var e, n = 1, r = arguments.length; n < r; n++)
+                for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
+            return t
+        }).apply(this, arguments)
+    },
+    aO = function() {
+        function t(t, e, n) {
+            this.instrumentationName = t, this.instrumentationVersion = e, this._config = {}, this._wrap = rE.wrap, this._unwrap = rE.unwrap, this._massWrap = rE.massWrap, this._massUnwrap = rE.massUnwrap, this.setConfig(n), this._diag = ty.createComponentLogger({
+                namespace: t
+            }), this._tracer = er.getTracer(t, e), this._meter = tH.getMeter(t, e), this._logger = aw.getLogger(t, e), this._updateMetricInstruments()
+        }
+        return Object.defineProperty(t.prototype, "meter", {
+            get: function() {
+                return this._meter
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setMeterProvider = function(t) {
+            this._meter = t.getMeter(this.instrumentationName, this.instrumentationVersion), this._updateMetricInstruments()
+        }, Object.defineProperty(t.prototype, "logger", {
+            get: function() {
+                return this._logger
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setLoggerProvider = function(t) {
+            this._logger = t.getLogger(this.instrumentationName, this.instrumentationVersion)
+        }, t.prototype.getModuleDefinitions = function() {
+            var t, e = null !== (t = this.init()) && void 0 !== t ? t : [];
+            return Array.isArray(e) ? e : [e]
+        }, t.prototype._updateMetricInstruments = function() {}, t.prototype.getConfig = function() {
+            return this._config
+        }, t.prototype.setConfig = function(t) {
+            this._config = aS({
+                enabled: !0
+            }, t)
+        }, t.prototype.setTracerProvider = function(t) {
+            this._tracer = t.getTracer(this.instrumentationName, this.instrumentationVersion)
+        }, Object.defineProperty(t.prototype, "tracer", {
+            get: function() {
+                return this._tracer
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype._runSpanCustomizationHook = function(t, e, n, r) {
+            if (t) try {
+                t(n, r)
+            } catch (t) {
+                this._diag.error("Error running span customization hook due to exception in handler", {
+                    triggerName: e
+                }, t)
+            }
+        }, t
+    }(),
+    aL = (i = function(t, e) {
         return (i = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
@@ -5409,170 +5867,134 @@ var an = function() {
         }
         i(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    aa = function(t) {
-        function e(e) {
-            void 0 === e && (e = {});
-            var n = t.call(this, "@opentelemetry/instrumentation-document-load", "0.39.0", e) || this;
-            return n.component = "document-load", n.version = "1", n.moduleName = n.component, n
+    aP = function(t) {
+        function e(e, n, r) {
+            var o = t.call(this, e, n, r) || this;
+            return o._config.enabled && o.enable(), o
         }
-        return ao(e, t), e.prototype.init = function() {}, e.prototype._onDocumentLoaded = function() {
-            var t = this;
-            window.setTimeout(function() {
-                t._collectPerformance()
-            })
-        }, e.prototype._addResourcesSpans = function(t) {
-            var e, n = this,
-                r = null === (e = nv.getEntriesByType) || void 0 === e ? void 0 : e.call(nv, "resource");
-            r && r.forEach(function(e) {
-                n._initResourceSpan(e, t)
-            })
-        }, e.prototype._collectPerformance = function() {
-            var t = this,
-                e = Array.from(document.getElementsByTagName("meta")).find(function(t) {
-                    return t.getAttribute("name") === ns
-                }),
-                n = an(),
-                r = e && e.content || "";
-            tv.with(tZ.extract(Z, {
-                traceparent: r
-            }), function() {
-                var e, r = t._startSpan(d.DOCUMENT_LOAD, p.FETCH_START, n);
-                r && (tv.with(ee.setSpan(tv.active(), r), function() {
-                    var e = t._startSpan(d.DOCUMENT_FETCH, p.FETCH_START, n);
-                    e && (e.setAttribute(nP, location.href), tv.with(ee.setSpan(tv.active(), e), function() {
-                        var r;
-                        t._getConfig().ignoreNetworkEvents || o1(e, n), t._addCustomAttributesOnSpan(e, null === (r = t._getConfig().applyCustomAttributesOnSpan) || void 0 === r ? void 0 : r.documentFetch), t._endSpan(e, p.RESPONSE_END, n)
-                    }))
-                }), r.setAttribute(nP, location.href), r.setAttribute(nI, navigator.userAgent), t._addResourcesSpans(r), t._getConfig().ignoreNetworkEvents || (o0(r, p.FETCH_START, n), o0(r, p.UNLOAD_EVENT_START, n), o0(r, p.UNLOAD_EVENT_END, n), o0(r, p.DOM_INTERACTIVE, n), o0(r, p.DOM_CONTENT_LOADED_EVENT_START, n), o0(r, p.DOM_CONTENT_LOADED_EVENT_END, n), o0(r, p.DOM_COMPLETE, n), o0(r, p.LOAD_EVENT_START, n), o0(r, p.LOAD_EVENT_END, n)), t._getConfig().ignorePerformancePaintEvents || ai(r), t._addCustomAttributesOnSpan(r, null === (e = t._getConfig().applyCustomAttributesOnSpan) || void 0 === e ? void 0 : e.documentLoad), t._endSpan(r, p.LOAD_EVENT_END, n))
-            })
-        }, e.prototype._endSpan = function(t, e, n) {
-            t && (e in n ? t.end(n[e]) : t.end())
-        }, e.prototype._initResourceSpan = function(t, e) {
-            var n, r = this._startSpan(d.RESOURCE_FETCH, p.FETCH_START, t, e);
-            r && (r.setAttribute(nP, t.name), this._getConfig().ignoreNetworkEvents || o1(r, t), this._addCustomAttributesOnResourceSpan(r, t, null === (n = this._getConfig().applyCustomAttributesOnSpan) || void 0 === n ? void 0 : n.resourceFetch), this._endSpan(r, p.RESPONSE_END, t))
-        }, e.prototype._startSpan = function(t, e, n, r) {
-            if (e in n && "number" == typeof n[e]) return this.tracer.startSpan(t, {
-                startTime: n[e]
-            }, r ? ee.setSpan(tv.active(), r) : void 0)
-        }, e.prototype._waitForPageLoad = function() {
-            "complete" === window.document.readyState ? this._onDocumentLoaded() : (this._onDocumentLoaded = this._onDocumentLoaded.bind(this), window.addEventListener("load", this._onDocumentLoaded))
-        }, e.prototype._getConfig = function() {
-            return this._config
-        }, e.prototype._addCustomAttributesOnSpan = function(t, e) {
-            var n = this;
-            e && at(function() {
-                return e(t)
-            }, function(t) {
-                t && n._diag.error("addCustomAttributesOnSpan", t)
-            }, !0)
-        }, e.prototype._addCustomAttributesOnResourceSpan = function(t, e, n) {
-            var r = this;
-            n && at(function() {
-                return n(t, e)
-            }, function(t) {
-                t && r._diag.error("addCustomAttributesOnResourceSpan", t)
-            }, !0)
-        }, e.prototype.enable = function() {
-            window.removeEventListener("load", this._onDocumentLoaded), this._waitForPageLoad()
-        }, e.prototype.disable = function() {
-            window.removeEventListener("load", this._onDocumentLoaded)
-        }, e
-    }(o7);
-(o = _ || (_ = {})).COMPONENT = "component", o.HTTP_ERROR_NAME = "http.error_name", o.HTTP_STATUS_TEXT = "http.status_text";
-var as = "0.52.1",
-    au = {},
-    ac = au = {};
+        return aL(e, t), e
+    }(aO),
+    aA = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    aR = performance;
 
-function al() {
+function aC(t) {
+    return [Math.trunc(t / 1e3), Math.round(t % 1e3 * 1e6)]
+}
+
+function aN(t) {
+    var e, n, r, o;
+    return n = aC(("number" != typeof(e = aR.timeOrigin) && (e = aR.timing && aR.timing.fetchStart), e)), r = aC("number" == typeof t ? t : aR.now()), (o = [n[0] + r[0], n[1] + r[1]])[1] >= 1e9 && (o[1] -= 1e9, o[0] += 1), o
+}
+var ax = function(t) {
+    var e = "function" == typeof Symbol && Symbol.iterator,
+        n = e && t[e],
+        r = 0;
+    if (n) return n.call(t);
+    if (t && "number" == typeof t.length) return {
+        next: function() {
+            return t && r >= t.length && (t = void 0), {
+                value: t && t[r++],
+                done: !t
+            }
+        }
+    };
+    throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
+};
+(a = m || (m = {})).COMPONENT = "component", a.HTTP_ERROR_NAME = "http.error_name", a.HTTP_STATUS_TEXT = "http.status_text";
+var aI = "0.54.0",
+    aD = {},
+    aM = aD = {};
+
+function ak() {
     throw Error("setTimeout has not been defined")
 }
 
-function ap() {
+function aj() {
     throw Error("clearTimeout has not been defined")
 }
 
-function af(t) {
-    if (v === setTimeout) return setTimeout(t, 0);
-    if ((v === al || !v) && setTimeout) return v = setTimeout, setTimeout(t, 0);
+function aU(t) {
+    if (y === setTimeout) return setTimeout(t, 0);
+    if ((y === ak || !y) && setTimeout) return y = setTimeout, setTimeout(t, 0);
     try {
-        return v(t, 0)
+        return y(t, 0)
     } catch (e) {
         try {
-            return v.call(null, t, 0)
+            return y.call(null, t, 0)
         } catch (e) {
-            return v.call(this, t, 0)
+            return y.call(this, t, 0)
         }
     }
 }! function() {
     try {
-        v = "function" == typeof setTimeout ? setTimeout : al
+        y = "function" == typeof setTimeout ? setTimeout : ak
     } catch (t) {
-        v = al
+        y = ak
     }
     try {
-        m = "function" == typeof clearTimeout ? clearTimeout : ap
+        b = "function" == typeof clearTimeout ? clearTimeout : aj
     } catch (t) {
-        m = ap
+        b = aj
     }
 }();
-var ad = [],
-    ah = !1,
-    a_ = -1;
+var aB = [],
+    aF = !1,
+    aH = -1;
 
-function av() {
-    ah && g && (ah = !1, g.length ? ad = g.concat(ad) : a_ = -1, ad.length && am())
+function aV() {
+    aF && E && (aF = !1, E.length ? aB = E.concat(aB) : aH = -1, aB.length && aG())
 }
 
-function am() {
-    if (!ah) {
-        var t = af(av);
-        ah = !0;
-        for (var e = ad.length; e;) {
-            for (g = ad, ad = []; ++a_ < e;) g && g[a_].run();
-            a_ = -1, e = ad.length
+function aG() {
+    if (!aF) {
+        var t = aU(aV);
+        aF = !0;
+        for (var e = aB.length; e;) {
+            for (E = aB, aB = []; ++aH < e;) E && E[aH].run();
+            aH = -1, e = aB.length
         }
-        g = null, ah = !1,
+        E = null, aF = !1,
             function(t) {
-                if (m === clearTimeout) return clearTimeout(t);
-                if ((m === ap || !m) && clearTimeout) return m = clearTimeout, clearTimeout(t);
+                if (b === clearTimeout) return clearTimeout(t);
+                if ((b === aj || !b) && clearTimeout) return b = clearTimeout, clearTimeout(t);
                 try {
-                    m(t)
+                    b(t)
                 } catch (e) {
                     try {
-                        return m.call(null, t)
+                        return b.call(null, t)
                     } catch (e) {
-                        return m.call(this, t)
+                        return b.call(this, t)
                     }
                 }
             }(t)
     }
 }
 
-function ag(t, e) {
+function aX(t, e) {
     this.fun = t, this.array = e
 }
 
-function ay() {}
-ac.nextTick = function(t) {
+function az() {}
+aM.nextTick = function(t) {
     var e = Array(arguments.length - 1);
     if (arguments.length > 1)
         for (var n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
-    ad.push(new ag(t, e)), 1 !== ad.length || ah || af(am)
-}, ag.prototype.run = function() {
+    aB.push(new aX(t, e)), 1 !== aB.length || aF || aU(aG)
+}, aX.prototype.run = function() {
     this.fun.apply(null, this.array)
-}, ac.title = "browser", ac.browser = !0, ac.env = {}, ac.argv = [], ac.version = "", ac.versions = {}, ac.on = ay, ac.addListener = ay, ac.once = ay, ac.off = ay, ac.removeListener = ay, ac.removeAllListeners = ay, ac.emit = ay, ac.prependListener = ay, ac.prependOnceListener = ay, ac.listeners = function(t) {
+}, aM.title = "browser", aM.browser = !0, aM.env = {}, aM.argv = [], aM.version = "", aM.versions = {}, aM.on = az, aM.addListener = az, aM.once = az, aM.off = az, aM.removeListener = az, aM.removeAllListeners = az, aM.emit = az, aM.prependListener = az, aM.prependOnceListener = az, aM.listeners = function(t) {
     return []
-}, ac.binding = function(t) {
+}, aM.binding = function(t) {
     throw Error("process.binding is not supported")
-}, ac.cwd = function() {
+}, aM.cwd = function() {
     return "/"
-}, ac.chdir = function(t) {
+}, aM.chdir = function(t) {
     throw Error("process.chdir is not supported")
-}, ac.umask = function() {
+}, aM.umask = function() {
     return 0
 };
-var ab = (a = function(t, e) {
-        return (a = Object.setPrototypeOf || ({
+var a$ = (s = function(t, e) {
+        return (s = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
             t.__proto__ = e
@@ -5585,60 +6007,80 @@ var ab = (a = function(t, e) {
         function n() {
             this.constructor = t
         }
-        a(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        s(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    aE = "object" == typeof au && (null === (y = au.release) || void 0 === y ? void 0 : y.name) === "node",
-    aT = function(t) {
+    aq = "object" == typeof aD && (null === (T = aD.release) || void 0 === T ? void 0 : T.name) === "node",
+    aW = function(t) {
         function e(e) {
             void 0 === e && (e = {});
-            var n = t.call(this, "@opentelemetry/instrumentation-fetch", as, e) || this;
-            return n.component = "fetch", n.version = as, n.moduleName = n.component, n._usedResources = new WeakSet, n._tasksCount = 0, n
+            var n = t.call(this, "@opentelemetry/instrumentation-fetch", aI, e) || this;
+            return n.component = "fetch", n.version = aI, n.moduleName = n.component, n._usedResources = new WeakSet, n._tasksCount = 0, n
         }
-        return ab(e, t), e.prototype.init = function() {}, e.prototype._addChildSpan = function(t, e) {
+        return a$(e, t), e.prototype.init = function() {}, e.prototype._addChildSpan = function(t, e) {
             var n = this.tracer.startSpan("CORS Preflight", {
-                startTime: e[p.FETCH_START]
-            }, ee.setSpan(tv.active(), t));
-            this.getConfig().ignoreNetworkEvents || o1(n, e), n.end(e[p.RESPONSE_END])
+                startTime: e[h.FETCH_START]
+            }, er.setSpan(tm.active(), t));
+            this.getConfig().ignoreNetworkEvents || i3(n, e), n.end(e[h.RESPONSE_END])
         }, e.prototype._addFinalSpanAttributes = function(t, e) {
-            var n = o4(e.url);
-            t.setAttribute(nx, e.status), null != e.statusText && t.setAttribute(_.HTTP_STATUS_TEXT, e.statusText), t.setAttribute(nC, n.host), t.setAttribute(nN, n.protocol.replace(":", "")), "undefined" != typeof navigator && t.setAttribute(nI, navigator.userAgent)
+            var n = i5(e.url);
+            t.setAttribute(nA, e.status), null != e.statusText && t.setAttribute(m.HTTP_STATUS_TEXT, e.statusText), t.setAttribute(nL, n.host), t.setAttribute(nP, n.protocol.replace(":", "")), "undefined" != typeof navigator && t.setAttribute(nR, navigator.userAgent)
         }, e.prototype._addHeaders = function(t, e) {
-            if (!o6(e, this.getConfig().propagateTraceHeaderCorsUrls)) {
+            if (!i9(e, this.getConfig().propagateTraceHeaderCorsUrls)) {
                 var n = {};
-                tZ.inject(tv.active(), n), Object.keys(n).length > 0 && this._diag.debug("headers inject skipped due to CORS policy");
+                tQ.inject(tm.active(), n), Object.keys(n).length > 0 && this._diag.debug("headers inject skipped due to CORS policy");
                 return
             }
-            if (t instanceof Request) tZ.inject(tv.active(), t.headers, {
+            if (t instanceof Request) tQ.inject(tm.active(), t.headers, {
                 set: function(t, e, n) {
                     return t.set(e, "string" == typeof n ? n : String(n))
                 }
             });
-            else if (t.headers instanceof Headers) tZ.inject(tv.active(), t.headers, {
+            else if (t.headers instanceof Headers) tQ.inject(tm.active(), t.headers, {
                 set: function(t, e, n) {
                     return t.set(e, "string" == typeof n ? n : String(n))
                 }
             });
-            else if (t.headers instanceof Map) tZ.inject(tv.active(), t.headers, {
+            else if (t.headers instanceof Map) tQ.inject(tm.active(), t.headers, {
                 set: function(t, e, n) {
                     return t.set(e, "string" == typeof n ? n : String(n))
                 }
             });
             else {
                 var n = {};
-                tZ.inject(tv.active(), n), t.headers = Object.assign({}, n, t.headers || {})
+                tQ.inject(tm.active(), n), t.headers = Object.assign({}, n, t.headers || {})
             }
         }, e.prototype._clearResources = function() {
             0 === this._tasksCount && this.getConfig().clearTimingResources && (performance.clearResourceTimings(), this._usedResources = new WeakSet)
         }, e.prototype._createSpan = function(t, e) {
-            if (void 0 === e && (e = {}), oJ(t, this.getConfig().ignoreUrls)) {
+            if (void 0 === e && (e = {}), function(t, e) {
+                    var n, r;
+                    if (!e) return !1;
+                    try {
+                        for (var o = ax(e), i = o.next(); !i.done; i = o.next()) {
+                            var a = i.value;
+                            if ("string" == typeof a ? t === a : !!t.match(a)) return !0
+                        }
+                    } catch (t) {
+                        n = {
+                            error: t
+                        }
+                    } finally {
+                        try {
+                            i && !i.done && (r = o.return) && r.call(o)
+                        } finally {
+                            if (n) throw n.error
+                        }
+                    }
+                    return !1
+                }(t, this.getConfig().ignoreUrls)) {
                 this._diag.debug("ignoring span as url matches ignored url");
                 return
             }
             var n, r = (e.method || "GET").toUpperCase(),
-                i = "HTTP " + r;
-            return this.tracer.startSpan(i, {
-                kind: iC.CLIENT,
-                attributes: ((n = {})[_.COMPONENT] = this.moduleName, n[nA] = r, n[nP] = t, n)
+                o = "HTTP " + r;
+            return this.tracer.startSpan(o, {
+                kind: oL.CLIENT,
+                attributes: ((n = {})[m.COMPONENT] = this.moduleName, n[nS] = r, n[nO] = t, n)
             })
         }, e.prototype._findResourceAndAddNetworkEvents = function(t, e, n) {
             var r = e.entries;
@@ -5646,40 +6088,40 @@ var ab = (a = function(t, e) {
                 if (!performance.getEntriesByType) return;
                 r = performance.getEntriesByType("resource")
             }
-            var i = o3(e.spanUrl, e.startTime, n, r, this._usedResources, "fetch");
-            if (i.mainRequest) {
-                var o = i.mainRequest;
-                this._markResourceAsUsed(o);
-                var a = i.corsPreFlightRequest;
-                a && (this._addChildSpan(t, a), this._markResourceAsUsed(a)), this.getConfig().ignoreNetworkEvents || o1(t, o)
+            var o = i6(e.spanUrl, e.startTime, n, r, this._usedResources, "fetch");
+            if (o.mainRequest) {
+                var i = o.mainRequest;
+                this._markResourceAsUsed(i);
+                var a = o.corsPreFlightRequest;
+                a && (this._addChildSpan(t, a), this._markResourceAsUsed(a)), this.getConfig().ignoreNetworkEvents || i3(t, i)
             }
         }, e.prototype._markResourceAsUsed = function(t) {
             this._usedResources.add(t)
         }, e.prototype._endSpan = function(t, e, n) {
             var r = this,
-                i = nm(Date.now()),
-                o = ny();
+                o = aC(Date.now()),
+                i = aN();
             this._addFinalSpanAttributes(t, n), setTimeout(function() {
                 var n;
-                null === (n = e.observer) || void 0 === n || n.disconnect(), r._findResourceAndAddNetworkEvents(t, e, o), r._tasksCount--, r._clearResources(), t.end(i)
+                null === (n = e.observer) || void 0 === n || n.disconnect(), r._findResourceAndAddNetworkEvents(t, e, i), r._tasksCount--, r._clearResources(), t.end(o)
             }, 300)
         }, e.prototype._patchConstructor = function() {
             var t = this;
             return function(e) {
                 return function() {
                     for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                    var i = this,
-                        o = o4(n[0] instanceof Request ? n[0].url : String(n[0])).href,
+                    var o = this,
+                        i = i5(n[0] instanceof Request ? n[0].url : String(n[0])).href,
                         a = n[0] instanceof Request ? n[0] : n[1] || {},
-                        s = t._createSpan(o, a);
+                        s = t._createSpan(i, a);
                     if (!s) return e.apply(this, n);
-                    var u = t._prepareSpanData(o);
+                    var u = t._prepareSpanData(i);
 
                     function c(e, n) {
                         t._applyAttributesAfterFetch(e, a, n), t._endSpan(e, u, {
                             status: n.status || 0,
                             statusText: n.message,
-                            url: o
+                            url: i
                         })
                     }
 
@@ -5687,20 +6129,20 @@ var ab = (a = function(t, e) {
                         t._applyAttributesAfterFetch(e, a, n), n.status >= 200 && n.status < 400 ? t._endSpan(e, u, n) : t._endSpan(e, u, {
                             status: n.status,
                             statusText: n.statusText,
-                            url: o
+                            url: i
                         })
                     }
 
                     function p(t, e, n) {
                         try {
                             var r = n.clone(),
-                                i = n.clone(),
-                                o = r.body;
-                            if (o) {
-                                var a = o.getReader(),
+                                o = n.clone(),
+                                i = r.body;
+                            if (i) {
+                                var a = i.getReader(),
                                     s = function() {
                                         a.read().then(function(e) {
-                                            e.done ? l(t, i) : s()
+                                            e.done ? l(t, o) : s()
                                         }, function(e) {
                                             c(t, e)
                                         })
@@ -5720,22 +6162,31 @@ var ab = (a = function(t, e) {
                         }
                     }
                     return new Promise(function(n, r) {
-                        return tv.with(ee.setSpan(tv.active(), s), function() {
-                            return t._addHeaders(a, o), t._tasksCount++, e.apply(i, a instanceof Request ? [a] : [o, a]).then(p.bind(i, s, n), f.bind(i, s, r))
+                        return tm.with(er.setSpan(tm.active(), s), function() {
+                            return t._addHeaders(a, i), t._tasksCount++, e.apply(o, a instanceof Request ? [a] : [i, a]).then(p.bind(o, s, n), f.bind(o, s, r))
                         })
                     })
                 }
             }
         }, e.prototype._applyAttributesAfterFetch = function(t, e, n) {
             var r = this,
-                i = this.getConfig().applyCustomAttributesOnSpan;
-            i && at(function() {
-                return i(t, e, n)
+                o = this.getConfig().applyCustomAttributesOnSpan;
+            o && function(t, e, n) {
+                var r, o;
+                try {
+                    o = t()
+                } catch (t) {
+                    r = t
+                } finally {
+                    if (e(r, o), r && !n) throw r
+                }
+            }(function() {
+                return o(t, e, n)
             }, function(t) {
                 t && r._diag.error("applyCustomAttributesOnSpan", t)
             }, !0)
         }, e.prototype._prepareSpanData = function(t) {
-            var e = ny(),
+            var e = aN(),
                 n = [];
             if ("function" != typeof PerformanceObserver) return {
                 entries: n,
@@ -5756,18 +6207,132 @@ var ab = (a = function(t, e) {
                 spanUrl: t
             }
         }, e.prototype.enable = function() {
-            if (aE) {
+            var t;
+            if (aq) {
                 this._diag.warn("this instrumentation is intended for web usage only, it does not instrument Node.js's fetch()");
                 return
             }
-            ae(fetch) && (this._unwrap(ex, "fetch"), this._diag.debug("removing previous patch for constructor")), this._wrap(ex, "fetch", this._patchConstructor())
+            "function" == typeof(t = fetch) && "function" == typeof t.__original && "function" == typeof t.__unwrap && !0 === t.__wrapped && (this._unwrap(aA, "fetch"), this._diag.debug("removing previous patch for constructor")), this._wrap(aA, "fetch", this._patchConstructor())
         }, e.prototype.disable = function() {
-            aE || (this._unwrap(ex, "fetch"), this._usedResources = new WeakSet)
+            aq || (this._unwrap(aA, "fetch"), this._usedResources = new WeakSet)
         }, e
-    }(o7);
-(s = b || (b = {})).EVENT_TYPE = "event_type", s.TARGET_ELEMENT = "target_element", s.TARGET_XPATH = "target_xpath", s.HTTP_URL = "http.url";
-var aw = "0.39.0",
-    aO = (u = function(t, e) {
+    }(aP),
+    aK = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    aZ = Symbol.for("io.opentelemetry.js.api.logs"),
+    aY = function() {
+        function t() {}
+        return t.prototype.emit = function(t) {}, t
+    }(),
+    aQ = new aY,
+    aJ = new(function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            return new aY
+        }, t
+    }()),
+    a0 = function() {
+        function t(t, e, n, r) {
+            this._provider = t, this.name = e, this.version = n, this.options = r
+        }
+        return t.prototype.emit = function(t) {
+            this._getLogger().emit(t)
+        }, t.prototype._getLogger = function() {
+            if (this._delegate) return this._delegate;
+            var t = this._provider.getDelegateLogger(this.name, this.version, this.options);
+            return t ? (this._delegate = t, this._delegate) : aQ
+        }, t
+    }(),
+    a1 = function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            var r;
+            return null !== (r = this.getDelegateLogger(t, e, n)) && void 0 !== r ? r : new a0(this, t, e, n)
+        }, t.prototype.getDelegate = function() {
+            var t;
+            return null !== (t = this._delegate) && void 0 !== t ? t : aJ
+        }, t.prototype.setDelegate = function(t) {
+            this._delegate = t
+        }, t.prototype.getDelegateLogger = function(t, e, n) {
+            var r;
+            return null === (r = this._delegate) || void 0 === r ? void 0 : r.getLogger(t, e, n)
+        }, t
+    }(),
+    a2 = (function() {
+        function t() {
+            this._proxyLoggerProvider = new a1
+        }
+        return t.getInstance = function() {
+            return this._instance || (this._instance = new t), this._instance
+        }, t.prototype.setGlobalLoggerProvider = function(t) {
+            return aK[aZ] ? this.getLoggerProvider() : (aK[aZ] = function(e) {
+                return 1 === e ? t : aJ
+            }, this._proxyLoggerProvider.setDelegate(t), t)
+        }, t.prototype.getLoggerProvider = function() {
+            var t, e;
+            return null !== (e = null === (t = aK[aZ]) || void 0 === t ? void 0 : t.call(aK, 1)) && void 0 !== e ? e : this._proxyLoggerProvider
+        }, t.prototype.getLogger = function(t, e, n) {
+            return this.getLoggerProvider().getLogger(t, e, n)
+        }, t.prototype.disable = function() {
+            delete aK[aZ], this._proxyLoggerProvider = new a1
+        }, t
+    })().getInstance(),
+    a3 = function() {
+        return (a3 = Object.assign || function(t) {
+            for (var e, n = 1, r = arguments.length; n < r; n++)
+                for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
+            return t
+        }).apply(this, arguments)
+    },
+    a4 = function() {
+        function t(t, e, n) {
+            this.instrumentationName = t, this.instrumentationVersion = e, this._config = {}, this._wrap = rE.wrap, this._unwrap = rE.unwrap, this._massWrap = rE.massWrap, this._massUnwrap = rE.massUnwrap, this.setConfig(n), this._diag = ty.createComponentLogger({
+                namespace: t
+            }), this._tracer = er.getTracer(t, e), this._meter = tH.getMeter(t, e), this._logger = a2.getLogger(t, e), this._updateMetricInstruments()
+        }
+        return Object.defineProperty(t.prototype, "meter", {
+            get: function() {
+                return this._meter
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setMeterProvider = function(t) {
+            this._meter = t.getMeter(this.instrumentationName, this.instrumentationVersion), this._updateMetricInstruments()
+        }, Object.defineProperty(t.prototype, "logger", {
+            get: function() {
+                return this._logger
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setLoggerProvider = function(t) {
+            this._logger = t.getLogger(this.instrumentationName, this.instrumentationVersion)
+        }, t.prototype.getModuleDefinitions = function() {
+            var t, e = null !== (t = this.init()) && void 0 !== t ? t : [];
+            return Array.isArray(e) ? e : [e]
+        }, t.prototype._updateMetricInstruments = function() {}, t.prototype.getConfig = function() {
+            return this._config
+        }, t.prototype.setConfig = function(t) {
+            this._config = a3({
+                enabled: !0
+            }, t)
+        }, t.prototype.setTracerProvider = function(t) {
+            this._tracer = t.getTracer(this.instrumentationName, this.instrumentationVersion)
+        }, Object.defineProperty(t.prototype, "tracer", {
+            get: function() {
+                return this._tracer
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype._runSpanCustomizationHook = function(t, e, n, r) {
+            if (t) try {
+                t(n, r)
+            } catch (t) {
+                this._diag.error("Error running span customization hook due to exception in handler", {
+                    triggerName: e
+                }, t)
+            }
+        }, t
+    }(),
+    a6 = (u = function(t, e) {
         return (u = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
@@ -5783,208 +6348,19 @@ var aw = "0.39.0",
         }
         u(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    aS = ["click"];
+    a5 = function(t) {
+        function e(e, n, r) {
+            var o = t.call(this, e, n, r) || this;
+            return o._config.enabled && o.enable(), o
+        }
+        return a6(e, t), e
+    }(a4);
 
-function aR() {
-    return !1
-}
-var aL = function(t) {
-    function e(e) {
-        void 0 === e && (e = {});
-        var n, r = t.call(this, "@opentelemetry/instrumentation-user-interaction", aw, e) || this;
-        return r.version = aw, r.moduleName = "user-interaction", r._spansData = new WeakMap, r._wrappedListeners = new WeakMap, r._eventsSpanMap = new WeakMap, r._eventNames = new Set(null !== (n = null == e ? void 0 : e.eventNames) && void 0 !== n ? n : aS), r._shouldPreventSpanCreation = "function" == typeof(null == e ? void 0 : e.shouldPreventSpanCreation) ? e.shouldPreventSpanCreation : aR, r
-    }
-    return aO(e, t), e.prototype.init = function() {}, e.prototype._checkForTimeout = function(t, e) {
-        var n = this._spansData.get(e);
-        n && ("setTimeout" === t.source ? n.hrTimeLastTimeout = ny() : "Promise.then" !== t.source && "setTimeout" !== t.source && (n.hrTimeLastTimeout = void 0))
-    }, e.prototype._allowEventName = function(t) {
-        return this._eventNames.has(t)
-    }, e.prototype._createSpan = function(t, e, n) {
-        if (!(!(t instanceof HTMLElement) || !t.getAttribute || t.hasAttribute("disabled")) && this._allowEventName(e)) {
-            var r, i = function t(e, n) {
-                if (e.nodeType === Node.DOCUMENT_NODE) return "/";
-                var r = function(t, e) {
-                    var n = t.nodeType,
-                        r = function(t) {
-                            if (!t.parentNode) return 0;
-                            var e = [t.nodeType];
-                            t.nodeType === Node.CDATA_SECTION_NODE && e.push(Node.TEXT_NODE);
-                            var n = Array.from(t.parentNode.childNodes);
-                            return (n = n.filter(function(n) {
-                                var r = n.localName;
-                                return e.indexOf(n.nodeType) >= 0 && r === t.localName
-                            })).length >= 1 ? n.indexOf(t) + 1 : 0
-                        }(t),
-                        i = "";
-                    if (n === Node.ELEMENT_NODE) {
-                        var o = t.getAttribute("id");
-                        if (e && o) return '//*[@id="' + o + '"]';
-                        i = t.localName
-                    } else if (n === Node.TEXT_NODE || n === Node.CDATA_SECTION_NODE) i = "text()";
-                    else {
-                        if (n !== Node.COMMENT_NODE) return "";
-                        i = "comment()"
-                    }
-                    return i && r > 1 ? "/" + i + "[" + r + "]" : "/" + i
-                }(e, n);
-                if (n && r.indexOf("@id") > 0) return r;
-                var i = "";
-                return e.parentNode && (i += t(e.parentNode, !1)), i += r
-            }(t, !0);
-            try {
-                var o = this.tracer.startSpan(e, {
-                    attributes: ((r = {})[b.EVENT_TYPE] = e, r[b.TARGET_ELEMENT] = t.tagName, r[b.TARGET_XPATH] = i, r[b.HTTP_URL] = window.location.href, r)
-                }, n ? ee.setSpan(tv.active(), n) : void 0);
-                if (!0 === this._shouldPreventSpanCreation(e, t, o)) return;
-                return this._spansData.set(o, {
-                    taskCount: 0
-                }), o
-            } catch (t) {
-                this._diag.error("failed to start create new user interaction span", t)
-            }
-        }
-    }, e.prototype._decrementTask = function(t) {
-        var e = this._spansData.get(t);
-        e && (e.taskCount--, 0 === e.taskCount && this._tryToEndSpan(t, e.hrTimeLastTimeout))
-    }, e.prototype._getCurrentSpan = function(t) {
-        var e = t.get("OT_ZONE_CONTEXT");
-        return e ? ee.getSpan(e) : e
-    }, e.prototype._incrementTask = function(t) {
-        var e = this._spansData.get(t);
-        e && e.taskCount++
-    }, e.prototype.addPatchedListener = function(t, e, n, r) {
-        var i = this._wrappedListeners.get(n);
-        i || (i = new Map, this._wrappedListeners.set(n, i));
-        var o = i.get(e);
-        return o || (o = new Map, i.set(e, o)), !o.has(t) && (o.set(t, r), !0)
-    }, e.prototype.removePatchedListener = function(t, e, n) {
-        var r = this._wrappedListeners.get(n);
-        if (r) {
-            var i = r.get(e);
-            if (i) {
-                var o = i.get(t);
-                return o && (i.delete(t), 0 === i.size && (r.delete(e), 0 === r.size && this._wrappedListeners.delete(n))), o
-            }
-        }
-    }, e.prototype._invokeListener = function(t, e, n) {
-        return "function" == typeof t ? t.apply(e, n) : t.handleEvent(n[0])
-    }, e.prototype._patchAddEventListener = function() {
-        var t = this;
-        return function(e) {
-            return function(n, r, i) {
-                if (!r) return e.call(this, n, r, i);
-                var o = i && "object" == typeof i && i.once,
-                    a = function() {
-                        for (var e, i = this, a = [], s = 0; s < arguments.length; s++) a[s] = arguments[s];
-                        var u = a[0],
-                            c = null == u ? void 0 : u.target;
-                        u && (e = t._eventsSpanMap.get(u)), o && t.removePatchedListener(this, n, r);
-                        var l = t._createSpan(c, n, e);
-                        return l ? (u && t._eventsSpanMap.set(u, l), tv.with(ee.setSpan(tv.active(), l), function() {
-                            var e = t._invokeListener(r, i, a);
-                            return l.end(), e
-                        })) : t._invokeListener(r, this, a)
-                    };
-                if (t.addPatchedListener(this, n, r, a)) return e.call(this, n, a, i)
-            }
-        }
-    }, e.prototype._patchRemoveEventListener = function() {
-        var t = this;
-        return function(e) {
-            return function(n, r, i) {
-                var o = t.removePatchedListener(this, n, r);
-                return o ? e.call(this, n, o, i) : e.call(this, n, r, i)
-            }
-        }
-    }, e.prototype._getPatchableEventTargets = function() {
-        return window.EventTarget ? [EventTarget.prototype] : [Node.prototype, Window.prototype]
-    }, e.prototype._patchHistoryApi = function() {
-        this._unpatchHistoryApi(), this._wrap(history, "replaceState", this._patchHistoryMethod()), this._wrap(history, "pushState", this._patchHistoryMethod()), this._wrap(history, "back", this._patchHistoryMethod()), this._wrap(history, "forward", this._patchHistoryMethod()), this._wrap(history, "go", this._patchHistoryMethod())
-    }, e.prototype._patchHistoryMethod = function() {
-        var t = this;
-        return function(e) {
-            return function() {
-                for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                var i = "" + location.pathname + location.hash + location.search,
-                    o = e.apply(this, n),
-                    a = "" + location.pathname + location.hash + location.search;
-                return i !== a && t._updateInteractionName(a), o
-            }
-        }
-    }, e.prototype._unpatchHistoryApi = function() {
-        ae(history.replaceState) && this._unwrap(history, "replaceState"), ae(history.pushState) && this._unwrap(history, "pushState"), ae(history.back) && this._unwrap(history, "back"), ae(history.forward) && this._unwrap(history, "forward"), ae(history.go) && this._unwrap(history, "go")
-    }, e.prototype._updateInteractionName = function(t) {
-        var e = ee.getSpan(tv.active());
-        e && "function" == typeof e.updateName && e.updateName("Navigation: " + t)
-    }, e.prototype._patchZoneCancelTask = function() {
-        var t = this;
-        return function(e) {
-            return function(n) {
-                var r = Zone.current,
-                    i = t._getCurrentSpan(r);
-                return i && t._shouldCountTask(n, r) && t._decrementTask(i), e.call(this, n)
-            }
-        }
-    }, e.prototype._patchZoneScheduleTask = function() {
-        var t = this;
-        return function(e) {
-            return function(n) {
-                var r = Zone.current,
-                    i = t._getCurrentSpan(r);
-                return i && t._shouldCountTask(n, r) && (t._incrementTask(i), t._checkForTimeout(n, i)), e.call(this, n)
-            }
-        }
-    }, e.prototype._patchZoneRunTask = function() {
-        var t = this;
-        return function(e) {
-            return function(n, r, i) {
-                var o, a = Array.isArray(i) && i[0] instanceof Event ? i[0] : void 0,
-                    s = null == a ? void 0 : a.target;
-                if (s) {
-                    if (o = t._createSpan(s, n.eventName)) return t._incrementTask(o), this.run(function() {
-                        try {
-                            return tv.with(ee.setSpan(tv.active(), o), function() {
-                                var t = Zone.current;
-                                return n._zone = t, e.call(t, n, r, i)
-                            })
-                        } finally {
-                            t._decrementTask(o)
-                        }
-                    })
-                } else o = t._getCurrentSpan(this);
-                try {
-                    return e.call(this, n, r, i)
-                } finally {
-                    o && t._shouldCountTask(n, this) && t._decrementTask(o)
-                }
-            }
-        }
-    }, e.prototype._shouldCountTask = function(t, e) {
-        if (t._zone && (e = t._zone), !e || !t.data || t.data.isPeriodic) return !1;
-        var n = this._getCurrentSpan(e);
-        return !!(n && this._spansData.get(n)) && ("macroTask" === t.type || "microTask" === t.type)
-    }, e.prototype._tryToEndSpan = function(t, e) {
-        t && this._spansData.get(t) && (t.end(e), this._spansData.delete(t))
-    }, e.prototype.enable = function() {
-        var t = this,
-            e = this.getZoneWithPrototype();
-        this._diag.debug("applying patch to", this.moduleName, this.version, "zone:", !!e), e ? (ae(e.prototype.runTask) && (this._unwrap(e.prototype, "runTask"), this._diag.debug("removing previous patch from method runTask")), ae(e.prototype.scheduleTask) && (this._unwrap(e.prototype, "scheduleTask"), this._diag.debug("removing previous patch from method scheduleTask")), ae(e.prototype.cancelTask) && (this._unwrap(e.prototype, "cancelTask"), this._diag.debug("removing previous patch from method cancelTask")), this._zonePatched = !0, this._wrap(e.prototype, "runTask", this._patchZoneRunTask()), this._wrap(e.prototype, "scheduleTask", this._patchZoneScheduleTask()), this._wrap(e.prototype, "cancelTask", this._patchZoneCancelTask())) : (this._zonePatched = !1, this._getPatchableEventTargets().forEach(function(e) {
-            ae(e.addEventListener) && (t._unwrap(e, "addEventListener"), t._diag.debug("removing previous patch from method addEventListener")), ae(e.removeEventListener) && (t._unwrap(e, "removeEventListener"), t._diag.debug("removing previous patch from method removeEventListener")), t._wrap(e, "addEventListener", t._patchAddEventListener()), t._wrap(e, "removeEventListener", t._patchRemoveEventListener())
-        })), this._patchHistoryApi()
-    }, e.prototype.disable = function() {
-        var t = this,
-            e = this.getZoneWithPrototype();
-        this._diag.debug("removing patch from", this.moduleName, this.version, "zone:", !!e), e && this._zonePatched ? (ae(e.prototype.runTask) && this._unwrap(e.prototype, "runTask"), ae(e.prototype.scheduleTask) && this._unwrap(e.prototype, "scheduleTask"), ae(e.prototype.cancelTask) && this._unwrap(e.prototype, "cancelTask")) : this._getPatchableEventTargets().forEach(function(e) {
-            ae(e.addEventListener) && t._unwrap(e, "addEventListener"), ae(e.removeEventListener) && t._unwrap(e, "removeEventListener")
-        }), this._unpatchHistoryApi()
-    }, e.prototype.getZoneWithPrototype = function() {
-        return window.Zone
-    }, e
-}(o7);
-(c = E || (E = {})).METHOD_OPEN = "open", c.METHOD_SEND = "send", c.EVENT_ABORT = "abort", c.EVENT_ERROR = "error", c.EVENT_LOAD = "loaded", c.EVENT_TIMEOUT = "timeout";
-var aA = "0.52.1";
-(T || (T = {})).HTTP_STATUS_TEXT = "http.status_text";
-var aP = (l = function(t, e) {
+function a9(t) {
+    return "function" == typeof t && "function" == typeof t.__original && "function" == typeof t.__unwrap && !0 === t.__wrapped
+}(c = w || (w = {})).EVENT_TYPE = "event_type", c.TARGET_ELEMENT = "target_element", c.TARGET_XPATH = "target_xpath", c.HTTP_URL = "http.url";
+var a8 = "0.41.0",
+    a7 = (l = function(t, e) {
         return (l = Object.setPrototypeOf || ({
             __proto__: []
         }) instanceof Array && function(t, e) {
@@ -6000,43 +6376,436 @@ var aP = (l = function(t, e) {
         }
         l(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
     }),
-    aC = {
-        "@opentelemetry/instrumentation-document-load": aa,
-        "@opentelemetry/instrumentation-fetch": aT,
-        "@opentelemetry/instrumentation-user-interaction": aL,
+    st = ["click"];
+
+function se() {
+    return !1
+}
+var sn = function(t) {
+        function e(e) {
+            void 0 === e && (e = {});
+            var n, r = t.call(this, "@opentelemetry/instrumentation-user-interaction", a8, e) || this;
+            return r.version = a8, r.moduleName = "user-interaction", r._spansData = new WeakMap, r._wrappedListeners = new WeakMap, r._eventsSpanMap = new WeakMap, r._eventNames = new Set(null !== (n = null == e ? void 0 : e.eventNames) && void 0 !== n ? n : st), r._shouldPreventSpanCreation = "function" == typeof(null == e ? void 0 : e.shouldPreventSpanCreation) ? e.shouldPreventSpanCreation : se, r
+        }
+        return a7(e, t), e.prototype.init = function() {}, e.prototype._checkForTimeout = function(t, e) {
+            var n = this._spansData.get(e);
+            n && ("setTimeout" === t.source ? n.hrTimeLastTimeout = nv() : "Promise.then" !== t.source && "setTimeout" !== t.source && (n.hrTimeLastTimeout = void 0))
+        }, e.prototype._allowEventName = function(t) {
+            return this._eventNames.has(t)
+        }, e.prototype._createSpan = function(t, e, n) {
+            if (!(!(t instanceof HTMLElement) || !t.getAttribute || t.hasAttribute("disabled")) && this._allowEventName(e)) {
+                var r, o = function t(e, n) {
+                    if (e.nodeType === Node.DOCUMENT_NODE) return "/";
+                    var r = function(t, e) {
+                        var n = t.nodeType,
+                            r = function(t) {
+                                if (!t.parentNode) return 0;
+                                var e = [t.nodeType];
+                                t.nodeType === Node.CDATA_SECTION_NODE && e.push(Node.TEXT_NODE);
+                                var n = Array.from(t.parentNode.childNodes);
+                                return (n = n.filter(function(n) {
+                                    var r = n.localName;
+                                    return e.indexOf(n.nodeType) >= 0 && r === t.localName
+                                })).length >= 1 ? n.indexOf(t) + 1 : 0
+                            }(t),
+                            o = "";
+                        if (n === Node.ELEMENT_NODE) {
+                            var i = t.getAttribute("id");
+                            if (e && i) return '//*[@id="' + i + '"]';
+                            o = t.localName
+                        } else if (n === Node.TEXT_NODE || n === Node.CDATA_SECTION_NODE) o = "text()";
+                        else {
+                            if (n !== Node.COMMENT_NODE) return "";
+                            o = "comment()"
+                        }
+                        return o && r > 1 ? "/" + o + "[" + r + "]" : "/" + o
+                    }(e, n);
+                    if (n && r.indexOf("@id") > 0) return r;
+                    var o = "";
+                    return e.parentNode && (o += t(e.parentNode, !1)), o += r
+                }(t, !0);
+                try {
+                    var i = this.tracer.startSpan(e, {
+                        attributes: ((r = {})[w.EVENT_TYPE] = e, r[w.TARGET_ELEMENT] = t.tagName, r[w.TARGET_XPATH] = o, r[w.HTTP_URL] = window.location.href, r)
+                    }, n ? er.setSpan(tm.active(), n) : void 0);
+                    if (!0 === this._shouldPreventSpanCreation(e, t, i)) return;
+                    return this._spansData.set(i, {
+                        taskCount: 0
+                    }), i
+                } catch (t) {
+                    this._diag.error("failed to start create new user interaction span", t)
+                }
+            }
+        }, e.prototype._decrementTask = function(t) {
+            var e = this._spansData.get(t);
+            e && (e.taskCount--, 0 === e.taskCount && this._tryToEndSpan(t, e.hrTimeLastTimeout))
+        }, e.prototype._getCurrentSpan = function(t) {
+            var e = t.get("OT_ZONE_CONTEXT");
+            return e ? er.getSpan(e) : e
+        }, e.prototype._incrementTask = function(t) {
+            var e = this._spansData.get(t);
+            e && e.taskCount++
+        }, e.prototype.addPatchedListener = function(t, e, n, r) {
+            var o = this._wrappedListeners.get(n);
+            o || (o = new Map, this._wrappedListeners.set(n, o));
+            var i = o.get(e);
+            return i || (i = new Map, o.set(e, i)), !i.has(t) && (i.set(t, r), !0)
+        }, e.prototype.removePatchedListener = function(t, e, n) {
+            var r = this._wrappedListeners.get(n);
+            if (r) {
+                var o = r.get(e);
+                if (o) {
+                    var i = o.get(t);
+                    return i && (o.delete(t), 0 === o.size && (r.delete(e), 0 === r.size && this._wrappedListeners.delete(n))), i
+                }
+            }
+        }, e.prototype._invokeListener = function(t, e, n) {
+            return "function" == typeof t ? t.apply(e, n) : t.handleEvent(n[0])
+        }, e.prototype._patchAddEventListener = function() {
+            var t = this;
+            return function(e) {
+                return function(n, r, o) {
+                    if (!r) return e.call(this, n, r, o);
+                    var i = o && "object" == typeof o && o.once,
+                        a = function() {
+                            for (var e, o = this, a = [], s = 0; s < arguments.length; s++) a[s] = arguments[s];
+                            var u = a[0],
+                                c = null == u ? void 0 : u.target;
+                            u && (e = t._eventsSpanMap.get(u)), i && t.removePatchedListener(this, n, r);
+                            var l = t._createSpan(c, n, e);
+                            return l ? (u && t._eventsSpanMap.set(u, l), tm.with(er.setSpan(tm.active(), l), function() {
+                                var e = t._invokeListener(r, o, a);
+                                return l.end(), e
+                            })) : t._invokeListener(r, this, a)
+                        };
+                    if (t.addPatchedListener(this, n, r, a)) return e.call(this, n, a, o)
+                }
+            }
+        }, e.prototype._patchRemoveEventListener = function() {
+            var t = this;
+            return function(e) {
+                return function(n, r, o) {
+                    var i = t.removePatchedListener(this, n, r);
+                    return i ? e.call(this, n, i, o) : e.call(this, n, r, o)
+                }
+            }
+        }, e.prototype._getPatchableEventTargets = function() {
+            return window.EventTarget ? [EventTarget.prototype] : [Node.prototype, Window.prototype]
+        }, e.prototype._patchHistoryApi = function() {
+            this._unpatchHistoryApi(), this._wrap(history, "replaceState", this._patchHistoryMethod()), this._wrap(history, "pushState", this._patchHistoryMethod()), this._wrap(history, "back", this._patchHistoryMethod()), this._wrap(history, "forward", this._patchHistoryMethod()), this._wrap(history, "go", this._patchHistoryMethod())
+        }, e.prototype._patchHistoryMethod = function() {
+            var t = this;
+            return function(e) {
+                return function() {
+                    for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
+                    var o = "" + location.pathname + location.hash + location.search,
+                        i = e.apply(this, n),
+                        a = "" + location.pathname + location.hash + location.search;
+                    return o !== a && t._updateInteractionName(a), i
+                }
+            }
+        }, e.prototype._unpatchHistoryApi = function() {
+            a9(history.replaceState) && this._unwrap(history, "replaceState"), a9(history.pushState) && this._unwrap(history, "pushState"), a9(history.back) && this._unwrap(history, "back"), a9(history.forward) && this._unwrap(history, "forward"), a9(history.go) && this._unwrap(history, "go")
+        }, e.prototype._updateInteractionName = function(t) {
+            var e = er.getSpan(tm.active());
+            e && "function" == typeof e.updateName && e.updateName("Navigation: " + t)
+        }, e.prototype._patchZoneCancelTask = function() {
+            var t = this;
+            return function(e) {
+                return function(n) {
+                    var r = Zone.current,
+                        o = t._getCurrentSpan(r);
+                    return o && t._shouldCountTask(n, r) && t._decrementTask(o), e.call(this, n)
+                }
+            }
+        }, e.prototype._patchZoneScheduleTask = function() {
+            var t = this;
+            return function(e) {
+                return function(n) {
+                    var r = Zone.current,
+                        o = t._getCurrentSpan(r);
+                    return o && t._shouldCountTask(n, r) && (t._incrementTask(o), t._checkForTimeout(n, o)), e.call(this, n)
+                }
+            }
+        }, e.prototype._patchZoneRunTask = function() {
+            var t = this;
+            return function(e) {
+                return function(n, r, o) {
+                    var i, a = Array.isArray(o) && o[0] instanceof Event ? o[0] : void 0,
+                        s = null == a ? void 0 : a.target;
+                    if (s) {
+                        if (i = t._createSpan(s, n.eventName)) return t._incrementTask(i), this.run(function() {
+                            try {
+                                return tm.with(er.setSpan(tm.active(), i), function() {
+                                    var t = Zone.current;
+                                    return n._zone = t, e.call(t, n, r, o)
+                                })
+                            } finally {
+                                t._decrementTask(i)
+                            }
+                        })
+                    } else i = t._getCurrentSpan(this);
+                    try {
+                        return e.call(this, n, r, o)
+                    } finally {
+                        i && t._shouldCountTask(n, this) && t._decrementTask(i)
+                    }
+                }
+            }
+        }, e.prototype._shouldCountTask = function(t, e) {
+            if (t._zone && (e = t._zone), !e || !t.data || t.data.isPeriodic) return !1;
+            var n = this._getCurrentSpan(e);
+            return !!(n && this._spansData.get(n)) && ("macroTask" === t.type || "microTask" === t.type)
+        }, e.prototype._tryToEndSpan = function(t, e) {
+            t && this._spansData.get(t) && (t.end(e), this._spansData.delete(t))
+        }, e.prototype.enable = function() {
+            var t = this,
+                e = this.getZoneWithPrototype();
+            this._diag.debug("applying patch to", this.moduleName, this.version, "zone:", !!e), e ? (a9(e.prototype.runTask) && (this._unwrap(e.prototype, "runTask"), this._diag.debug("removing previous patch from method runTask")), a9(e.prototype.scheduleTask) && (this._unwrap(e.prototype, "scheduleTask"), this._diag.debug("removing previous patch from method scheduleTask")), a9(e.prototype.cancelTask) && (this._unwrap(e.prototype, "cancelTask"), this._diag.debug("removing previous patch from method cancelTask")), this._zonePatched = !0, this._wrap(e.prototype, "runTask", this._patchZoneRunTask()), this._wrap(e.prototype, "scheduleTask", this._patchZoneScheduleTask()), this._wrap(e.prototype, "cancelTask", this._patchZoneCancelTask())) : (this._zonePatched = !1, this._getPatchableEventTargets().forEach(function(e) {
+                a9(e.addEventListener) && (t._unwrap(e, "addEventListener"), t._diag.debug("removing previous patch from method addEventListener")), a9(e.removeEventListener) && (t._unwrap(e, "removeEventListener"), t._diag.debug("removing previous patch from method removeEventListener")), t._wrap(e, "addEventListener", t._patchAddEventListener()), t._wrap(e, "removeEventListener", t._patchRemoveEventListener())
+            })), this._patchHistoryApi()
+        }, e.prototype.disable = function() {
+            var t = this,
+                e = this.getZoneWithPrototype();
+            this._diag.debug("removing patch from", this.moduleName, this.version, "zone:", !!e), e && this._zonePatched ? (a9(e.prototype.runTask) && this._unwrap(e.prototype, "runTask"), a9(e.prototype.scheduleTask) && this._unwrap(e.prototype, "scheduleTask"), a9(e.prototype.cancelTask) && this._unwrap(e.prototype, "cancelTask")) : this._getPatchableEventTargets().forEach(function(e) {
+                a9(e.addEventListener) && t._unwrap(e, "addEventListener"), a9(e.removeEventListener) && t._unwrap(e, "removeEventListener")
+            }), this._unpatchHistoryApi()
+        }, e.prototype.getZoneWithPrototype = function() {
+            return window.Zone
+        }, e
+    }(a5),
+    sr = "object" == typeof globalThis ? globalThis : "object" == typeof self ? self : "object" == typeof window ? window : "object" == typeof L ? L : {},
+    so = Symbol.for("io.opentelemetry.js.api.logs"),
+    si = function() {
+        function t() {}
+        return t.prototype.emit = function(t) {}, t
+    }(),
+    sa = new si,
+    ss = new(function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            return new si
+        }, t
+    }()),
+    su = function() {
+        function t(t, e, n, r) {
+            this._provider = t, this.name = e, this.version = n, this.options = r
+        }
+        return t.prototype.emit = function(t) {
+            this._getLogger().emit(t)
+        }, t.prototype._getLogger = function() {
+            if (this._delegate) return this._delegate;
+            var t = this._provider.getDelegateLogger(this.name, this.version, this.options);
+            return t ? (this._delegate = t, this._delegate) : sa
+        }, t
+    }(),
+    sc = function() {
+        function t() {}
+        return t.prototype.getLogger = function(t, e, n) {
+            var r;
+            return null !== (r = this.getDelegateLogger(t, e, n)) && void 0 !== r ? r : new su(this, t, e, n)
+        }, t.prototype.getDelegate = function() {
+            var t;
+            return null !== (t = this._delegate) && void 0 !== t ? t : ss
+        }, t.prototype.setDelegate = function(t) {
+            this._delegate = t
+        }, t.prototype.getDelegateLogger = function(t, e, n) {
+            var r;
+            return null === (r = this._delegate) || void 0 === r ? void 0 : r.getLogger(t, e, n)
+        }, t
+    }(),
+    sl = (function() {
+        function t() {
+            this._proxyLoggerProvider = new sc
+        }
+        return t.getInstance = function() {
+            return this._instance || (this._instance = new t), this._instance
+        }, t.prototype.setGlobalLoggerProvider = function(t) {
+            return sr[so] ? this.getLoggerProvider() : (sr[so] = function(e) {
+                return 1 === e ? t : ss
+            }, this._proxyLoggerProvider.setDelegate(t), t)
+        }, t.prototype.getLoggerProvider = function() {
+            var t, e;
+            return null !== (e = null === (t = sr[so]) || void 0 === t ? void 0 : t.call(sr, 1)) && void 0 !== e ? e : this._proxyLoggerProvider
+        }, t.prototype.getLogger = function(t, e, n) {
+            return this.getLoggerProvider().getLogger(t, e, n)
+        }, t.prototype.disable = function() {
+            delete sr[so], this._proxyLoggerProvider = new sc
+        }, t
+    })().getInstance(),
+    sp = function() {
+        return (sp = Object.assign || function(t) {
+            for (var e, n = 1, r = arguments.length; n < r; n++)
+                for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
+            return t
+        }).apply(this, arguments)
+    },
+    sf = function() {
+        function t(t, e, n) {
+            this.instrumentationName = t, this.instrumentationVersion = e, this._config = {}, this._wrap = rE.wrap, this._unwrap = rE.unwrap, this._massWrap = rE.massWrap, this._massUnwrap = rE.massUnwrap, this.setConfig(n), this._diag = ty.createComponentLogger({
+                namespace: t
+            }), this._tracer = er.getTracer(t, e), this._meter = tH.getMeter(t, e), this._logger = sl.getLogger(t, e), this._updateMetricInstruments()
+        }
+        return Object.defineProperty(t.prototype, "meter", {
+            get: function() {
+                return this._meter
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setMeterProvider = function(t) {
+            this._meter = t.getMeter(this.instrumentationName, this.instrumentationVersion), this._updateMetricInstruments()
+        }, Object.defineProperty(t.prototype, "logger", {
+            get: function() {
+                return this._logger
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype.setLoggerProvider = function(t) {
+            this._logger = t.getLogger(this.instrumentationName, this.instrumentationVersion)
+        }, t.prototype.getModuleDefinitions = function() {
+            var t, e = null !== (t = this.init()) && void 0 !== t ? t : [];
+            return Array.isArray(e) ? e : [e]
+        }, t.prototype._updateMetricInstruments = function() {}, t.prototype.getConfig = function() {
+            return this._config
+        }, t.prototype.setConfig = function(t) {
+            this._config = sp({
+                enabled: !0
+            }, t)
+        }, t.prototype.setTracerProvider = function(t) {
+            this._tracer = t.getTracer(this.instrumentationName, this.instrumentationVersion)
+        }, Object.defineProperty(t.prototype, "tracer", {
+            get: function() {
+                return this._tracer
+            },
+            enumerable: !1,
+            configurable: !0
+        }), t.prototype._runSpanCustomizationHook = function(t, e, n, r) {
+            if (t) try {
+                t(n, r)
+            } catch (t) {
+                this._diag.error("Error running span customization hook due to exception in handler", {
+                    triggerName: e
+                }, t)
+            }
+        }, t
+    }(),
+    sd = (p = function(t, e) {
+        return (p = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(t, e) {
+            t.__proto__ = e
+        } || function(t, e) {
+            for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
+        })(t, e)
+    }, function(t, e) {
+        if ("function" != typeof e && null !== e) throw TypeError("Class extends value " + String(e) + " is not a constructor or null");
+
+        function n() {
+            this.constructor = t
+        }
+        p(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+    }),
+    sh = function(t) {
+        function e(e, n, r) {
+            var o = t.call(this, e, n, r) || this;
+            return o._config.enabled && o.enable(), o
+        }
+        return sd(e, t), e
+    }(sf);
+
+function sg(t) {
+    return "function" == typeof t && "function" == typeof t.__original && "function" == typeof t.__unwrap && !0 === t.__wrapped
+}
+var s_ = performance;
+
+function sv(t) {
+    return [Math.trunc(t / 1e3), Math.round(t % 1e3 * 1e6)]
+}
+
+function sm(t) {
+    var e, n, r, o;
+    return n = sv(("number" != typeof(e = s_.timeOrigin) && (e = s_.timing && s_.timing.fetchStart), e)), r = sv("number" == typeof t ? t : s_.now()), (o = [n[0] + r[0], n[1] + r[1]])[1] >= 1e9 && (o[1] -= 1e9, o[0] += 1), o
+}
+var sy = function(t) {
+    var e = "function" == typeof Symbol && Symbol.iterator,
+        n = e && t[e],
+        r = 0;
+    if (n) return n.call(t);
+    if (t && "number" == typeof t.length) return {
+        next: function() {
+            return t && r >= t.length && (t = void 0), {
+                value: t && t[r++],
+                done: !t
+            }
+        }
+    };
+    throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
+};
+(f = S || (S = {})).METHOD_OPEN = "open", f.METHOD_SEND = "send", f.EVENT_ABORT = "abort", f.EVENT_ERROR = "error", f.EVENT_LOAD = "loaded", f.EVENT_TIMEOUT = "timeout";
+var sb = "0.54.0";
+(O || (O = {})).HTTP_STATUS_TEXT = "http.status_text";
+var sE = (d = function(t, e) {
+        return (d = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(t, e) {
+            t.__proto__ = e
+        } || function(t, e) {
+            for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
+        })(t, e)
+    }, function(t, e) {
+        if ("function" != typeof e && null !== e) throw TypeError("Class extends value " + String(e) + " is not a constructor or null");
+
+        function n() {
+            this.constructor = t
+        }
+        d(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+    }),
+    sT = {
+        "@opentelemetry/instrumentation-document-load": ag,
+        "@opentelemetry/instrumentation-fetch": aW,
+        "@opentelemetry/instrumentation-user-interaction": sn,
         "@opentelemetry/instrumentation-xml-http-request": function(t) {
             function e(e) {
                 void 0 === e && (e = {});
-                var n = t.call(this, "@opentelemetry/instrumentation-xml-http-request", aA, e) || this;
-                return n.component = "xml-http-request", n.version = aA, n.moduleName = n.component, n._tasksCount = 0, n._xhrMem = new WeakMap, n._usedResources = new WeakSet, n
+                var n = t.call(this, "@opentelemetry/instrumentation-xml-http-request", sb, e) || this;
+                return n.component = "xml-http-request", n.version = sb, n.moduleName = n.component, n._tasksCount = 0, n._xhrMem = new WeakMap, n._usedResources = new WeakSet, n
             }
-            return aP(e, t), e.prototype.init = function() {}, e.prototype._addHeaders = function(t, e) {
-                if (!o6(o4(e).href, this.getConfig().propagateTraceHeaderCorsUrls)) {
+            return sE(e, t), e.prototype.init = function() {}, e.prototype._addHeaders = function(t, e) {
+                if (!i9(i5(e).href, this.getConfig().propagateTraceHeaderCorsUrls)) {
                     var n = {};
-                    tZ.inject(tv.active(), n), Object.keys(n).length > 0 && this._diag.debug("headers inject skipped due to CORS policy");
+                    tQ.inject(tm.active(), n), Object.keys(n).length > 0 && this._diag.debug("headers inject skipped due to CORS policy");
                     return
                 }
                 var r = {};
-                tZ.inject(tv.active(), r), Object.keys(r).forEach(function(e) {
+                tQ.inject(tm.active(), r), Object.keys(r).forEach(function(e) {
                     t.setRequestHeader(e, String(r[e]))
                 })
             }, e.prototype._addChildSpan = function(t, e) {
                 var n = this;
-                tv.with(ee.setSpan(tv.active(), t), function() {
+                tm.with(er.setSpan(tm.active(), t), function() {
                     var t = n.tracer.startSpan("CORS Preflight", {
-                        startTime: e[p.FETCH_START]
+                        startTime: e[h.FETCH_START]
                     });
-                    n.getConfig().ignoreNetworkEvents || o1(t, e), t.end(e[p.RESPONSE_END])
+                    n.getConfig().ignoreNetworkEvents || i3(t, e), t.end(e[h.RESPONSE_END])
                 })
             }, e.prototype._addFinalSpanAttributes = function(t, e, n) {
                 if ("string" == typeof n) {
-                    var r = o4(n);
-                    void 0 !== e.status && t.setAttribute(nx, e.status), void 0 !== e.statusText && t.setAttribute(T.HTTP_STATUS_TEXT, e.statusText), t.setAttribute(nC, r.host), t.setAttribute(nN, r.protocol.replace(":", "")), t.setAttribute(nI, navigator.userAgent)
+                    var r = i5(n);
+                    void 0 !== e.status && t.setAttribute(nA, e.status), void 0 !== e.statusText && t.setAttribute(O.HTTP_STATUS_TEXT, e.statusText), t.setAttribute(nL, r.host), t.setAttribute(nP, r.protocol.replace(":", "")), t.setAttribute(nR, navigator.userAgent)
                 }
             }, e.prototype._applyAttributesAfterXHR = function(t, e) {
                 var n = this,
                     r = this.getConfig().applyCustomAttributesOnSpan;
-                "function" == typeof r && at(function() {
+                "function" == typeof r && function(t, e, n) {
+                    var r, o;
+                    try {
+                        o = t()
+                    } catch (t) {
+                        r = t
+                    } finally {
+                        if (e(r, o), r && !n) throw r
+                    }
+                }(function() {
                     return r(t, e)
                 }, function(t) {
                     t && n._diag.error("applyCustomAttributesOnSpan", t)
@@ -6046,9 +6815,9 @@ var aP = (l = function(t, e) {
                 n && "function" == typeof PerformanceObserver && "function" == typeof PerformanceResourceTiming && (n.createdResources = {
                     observer: new PerformanceObserver(function(t) {
                         var r = t.getEntries(),
-                            i = o4(e);
+                            o = i5(e);
                         r.forEach(function(t) {
-                            "xmlhttprequest" === t.initiatorType && t.name === i.href && n.createdResources && n.createdResources.entries.push(t)
+                            "xmlhttprequest" === t.initiatorType && t.name === o.href && n.createdResources && n.createdResources.entries.push(t)
                         })
                     }),
                     entries: []
@@ -6056,17 +6825,17 @@ var aP = (l = function(t, e) {
                     entryTypes: ["resource"]
                 }))
             }, e.prototype._clearResources = function() {
-                0 === this._tasksCount && this.getConfig().clearTimingResources && (nv.clearResourceTimings(), this._xhrMem = new WeakMap, this._usedResources = new WeakSet)
-            }, e.prototype._findResourceAndAddNetworkEvents = function(t, e, n, r, i) {
-                if (n && r && i && t.createdResources) {
-                    var o = t.createdResources.entries;
-                    o && o.length || (o = nv.getEntriesByType("resource"));
-                    var a = o3(o4(n).href, r, i, o, this._usedResources);
+                0 === this._tasksCount && this.getConfig().clearTimingResources && (s_.clearResourceTimings(), this._xhrMem = new WeakMap, this._usedResources = new WeakSet)
+            }, e.prototype._findResourceAndAddNetworkEvents = function(t, e, n, r, o) {
+                if (n && r && o && t.createdResources) {
+                    var i = t.createdResources.entries;
+                    i && i.length || (i = s_.getEntriesByType("resource"));
+                    var a = i6(i5(n).href, r, o, i, this._usedResources);
                     if (a.mainRequest) {
                         var s = a.mainRequest;
                         this._markResourceAsUsed(s);
                         var u = a.corsPreFlightRequest;
-                        u && (this._addChildSpan(e, u), this._markResourceAsUsed(u)), this.getConfig().ignoreNetworkEvents || o1(e, s)
+                        u && (this._addChildSpan(e, u), this._markResourceAsUsed(u)), this.getConfig().ignoreNetworkEvents || i3(e, s)
                     }
                 }
             }, e.prototype._cleanPreviousSpanInformation = function(t) {
@@ -6076,19 +6845,39 @@ var aP = (l = function(t, e) {
                     n && n(), this._xhrMem.delete(t)
                 }
             }, e.prototype._createSpan = function(t, e, n) {
-                if (oJ(e, this.getConfig().ignoreUrls)) {
+                if (function(t, e) {
+                        var n, r;
+                        if (!e) return !1;
+                        try {
+                            for (var o = sy(e), i = o.next(); !i.done; i = o.next()) {
+                                var a = i.value;
+                                if ("string" == typeof a ? t === a : !!t.match(a)) return !0
+                            }
+                        } catch (t) {
+                            n = {
+                                error: t
+                            }
+                        } finally {
+                            try {
+                                i && !i.done && (r = o.return) && r.call(o)
+                            } finally {
+                                if (n) throw n.error
+                            }
+                        }
+                        return !1
+                    }(e, this.getConfig().ignoreUrls)) {
                     this._diag.debug("ignoring span as url matches ignored url");
                     return
                 }
-                var r, i = n.toUpperCase(),
-                    o = this.tracer.startSpan(i, {
-                        kind: iC.CLIENT,
-                        attributes: ((r = {})[nA] = n, r[nP] = o4(e).toString(), r)
+                var r, o = n.toUpperCase(),
+                    i = this.tracer.startSpan(o, {
+                        kind: oL.CLIENT,
+                        attributes: ((r = {})[nS] = n, r[nO] = i5(e).toString(), r)
                     });
-                return o.addEvent(E.METHOD_OPEN), this._cleanPreviousSpanInformation(t), this._xhrMem.set(t, {
-                    span: o,
+                return i.addEvent(S.METHOD_OPEN), this._cleanPreviousSpanInformation(t), this._xhrMem.set(t, {
+                    span: i,
                     spanUrl: e
-                }), o
+                }), i
             }, e.prototype._markResourceAsUsed = function(t) {
                 this._usedResources.add(t)
             }, e.prototype._patchOpen = function() {
@@ -6096,9 +6885,9 @@ var aP = (l = function(t, e) {
                 return function(e) {
                     return function() {
                         for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                        var i = n[0],
-                            o = n[1];
-                        return t._createSpan(this, o, i), e.apply(this, n)
+                        var o = n[0],
+                            i = n[1];
+                        return t._createSpan(this, i, o), e.apply(this, n)
                     }
                 }
             }, e.prototype._patchSend = function() {
@@ -6108,29 +6897,29 @@ var aP = (l = function(t, e) {
                     var r = t._xhrMem.get(n);
                     if (r) {
                         r.status = n.status, r.statusText = n.statusText, t._xhrMem.delete(n), r.span && t._applyAttributesAfterXHR(r.span, n);
-                        var i = ny(),
-                            o = Date.now();
+                        var o = sm(),
+                            i = Date.now();
                         setTimeout(function() {
                             var n, a, s, u;
-                            "function" == typeof(n = r.callbackToRemoveEvents) && n(), a = r.span, s = r.spanUrl, u = r.sendStartTime, a && (t._findResourceAndAddNetworkEvents(r, a, s, u, i), a.addEvent(e, o), t._addFinalSpanAttributes(a, r, s), a.end(o), t._tasksCount--), t._clearResources()
+                            "function" == typeof(n = r.callbackToRemoveEvents) && n(), a = r.span, s = r.spanUrl, u = r.sendStartTime, a && (t._findResourceAndAddNetworkEvents(r, a, s, u, o), a.addEvent(e, i), t._addFinalSpanAttributes(a, r, s), a.end(i), t._tasksCount--), t._clearResources()
                         }, 300)
                     }
                 }
 
                 function n() {
-                    e(E.EVENT_ERROR, this)
+                    e(S.EVENT_ERROR, this)
                 }
 
                 function r() {
-                    e(E.EVENT_ABORT, this)
-                }
-
-                function i() {
-                    e(E.EVENT_TIMEOUT, this)
+                    e(S.EVENT_ABORT, this)
                 }
 
                 function o() {
-                    this.status < 299 ? e(E.EVENT_LOAD, this) : e(E.EVENT_ERROR, this)
+                    e(S.EVENT_TIMEOUT, this)
+                }
+
+                function i() {
+                    this.status < 299 ? e(S.EVENT_LOAD, this) : e(S.EVENT_ERROR, this)
                 }
                 return function(e) {
                     return function() {
@@ -6139,36 +6928,35 @@ var aP = (l = function(t, e) {
                         if (!c) return e.apply(this, s);
                         var l = c.span,
                             p = c.spanUrl;
-                        return l && p && tv.with(ee.setSpan(tv.active(), l), function() {
-                            t._tasksCount++, c.sendStartTime = ny(), l.addEvent(E.METHOD_SEND), a.addEventListener("abort", r), a.addEventListener("error", n), a.addEventListener("load", o), a.addEventListener("timeout", i), c.callbackToRemoveEvents = function() {
+                        return l && p && tm.with(er.setSpan(tm.active(), l), function() {
+                            t._tasksCount++, c.sendStartTime = sm(), l.addEvent(S.METHOD_SEND), a.addEventListener("abort", r), a.addEventListener("error", n), a.addEventListener("load", i), a.addEventListener("timeout", o), c.callbackToRemoveEvents = function() {
                                 var e;
-                                a.removeEventListener("abort", r), a.removeEventListener("error", n), a.removeEventListener("load", o), a.removeEventListener("timeout", i), (e = t._xhrMem.get(a)) && (e.callbackToRemoveEvents = void 0), c.createdResources && c.createdResources.observer.disconnect()
+                                a.removeEventListener("abort", r), a.removeEventListener("error", n), a.removeEventListener("load", i), a.removeEventListener("timeout", o), (e = t._xhrMem.get(a)) && (e.callbackToRemoveEvents = void 0), c.createdResources && c.createdResources.observer.disconnect()
                             }, t._addHeaders(a, p), t._addResourceObserver(a, p)
                         }), e.apply(this, s)
                     }
                 }
             }, e.prototype.enable = function() {
-                this._diag.debug("applying patch to", this.moduleName, this.version), ae(XMLHttpRequest.prototype.open) && (this._unwrap(XMLHttpRequest.prototype, "open"), this._diag.debug("removing previous patch from method open")), ae(XMLHttpRequest.prototype.send) && (this._unwrap(XMLHttpRequest.prototype, "send"), this._diag.debug("removing previous patch from method send")), this._wrap(XMLHttpRequest.prototype, "open", this._patchOpen()), this._wrap(XMLHttpRequest.prototype, "send", this._patchSend())
+                this._diag.debug("applying patch to", this.moduleName, this.version), sg(XMLHttpRequest.prototype.open) && (this._unwrap(XMLHttpRequest.prototype, "open"), this._diag.debug("removing previous patch from method open")), sg(XMLHttpRequest.prototype.send) && (this._unwrap(XMLHttpRequest.prototype, "send"), this._diag.debug("removing previous patch from method send")), this._wrap(XMLHttpRequest.prototype, "open", this._patchOpen()), this._wrap(XMLHttpRequest.prototype, "send", this._patchSend())
             }, e.prototype.disable = function() {
                 this._diag.debug("removing patch from", this.moduleName, this.version), this._unwrap(XMLHttpRequest.prototype, "open"), this._unwrap(XMLHttpRequest.prototype, "send"), this._tasksCount = 0, this._xhrMem = new WeakMap, this._usedResources = new WeakSet
             }, e
-        }(o7)
+        }(sh)
     };
-const aN = {
-    ignoreNetworkEvents: !0,
-    propagateTraceHeaderCorsUrls: [/.+/g]
+const sw = {
+    ignoreNetworkEvents: false
 };
-new class extends rI {
+new class extends rC {
     constructor(t) {
         var e, n;
         let r = [...(null == t ? void 0 : t.instrumentations) || []];
-        (null === (e = null == t ? void 0 : t.webVitalsInstrumentationConfig) || void 0 === e ? void 0 : e.enabled) !== !1 && r.push(new oW(null == t ? void 0 : t.webVitalsInstrumentationConfig)), (null === (n = null == t ? void 0 : t.globalErrorsInstrumentationConfig) || void 0 === n ? void 0 : n.enabled) !== !1 && r.push(new oZ(null == t ? void 0 : t.globalErrorsInstrumentationConfig)), super(Object.assign(Object.assign({}, t), {
+        (null === (e = null == t ? void 0 : t.webVitalsInstrumentationConfig) || void 0 === e ? void 0 : e.enabled) !== !1 && r.push(new iK(null == t ? void 0 : t.webVitalsInstrumentationConfig)), (null === (n = null == t ? void 0 : t.globalErrorsInstrumentationConfig) || void 0 === n ? void 0 : n.enabled) !== !1 && r.push(new iZ(null == t ? void 0 : t.globalErrorsInstrumentationConfig)), super(Object.assign(Object.assign({}, t), {
             instrumentations: r,
             resource: function(t) {
-                let e = rH(t[0]);
+                let e = rU(t[0]);
                 for (let n = 1; n < t.length; n++) {
                     if (!t[n]) continue;
-                    let r = rH(t[n]);
+                    let r = rU(t[n]);
                     e = e.merge(r)
                 }
                 return e
@@ -6177,8 +6965,8 @@ new class extends rI {
                     browserName: t,
                     browserVersion: e,
                     deviceType: n
-                } = rF(navigator.userAgent);
-                return new e_({
+                } = rj(navigator.userAgent);
+                return new ev({
                     "user_agent.original": navigator.userAgent,
                     "browser.mobile": navigator.userAgent.includes("Mobi"),
                     "browser.touch_screen_enabled": navigator.maxTouchPoints > 0,
@@ -6186,73 +6974,73 @@ new class extends rI {
                     "browser.name": t,
                     "browser.version": e,
                     "device.type": n,
-                    "network.effectiveType": rj(navigator.connection),
+                    "network.effectiveType": rM(navigator.connection),
                     "screen.width": window.screen.width,
                     "screen.height": window.screen.height,
-                    "screen.size": rU(window.screen.width)
+                    "screen.size": rD(window.screen.width)
                 })
             }(), function(t) {
-                if (!1 === t || !(null == window ? void 0 : window.location)) return new e_({});
-                let e = t ? Object.assign(Object.assign({}, rM), t) : rM,
+                if (!1 === t || !(null == window ? void 0 : window.location)) return new ev({});
+                let e = t ? Object.assign(Object.assign({}, rx), t) : rx,
                     {
                         href: n,
                         pathname: r,
-                        search: i,
-                        hash: o,
+                        search: o,
+                        hash: i,
                         hostname: a
                     } = window.location;
-                return new e_({
-                    "entry_page.url": rk(e.url, n),
-                    "entry_page.path": rk(e.path, r),
-                    "entry_page.search": rk(e.search, i),
-                    "entry_page.hash": rk(e.hash, o),
-                    "entry_page.hostname": rk(e.hostname, a),
-                    "entry_page.referrer": rk(e.referrer, document.referrer)
+                return new ev({
+                    "entry_page.url": rI(e.url, n),
+                    "entry_page.path": rI(e.path, r),
+                    "entry_page.search": rI(e.search, o),
+                    "entry_page.hash": rI(e.hash, i),
+                    "entry_page.hostname": rI(e.hostname, a),
+                    "entry_page.referrer": rI(e.referrer, document.referrer)
                 })
-            }(null == t ? void 0 : t.entryPageAttributes), null == t ? void 0 : t.resource, null == t ? void 0 : t.resourceAttributes, new e_({
-                "honeycomb.distro.version": rD,
+            }(null == t ? void 0 : t.entryPageAttributes), null == t ? void 0 : t.resource, null == t ? void 0 : t.resourceAttributes, new ev({
+                "honeycomb.distro.version": rN,
                 "honeycomb.distro.runtime_version": "browser"
             })]),
-            sampler: ii(t),
-            spanProcessor: ie(t)
-        })), r5(t), (null == t ? void 0 : t.debug) && function(t) {
+            sampler: oe(t),
+            spanProcessor: r7(t)
+        })), r4(t), (null == t ? void 0 : t.debug) && function(t) {
             if (!(null == t ? void 0 : t.debug)) return;
-            tm.setLogger(new Q, iL.DEBUG), tm.debug(rz("\uD83D\uDC1D Honeycomb Web SDK Debug Mode Enabled \uD83D\uDC1D"));
-            let e = rW(t),
-                n = Object.assign(Object.assign(Object.assign({}, rX), t), {
+            ty.setLogger(new tt, ow.DEBUG), ty.debug(rV("\uD83D\uDC1D Honeycomb Web SDK Debug Mode Enabled \uD83D\uDC1D"));
+            let e = r$(t),
+                n = Object.assign(Object.assign(Object.assign({}, rH), t), {
                     tracesEndpoint: e
                 });
             (function(t) {
-                let e = rZ(t) || "";
+                let e = rq(t) || "";
                 if (!e) {
-                    tm.debug(rQ);
+                    ty.debug(rK);
                     return
                 }
-                tm.debug(rz(`API Key configured for traces: '${e}'`))
+                ty.debug(rV(`API Key configured for traces: '${e}'`))
             })(n),
             function(t) {
-                let e = t.serviceName || rX.serviceName;
-                if (e === rX.serviceName) {
-                    tm.debug(rJ);
+                let e = t.serviceName || rH.serviceName;
+                if (e === rH.serviceName) {
+                    ty.debug(rZ);
                     return
                 }
-                tm.debug(`@honeycombio/opentelemetry-web: Service Name configured for traces: '${e}'`)
+                ty.debug(`@honeycombio/opentelemetry-web: Service Name configured for traces: '${e}'`)
+            }(n),
+            function(t) {
+                let e = r$(t);
+                if (!e) {
+                    ty.debug(rV("No endpoint configured for traces"));
+                    return
+                }
+                ty.debug(rV(`Endpoint configured for traces: '${e}'`))
             }(n),
             function(t) {
                 let e = rW(t);
                 if (!e) {
-                    tm.debug(rz("No endpoint configured for traces"));
+                    ty.debug("No sampler configured for traces");
                     return
                 }
-                tm.debug(rz(`Endpoint configured for traces: '${e}'`))
-            }(n),
-            function(t) {
-                let e = rY(t);
-                if (!e) {
-                    tm.debug("No sampler configured for traces");
-                    return
-                }
-                tm.debug(rz(`Sample Rate configured for traces: '${e}'`))
+                ty.debug(rV(`Sample Rate configured for traces: '${e}'`))
             }(n)
         }(t)
     }
@@ -6261,35 +7049,36 @@ new class extends rI {
     endpoint: "https://api.honeycomb.io/v1/traces",
     apiKey: "<your api key>",
     skipOptionsValidation: false,
-    serviceName: "web-sdk",
+    serviceName: "hfo",
     instrumentations: [function(t) {
         void 0 === t && (t = {});
         for (var e, n = 0, r = Object.keys(t); n < r.length; n++) {
-            var i = r[n];
-            if (!Object.prototype.hasOwnProperty.call(aC, i)) {
-                tm.error('Provided instrumentation name "' + i + '" not found');
+            var o = r[n];
+            if (!Object.prototype.hasOwnProperty.call(sT, o)) {
+                ty.error('Provided instrumentation name "' + o + '" not found');
                 continue
             }
         }
-        for (var o = [], a = 0, s = Object.keys(aC); a < s.length; a++) {
+        for (var i = [], a = 0, s = Object.keys(sT); a < s.length; a++) {
             var u = s[a],
-                c = aC[u],
+                c = sT[u],
                 l = null !== (e = t[u]) && void 0 !== e ? e : {};
             if (!1 === l.enabled) {
-                tm.debug("Disabling instrumentation for " + u);
+                ty.debug("Disabling instrumentation for " + u);
                 continue
             }
             try {
-                tm.debug("Loading instrumentation for " + u), o.push(new c(l))
+                ty.debug("Loading instrumentation for " + u), i.push(new c(l))
             } catch (t) {
-                tm.error(t)
+                ty.error(t)
             }
         }
-        return o
+        return i
     }({
-        "@opentelemetry/instrumentation-xml-http-request": aN,
-        "@opentelemetry/instrumentation-fetch": aN,
-        "@opentelemetry/instrumentation-document-load": aN,
-        "@opentelemetry/instrumentation-user-interaction": aN
+        "@opentelemetry/instrumentation-xml-http-request": sw,
+        "@opentelemetry/instrumentation-fetch": sw,
+        "@opentelemetry/instrumentation-document-load": sw,
+        "@opentelemetry/instrumentation-user-interaction": sw
     })]
 }).start();
+//# sourceMappingURL=index.5e55b4a4.js.map
