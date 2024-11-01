@@ -160,7 +160,7 @@ def get_image():
     try:
         # delay a little 
         if random.random() < 0.25:
-            time.sleep(random.randint(1, 3))
+            time.sleep(random.randint(1, 4))
         return send_from_directory(IMAGE_DIRECTORY, IMAGE_FILENAME, as_attachment=False)
     except FileNotFoundError:
         return "Image not found.", 404
