@@ -6944,7 +6944,8 @@ var sE = (d = function(t, e) {
         }(sh)
     };
 const sw = {
-    ignoreNetworkEvents: false
+    ignoreNetworkEvents: false,
+    propagateTraceHeaderCorsUrls: [/.+/g]
 };
 new class extends rC {
     constructor(t) {
@@ -7047,7 +7048,7 @@ new class extends rC {
 }({
     debug: true,
     endpoint: "https://api.honeycomb.io/v1/traces",
-    apiKey: "<your api key>",
+    apiKey: "hcaik_01jbcnrg2xttf2e373jwd209em38rxyfadbtv70bx6dm1mmqm9x3xx71sr",
     skipOptionsValidation: false,
     serviceName: "hfo",
     instrumentations: [function(t) {

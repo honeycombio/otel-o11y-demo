@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from healthcheck import HealthCheck
 import time
 import requests
@@ -151,6 +151,19 @@ def error_route():
     do_saas("error")
     result = result + " → " + str(do_error())
     return result
+
+IMAGE_DIRECTORY = 'images'
+IMAGE_FILENAME = 'honeycomb.png'  # Change this to the name of your image file
+
+@APP.route("/get-image", methods=['GET'])
+def get_image():
+    try:
+        # delay a little 
+        if random.random() < 0.25:
+            time.sleep(random.uniform(1, 2))
+        return send_from_directory(IMAGE_DIRECTORY, IMAGE_FILENAME, as_attachment=False)
+    except FileNotFoundError:
+        return "Image not found.", 404
 
 @APP.route("/random")
 def random_route():
