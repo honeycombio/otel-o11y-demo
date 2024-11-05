@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="module" src="otelweb.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poor CLS Example</title>
+    <link rel="shortcut icon" href="https://www.honeycomb.io/wp-content/themes/honeycomb/assets/img/favicon/favicon.ico">
+    <!-- Load a web font without fallback to cause text shifts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Poor CLS Example Page</h1>
+
+    <!-- Image without width and height attributes -->
+    <img src="https://www.honeycomb.io/wp-content/themes/honeycomb/assets/img/logo.svg" alt="Honeycomb logo">
+
+    <p class="content">This is some content that will be pushed down when the banner is inserted above.</p>
+
+    <input id="hidden" type="button" value="hidden" onclick="javascript:simVisibilityChange('hidden');"/>
+    <input id="visible" type="button" value="visible" onclick="javascript:simVisibilityChange('visible');"/>
+    <input id="pagehide" type="button" value="pagehide" onclick="javascript:simPageHide();"/>
+
+    <!-- JavaScript to insert dynamic content after a delay -->
+    <script>
+        window.onload = function() {
+            // Insert a banner after 2 seconds to cause a layout shift
+            setTimeout(function() {
+                const banner = document.createElement('div');
+                banner.innerHTML = '<div style="background-color: yellow; padding: 20px; text-align: center;">Promotional Banner</div>';
+                document.body.prepend(banner);
+            }, 2000);
+        };
+
+        function simPageHide() {
+            const event = new Event('pagehide');
+            Object.defineProperty(document, 'pagehide', {
+                persisted: false
+            });
+            console.log('dispatch event: pagehide');
+            document.dispatchEvent(event);
+        }
+
+        function simVisibilityChange(state) {
+            const event = new Event('visibilitychange');
+            Object.defineProperty(document, 'visibilityState', {
+                configurable: true,
+                value: state
+            });
+            console.log('dispatch event: visibilitychange = ' + state);
+            document.dispatchEvent(event);
+        }
+    </script>
+</body>
+</html>

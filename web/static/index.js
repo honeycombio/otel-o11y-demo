@@ -60,8 +60,31 @@ async function tier1(event) {
         document.getElementById('message').innerText = "There was an error running the service. Please retry.";
         document.getElementById('message').style = "display:block;";
     }
+
+    // simulate page hide and visibility change
+    simPageHide();
+    simVisibilityChange('hidden');
 }
 
 document.getElementById('go_fast').addEventListener('click', tier1);
 document.getElementById('go_slow').addEventListener('click', tier1);
 document.getElementById('go_error').addEventListener('click', tier1);
+
+function simPageHide() {
+    const event = new Event('pagehide');
+    Object.defineProperty(document, 'pagehide', {
+        persisted: false
+    });
+    console.log('dispatch event: pagehide');
+    document.dispatchEvent(event);
+}
+
+function simVisibilityChange(state) {
+    const event = new Event('visibilitychange');
+    Object.defineProperty(document, 'visibilityState', {
+        configurable: true,
+        value: state
+    });
+    console.log('dispatch event: visibilitychange = ' + state);
+    document.dispatchEvent(event);
+}

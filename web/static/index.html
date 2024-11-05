@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script type="module" src="otelweb.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="traceparent" content="00-00000000000000000000000000000000-0000000000000000-00">
@@ -53,6 +54,7 @@
             margin: 5px;
             padding: 5px;
             background-color: white;
+            width: auto;
         }
 
         div {
@@ -75,7 +77,6 @@
 </head>
 
 <body>
-    <a href="https://honeycomb.io"><img id="honeycomb" src="/proxy/get-image"/></a>
     <h1>OTEL o11y demo</h1>
     <p>Invoke Tier 1 service with...</p>
     <p>
@@ -83,13 +84,31 @@
         <button id="go_slow">🐢 SLOW</button>
         <button id="go_error">❌ ERROR</button>
     </p>
-    <div id="message" style="display:none"></div>
     <div class="content">
         <img id="picture" src="#" alt="Picture" style="display:none"></img>
         <img id="loading-meme" src="./loading-meme.gif" alt="Loading Meme" style="display:none"></img>
     </div>
+    <div id="message" style="display:none"></div>
+    <!-- for testing purpose -->
+    <div class="content" style="display:none">
+        <input id="hidden" type="button" value="hidden" onclick="javascript:simVisibilityChange('hidden');"/>
+        <input id="visible" type="button" value="visible" onclick="javascript:simVisibilityChange('visible');"/>
+        <input id="pagehide" type="button" value="pagehide" onclick="javascript:simPageHide();"/>
+    </div>
     <script type="text/javascript" src="index.js"></script>
-    <script type="module" src="otelweb.js"></script>
 </body>
-
+<script type="text/javascript">
+    // script to add a banner at the top of the page.
+    // this may affect the poor LCP score
+    window.onload = function() {
+        // let's introduce poor LCP on approx. 25% of the cases
+        if (Math.random() < 0.4) {
+            setTimeout( function() {
+                const banner = document.createElement('div');
+                banner.innerHTML = '<a href="https://honeycomb.io"><img id="honeycomb" src="/proxy/get-image"/></a>';
+                document.body.prepend(banner);
+            }, 1000);
+        }
+    };
+</script>
 </html>

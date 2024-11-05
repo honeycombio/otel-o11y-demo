@@ -154,14 +154,16 @@ def error_route():
 
 IMAGE_DIRECTORY = 'images'
 IMAGE_FILENAME = 'honeycomb.png'  # Change this to the name of your image file
+IMAGE_FILENAME_LARGE = 'honeycombio-large.jpeg'
 
 @APP.route("/get-image", methods=['GET'])
 def get_image():
     try:
         # delay a little 
         if random.random() < 0.25:
-            time.sleep(random.randint(1, 4))
-        return send_from_directory(IMAGE_DIRECTORY, IMAGE_FILENAME, as_attachment=False)
+            return send_from_directory(IMAGE_DIRECTORY, IMAGE_FILENAME_LARGE, as_attachment=False)
+        else:
+            return send_from_directory(IMAGE_DIRECTORY, IMAGE_FILENAME, as_attachment=False)
     except FileNotFoundError:
         return "Image not found.", 404
 

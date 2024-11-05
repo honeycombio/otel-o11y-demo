@@ -9,6 +9,7 @@ RUN apt-get install -y nginx
 RUN apt-get install -y nginx-module-otel
 RUN apt-get install -y nginx-module-njs
 COPY static/index.html /usr/share/nginx/html/index.html
+COPY static/poor.html /usr/share/nginx/html/poor.html
 COPY static/index.js /usr/share/nginx/html/index.js
 COPY static/otelweb.js /usr/share/nginx/html/otelweb.js
 COPY static/loading-meme.gif /usr/share/nginx/html/loading-meme.gif
