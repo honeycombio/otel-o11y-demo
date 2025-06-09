@@ -151,6 +151,42 @@ Dataset `web-sdk` is also going to show how a particular page request had web re
 
 Various web vitals and user interactions can also be captured (e.g. mouse clicks) which can add depth to your real user monitoring.
 
+## (Optional) WEB SDK from external source ##
+
+You can also include a publicly available distribution of web sdk (index.js) by simply including it in the web page like this:
+```
+<script src="https://unpkg.com/@honeycombio/opentelemetry-web@0.18.0/dist/umd/index.js"></script>
+```
+And  then including this javascript snippet into the browser page to configure it as:
+```
+<script>
+  let ingestKey = 'your key'
+  let dataSet = 'dataset name here'
+  
+  const configDefaults = {
+    ignoreNetworkEvents: true,
+  }
+  const sdk = HNY.configureHoneycombSDK({
+    apiKey: ingestKey,
+    serviceName: dataSet
+  }, 
+  {                                    
+      '@opentelemetry/instrumentation-document-load': configDefaults,
+      '@opentelemetry/instrumentation-fetch': configDefaults,
+      '@honeycombio/core-web-vitals': {},
+      '@opentelemetry/instrumentation/xml-http-request': { enabled: false}                                        
+  });
+  sdk.start();
+  
+  window.addEventListener("unload", (event) => {
+    console.log("unloading...");
+    sdk.close();
+  })
+
+</script>
+```
+An advantage is that this will make it easier to anybody to simply grab and use web sdk without having to webpack build it by themselves.
+
 ## Further readings
 
 - [OpenTelemetry Concepts](https://opentelemetry.io/docs/concepts/) : Get yourself familiarized with various concepts of OpenTelemetry.
