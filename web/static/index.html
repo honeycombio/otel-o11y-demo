@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script type="module" src="otelweb.js"></script>
+    <script src="https://unpkg.com/@honeycombio/opentelemetry-web@0.20.0/dist/umd/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="traceparent" content="00-00000000000000000000000000000000-0000000000000000-00">
@@ -110,5 +110,29 @@
             }, 1000);
         }
     };
+</script>
+<script>
+    let ingestKey = 'HONEYCOMB_API_KEY';
+    let dataSet = 'browser';
+    
+    const configDefaults = {
+      ignoreNetworkEvents: false,
+    }
+    const sdk = HNY.configureHoneycombSDK({
+      apiKey: ingestKey,
+      serviceName: dataSet
+    }, 
+    {                                    
+        '@opentelemetry/instrumentation-document-load': configDefaults,
+        '@opentelemetry/instrumentation-fetch': configDefaults,
+        '@honeycombio/core-web-vitals': {},
+        '@opentelemetry/instrumentation/xml-http-request': { enabled: false}                                        
+    });
+    sdk.start();
+    
+    window.addEventListener("unload", (event) => {
+      console.log("unloading...");
+      sdk.close();
+    })
 </script>
 </html>
