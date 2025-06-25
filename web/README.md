@@ -101,41 +101,53 @@ COPY static/http_js.js /etc/nginx/http_js.js
 * The above script is necessary to register the nginx repo, and installing necessary nginx and nginx-module-otel to the container.
 * Also, the module seems to have dependency with nginx:1.26.1
 
-3. **http_js.js** and **otelweb.js**
+3. **http_js.js**
 
 Copy the following files into [./static](./static) directory:
 
 - [http_js.js](https://github.com/honeycombio/otel-o11y-demo/blob/custom-instrumented/web/static/http_js.js): used to render traceparent meta tag inside [index.html](static/index.html) with the propagated traceparent value, if exists.
-- [otelweb.js](https://github.com/honeycombio/otel-o11y-demo/blob/custom-instrumented/web/static/otelweb.js): built and bundled frontend package containing instrumentation codes and exporters to emit trace to Honeycomb endpoint.
 
-4. modify otelweb.js
-- Open `otelweb.js` and scroll to the end of the file. By default, since the web sdk is going to be running on user's browser, the setup requires that you get your Honeycomb API key, and enter into the `apiKey` parameter. Replace the `<your api key>` with the actual API Key that you obtain from Honeycomb. Refer to [here](https://docs.honeycomb.io/get-started/configure/environments/manage-api-keys/#find-api-keys) on how to obtain the API key.
-
-```
-    debug: true,
-    endpoint: "https://api.honeycomb.io/v1/traces",
-    apiKey: "<your api key>",
-    skipOptionsValidation: false,
-    serviceName: "web-sdk",
-```
-
-5. modify index.html
+4. modify index.html
 - Open [index.html](static/index.html) and add the `traceparent` meta tag in the header section.
+- Also add `<script src="https://unpkg.com/@honeycombio/opentelemetry-web@0.20.0/dist/umd/index.js"></script>` inside the `head` tag.
 
 ```html
 <head>
+    <script src="https://unpkg.com/@honeycombio/opentelemetry-web@0.20.0/dist/umd/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="traceparent" content="00-00000000000000000000000000000000-0000000000000000-00">
     <title>OTEL o11y demo</title>
 ```
 
-Also, at the end of the body, add the `<script type="module" src="otelweb.js"></script>` to include the web sdk to be loaded.
-
+- Add the following javascript snippet at the end of `index.html`, inside the `body` tag.
+```javascript
+<script>
+    let ingestKey = 'HONEYCOMB_API_KEY';
+    let dataSet = 'browser';
+    
+    const configDefaults = {
+      ignoreNetworkEvents: false,
+    }
+    const sdk = HNY.configureHoneycombSDK({
+      apiKey: ingestKey,
+      serviceName: dataSet
+    }, 
+    {                                    
+        '@opentelemetry/instrumentation-document-load': configDefaults,
+        '@opentelemetry/instrumentation-fetch': configDefaults,
+        '@honeycombio/core-web-vitals': {},
+        '@opentelemetry/instrumentation/xml-http-request': { enabled: false}                                        
+    });
+    sdk.start();
+    
+    window.addEventListener("unload", (event) => {
+      console.log("unloading...");
+      sdk.close();
+    })
+</script>
 ```
-    <script type="text/javascript" src="index.js"></script>
-    <script type="module" src="otelweb.js"></script>
-```
+- Replace the HONEYCOMB_API_KEY with your Honeycomb API key
 
 ## What this would look like
 
@@ -150,42 +162,6 @@ Dataset `web-sdk` is also going to show how a particular page request had web re
 ![screenshot](web-trace-screenshot3.png "screenshot")
 
 Various web vitals and user interactions can also be captured (e.g. mouse clicks) which can add depth to your real user monitoring.
-
-## (Optional) WEB SDK from external source ##
-
-You can also include a publicly available distribution of web sdk (index.js) by simply including it in the web page like this:
-```
-<script src="https://unpkg.com/@honeycombio/opentelemetry-web@0.18.0/dist/umd/index.js"></script>
-```
-And  then including this javascript snippet into the browser page to configure it as:
-```
-<script>
-  let ingestKey = 'your key'
-  let dataSet = 'dataset name here'
-  
-  const configDefaults = {
-    ignoreNetworkEvents: true,
-  }
-  const sdk = HNY.configureHoneycombSDK({
-    apiKey: ingestKey,
-    serviceName: dataSet
-  }, 
-  {                                    
-      '@opentelemetry/instrumentation-document-load': configDefaults,
-      '@opentelemetry/instrumentation-fetch': configDefaults,
-      '@honeycombio/core-web-vitals': {},
-      '@opentelemetry/instrumentation/xml-http-request': { enabled: false}                                        
-  });
-  sdk.start();
-  
-  window.addEventListener("unload", (event) => {
-    console.log("unloading...");
-    sdk.close();
-  })
-
-</script>
-```
-An advantage is that this will make it easier to anybody to simply grab and use web sdk without having to webpack build it by themselves.
 
 ## Further readings
 
